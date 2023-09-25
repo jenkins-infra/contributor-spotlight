@@ -1,0 +1,28 @@
+{
+  "name": "jenkins-contributor-spotlight",
+  "version": "1.0.0",
+  "private": true,
+  "description": "jenkins-contributor-spotlight",
+  "author": "Kris Stern",
+  "keywords": [
+    "gatsby"
+  ],
+  "scripts": {
+    "develop": "gatsby develop",
+    "start": "gatsby develop",
+    "build": "gatsby build",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean"
+  },
+  "dependencies": {
+    "gatsby": "^5.12.4",
+    "gatsby-plugin-google-gtag": "^5.12.0",
+    "gatsby-plugin-image": "^3.12.0",
+    "gatsby-plugin-sharp": "^5.12.0",
+    "gatsby-plugin-sitemap": "^6.12.0",
+    "gatsby-source-filesystem": "^5.12.0",
+    "gatsby-transformer-sharp": "^5.12.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  }
+}
