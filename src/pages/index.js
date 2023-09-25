@@ -31,6 +31,33 @@ const IndexPage = () => {
     )
   }
 
+
+  const contributorCards = [
+    ...Array(25).fill(contributorCard()).map((card, index) => {
+    return (
+      <React.Fragment key={index}>
+        {card}
+      </React.Fragment>
+      )
+    }).slice(0, 24),
+      <React.Fragment key={"blank"}>
+        <Box
+          padding={5}
+        >
+          <Box>
+            {" "}
+          </Box>
+        </Box>
+      </React.Fragment>,
+      ...Array(25).fill(contributorCard()).map((card, index) => {
+        return (
+          <React.Fragment key={index}>
+            {card}
+          </React.Fragment>
+        )
+      }).slice(24, 25)
+  ]
+
   return (
     <main>
       <Box
@@ -69,7 +96,7 @@ const IndexPage = () => {
           display={"grid"}
           gridTemplateColumns={"repeat(3, 1fr)"}
         >
-          {Array(25).fill(contributorCard())}
+          {contributorCards}
         </Box>
       </Box>
     </main>
