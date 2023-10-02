@@ -72,12 +72,18 @@ const IndexPage = () => {
         paddingLeft={10}
         paddingRight={10}
       >
-        <Typography variant={"h5"}><strong>Contributor Spotlight</strong></Typography>
+        <Box
+          sx={{
+            paddingTop: 5,
+            paddingBottom: 5
+          }}
+        >
+          <Typography variant={"h5"}><strong>Contributor Spotlight</strong></Typography>
+        </Box>
         <Stack
           id={"featured-contributor"}
           direction={"row"}
-          minWidth={1000}
-          maxWidth={1200}
+          minWidth={1100}
           height={500}
           padding={5}
           sx={{ borderRadius: 5, backgroundImage: "linear-gradient(180deg, #FFFFFF, #DAD1C6);" }}
@@ -133,7 +139,7 @@ const IndexPage = () => {
               <Typography
                 sx={{
                   display: '-webkit-box',
-                  maxWidth: "400px",
+                  maxWidth: "450px",
                   WebkitLineClamp: 5,
                   WebkitBoxOrient: "vertical",
                   overflow: "hidden",
