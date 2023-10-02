@@ -56,7 +56,7 @@ const IndexPage = () => {
         }}
       >
         <Typography variant={"h4"}><strong>Meet the driving forces behind Jenkins</strong></Typography>
-        <Typography variant={"h4"}>as we showcase the top 25 contributors shaping the</Typography>
+        <Typography variant={"h4"}>as we showcase the top contributors shaping the</Typography>
         <Typography variant={"h4"}>future of continuous integration and delivery</Typography>
         <Box sx={{ paddingTop: 8 }}>
           <img src={'jenkins.png'} alt={"Jenkins logo"}/>
