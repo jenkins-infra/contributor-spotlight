@@ -1,6 +1,6 @@
 import * as React from "react";
 import "../../styles/index.css";
-import {Box, Typography} from "@mui/material";
+import {Box, Stack, Typography} from "@mui/material";
 
 const IndexPage = () => {
   const contributorCard = () => {
@@ -32,31 +32,13 @@ const IndexPage = () => {
   }
 
 
-  const contributorCards = [
-    ...Array(25).fill(contributorCard()).map((card, index) => {
+  const ContributorCards = Array(12).fill(contributorCard()).map((card, idx) => {
     return (
-      <React.Fragment key={index}>
+      <React.Fragment key={idx}>
         {card}
       </React.Fragment>
-      )
-    }).slice(0, 24),
-      <React.Fragment key={"blank"}>
-        <Box
-          padding={5}
-        >
-          <Box>
-            {" "}
-          </Box>
-        </Box>
-      </React.Fragment>,
-      ...Array(25).fill(contributorCard()).map((card, index) => {
-        return (
-          <React.Fragment key={index}>
-            {card}
-          </React.Fragment>
-        )
-      }).slice(24, 25)
-  ]
+    )
+  });
 
   return (
     <main>
@@ -91,12 +73,85 @@ const IndexPage = () => {
         paddingRight={10}
       >
         <Typography variant={"h5"}><strong>Contributor Spotlight</strong></Typography>
+        <Stack
+          id={"featured-contributor"}
+          direction={"row"}
+          minWidth={1000}
+          maxWidth={1200}
+          height={500}
+          padding={5}
+          sx={{ borderRadius: 5, backgroundImage: "linear-gradient(180deg, #FFFFFF, #DAD1C6);" }}
+          justifyContent={"flex-start"}
+          alignItems={'center'}
+          useFlexGap
+          gap={2}
+        >
+          <Stack
+            id={"featured-contributor-avatar"}
+            direction={"column"}
+            justifyContent={"center"}
+            alignItems={"center"}
+            paddingTop={5}
+            paddingBottom={5}
+            paddingLeft={2}
+            paddingRight={2}
+          >
+            <img src={"avatar/stephanie-liverani-Zz5LQe-VSMY-unsplash.jpg"}
+                 alt={"Featured contributor avatar"}
+                 width={350}
+                 height={350}
+                 style={{objectFit: "cover", borderRadius: "50%"}}
+            />
+          </Stack>
+          <Stack
+            id={"featured-contributor-info"}
+            direction={"column"}
+            justifyContent={"center"}
+            alignItems={"flex-start"}
+            padding={5}
+          >
+            <Box
+              marginTop={1}
+              marginBottom={1}
+            >
+              <Typography variant={"h4"}>Sarah Jenkins</Typography>
+              <Typography variant={"h5"}>They/them</Typography>
+            </Box>
+
+            <Box
+              marginTop={1}
+              marginBottom={1}
+            >
+              <Typography variant={"h5"}>San Francisco, USA</Typography>
+              <Typography variant={"h5"}>First Commit: June 2018</Typography>
+            </Box>
+
+            <Box
+              marginTop={1}
+              marginBottom={1}
+            >
+              <Typography
+                sx={{
+                  display: '-webkit-box',
+                  maxWidth: "400px",
+                  WebkitLineClamp: 5,
+                  WebkitBoxOrient: "vertical",
+                  overflow: "hidden",
+                }}
+              >
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+              </Typography>
+            </Box>
+          </Stack>
+        </Stack>
         <Box
           id={"contributor-grid"}
           display={"grid"}
           gridTemplateColumns={"repeat(3, 1fr)"}
+          paddingTop={5}
+          paddingBottom={5}
         >
-          {contributorCards}
+          {ContributorCards}
         </Box>
       </Box>
     </main>
