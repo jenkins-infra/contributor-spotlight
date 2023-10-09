@@ -18,24 +18,26 @@
     "@emotion/react": "^11.11.1",
     "@emotion/styled": "^11.11.0",
     "@mui/material": "^5.14.10",
+    "asciidoctor.js": "^1.5.9",
     "gatsby": "^5.12.4",
+    "gatsby-core-utils": "^4.12.0",
     "gatsby-plugin-image": "^3.12.0",
     "gatsby-plugin-manifest": "^5.12.0",
+    "gatsby-plugin-offline": "^6.12.1",
     "gatsby-plugin-sharp": "^5.12.0",
     "gatsby-plugin-sitemap": "^6.12.0",
+    "gatsby-plugin-typography": "^5.12.0",
     "gatsby-source-filesystem": "^5.12.0",
+    "gatsby-transformer-asciidoc": "^4.12.0",
     "gatsby-transformer-sharp": "^5.12.0",
     "loader-utils": "^3.2.1",
+    "lodash": "^4.17.21",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-typography": "^0.16.23",
+    "slash": "^5.1.0",
+    "typography": "^0.16.24",
+    "typography-breakpoint-constants": "^0.16.19"
   },
-  "overrides": {
-    "decode-uri-component": "^0.4.1",
-    "graphql": "^16.8.1",
-    "http-cache-semantics": "^4.1.1",
-    "json5": "^2.2.3",
-    "semver": "^7.5.4",
-    "word-wrap": "^1.2.5",
-    "yaml": "^2.3.2"
-  }
+  "license": "MIT"
 }
