@@ -30,6 +30,9 @@ exports.createPages = ({ graphql, actions }) => {
               }
               pageAttributes {
                 name
+                pronouns
+                location
+                firstcommit
                 linkedin
                 twitter
                 github

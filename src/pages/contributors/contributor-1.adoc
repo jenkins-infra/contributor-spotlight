@@ -7,7 +7,7 @@
 :page-image: avatar/stephanie-liverani-Zz5LQe-VSMY-unsplash.jpg
 :page-pronouns: They/them
 :page-location: San Francisco, CA, USA
-:page-first-commit: June 2018
+:page-firstcommit: June 2018
 
 Sarah Jenkins is a passionate open-source enthusiast with a knack for streamlining software development processes. Hailing from the bustling tech hub of Silicon Valley, Sarah's journey into the world of Jenkins began with a simple curiosity that soon evolved into an unwavering commitment to the project.
 

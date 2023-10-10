@@ -10,14 +10,14 @@ module.exports = {
     resolve: 'gatsby-source-filesystem',
     options: {
       "name": "images",
-      "path": "./src/images/",
+      "path": `${__dirname}/src/images/`,
     },
     __key: "images"
   }, {
     resolve: `gatsby-source-filesystem`,
     options: {
-      name: `contributors`,
-      path: `src/pages`,
+      name: `pages`,
+      path: `${__dirname}/src`,
     },
   }, {
     resolve: 'gatsby-plugin-manifest',
@@ -26,20 +26,20 @@ module.exports = {
       short_name: `Contributor Spotlight`,
       start_url: `/`,
       display: `standalone`,
-      icon: `src/images/jenkins.png`,
+      icon: `${__dirname}/src/images/jenkins.png`,
     },
   }, `gatsby-transformer-asciidoc`,
     {
       resolve: `gatsby-plugin-typography`,
       options: {
-        pathToConfigModule: `src/utils/typography`,
+        pathToConfigModule: `${__dirname}/src/utils/typography`,
       },
     },
     {
       resolve: `gatsby-transformer-asciidoc`,
       options: {
         attributes: {
-          imagesdir: '/static@',
+          imagesdir: `${__dirname}/static@`,
         },
       },
     },

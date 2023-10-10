@@ -23,14 +23,14 @@ class ContributorDetails extends React.Component {
           justifyContent={'center'}
           padding={10}
           sx={{
-            backgroundImage: 'url("../../marek-szturc-2s3fI3M1lO0-unsplash.jpg")',
+            backgroundImage: 'url("../../../marek-szturc-2s3fI3M1lO0-unsplash.jpg")',
             backgroundRepeat: 'no-repeat',
             backgroundSize: 'cover',
             backgroundPosition: 'center',
           }}
         >
           <Box sx={{ paddingTop: 8 }}>
-            <img src={"../../" + this.props.data.asciidoc.pageAttributes.image}
+            <img src={"../../../" + this.props.data.asciidoc.pageAttributes.image}
                  alt={"Contributor avatar"}
                  width={350}
                  height={350}
@@ -55,7 +55,15 @@ class ContributorDetails extends React.Component {
               {this.props.data.asciidoc.document.title}
             </Typography>
             <Typography variant={"h5"} textAlign={"center"} color={"#0096FF"}>
-              {this.props.data.asciidoc.pageAttributes.pronouns}
+              {this.props.data.asciidoc.pageAttributes.pronouns ?? "They/them"}
+            </Typography>
+          </Box>
+          <Box sx={{paddingBottom: 1.5}}>
+            <Typography variant={"h6"} textAlign={"center"}>
+              {this.props.data.asciidoc.pageAttributes.location ?? "World"}
+            </Typography>
+            <Typography variant={"h6"} textAlign={"center"}>
+              {"First Commit: " + this.props.data.asciidoc.pageAttributes.firstcommit ?? "Unknown"}
             </Typography>
           </Box>
           <Box display={"flex"} alignItems={"center"} justifyContent={"center"} gap={1} sx={{paddingBottom: 2}}>
@@ -101,6 +109,7 @@ export const pageQuery = graphql`
         name
         pronouns
         location
+        firstcommit
         linkedin
         twitter
         github
