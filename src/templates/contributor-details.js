@@ -92,19 +92,6 @@ export const pageQuery = graphql`
         subtitle
         main
       }
-      revision {
-        date
-        number
-        remark
-      }
-      author {
-        fullName
-        firstName
-        lastName
-        middleName
-        authorInitials
-        email
-      }
       pageAttributes {
         name
         pronouns
