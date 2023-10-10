@@ -17,7 +17,10 @@
   "dependencies": {
     "@emotion/react": "^11.11.1",
     "@emotion/styled": "^11.11.0",
-    "@mui/material": "^5.14.10",
+    "@fortawesome/fontawesome-svg-core": "^6.4.2",
+    "@fortawesome/react-fontawesome": "^0.2.0",
+    "@mui/icons-material": "^5.14.12",
+    "@mui/material": "^5.14.12",
     "asciidoctor.js": "^1.5.9",
     "gatsby": "^5.12.4",
     "gatsby-core-utils": "^4.12.0",

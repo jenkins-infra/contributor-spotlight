@@ -20,8 +20,21 @@ exports.createPages = ({ graphql, actions }) => {
           edges {
             node {
               id
+              html
+              document {
+                title
+                main
+              }
               fields {
                 slug
+              }
+              pageAttributes {
+                name
+                linkedin
+                twitter
+                github
+                email
+                image
               }
             }
           }

@@ -1,80 +1,79 @@
 import React from "react"
-import { graphql } from "gatsby"
+import {graphql, Link} from "gatsby"
+import {Box, Stack, Typography} from "@mui/material"
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import GitHubIcon from '@mui/icons-material/GitHub';
+import TwitterIcon from '@mui/icons-material/Twitter';
+import AlternateEmailIcon from '@mui/icons-material/AlternateEmail';
+import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 
-import Layout from "../layouts"
-
-class Article extends React.Component {
+class ContributorDetails extends React.Component {
   render() {
+    console.log(this.props.data.asciidoc.pageAttributes.image)
     return (
-      <Layout>
-        <h1>{this.props.data.asciidoc.document.title} </h1>
-        {this.props.data.asciidoc.author && (
-          <table>
-            <thead>
-            <tr>
-              <td colSpan="2">Author metadata</td>
-            </tr>
-            </thead>
-            <tbody>
-            <tr>
-              <th>author.fullName</th>
-              <td>{this.props.data.asciidoc.author.fullName}</td>
-            </tr>
-            <tr>
-              <th>author.firstName</th>
-              <td>{this.props.data.asciidoc.author.firstName}</td>
-            </tr>
-            <tr>
-              <th>author.lastName</th>
-              <td>{this.props.data.asciidoc.author.lastName}</td>
-            </tr>
-            <tr>
-              <th>author.middleName</th>
-              <td>{this.props.data.asciidoc.author.middleName}</td>
-            </tr>
-            <tr>
-              <th>author.authorInitials</th>
-              <td>{this.props.data.asciidoc.author.authorInitials}</td>
-            </tr>
-            <tr>
-              <th>author.email</th>
-              <td>{this.props.data.asciidoc.author.email}</td>
-            </tr>
-            </tbody>
-          </table>
-        )}
-        {this.props.data.asciidoc.revision && (
-          <table>
-            <thead>
-            <tr>
-              <td colSpan="2">Revision metadata</td>
-            </tr>
-            </thead>
-            <tbody>
-            <tr>
-              <th>revision.date</th>
-              <td>{this.props.data.asciidoc.revision.date}</td>
-            </tr>
-            <tr>
-              <th>revision.number</th>
-              <td>{this.props.data.asciidoc.revision.number}</td>
-            </tr>
-            <tr>
-              <th>revision.remark</th>
-              <td>{this.props.data.asciidoc.revision.remark}</td>
-            </tr>
-            </tbody>
-          </table>
-        )}
-        <div
-          dangerouslySetInnerHTML={{ __html: this.props.data.asciidoc.html }}
-        />
-      </Layout>
+      <Box
+        padding={0}
+        display={"flex"}
+        flexDirection={"column"}
+      >
+        <Box
+          display={"flex"}
+          flexDirection={"column"}
+          alignItems={'center'}
+          justifyContent={'center'}
+          padding={10}
+          sx={{
+            backgroundImage: 'url("../../marek-szturc-2s3fI3M1lO0-unsplash.jpg")',
+            backgroundRepeat: 'no-repeat',
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+          }}
+        >
+          <Box sx={{ paddingTop: 8 }}>
+            <img src={"../../" + this.props.data.asciidoc.pageAttributes.image}
+                 alt={"Contributor avatar"}
+                 width={350}
+                 height={350}
+                 style={{objectFit: "cover", borderRadius: "50%"}}
+            />
+          </Box>
+        </Box>
+        <Box padding={'32px 160px'}>
+          <Link style={{ textDecoration: `none` }} to="/">
+            <Stack direction={"row"} gap={1}>
+              <ArrowBackIcon />
+              <Typography>Back to Spotlight</Typography>
+            </Stack>
+          </Link>
+          <Box sx={{paddingBottom: 2}}>
+            <Typography variant="h5" fontweight={500} textAlign={"center"}>
+              Contributor Spotlight
+            </Typography>
+          </Box>
+          <Box sx={{paddingBottom: 1.5}}>
+            <Typography variant="h4" fontWeight={700} textAlign={"center"} color={"#0096FF"}>
+              {this.props.data.asciidoc.document.title}
+            </Typography>
+            <Typography variant={"h5"} textAlign={"center"} color={"#0096FF"}>
+              {this.props.data.asciidoc.pageAttributes.pronouns}
+            </Typography>
+          </Box>
+          <Box display={"flex"} alignItems={"center"} justifyContent={"center"} gap={1} sx={{paddingBottom: 2}}>
+            <LinkedInIcon />
+            <TwitterIcon />
+            <GitHubIcon />
+            <AlternateEmailIcon />
+          </Box>
+          <Box
+            dangerouslySetInnerHTML={{ __html: this.props.data.asciidoc.html }}
+          />
+        </Box>
+      </Box>
     )
   }
 }
 
-export default Article
+export default ContributorDetails
 
 export const pageQuery = graphql`
   query($id: String!) {
@@ -97,6 +96,16 @@ export const pageQuery = graphql`
         middleName
         authorInitials
         email
+      }
+      pageAttributes {
+        name
+        pronouns
+        location
+        linkedin
+        twitter
+        github
+        email
+        image
       }
     }
   }

@@ -16,8 +16,8 @@ module.exports = {
   }, {
     resolve: `gatsby-source-filesystem`,
     options: {
-      name: `pages`,
-      path: `${__dirname}/src`,
+      name: `contributors`,
+      path: `src/pages`,
     },
   }, {
     resolve: 'gatsby-plugin-manifest',
@@ -33,6 +33,14 @@ module.exports = {
       resolve: `gatsby-plugin-typography`,
       options: {
         pathToConfigModule: `src/utils/typography`,
+      },
+    },
+    {
+      resolve: `gatsby-transformer-asciidoc`,
+      options: {
+        attributes: {
+          imagesdir: '/static@',
+        },
       },
     },
   ]

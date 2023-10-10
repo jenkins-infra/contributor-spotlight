@@ -1,3 +1,4 @@
+import { Box, Typography } from "@mui/material"
 import React from 'react'
 import typography from "../utils/typography"
 import { Link } from "gatsby";
@@ -16,11 +17,6 @@ class DefaultLayout extends React.Component {
           paddingRight: rhythm(3 / 4),
         }}
       >
-        <Link style={{ textDecoration: `none` }} to="/">
-          <h3 style={{ color: `tomato`, marginBottom: rhythm(1.5) }}>
-            Example of using Asciidoc with a Gatsby site
-          </h3>
-        </Link>
         {this.props.children}
       </div>
     )

@@ -31,7 +31,6 @@ const IndexPage = () => {
     )
   }
 
-
   const ContributorCards = Array(12).fill(contributorCard()).map((card, idx) => {
     return (
       <React.Fragment key={idx}>
