@@ -38,6 +38,8 @@ exports.createPages = ({ graphql, actions }) => {
                 github
                 email
                 image
+                featured
+                intro
               }
             }
           }
