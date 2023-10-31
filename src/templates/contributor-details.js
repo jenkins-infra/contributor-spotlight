@@ -6,10 +6,10 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import AlternateEmailIcon from '@mui/icons-material/AlternateEmail';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
+import "../styles/contributor-details.css";
 
 class ContributorDetails extends React.Component {
   render() {
-    console.log(this.props.data.asciidoc.pageAttributes.image)
     return (
       <Box
         padding={0}
