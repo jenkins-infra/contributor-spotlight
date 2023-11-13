@@ -61,10 +61,9 @@ Jenkins has helped me automate tasks, allowing me to spend my time and energy on
 
 The Jenkins project has existed for almost a decade, involving components created around that time that are still being maintained and developed.
 Jenkins is great at reforging itself, especially in code.
-Constant UI/UX improvements over the years or adapting new technologies, like Java, is great to see.
+Constant UI/UX improvements over the years is great to see.
 
-The connection with the community must be highlighted.
-Keeping up with the times is a must.
+The connection with the community is a keypoint when it comes to running a successful open source project.
 Hence, I value the ease of accessibility of the project's chat channels and community forums a lot.
 I greatly appreciate the opportunity to connect with other members of the community with such ease.
 
