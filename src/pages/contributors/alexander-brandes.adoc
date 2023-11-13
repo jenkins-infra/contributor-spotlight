@@ -9,9 +9,9 @@
 :page-location: Kassel, Germany
 :page-firstcommit: 2019
 :page-featured: true
-:page-intro: Alexander Brandes is an open-source contributor and maintainer and has serves on the Jenkins governance board. He has made contributions to multiple aspects of the Jenkins project including Jenkins core, multiple plugins, weekly and long term support releases, and the community.
+:page-intro: Alexander Brandes is an open-source contributor and maintainer and serves on the Jenkins governance board. He has made contributions to multiple aspects of the Jenkins project including Jenkins Core, multiple plugins, Weekly and Long Term Support releases, and the community.
 
-When he is not pursuing open-source endeavors, Alexander is a passionate musician and has played the trumpet for more than 15 years, primarily playing jazz and film music. In addition to being the lead trumpet in a band, he also teaches beginners how to play an instrument.
+When he is not pursuing open-source endeavors, Alexander is a passionate musician and has been playing the trumpet for more than 15 years, primarily playing jazz and film music. In addition to being the lead trumpet in a band, he also teaches beginners how to play an instrument.
 
 == What is your background prior to contributing to Jenkins?
 
@@ -20,7 +20,7 @@ Eventually, we created our own Minecraft server without any clue about what we w
 The game is written in Java, and can be modified or extended with plugins.
 Even though we weren't fully aware of what we were doing, we had a great time with writing our first plugin.
 It wasn't any good, considering what I know now, but the few people who played on the server liked it a lot, which still means a lot to me almost a decade later.
-In 2020, we had more than 5k concurrent players every day and grew a discord community made up of around ~250,000 active members, becoming one of the larger Minecraft servers worldwide.
+In 2020, we had more than 5k concurrent players every day and grew a Discord community made up of around ~250,000 active members, becoming one of the largest Minecraft servers worldwide.
 
 Ultimately, this hobby project shaped a major part of me over the past decade.
 Throughout the years, I continued learning more about Java, containers, and networking as the single server evolved into a continuously growing network.
