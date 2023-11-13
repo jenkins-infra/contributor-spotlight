@@ -1,7 +1,9 @@
 = Alexander Brandes
 :page-name: Alexander Brandes
+:page-linkedin: 
 :page-twitter: NotMyFault_OG
 :page-github: NotMyFault
+:page-email: 
 :page-image: avatar/alexander-brandes.jpg
 :page-pronouns: He/Him
 :page-location: Kassel, Germany
