@@ -42,5 +42,8 @@
     "typography": "^0.16.24",
     "typography-breakpoint-constants": "^0.16.19"
   },
+  "overrides": {
+    "axios": "^1.6.2"
+  },
   "license": "MIT"
 }
