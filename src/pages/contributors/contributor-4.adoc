@@ -2,8 +2,8 @@
 :page-name: Mark Jenkins
 :page-linkedin: mark-jenkins
 :page-twitter: markjenkins
-:page-github: mark-jenkins
-:page-email: mark.jenkins@cloudbees.com
+:page-github:
+:page-email:
 :page-image: avatar/stephanie-liverani-Zz5LQe-VSMY-unsplash.jpg
 :page-pronouns: They/them
 :page-location: San Francisco, CA, USA

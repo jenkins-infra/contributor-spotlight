@@ -67,10 +67,14 @@ class ContributorDetails extends React.Component {
             </Typography>
           </Box>
           <Box display={"flex"} alignItems={"center"} justifyContent={"center"} gap={1} sx={{paddingBottom: 2}}>
-            <Link to={`https://www.linkedin.com/in/${this.props.data.asciidoc.pageAttributes.linkedin}`}><LinkedInIcon /></Link>
-            <Link to={`https://twitter.com/${this.props.data.asciidoc.pageAttributes.twitter}`}><TwitterIcon /></Link>
-            <Link to={`https://github.com/${this.props.data.asciidoc.pageAttributes.github}`}><GitHubIcon /></Link>
-            <Link to={`mailto:${this.props.data.asciidoc.pageAttributes.email}`}><AlternateEmailIcon /></Link>
+            {this.props.data.asciidoc.pageAttributes.linkedin !== ""
+              && <Link to={`https://www.linkedin.com/in/${this.props.data.asciidoc.pageAttributes.linkedin}`}><LinkedInIcon/></Link>}
+            {this.props.data.asciidoc.pageAttributes.twitter !== ""
+              && <Link to={`https://twitter.com/${this.props.data.asciidoc.pageAttributes.twitter}`}><TwitterIcon/></Link>}
+            {this.props.data.asciidoc.pageAttributes.github !== ""
+              && <Link to={`https://github.com/${this.props.data.asciidoc.pageAttributes.github}`}><GitHubIcon/></Link>}
+            {this.props.data.asciidoc.pageAttributes.email !== ""
+              && <Link to={`mailto:${this.props.data.asciidoc.pageAttributes.email}`}><AlternateEmailIcon/></Link>}
           </Box>
           <Box sx={{ my: 2 }}>
             <Typography>{this.props.data.asciidoc.pageAttributes.intro}</Typography>
