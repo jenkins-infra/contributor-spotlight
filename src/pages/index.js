@@ -17,7 +17,7 @@ const IndexPage = (props) => {
         >
           <Box>
             <img
-              src={"avatar/stephanie-liverani-Zz5LQe-VSMY-unsplash.jpg"}
+              src={contributor.node.pageAttributes.image}
               alt={"Contributor avatar"}
               width={250}
               height={250}
@@ -105,7 +105,7 @@ const IndexPage = (props) => {
                   paddingLeft={2}
                   paddingRight={2}
                 >
-                  <img src={"avatar/stephanie-liverani-Zz5LQe-VSMY-unsplash.jpg"}
+                  <img src={contributor.node.pageAttributes.image}
                        alt={"Featured contributor avatar"}
                        width={350}
                        height={350}

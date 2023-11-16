@@ -8,7 +8,7 @@
 :page-pronouns: They/them
 :page-location: San Francisco, CA, USA
 :page-firstcommit: June 2018
-:page-featured: true
+:page-featured: false
 :page-intro: Sarah Jenkins is a passionate open-source enthusiast with a knack for streamlining software development processes. Hailing from the bustling tech hub of Silicon Valley, Sarah's journey into the world of Jenkins began with a simple curiosity that soon evolved into an unwavering commitment to the project.
 
 With a degree in Computer Science from Stanford University, Sarah possesses a strong technical foundation. Her day job as a DevOps engineer at a leading tech company provides her with real-world insights into the challenges developers face. She seamlessly blends her professional expertise with her fervor for open-source collaboration.
