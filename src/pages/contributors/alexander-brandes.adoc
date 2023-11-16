@@ -1,0 +1,81 @@
+= Alexander Brandes
+:page-name: Alexander Brandes
+:page-linkedin: 
+:page-twitter: NotMyFault_OG
+:page-github: NotMyFault
+:page-email: 
+:page-image: avatar/alexander-brandes.jpg
+:page-pronouns: He/Him
+:page-location: Kassel, Germany
+:page-firstcommit: 2019
+:page-featured: true
+:page-intro: Alexander Brandes is an open-source contributor and maintainer and serves on the Jenkins governance board. He has made contributions to multiple aspects of the Jenkins project including Jenkins Core, multiple plugins, weekly and Long Term Support releases, and the community.
+
+When he is not pursuing open-source endeavors, Alexander is a passionate musician and has been playing the trumpet for more than 15 years, primarily playing jazz and film music. In addition to being the lead trumpet in a band, he also teaches beginners how to play an instrument.
+
+== What is your background prior to contributing to Jenkins?
+
+When I was 13, my friends and I discovered the sandbox game _Minecraft_.
+Eventually, we created our own Minecraft server without any clue about what we were doing.
+The game is written in Java, and can be modified or extended with plugins.
+Even though we weren't fully aware of what we were doing, we had a great time with writing our first plugin.
+It wasn't any good, considering what I know now, but the few people who played on the server liked it a lot, which still means a lot to me almost a decade later.
+In 2020, we had more than 5k concurrent players every day and grew a Discord community made up of around ~250,000 active members, becoming one of the largest Minecraft servers worldwide.
+
+Ultimately, this hobby project shaped a major part of me over the past decade.
+Throughout the years, I continued learning more about Java, containers, and networking as the single server evolved into a continuously growing network.
+Everything I needed to learn, I had to teach myself since I had no technical background at all.
+The knowledge acquired helped me tremendously when getting into open source and development. 
+I still enjoy looking back at what started as a small project and turned into something thousands of people have a great time on every day.
+It is absolutely inspiring for me to see.
+
+Before I started contributing to Jenkins, I had already contributed to smaller open-source projects.
+My contributions primarily focused on Java-based projects and documentation improvements.
+These contributions, paired with continuous learning of new languages and technologies, helped improve my knowledge and advance future contributions.
+
+== How long have you been using Jenkins?
+
+I have been using Jenkins since 2019.
+
+== Why choose Jenkins over other projects?
+
+Jenkins maintains a notably low barrier of entry, which makes it attractive to contribute to, regardless of the massive plugin ecosystem around Jenkins.
+What I liked the most when I started contributing to Jenkins, is that you can start with small pull requests for plugins, and move on to bigger contributions when you feel more comfortable with the codebase and ecosystem.
+
+Moreover, Jenkins is something I had used before I started contributing.
+Therefore, I already had a certain level of experience as an end user, before becoming a contributor.
+That's a key point which made it easier for me to contribute, because I've already been a user of the project, instead of a contributing to a project totally unfamiliar to me.
+
+== What problems has Jenkins solved for you?
+
+When I started using Jenkins initially, its primary task was only building a project.
+Over the years, my needs shifted and so did my setup.
+Nowadays, Jenkins is my all-rounder, handling a multitude of tasks.
+
+I'm using various plugins to deploy artifacts to a Maven repository, aggregate test results and code coverage, and send notifications to Discord when a new build is available.
+Additionally, Jenkins has helped me to test pull requests before they land in the default branch.
+
+Jenkins has helped me automate tasks, allowing me to spend my time and energy on more important tasks.
+
+== Is there an aspect of Jenkins that you're particularly passionate about?
+
+The Jenkins project has existed for almost a decade, involving components created around that time that are still being maintained and developed.
+Jenkins is great at reforging itself, especially in code.
+Constant UI/UX improvements over the years is great to see.
+
+The connection with the community is a key point when it comes to running a successful open source project.
+Hence, I value the ease of accessibility of the project's chat channels and community forums a lot.
+I greatly appreciate the opportunity to readily connect with other members of the community.
+
+== What sort of contributions have felt the most successful or impactful?
+
+The ongoing UI/UX changes in Jenkins core have been a next-level milestone for the project.
+Thanks to the numerous contributors, the Jenkins user interface has improved greatly with a new look and feel.
+Continuous improvements are key to stay in the loop, given how fast-paced technology is.
+Every contributor or maintainer improving Jenkins' UI is a big win.
+
+== Advice for new developers and new members of the open-source community
+
+Asking for help is no crime.
+Don't feel intimidated by the size of projects you want to contribute to.
+Everyone starts little, but asking questions and solving small issues is a great milestone to increase your knowledge and carry further contribution over the finish line.
