@@ -7,13 +7,6 @@ module.exports = {
     siteUrl: `https://www.jenkins.io/`
   },
   plugins: ["gatsby-plugin-image", "gatsby-plugin-sitemap", "gatsby-plugin-sharp", "gatsby-transformer-sharp", {
-    resolve: 'gatsby-source-filesystem',
-    options: {
-      "name": "images",
-      "path": `${__dirname}/src/images/`,
-    },
-    __key: "images"
-  }, {
     resolve: `gatsby-source-filesystem`,
     options: {
       name: `pages`,
