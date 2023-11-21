@@ -44,7 +44,7 @@ What I liked the most when I started contributing to Jenkins, is that you can st
 
 Moreover, Jenkins is something I had used before I started contributing.
 Therefore, I already had a certain level of experience as an end user, before becoming a contributor.
-That's a key point which made it easier for me to contribute, because I've already been a user of the project, instead of a contributing to a project totally unfamiliar to me.
+That's a key point which made it easier for me to contribute, because I've already been a user of the project, instead of contributing to a project totally unfamiliar to me.
 
 == What problems has Jenkins solved for you?
 
