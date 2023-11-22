@@ -10,7 +10,7 @@
   "scripts": {
     "develop": "gatsby develop",
     "start": "gatsby develop",
-    "build": "gatsby build --verbose",
+    "build": "gatsby build",
     "serve": "gatsby serve",
     "info": "gatsby info",
     "clean": "gatsby clean"
