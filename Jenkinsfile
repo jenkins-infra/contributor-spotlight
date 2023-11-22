@@ -59,7 +59,7 @@ pipeline {
       when {
         allOf{
           changeRequest target: 'main'
-          // Only deploy to production from infra.ci.jenkins.io
+          // Only deploy from infra.ci.jenkins.io
           expression { infra.isInfra() }
         }
       }
