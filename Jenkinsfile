@@ -40,8 +40,10 @@ pipeline {
         NODE_ENV = 'development'
       }
       steps {
-        sh 'asdf install'
-        sh 'npm install'
+        sh '''
+        asdf install
+        npm install
+        '''
       }
     }
 
@@ -51,7 +53,10 @@ pipeline {
         NODE_ENV = 'development'
       }
       steps {
-        sh 'npm run build'
+        sh '''
+        npm run info
+        npm run build
+        '''
       }
     }
 
