@@ -4,7 +4,7 @@
 :page-twitter: markjenkins
 :page-github:
 :page-email:
-:page-image: https://www.jenkins.io/images/logos/worldwide/256.png
+:page-image: avatar/buttler_worldwide.png
 :page-pronouns: They/them
 :page-location: San Francisco, CA, USA
 :page-firstcommit: June 2018
