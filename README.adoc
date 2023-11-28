@@ -1,6 +1,6 @@
 # Jenkins Contributor Spotlight
 
-This feature is to showcase the top contributors of the Jenkins project.
+This feature is to showcase the top contributors of the Jenkins project at link:https://contributors.jenkins.io[contributors.jenkins.io]
 
 ## 🚀 Quick start
 
