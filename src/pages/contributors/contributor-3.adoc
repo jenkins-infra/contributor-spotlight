@@ -4,7 +4,7 @@
 :page-twitter: tonyjenkins
 :page-github: tony-jenkins
 :page-email: tony.jenkins@cloudbees.com
-:page-image: avatar/stephanie-liverani-Zz5LQe-VSMY-unsplash.jpg
+:page-image: https://www.jenkins.io/images/logos/actor/256.png
 :page-pronouns: They/them
 :page-location: San Francisco, CA, USA
 :page-firstcommit: June 2018
