@@ -11,20 +11,19 @@ pipeline {
   }
 
   environment {
-    NODE_ENV = 'production'
-    TZ = "UTC"
+    TZ = 'UTC'
     // Amount of available vCPUs, to avoid OOM - https://www.gatsbyjs.com/docs/how-to/performance/resolving-out-of-memory-issues/#try-reducing-the-number-of-cores
     // https://github.com/jenkins-infra/jenkins-infra/tree/production/hieradata/clients/controller.ci.jenkins.io.yaml#L327
-    GATSBY_CPU_COUNT = "4"
+    GATSBY_CPU_COUNT = '4'
   }
 
   stages {
     stage('Check for typos') {
       steps {
         sh '''
-          curl -qsL https://github.com/crate-ci/typos/releases/download/v1.5.0/typos-v1.5.0-x86_64-unknown-linux-musl.tar.gz | tar xvzf - ./typos
-          curl -qsL https://github.com/halkeye/typos-json-to-checkstyle/releases/download/v0.1.1/typos-checkstyle-v0.1.1-x86_64 > typos-checkstyle && chmod 0755 typos-checkstyle
-          ./typos --format json | ./typos-checkstyle - > checkstyle.xml || true
+        curl -qsL https://github.com/crate-ci/typos/releases/download/v1.5.0/typos-v1.5.0-x86_64-unknown-linux-musl.tar.gz | tar xvzf - ./typos
+        curl -qsL https://github.com/halkeye/typos-json-to-checkstyle/releases/download/v0.1.1/typos-checkstyle-v0.1.1-x86_64 > typos-checkstyle && chmod 0755 typos-checkstyle
+        ./typos --format json | ./typos-checkstyle - > checkstyle.xml || true
         '''
       }
       post {
@@ -34,7 +33,7 @@ pipeline {
       }
     }
 
-    stage('Install Dependencies') {
+    stage('Install dependencies') {
       environment {
         NODE_ENV = 'development'
       }
@@ -79,6 +78,31 @@ pipeline {
         }
         failure {
           recordDeployment('jenkins-infra', 'contributor-spotlight', pullRequest.head, 'failure', "https://deploy-preview-${CHANGE_ID}--contributor-spotlight.netlify.app")
+        }
+      }
+    }
+
+    stage('Deploy to production') {
+      when {
+        allOf{
+          expression { env.BRANCH_IS_PRIMARY }
+          // Only deploy from infra.ci.jenkins.io
+          expression { infra.isInfra() }
+        }
+      }
+      environment {
+        NODE_ENV = 'production'
+        GATSBY_MATOMO_SITE_URL = 'https://jenkins-matomo.do.g4v.dev'
+        GATSBY_MATOMO_SITE_ID = '4'
+      }
+      steps {
+        withCredentials([
+          string(credentialsId: 'contributors-jenkins-io-fileshare-sas-querystring', variable: 'FILESHARE_QUERYSTRING')
+        ]) {
+          sh '''
+          npm run build
+          azcopy sync --recursive=true --delete-destination=true ./public/ "https://contributors.jenkinsio.file.core.windows.net/contributors-jenkins-io/?${FILESHARE_QUERYSTRING}"
+          '''
         }
       }
     }
