@@ -101,7 +101,7 @@ pipeline {
         ]) {
           sh '''
           npm run build
-          azcopy sync --recursive=true --delete-destination=true ./public/ "https://contributors.jenkinsio.file.core.windows.net/contributors-jenkins-io/?${FILESHARE_QUERYSTRING}"
+          azcopy sync --recursive=true --delete-destination=true ./public/ "https://contributorsjenkinsio.file.core.windows.net/contributors-jenkins-io/?${FILESHARE_QUERYSTRING}"
           '''
         }
       }
