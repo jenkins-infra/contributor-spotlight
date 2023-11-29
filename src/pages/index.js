@@ -105,8 +105,8 @@ const IndexPage = (props) => {
                   direction={"column"}
                   justifyContent={"center"}
                   alignItems={"center"}
-                  paddingTop={5}
-                  paddingBottom={5}
+                  paddingTop={isMobile ? 0 : 5}
+                  paddingBottom={isMobile ? 0 : 5}
                   paddingLeft={2}
                   paddingRight={2}
                 >
