@@ -112,7 +112,7 @@ const IndexPage = (props) => {
                 >
                   <img src={contributor.node.pageAttributes.image}
                        alt={"Featured contributor avatar"}
-                       width={350}
+                       width={isDesktop ? 350 : 300}
                        height={"auto"}
                        style={{objectFit: "cover", borderRadius: "50%"}}
                   />
