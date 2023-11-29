@@ -164,7 +164,7 @@ const IndexPage = (props) => {
         <Box
           id={"contributor-grid"}
           display={"grid"}
-          gridTemplateColumns={"repeat(3, 1fr)"}
+          gridTemplateColumns={isDesktop ? "repeat(3, 1fr)" : isTablet ? "repeat(2, 1fr)" : "repeat(1, 1fr)"}
           paddingTop={5}
           paddingBottom={5}
         >
