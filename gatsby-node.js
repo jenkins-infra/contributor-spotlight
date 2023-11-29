@@ -52,7 +52,7 @@ exports.createPages = ({ graphql, actions }) => {
     }
 
     // Create Asciidoc pages.
-    const articleTemplate = path.resolve(`./src/templates/contributor-details.js`)
+    const articleTemplate = path.resolve(`./src/templates/contributor-details.jsx`)
     _.each(result.data.allAsciidoc.edges, edge => {
       // Gatsby uses Redux to manage its internal state.
       // Plugins and sites can use functions like "createPage"

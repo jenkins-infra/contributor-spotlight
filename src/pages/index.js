@@ -1,9 +1,16 @@
 import * as React from "react";
 import "../../styles/index.css";
-import {Box, Stack, Typography} from "@mui/material";
+import {Box, Stack, Typography, useTheme} from "@mui/material";
 import {graphql, Link} from 'gatsby';
+import useMediaQuery from '@mui/material/useMediaQuery';
+
 
 const IndexPage = (props) => {
+  const theme = useTheme();
+  const isDesktop = useMediaQuery(theme.breakpoints.up('lg'));
+  const isTablet = useMediaQuery(theme.breakpoints.between('lg', 'sm'));
+  const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
+
   const { data } = props;
   console.log("edges", data.allAsciidoc.edges);
   const contributors = data.allAsciidoc.edges;
@@ -54,9 +61,7 @@ const IndexPage = (props) => {
           backgroundPosition: 'center',
         }}
       >
-        <Typography variant={"h4"}><strong>Meet the driving forces behind Jenkins</strong></Typography>
-        <Typography variant={"h4"}>as we showcase the top contributors shaping the</Typography>
-        <Typography variant={"h4"}>future of continuous integration and delivery</Typography>
+        <Typography variant={"h4"} textAlign={"center"}><strong>Meet the driving forces behind Jenkins</strong><br/>as we showcase the top contributors shaping the future of continuous integration and delivery</Typography>
         <Box sx={{ paddingTop: 8 }}>
           <img src={'jenkins.png'} alt={"Jenkins logo"}/>
         </Box>
@@ -85,9 +90,9 @@ const IndexPage = (props) => {
             <Link to={contributor.node.fields.slug} style={{ textDecoration:'none', color: '#000000' }}>
               <Stack
                 id={"featured-contributor"}
-                direction={"row"}
-                minWidth={1100}
-                height={500}
+                direction={!isMobile ? "row" : "column"}
+                minWidth={isDesktop ? 1100 : isTablet ? 520 : 328 }
+                height={"auto"}
                 padding={5}
                 sx={{ borderRadius: 5, backgroundImage: "linear-gradient(180deg, #FFFFFF, #DAD1C6);" }}
                 justifyContent={"flex-start"}
@@ -100,15 +105,15 @@ const IndexPage = (props) => {
                   direction={"column"}
                   justifyContent={"center"}
                   alignItems={"center"}
-                  paddingTop={5}
-                  paddingBottom={5}
+                  paddingTop={isMobile ? 0 : 5}
+                  paddingBottom={isMobile ? 0 : 5}
                   paddingLeft={2}
                   paddingRight={2}
                 >
                   <img src={contributor.node.pageAttributes.image}
                        alt={"Featured contributor avatar"}
-                       width={350}
-                       height={350}
+                       width={isDesktop ? 350 : 300}
+                       height={"auto"}
                        style={{objectFit: "cover", borderRadius: "50%"}}
                   />
                 </Stack>
@@ -159,7 +164,7 @@ const IndexPage = (props) => {
         <Box
           id={"contributor-grid"}
           display={"grid"}
-          gridTemplateColumns={"repeat(3, 1fr)"}
+          gridTemplateColumns={isDesktop ? "repeat(3, 1fr)" : isTablet ? "repeat(2, 1fr)" : "repeat(1, 1fr)"}
           paddingTop={5}
           paddingBottom={5}
         >
