@@ -53,7 +53,7 @@ const IndexPage = (props) => {
         flexDirection={"column"}
         alignItems={'center'}
         justifyContent={'flex-start'}
-        padding={10}
+        padding={isMobile ? 5 : 10}
         sx={{
           backgroundImage: 'url("marek-szturc-2s3fI3M1lO0-unsplash.jpg")',
           backgroundRepeat: 'no-repeat',
@@ -73,8 +73,8 @@ const IndexPage = (props) => {
         justifyContent={'flex-start'}
         paddingTop={5}
         paddingBottom={10}
-        paddingLeft={10}
-        paddingRight={10}
+        paddingLeft={isMobile ? 5: 10}
+        paddingRight={isMobile ? 5: 10}
       >
         <Box
           sx={{

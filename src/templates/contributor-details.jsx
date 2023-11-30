@@ -27,7 +27,7 @@ function ContributorDetails(props) {
         flexDirection={"column"}
         alignItems={'center'}
         justifyContent={'center'}
-        padding={10}
+        padding={isMobile ? 5: 10}
         sx={{
           backgroundImage: 'url("../../../marek-szturc-2s3fI3M1lO0-unsplash.jpg")',
           backgroundRepeat: 'no-repeat',
