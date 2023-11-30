@@ -19,7 +19,7 @@ const IndexPage = (props) => {
     return (
       <Link to={contributor.node.fields.slug} style={{ textDecoration:'none', color: '#000000' }}>
         <Box
-          padding={5}
+          padding={isDesktop ? 5 : 2}
           key={idx}
         >
           <Box>
