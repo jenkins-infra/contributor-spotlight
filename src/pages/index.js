@@ -149,6 +149,16 @@ const IndexPage = (props) => {
                   <Box
                     marginTop={1}
                     marginBottom={1}
+                    display={"flex"}
+                    flexDirection={"column"}
+                    width={"100%"}
+                  >
+                    <Typography variant={"h5"} textAlign={isDesktop ? "left" : "center"}>Date Published: <br/>{contributor.node.pageAttributes.datepublished}</Typography>
+                  </Box>
+
+                  <Box
+                    marginTop={1}
+                    marginBottom={1}
                   >
                     <Typography
                       sx={{
@@ -202,6 +212,7 @@ export const pageQuery = graphql`
           slug
         }
         pageAttributes {
+          datepublished
           name
           pronouns
           location
