@@ -90,7 +90,7 @@ const IndexPage = (props) => {
             <Link to={contributor.node.fields.slug} style={{ textDecoration:'none', color: '#000000' }}>
               <Stack
                 id={"featured-contributor"}
-                direction={!isMobile ? "row" : "column"}
+                direction={isDesktop ? "row" : "column"}
                 minWidth={isDesktop ? 1100 : isTablet ? 520 : 328 }
                 height={"auto"}
                 padding={isMobile ? 2 : 5}
@@ -127,17 +127,23 @@ const IndexPage = (props) => {
                   <Box
                     marginTop={1}
                     marginBottom={1}
+                    display={"flex"}
+                    flexDirection={"column"}
+                    width={"100%"}
                   >
-                    <Typography variant={"h4"} textAlign={"center"}>{contributor.node.pageAttributes.name}</Typography>
-                    <Typography variant={"h5"} textAlign={"center"}>{contributor.node.pageAttributes.pronouns}</Typography>
+                    <Typography variant={"h4"} textAlign={isDesktop ? "left" : "center"}>{contributor.node.pageAttributes.name}</Typography>
+                    <Typography variant={"h5"} textAlign={isDesktop ? "left" : "center"}>{contributor.node.pageAttributes.pronouns}</Typography>
                   </Box>
 
                   <Box
                     marginTop={1}
                     marginBottom={1}
+                    display={"flex"}
+                    flexDirection={"column"}
+                    width={"100%"}
                   >
-                    <Typography variant={"h5"} textAlign={"center"}>{contributor.node.pageAttributes.location}</Typography>
-                    <Typography variant={"h5"} textAlign={"center"}>First Commit: {contributor.node.pageAttributes.firstcommit}</Typography>
+                    <Typography variant={"h5"} textAlign={isDesktop ? "left" : "center"}>{contributor.node.pageAttributes.location}</Typography>
+                    <Typography variant={"h5"} textAlign={isDesktop ? "left" : "center"}>First Commit: {contributor.node.pageAttributes.firstcommit}</Typography>
                   </Box>
 
                   <Box
@@ -164,7 +170,7 @@ const IndexPage = (props) => {
         <Box
           id={"contributor-grid"}
           display={"grid"}
-          gridTemplateColumns={isDesktop ? "repeat(3, 1fr)" : isTablet ? "repeat(2, 1fr)" : "repeat(1, 1fr)"}
+          gridTemplateColumns={isDesktop ? "repeat(3, 1fr)" : isMobile ? "repeat(1, 1fr)" : "repeat(2, 1fr)"}
           paddingTop={5}
           paddingBottom={5}
         >
