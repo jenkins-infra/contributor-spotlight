@@ -37,9 +37,9 @@ const IndexPage = (props) => {
             flexDirection={"column"}
             alignItems={'center'}
           >
-            <Typography variant={"h6"}>{contributor.node.pageAttributes.name}</Typography>
-            <Typography variant={"body2"}>{contributor.node.pageAttributes.pronouns}</Typography>
-            <Typography variant={"body1"}>{contributor.node.pageAttributes.location}</Typography>
+            <Typography variant={"h6"} textAlign={"center"}>{contributor.node.pageAttributes.name}</Typography>
+            <Typography variant={"body2"} textAlign={"center"}>{contributor.node.pageAttributes.pronouns}</Typography>
+            <Typography variant={"body1"} textAlign={"center"}>{contributor.node.pageAttributes.location}</Typography>
           </Box>
         </Box>
       </Link>
@@ -61,7 +61,7 @@ const IndexPage = (props) => {
           backgroundPosition: 'center',
         }}
       >
-        <Typography variant={"h4"} textAlign={"center"}><strong>Meet the driving forces behind Jenkins</strong><br/>as we showcase the top contributors shaping the future of continuous integration and delivery</Typography>
+        <Typography variant={isMobile ? "h5" : "h4"} textAlign={"center"}><strong>Meet the driving forces behind Jenkins</strong><br/>as we showcase the top contributors shaping the future of continuous integration and delivery</Typography>
         <Box sx={{ paddingTop: 8 }}>
           <img src={'jenkins.png'} alt={"Jenkins logo"}/>
         </Box>
@@ -82,7 +82,7 @@ const IndexPage = (props) => {
             paddingBottom: 5
           }}
         >
-          <Typography variant={"h5"}><strong>Contributor Spotlight</strong></Typography>
+          <Typography variant={"h5"} textAlign={"center"}><strong>Contributor Spotlight</strong></Typography>
         </Box>
         {contributors.map((contributor, idx) => {
         if (contributor.node.pageAttributes.featured === 'true') {
@@ -93,7 +93,7 @@ const IndexPage = (props) => {
                 direction={!isMobile ? "row" : "column"}
                 minWidth={isDesktop ? 1100 : isTablet ? 520 : 328 }
                 height={"auto"}
-                padding={5}
+                padding={isMobile ? 2 : 5}
                 sx={{ borderRadius: 5, backgroundImage: "linear-gradient(180deg, #FFFFFF, #DAD1C6);" }}
                 justifyContent={"flex-start"}
                 alignItems={'center'}
@@ -112,8 +112,8 @@ const IndexPage = (props) => {
                 >
                   <img src={contributor.node.pageAttributes.image}
                        alt={"Featured contributor avatar"}
-                       width={isDesktop ? 350 : 300}
-                       height={"auto"}
+                       width={isDesktop ? 350 : isTablet ? 300 : 250}
+                       height={isDesktop? 350 : isTablet? 300 : 250}
                        style={{objectFit: "cover", borderRadius: "50%"}}
                   />
                 </Stack>
@@ -128,16 +128,16 @@ const IndexPage = (props) => {
                     marginTop={1}
                     marginBottom={1}
                   >
-                    <Typography variant={"h4"}>{contributor.node.pageAttributes.name}</Typography>
-                    <Typography variant={"h5"}>{contributor.node.pageAttributes.pronouns}</Typography>
+                    <Typography variant={"h4"} textAlign={"center"}>{contributor.node.pageAttributes.name}</Typography>
+                    <Typography variant={"h5"} textAlign={"center"}>{contributor.node.pageAttributes.pronouns}</Typography>
                   </Box>
 
                   <Box
                     marginTop={1}
                     marginBottom={1}
                   >
-                    <Typography variant={"h5"}>{contributor.node.pageAttributes.location}</Typography>
-                    <Typography variant={"h5"}>First Commit: {contributor.node.pageAttributes.firstcommit}</Typography>
+                    <Typography variant={"h5"} textAlign={"center"}>{contributor.node.pageAttributes.location}</Typography>
+                    <Typography variant={"h5"} textAlign={"center"}>First Commit: {contributor.node.pageAttributes.firstcommit}</Typography>
                   </Box>
 
                   <Box

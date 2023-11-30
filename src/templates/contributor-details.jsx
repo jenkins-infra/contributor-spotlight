@@ -16,7 +16,6 @@ function ContributorDetails(props) {
   const isTablet = useMediaQuery(theme.breakpoints.between('lg', 'sm'));
   const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
 
-
   return (
     <Box
       padding={0}
@@ -39,8 +38,8 @@ function ContributorDetails(props) {
         <Box sx={{ paddingTop: 8 }}>
           <img src={"../../../" + props.data.asciidoc.pageAttributes.image}
                alt={"Contributor avatar"}
-               width={!isMobile ? 350 : 300}
-               height={"auto"}
+               width={isDesktop ? 350 : isTablet ? 300 : 250}
+               height={isDesktop ? 350 : isTablet ? 300 : 250}
                style={{objectFit: "cover", borderRadius: "50%"}}
           />
         </Box>
