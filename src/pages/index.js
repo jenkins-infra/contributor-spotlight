@@ -19,7 +19,7 @@ const IndexPage = (props) => {
     return (
       <Link to={contributor.node.fields.slug} style={{ textDecoration:'none', color: '#000000' }}>
         <Box
-          padding={5}
+          padding={isDesktop ? 5 : 2}
           key={idx}
         >
           <Box>
@@ -149,6 +149,9 @@ const IndexPage = (props) => {
                   <Box
                     marginTop={1}
                     marginBottom={1}
+                    display={"flex"}
+                    flexDirection={"column"}
+                    width={"100%"}
                   >
                     <Typography
                       sx={{
