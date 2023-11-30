@@ -27,7 +27,7 @@ function ContributorDetails(props) {
         flexDirection={"column"}
         alignItems={'center'}
         justifyContent={'center'}
-        padding={10}
+        padding={isMobile ? 5: 10}
         sx={{
           backgroundImage: 'url("../../../marek-szturc-2s3fI3M1lO0-unsplash.jpg")',
           backgroundRepeat: 'no-repeat',
@@ -35,7 +35,7 @@ function ContributorDetails(props) {
           backgroundPosition: 'center',
         }}
       >
-        <Box sx={{ paddingTop: 8 }}>
+        <Box sx={{ paddingTop: isMobile ? 5 : 8}}>
           <img src={"../../../" + props.data.asciidoc.pageAttributes.image}
                alt={"Contributor avatar"}
                width={isDesktop ? 350 : isTablet ? 300 : 250}
