@@ -29,6 +29,7 @@ exports.createPages = ({ graphql, actions }) => {
                 slug
               }
               pageAttributes {
+                datepublished
                 name
                 pronouns
                 location

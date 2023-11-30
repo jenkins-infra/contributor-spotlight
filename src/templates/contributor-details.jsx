@@ -72,6 +72,11 @@ function ContributorDetails(props) {
             {"First Commit: " + props.data.asciidoc.pageAttributes.firstcommit ?? "Unknown"}
           </Typography>
         </Box>
+        <Box sx={{paddingBottom: 1.5}}>
+          <Typography variant={"h6"} textAlign={"center"}>
+            {"Date Published: " + props.data.asciidoc.pageAttributes.datepublished}
+          </Typography>
+        </Box>
         <Box display={"flex"} alignItems={"center"} justifyContent={"center"} gap={1} sx={{paddingBottom: 2}}>
           {props.data.asciidoc.pageAttributes.linkedin !== ""
             && <Link to={`https://www.linkedin.com/in/${props.data.asciidoc.pageAttributes.linkedin}`}><LinkedInIcon/></Link>}
@@ -105,6 +110,7 @@ export const pageQuery = graphql`
         main
       }
       pageAttributes {
+        datepublished
         name
         pronouns
         location
