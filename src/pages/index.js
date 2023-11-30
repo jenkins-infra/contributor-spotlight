@@ -122,7 +122,7 @@ const IndexPage = (props) => {
                   direction={"column"}
                   justifyContent={"center"}
                   alignItems={"flex-start"}
-                  padding={5}
+                  padding={isMobile ? 3 : 5}
                 >
                   <Box
                     marginTop={1}
