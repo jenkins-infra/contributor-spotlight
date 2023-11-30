@@ -35,7 +35,7 @@ function ContributorDetails(props) {
           backgroundPosition: 'center',
         }}
       >
-        <Box sx={{ paddingTop: 8 }}>
+        <Box sx={{ paddingTop: isMobile ? 5 : 8}}>
           <img src={"../../../" + props.data.asciidoc.pageAttributes.image}
                alt={"Contributor avatar"}
                width={isDesktop ? 350 : isTablet ? 300 : 250}
