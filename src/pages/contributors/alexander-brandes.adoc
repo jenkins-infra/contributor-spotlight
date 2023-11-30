@@ -8,6 +8,7 @@
 :page-pronouns: He/Him
 :page-location: Kassel, Germany
 :page-firstcommit: 2019
+:page-datepublished: 2023-11-29
 :page-featured: true
 :page-intro: Alexander Brandes is an open-source contributor and maintainer and serves on the Jenkins governance board. He has made contributions to multiple aspects of the Jenkins project including Jenkins Core, multiple plugins, weekly and Long Term Support releases, and the community.
 
