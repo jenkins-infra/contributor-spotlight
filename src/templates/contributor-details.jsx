@@ -38,8 +38,8 @@ function ContributorDetails(props) {
         <Box sx={{ paddingTop: 8 }}>
           <img src={"../../../" + props.data.asciidoc.pageAttributes.image}
                alt={"Contributor avatar"}
-               width={isMobile ? 300 : 350}
-               height={isMobile ? 300 : 350}
+               width={isDesktop ? 350 : isTablet ? 300 : 250}
+               height={isDesktop ? 350 : isTablet ? 300 : 250}
                style={{objectFit: "cover", borderRadius: "50%"}}
           />
         </Box>
