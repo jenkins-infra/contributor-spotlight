@@ -4,7 +4,7 @@
 :page-twitter: 
 :page-github: krisstern
 :page-email: 
-:page-image: avatar/kris-stern.jpg
+:page-image: avatar/kris-stern.png
 :page-pronouns: They/Theirs
 :page-location: Hong Kong SAR, China
 :page-firstcommit: 2021
