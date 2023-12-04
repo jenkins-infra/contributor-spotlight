@@ -5,7 +5,7 @@
 :page-github: krisstern
 :page-email: 
 :page-image: avatar/kris-stern.png
-:page-pronouns: They/Theirs
+:page-pronouns: They/Them/Theirs
 :page-location: Hong Kong SAR, China
 :page-firstcommit: 2021
 :page-datepublished: 2023-12-27
