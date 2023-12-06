@@ -5,7 +5,7 @@
 :page-github: NotMyFault
 :page-email: 
 :page-image: avatar/alexander-brandes.png
-:page-pronouns: He/Him
+:page-pronouns: He/Him/His
 :page-location: Kassel, Germany
 :page-firstcommit: 2019
 :page-datepublished: 2023-11-29
