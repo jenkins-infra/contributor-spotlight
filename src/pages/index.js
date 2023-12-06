@@ -78,8 +78,8 @@ const IndexPage = (props) => {
       >
         <Box
           sx={{
-            paddingTop: 5,
-            paddingBottom: 5
+            paddingTop: isDesktop? 5: 2,
+            paddingBottom: isDesktop? 5: 2
           }}
         >
           <Typography variant={"h5"} textAlign={"center"}><strong>Contributor Spotlight</strong></Typography>
@@ -105,8 +105,8 @@ const IndexPage = (props) => {
                   direction={"column"}
                   justifyContent={"center"}
                   alignItems={"center"}
-                  paddingTop={isMobile ? 0 : 5}
-                  paddingBottom={isMobile ? 0 : 5}
+                  paddingTop={isDesktop ? 5 : 2}
+                  paddingBottom={isDesktop ? 5 : 2}
                   paddingLeft={2}
                   paddingRight={2}
                 >
@@ -122,7 +122,7 @@ const IndexPage = (props) => {
                   direction={"column"}
                   justifyContent={"center"}
                   alignItems={"flex-start"}
-                  padding={isMobile ? 3 : 5}
+                  padding={isDesktop? 5 : 2}
                 >
                   <Box
                     marginTop={1}
