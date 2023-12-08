@@ -4,7 +4,6 @@ import {Box, Stack, Typography, useTheme} from "@mui/material";
 import {graphql, Link} from 'gatsby';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import { Helmet } from "react-helmet";
-import { SEO } from "../components/seo";
 
 const IndexPage = (props) => {
   const theme = useTheme();
