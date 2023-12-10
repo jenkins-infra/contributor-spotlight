@@ -4,9 +4,15 @@
 module.exports = {
   siteMetadata: {
     title: `Jenkins Contributor Spotlight`,
-    siteUrl: `https://www.jenkins.io/`
+    siteUrl: `https://www.jenkins.io/`,
+    description: `Jenkins Contributor Spotlight is where we celebrate the contributions of Jenkins community members`,
   },
-  plugins: ["gatsby-plugin-image", "gatsby-plugin-sitemap", "gatsby-plugin-sharp", "gatsby-transformer-sharp", {
+  plugins: [
+    "gatsby-plugin-image",
+    "gatsby-plugin-sitemap",
+    "gatsby-plugin-sharp",
+    "gatsby-transformer-sharp",
+    "gatsby-plugin-react-helmet", {
     resolve: `gatsby-source-filesystem`,
     options: {
       name: `pages`,
@@ -38,3 +44,4 @@ module.exports = {
     },
   ]
 };
+
