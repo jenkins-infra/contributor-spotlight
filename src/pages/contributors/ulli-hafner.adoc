@@ -21,7 +21,7 @@ In his free time, Ulli likes to balance his screen-usage by spending time with h
 I was a software developer and architect, and had never contributed to open source before Jenkins. 
 
 Currently, I am the maintainer of several Jenkins plugins, mostly in the area of build result visualization using modern JS based user interfaces.
-For example, I am the maintainer of the plugin:warnings-ng[Warnings], plugin:code-coverage-api[Code Coverage] and plugin:git-forensics[Git Forensics] plugins, as well as several UI related JS wrapper plugins like plugin:bootstrap5-api[Bootstrap], plugin:prism-api[Prism API], or plugin:echarts-api[ECharts].
+For example, I am the maintainer of the link:https://plugins.jenkins.io/warnings-ng/[Warnings], link:https://plugins.jenkins.io/code-coverage-api/[Code Coverage] and link:https://plugins.jenkins.io/git-forensics/[Git Forensics] plugins, as well as several UI related JS wrapper plugins like link:https://plugins.jenkins.io/bootstrap5-api/[Bootstrap], link:https://plugins.jenkins.io/prism-api/[Prism API], or link:https://plugins.jenkins.io/echarts-api/[ECharts].
 I am a member of the Jenkins UX SIG and the Jenkins Governance Board.
 
 During the day, I am a professor of Software Engineering at the University of Applied Sciences Munich, where I also try to win new Jenkins contributors by letting students develop new features in their student projects and theses.
