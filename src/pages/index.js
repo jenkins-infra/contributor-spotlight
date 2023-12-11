@@ -3,7 +3,7 @@ import "../../styles/index.css";
 import {Box, Stack, Typography, useTheme} from "@mui/material";
 import {graphql, Link} from 'gatsby';
 import useMediaQuery from '@mui/material/useMediaQuery';
-
+import { Helmet } from "react-helmet";
 
 const IndexPage = (props) => {
   const theme = useTheme();
@@ -48,6 +48,10 @@ const IndexPage = (props) => {
 
   return (
     <main>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Jenkins Contributor Spotlight</title>
+      </Helmet>
       <Box
         display={"flex"}
         flexDirection={"column"}
@@ -192,8 +196,6 @@ const IndexPage = (props) => {
 }
 
 export default IndexPage
-
-export const Head = () => <title>Jenkins Contributor Spotlight</title>
 
 export const pageQuery = graphql`
   query{
