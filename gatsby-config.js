@@ -4,7 +4,7 @@
 module.exports = {
   siteMetadata: {
     title: `Jenkins Contributor Spotlight`,
-    siteUrl: `https://www.jenkins.io/`,
+    siteUrl: `https://www.jenkins.io`,
     description: `Jenkins Contributor Spotlight is where we celebrate the contributions of Jenkins community members`,
   },
   plugins: [
