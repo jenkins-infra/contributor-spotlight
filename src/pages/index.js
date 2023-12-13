@@ -63,12 +63,13 @@ const IndexPage = (props) => {
             <Helmet>
                 <meta charSet='utf-8' />
                 <title>Jenkins Contributor Spotlight</title>
-                <meta property='og:image' content='../../../jenkins.png' />
-                <meta property='og:image:width' content='226' />
-                <meta property='og:image:height' content='312' />
+                <meta property='og:image' content='../../../opengraph.png' />
+                <meta property='og:image:width' content='520' />
+                <meta property='og:image:height' content='270' />
                 <meta
                     property='og:description'
-                    content='Jenkins Contributor Spotlight is where we celebrate the contributions of Jenkins community members.'
+                    content='Jenkins Contributor Spotlight is where we celebrate the contributions of Jenkins community members.
+                    We showcase the top contributors shaping the future of continuous integration and delivery.'
                 />
                 <meta
                     property='article:author'
