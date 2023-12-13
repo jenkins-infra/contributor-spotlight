@@ -4,6 +4,7 @@ import { Box, Stack, Typography, useTheme } from '@mui/material';
 import { graphql, Link } from 'gatsby';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import { Helmet } from 'react-helmet';
+import dayjs from 'dayjs';
 
 const IndexPage = (props) => {
     const theme = useTheme();
@@ -62,6 +63,23 @@ const IndexPage = (props) => {
             <Helmet>
                 <meta charSet='utf-8' />
                 <title>Jenkins Contributor Spotlight</title>
+                <meta charSet='utf-8' />
+                <title>{props.data.asciidoc.pageAttributes.name}</title>
+                <meta property='og:image' content="../../../jenkins.png" />
+                <meta property='og:image:width' content='226' />
+                <meta property='og:image:height' content='312' />
+                <meta
+                    property='og:description'
+                    content="Jenkins Contributor Spotlight is where we celebrate the contributions of Jenkins community members."
+                />
+                <meta
+                    property='article:author'
+                    content='Jenkins Copy Editors'
+                />
+                <meta
+                    property='article:published_time'
+                    content={dayjs('2023-11-29T00:00:00.000Z').toISOString()}
+                />
             </Helmet>
             <Box
                 display='flex'
