@@ -9,6 +9,7 @@ import ArrowBackIcon from '@mui/icons-material/ArrowBack'
 import '../styles/contributor-details.css'
 import useMediaQuery from '@mui/material/useMediaQuery'
 import { Helmet } from 'react-helmet'
+import dayjs from 'dayjs'
 
 function ContributorDetails(props) {
     const theme = useTheme()
@@ -23,7 +24,9 @@ function ContributorDetails(props) {
                 <title>{props.data.asciidoc.pageAttributes.name}</title>
                 <meta
                     property='og:image'
-                    content={props.data.asciidoc.pageAttributes.image}
+                    content={
+                        '../../../' + props.data.asciidoc.pageAttributes.image
+                    }
                 />
                 <meta property='og:image:width' content='200' />
                 <meta property='og:image:height' content='200' />
@@ -34,6 +37,16 @@ function ContributorDetails(props) {
                         props.data.asciidoc.pageAttributes.name +
                         '.'
                     }
+                />
+                <meta
+                    property='article:author'
+                    content='Jenkins Copy Editors'
+                />
+                <meta
+                    property='article:published_time'
+                    content={dayjs(
+                        props.data.asciidoc.pageAttributes.datepublished
+                    ).toISOString()}
                 />
             </Helmet>
             <Box padding={0} display='flex' flexDirection='column'>
