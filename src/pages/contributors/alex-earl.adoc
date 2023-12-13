@@ -1,0 +1,55 @@
+= Alex Earl
+:page-name: Alex Earl
+:page-linkedin: 
+:page-twitter: 
+:page-github: slide
+:page-threads: slide_o_mix
+:page-email: 
+:page-image: avatar/alex-earl.jpg
+:page-pronouns: He/Him/His
+:page-location: Chandler, Arizona USA
+:page-firstcommit: 2008
+:page-datepublished: 2023-12-13
+:page-featured: true
+:page-intro: Alex Earl is a software engineer from Chandler, Arizona. He has been using and contributing to Jenkins for the last 15 years, during which he has provided numerous enhancements and changes.
+
+When not pursuing his open-source work, Alex loves spending time with his family, working on tech puzzles, and helping others in any way that he can.
+
+== What is your background prior to contributing to Jenkins?
+
+I was doing C++ and Visual Basic at work, along with a little bit of embedded C development.
+I transitioned to C# from C++/VB in the application I was supporting, and started to pick up more responsibility in the build and deployment area of my group.
+I started using Jenkins to do the build/deployment and moved my group in a much more agile direction, using continuous integration for our testing.
+This led to me looking at the plugin:email-ext[Email Extension] plugin and trying to understand why it wasn't able to do what I wanted it to do.
+I started submitting patches and fixing issues in the plugin to help me in my work.
+The rest, as they say, is history!
+
+== How long have you been using Jenkins?
+
+I have been using Jenkins for the last 15 years.
+
+== Why choose Jenkins over other projects?
+
+Jenkins was, and still is, the best at what it does.
+
+== What problems has Jenkins solved for you?
+
+Jenkins has helped solve lots of problems!
+I had to build and deploy around 50 embedded firmware binaries, several desktop applications, and more.
+Jenkins has helped me streamline this and make solutions that are easy to use, easy to maintain, and powerful!
+
+== Is there an aspect of Jenkins that you're particularly passionate about?
+
+I like to help people resolve issues on the Community channels (link:https://community.jenkins.io/[community.jenkins.io] and link:https://app.gitter.im/#/room/#jenkinsci_jenkins:gitter.im[Matrix]).
+Due to the global reach of Jenkins and the Community channels, we are able to communicate easily and help each other.
+Interacting with people all over the world, learning from them, and helping them solve issues is part of the magical open-source experience.
+
+== What sort of contributions have felt the most successful or impactful?
+
+I have previously maintained and currently maintain plugins that are used by _many_ people.
+It feels good to make an impact by working on something that so many people use.
+
+== Advice for new developers and new members of the open-source community
+
+Just find something that you like (or I guess don't like and want to improve) and go for it.
+There are plenty of issues in Jira and GitHub that need someone to look at them!
