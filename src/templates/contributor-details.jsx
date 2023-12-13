@@ -28,8 +28,8 @@ function ContributorDetails(props) {
                         '../../../' + props.data.asciidoc.pageAttributes.image
                     }
                 />
-                <meta property='og:image:width' content='200' />
-                <meta property='og:image:height' content='200' />
+                <meta property='og:image:width' content='520' />
+                <meta property='og:image:height' content='270' />
                 <meta
                     property='og:description'
                     content={
