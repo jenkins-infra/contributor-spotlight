@@ -32,9 +32,7 @@ module.exports = {
             { props: 'never', children: 'never' },
         ],
         'react/jsx-key': 'error',
-        semi: 'error',
-        'prefer-const': 'error',
         'no-unused-vars': 'off',
         'require-jsdoc': 'off',
     },
-};
+}

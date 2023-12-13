@@ -1,20 +1,20 @@
-import * as React from 'react';
-import '../../styles/index.css';
-import { Box, Stack, Typography, useTheme } from '@mui/material';
-import { graphql, Link } from 'gatsby';
-import useMediaQuery from '@mui/material/useMediaQuery';
-import { Helmet } from 'react-helmet';
-import dayjs from 'dayjs';
+import * as React from 'react'
+import '../../styles/index.css'
+import { Box, Stack, Typography, useTheme } from '@mui/material'
+import { graphql, Link } from 'gatsby'
+import useMediaQuery from '@mui/material/useMediaQuery'
+import { Helmet } from 'react-helmet'
+import dayjs from 'dayjs'
 
 const IndexPage = (props) => {
-    const theme = useTheme();
-    const isDesktop = useMediaQuery(theme.breakpoints.up('lg'));
-    const isTablet = useMediaQuery(theme.breakpoints.between('lg', 'sm'));
-    const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
+    const theme = useTheme()
+    const isDesktop = useMediaQuery(theme.breakpoints.up('lg'))
+    const isTablet = useMediaQuery(theme.breakpoints.between('lg', 'sm'))
+    const isMobile = useMediaQuery(theme.breakpoints.down('sm'))
 
-    const { data } = props;
-    console.log('edges', data.allAsciidoc.edges);
-    const contributors = data.allAsciidoc.edges;
+    const { data } = props
+    console.log('edges', data.allAsciidoc.edges)
+    const contributors = data.allAsciidoc.edges
     const contributorCards = contributors.map((contributor, idx) => {
         if (contributor.node.pageAttributes.featured === 'false') {
             return (
@@ -54,15 +54,20 @@ const IndexPage = (props) => {
                         </Box>
                     </Box>
                 </Link>
-            );
+            )
         }
-    });
+    })
 
     return (
         <main>
             <Helmet>
                 <meta charSet='utf-8' />
                 <title>Jenkins Contributor Spotlight</title>
+                <meta
+                    name='title'
+                    property='og:title'
+                    content='Jenkins Contributor Spotlight'
+                />
                 <meta property='og:image' content='../../../opengraph.png' />
                 <meta property='og:image:width' content='520' />
                 <meta property='og:image:height' content='270' />
@@ -311,7 +316,7 @@ const IndexPage = (props) => {
                                     </Stack>
                                 </Stack>
                             </Link>
-                        );
+                        )
                     }
                 })}
                 <Box
@@ -331,10 +336,10 @@ const IndexPage = (props) => {
                 </Box>
             </Box>
         </main>
-    );
-};
+    )
+}
 
-export default IndexPage;
+export default IndexPage
 
 export const pageQuery = graphql`
     query {
@@ -368,4 +373,4 @@ export const pageQuery = graphql`
             }
         }
     }
-`;
+`

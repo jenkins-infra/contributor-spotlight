@@ -1,8 +1,8 @@
-import Typography from 'typography';
+import Typography from 'typography'
 import {
     MOBILE_MEDIA_QUERY,
     TABLET_MEDIA_QUERY,
-} from 'typography-breakpoint-constants';
+} from 'typography-breakpoint-constants'
 
 const options = {
     baseFontSize: `18px`,
@@ -26,15 +26,15 @@ const options = {
                     fontSize: `${(16 / 16) * 100}%`,
                 },
             },
-        };
+        }
     },
-};
+}
 
-const typography = new Typography(options);
+const typography = new Typography(options)
 
 // Hot reload typography in development.
 if (process.env.NODE_ENV !== `production`) {
-    typography.injectStyles();
+    typography.injectStyles()
 }
 
-export default typography;
+export default typography
