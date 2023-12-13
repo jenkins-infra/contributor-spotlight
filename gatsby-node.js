@@ -2,7 +2,6 @@ const _ = require(`lodash`);
 const path = require(`path`);
 const { slash } = require(`gatsby-core-utils`);
 const { createFilePath } = require(`gatsby-source-filesystem`);
-const { createOpenGraphImage } = require('gatsby-plugin-open-graph-images');
 
 // Implement the Gatsby API “createPages”. This is
 // called after the Gatsby bootstrap is finished so you have
@@ -10,19 +9,6 @@ const { createOpenGraphImage } = require('gatsby-plugin-open-graph-images');
 // create pages.
 exports.createPages = ({ graphql, actions }) => {
     const { createPage } = actions;
-
-    const openGraphImage = createOpenGraphImage(createPage, {
-        path: 'static/jenkins.png',
-        component: path.resolve(`src/templates/contributor-details.jsx`),
-        size: {
-            width: 226,
-            height: 312,
-        },
-        waitCondition: 'networkidle0',
-        context: {
-            description: 'Jenkins logo',
-        },
-    });
 
     // The “graphql” function allows us to run arbitrary
     // queries against the local Drupal graphql schema. Think of

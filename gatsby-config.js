@@ -13,7 +13,6 @@ module.exports = {
         'gatsby-plugin-sharp',
         'gatsby-transformer-sharp',
         'gatsby-plugin-react-helmet',
-        'gatsby-plugin-open-graph-images',
         {
             resolve: `gatsby-source-filesystem`,
             options: {
@@ -44,12 +43,6 @@ module.exports = {
                 attributes: {
                     imagesdir: `${__dirname}/static@`,
                 },
-            },
-        },
-        {
-            resolve: `gatsby-plugin-sitemap`,
-            options: {
-                exclude: [`/__generated/*`],
             },
         },
     ],

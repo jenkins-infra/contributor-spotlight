@@ -7,3 +7,4 @@ public
 .env.production
 .DS_Store/
 src/.DS_Store
+.eslintcache
