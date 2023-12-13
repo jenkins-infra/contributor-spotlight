@@ -1,21 +1,21 @@
-import React from 'react'
-import { graphql, Link } from 'gatsby'
-import { Box, Stack, Typography, useTheme } from '@mui/material'
-import LinkedInIcon from '@mui/icons-material/LinkedIn'
-import GitHubIcon from '@mui/icons-material/GitHub'
-import TwitterIcon from '@mui/icons-material/Twitter'
-import AlternateEmailIcon from '@mui/icons-material/AlternateEmail'
-import ArrowBackIcon from '@mui/icons-material/ArrowBack'
-import '../styles/contributor-details.css'
-import useMediaQuery from '@mui/material/useMediaQuery'
-import { Helmet } from 'react-helmet'
-import dayjs from 'dayjs'
+import React from 'react';
+import { graphql, Link } from 'gatsby';
+import { Box, Stack, Typography, useTheme } from '@mui/material';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import GitHubIcon from '@mui/icons-material/GitHub';
+import TwitterIcon from '@mui/icons-material/Twitter';
+import AlternateEmailIcon from '@mui/icons-material/AlternateEmail';
+import ArrowBackIcon from '@mui/icons-material/ArrowBack';
+import '../styles/contributor-details.css';
+import useMediaQuery from '@mui/material/useMediaQuery';
+import { Helmet } from 'react-helmet';
+import dayjs from 'dayjs';
 
 function ContributorDetails(props) {
-    const theme = useTheme()
-    const isDesktop = useMediaQuery(theme.breakpoints.up('lg'))
-    const isTablet = useMediaQuery(theme.breakpoints.between('lg', 'sm'))
-    const isMobile = useMediaQuery(theme.breakpoints.down('sm'))
+    const theme = useTheme();
+    const isDesktop = useMediaQuery(theme.breakpoints.up('lg'));
+    const isTablet = useMediaQuery(theme.breakpoints.between('lg', 'sm'));
+    const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
 
     return (
         <>
@@ -186,10 +186,10 @@ function ContributorDetails(props) {
                 </Box>
             </Box>
         </>
-    )
+    );
 }
 
-export default ContributorDetails
+export default ContributorDetails;
 
 export const pageQuery = graphql`
     query ($id: String!) {
@@ -216,4 +216,4 @@ export const pageQuery = graphql`
             }
         }
     }
-`
+`;
