@@ -1,50 +1,67 @@
 {
-  "name": "jenkins-contributor-spotlight",
-  "version": "1.0.0",
-  "private": true,
-  "description": "jenkins-contributor-spotlight",
-  "author": "Kris Stern",
-  "keywords": [
-    "gatsby"
-  ],
-  "scripts": {
-    "develop": "gatsby develop",
-    "start": "gatsby develop",
-    "build": "gatsby build",
-    "serve": "gatsby serve",
-    "info": "gatsby info",
-    "clean": "gatsby clean"
-  },
-  "dependencies": {
-    "@emotion/react": "^11.11.1",
-    "@emotion/styled": "^11.11.0",
-    "@mui/icons-material": "^5.14.12",
-    "@mui/material": "^5.14.12",
-    "asciidoctor.js": "^1.5.9",
-    "gatsby": "^5.12.4",
-    "gatsby-core-utils": "^4.12.0",
-    "gatsby-plugin-image": "^3.12.0",
-    "gatsby-plugin-manifest": "^5.12.0",
-    "gatsby-plugin-offline": "^6.12.1",
-    "gatsby-plugin-react-helmet": "^6.12.0",
-    "gatsby-plugin-sharp": "^5.12.0",
-    "gatsby-plugin-sitemap": "^6.12.0",
-    "gatsby-plugin-typography": "^5.12.0",
-    "gatsby-source-filesystem": "^5.12.0",
-    "gatsby-transformer-asciidoc": "^4.12.0",
-    "gatsby-transformer-sharp": "^5.12.0",
-    "loader-utils": "^3.2.1",
-    "lodash": "^4.17.21",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-helmet": "^6.1.0",
-    "react-typography": "^0.16.23",
-    "slash": "^5.1.0",
-    "typography": "^0.16.24",
-    "typography-breakpoint-constants": "^0.16.19"
-  },
-  "overrides": {
-    "axios": "^1.6.2"
-  },
-  "license": "MIT"
+    "name": "jenkins-contributor-spotlight",
+    "version": "1.0.0",
+    "private": true,
+    "description": "jenkins-contributor-spotlight",
+    "author": "Kris Stern",
+    "keywords": [
+        "gatsby"
+    ],
+    "scripts": {
+        "develop": "gatsby develop",
+        "start": "gatsby develop",
+        "build": "gatsby build",
+        "serve": "gatsby serve",
+        "info": "gatsby info",
+        "clean": "gatsby clean",
+        "prepare": "husky install",
+        "lint": "npx eslint --fix --ext .js,.jsx src/",
+        "format": "npx prettier . --write"
+    },
+    "dependencies": {
+        "@emotion/react": "^11.11.1",
+        "@emotion/styled": "^11.11.0",
+        "@mui/icons-material": "^5.14.12",
+        "@mui/material": "^5.14.12",
+        "asciidoctor.js": "^1.5.9",
+        "dayjs": "^1.11.10",
+        "gatsby": "^5.12.4",
+        "gatsby-core-utils": "^4.12.0",
+        "gatsby-plugin-image": "^3.12.0",
+        "gatsby-plugin-manifest": "^5.12.0",
+        "gatsby-plugin-offline": "^6.12.1",
+        "gatsby-plugin-react-helmet": "^6.12.0",
+        "gatsby-plugin-sharp": "^5.12.0",
+        "gatsby-plugin-sitemap": "^6.12.0",
+        "gatsby-plugin-typography": "^5.12.0",
+        "gatsby-source-filesystem": "^5.12.0",
+        "gatsby-transformer-asciidoc": "^4.12.0",
+        "gatsby-transformer-sharp": "^5.12.0",
+        "loader-utils": "^3.2.1",
+        "lodash": "^4.17.21",
+        "react": "^18.2.0",
+        "react-dom": "^18.2.0",
+        "react-helmet": "^6.1.0",
+        "react-typography": "^0.16.23",
+        "slash": "^5.1.0",
+        "typography": "^0.16.24",
+        "typography-breakpoint-constants": "^0.16.19"
+    },
+    "overrides": {
+        "axios": "^1.6.2"
+    },
+    "license": "MIT",
+    "devDependencies": {
+        "eslint": "^7.32.0",
+        "eslint-config-google": "^0.14.0",
+        "eslint-config-prettier": "^9.1.0",
+        "eslint-plugin-react": "^7.33.2",
+        "husky": "^8.0.3",
+        "lint-staged": "^15.2.0",
+        "prettier": "3.1.1"
+    },
+    "lint-staged": {
+        "*.js": "eslint --cache --fix",
+        "*.{js,css,md}": "prettier --write"
+    }
 }

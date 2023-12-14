@@ -11,9 +11,29 @@ This feature is to showcase the top contributors of the Jenkins project at link:
 [source,bash]
 ----
 cd contributor-spotlight/
-npm run develop
+npm run clean && npm run develop
 ----
 
 2. **To run the code**
 
     Once the code is running, the site should be up at http://localhost:8000.
+
+3. **To run prettier**
+
+    Run the following commands at the terminal:
++
+[source,bash]
+----
+npm run format
+----
+
+4. **To run eslint**
+
+    Run the following commands at the terminal:
++
+[source,bash]
+----
+npm run lint
+----
+
+Remember to run prettier and eslint before submitting a PR.
