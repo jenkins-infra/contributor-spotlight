@@ -5,11 +5,11 @@
 :page-github: NotMyFault
 :page-email: 
 :page-image: avatar/alexander-brandes.png
-:page-pronouns: He/Him
+:page-pronouns: He/Him/His
 :page-location: Kassel, Germany
 :page-firstcommit: 2019
 :page-datepublished: 2023-11-29
-:page-featured: true
+:page-featured: false
 :page-intro: Alexander Brandes is an open-source contributor and maintainer and serves on the Jenkins governance board. He has made contributions to multiple aspects of the Jenkins project including Jenkins Core, multiple plugins, weekly and Long Term Support releases, and the community.
 
 When he is not pursuing open-source endeavors, Alexander is a passionate musician and has been playing the trumpet for more than 15 years, primarily playing jazz and film music. In addition to being the lead trumpet in a band, he also teaches beginners how to play an instrument.
