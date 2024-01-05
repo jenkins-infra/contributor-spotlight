@@ -10,7 +10,7 @@
 :page-location: Chandler, Arizona USA
 :page-firstcommit: 2008
 :page-datepublished: 2023-12-13
-:page-featured: true
+:page-featured: false
 :page-intro: Alex Earl is a software engineer from Chandler, Arizona. He has been using and contributing to Jenkins for the last 15 years, during which he has provided numerous enhancements and changes.
 
 When not pursuing his open-source work, Alex loves spending time with his family, working on tech puzzles, and helping others in any way that he can.
