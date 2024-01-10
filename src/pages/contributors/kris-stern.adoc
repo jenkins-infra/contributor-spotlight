@@ -1,0 +1,61 @@
+= Kris Stern
+:page-name: Kris Stern
+:page-linkedin: 
+:page-twitter: 
+:page-github: krisstern
+:page-email: 
+:page-image: avatar/kris-stern.png
+:page-pronouns: They/Them/Theirs
+:page-location: Hong Kong SAR, China
+:page-firstcommit: 2021
+:page-datepublished: 2024-01-10
+:page-featured: true
+:page-intro: Kris Stern is a problem solver, former astrophysicist, and Jenkins contributor. They have taken on the role of release lead for several Jenkins LTS releases, joined the Jenkins Google Summer of Code as an org admin, and is constantly raising their hand when opportunities to be involved are presented.
+
+Regardless of what role Kris takes on, their passion for self-improvement and determination to find answers is always on display.
+Kris has also gone above and beyond to help with creating the Contributor Spotlight repository and site.
+Thanks to their work, we are able to highlight the hard work that goes into Jenkins from the community.
+
+== What is your background prior to contributing to Jenkins?
+
+I am a "problem-solver" at heart, meaning that once I am assigned a task, especially a software-related one at work, I am very keen to do all I can until it is resolved.
+Throughout my life, I have met many inspirational people who challenged me through their examples to do better and to never give up on anything I have committed to doing.
+These people include a physics professor from the Western University of Ontario, my PhD thesis supervisor from the University of Hong Kong (HKU), and an older classmate at MCIT Online at the University of Pennsylvania.
+
+In my "previous life", I was trained as an astrophysicist.
+For my PhD thesis, I taught myself how to use Python for scripting and programming to solve astrophysics problems, and that's how I got into software engineering.
+I started contributing to open-source projects during my PhD, mostly related to astrophysics.
+Once I graduated from my PhD program, I discovered Jenkins as a tool and as a community.
+Being able to solve software engineering problems via code contributions is near and dear to my heart.
+I remember in the earlier stage of my professional software engineering career, I was not sure about things most of the time.
+However, with perseverance, careful and thorough research, and the help of colleagues, I was able to slowly gain the skills, knowledge, and confidence to help me be able to solve problems mostly on my own. 
+At first, I mostly focused on the Google Summer of Code program when contributing to Jenkins, but have diversified into other areas like adopting three Jenkins plugins and volunteering as Release Lead occasionally since. 
+
+== How long have you been using Jenkins?
+
+I have been using Jenkins for more than 2 years.
+
+== Why choose Jenkins over other projects?
+
+I think the main reason why I contributed to Jenkins over other open-source projects is the opportunities I have been afforded and the approachability and openness of the Jenkins community.
+
+== What problems has Jenkins solved for you?
+
+Jenkins as an automation server helps me detect defects in the software I develop during the software development lifecycle. 
+Jenkins also helps automate the testing of builds.
+
+== Is there an aspect of Jenkins that you're particularly passionate about?
+
+The Jenkins community is very approachable and the Jenkins project is very mature, yet is constantly evolving, which is the reason why I am very passionate about both. 
+
+== What sort of contributions have felt the most successful or impactful?
+
+For me, my Google Summer of Code contributions as an org admin and mentor have felt the most successful/impactful.
+
+== Advice for new developers and new members of the open-source community
+
+Always keep learning! 
+Enjoying the process makes it a tremendously more pleasurable experience to contribute to open-source.
+Since there are so many unknowns in open-source software development, try to find tasks that are challenging to you in addition to being a benefit to the community to work on, and do not expect too much in terms of an outcome.
+Sometimes your contribution will not get accepted for various reasons, but it will still be a worthwhile endeavor.
+Treat this as a learning experience so that your next contribution will build upon what you have already done.
