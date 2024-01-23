@@ -8,7 +8,7 @@
 :page-pronouns: He/Him/His
 :page-location: Munich, Bavaria, Germany
 :page-firstcommit: 2007
-:page-datepublished: 2024-01-24
+:page-datepublished: 2024-01-23
 :page-featured: true
 :page-intro: Ulli Hafner is a professor of Software Engineering at the University of Applied Sciences Munich where he advocates for Jenkins in several ways. He is also a software developer, open-source contributor, plugin maintainer, and serves on the Jenkins governance board.
 
