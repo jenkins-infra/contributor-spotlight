@@ -14,7 +14,7 @@
 
 == What is your background prior to contributing to Jenkins?
 
-Jenkins is the first open-source project I contributed to with a community.
+Jenkins is the first open-source project I contributed to with that kind of community.
 Before that, I had submitted some small contributions on home-made Maven plugins.
 
 Now, I'm contributing to different tools and technologies like Helm charts (link:https://github.com/bitnami/charts/tree/main/bitnami/external-dns[Bitnami external DNS]) and Ansible collections (link:https://github.com/prometheus-community/ansible[Prometheus collection]).
