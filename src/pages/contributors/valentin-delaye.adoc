@@ -10,12 +10,12 @@
 :page-firstcommit: 2018
 :page-datepublished: 2024-02-07
 :page-featured: true
-:page-intro: Valentin is a Jenkins contributor and plugin maintainer who is passionate about technology and programming. This passion is so great that it has spread as both his profession and hobby. He believes strongly in the power of open source and has been a Linux user since his teenage years. Valentin believes that open source is not only about consuming and taking advantage of it, but also contributing to it.
+:page-intro: Valentin is a Jenkins contributor and plugin maintainer passionate about technology and programming. This passion is so great that it has spread as his profession and hobby. He believes strongly in the power of open source and has been a Linux user since his teenage years. Valentin believes that open source is about consuming, taking advantage of, and contributing to it.
 
 == What is your background prior to contributing to Jenkins?
 
-Jenkins is the first open-source project I contributed to with that kind of community.
-Before that, I had submitted some small contributions on home-made Maven plugins.
+Jenkins is the first open-source project I contributed to with a community.
+Before that, I had submitted some small contributions on homemade Maven plugins.
 
 Now, I'm contributing to different tools and technologies like Helm charts (link:https://github.com/bitnami/charts/tree/main/bitnami/external-dns[Bitnami external DNS]) and Ansible collections (link:https://github.com/prometheus-community/ansible[Prometheus collection]).
 Recently I've added some features to link:https://github.com/openrewrite/rewrite[OpenRewrite], which is also used by the Jenkins project.
@@ -23,7 +23,8 @@ Recently I've added some features to link:https://github.com/openrewrite/rewrite
 == How long have you been using Jenkins?
 
 I've been using Jenkins for quite a long time.
-I think the first time I used Jenkins was around 2009, before it was even called Jenkins.
+I think the first time I used Jenkins was around 2009 before it was even called Jenkins.
+My first contribution to Jenkins occurred in 2018.
 
 == Why choose Jenkins over other projects?
 
@@ -42,7 +43,7 @@ Jenkins also has a massive plugin ecosystem that provides further customization 
 == What sort of contributions have felt the most successful or impactful?
 
 There isn't one contribution in particular, but over the last two years I've adopted about 30 plugins that were previously abandoned.
-I've refreshed them, fixed any issues, including security, and I now maintain them regularly.
+I've refreshed them and fixed any issues, including security, and I now maintain them regularly.
 
 == Advice for new developers and new members of the open-source community
 
