@@ -42,7 +42,7 @@ Jenkins also has a massive plugin ecosystem that provides further customization 
 
 == What sort of contributions have felt the most successful or impactful?
 
-There isn't one contribution in particular, but over the last two years I've adopted about 30 plugins that were previously abandoned.
+There isn't one contribution in particular, but over the last two years I've adopted about 30 previously abandoned plugins.
 I've refreshed them and fixed any issues, including security, and I now maintain them regularly.
 
 == Advice for new developers and new members of the open-source community
