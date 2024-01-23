@@ -10,11 +10,11 @@
 :page-firstcommit: 2018
 :page-datepublished: 2024-02-07
 :page-featured: true
-:page-intro: Valentin is a Jenkins contributor and plugin maintainer who's passionate about technology and programming. This passion is so great that it has spread as both his profession and hobby. He believes strongly in the power of open source and has been a Linux user since his teenage years. Valentin believes that open source is not only about consuming and taking advantage of it, but also contributing to it.
+:page-intro: Valentin is a Jenkins contributor and plugin maintainer who is passionate about technology and programming. This passion is so great that it has spread as both his profession and hobby. He believes strongly in the power of open source and has been a Linux user since his teenage years. Valentin believes that open source is not only about consuming and taking advantage of it, but also contributing to it.
 
 == What is your background prior to contributing to Jenkins?
 
-Jenkins is the first open-source project I contributed to with a community.
+Jenkins is the first open-source project I contributed to with that kind of community.
 Before that, I had submitted some small contributions on home-made Maven plugins.
 
 Now, I'm contributing to different tools and technologies like Helm charts (link:https://github.com/bitnami/charts/tree/main/bitnami/external-dns[Bitnami external DNS]) and Ansible collections (link:https://github.com/prometheus-community/ansible[Prometheus collection]).
