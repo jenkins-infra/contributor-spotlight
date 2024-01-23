@@ -1,0 +1,61 @@
+= Ulli Hafner
+:page-name: Ulli Hafner
+:page-linkedin: 
+:page-twitter: 
+:page-github: uhafner
+:page-email: 
+:page-image: avatar/ulli-hafner.png
+:page-pronouns: He/Him/His
+:page-location: Munich, Bavaria, Germany
+:page-firstcommit: 2007
+:page-datepublished: 2024-01-23
+:page-featured: true
+:page-intro: Ulli Hafner is a professor of Software Engineering at the University of Applied Sciences Munich where he advocates for Jenkins in several ways. He is also a software developer, open-source contributor, plugin maintainer, and serves on the Jenkins governance board.
+
+He is also part of the UX SIG, participating in meetings and providing various UX contributions over the years.
+Ulli enjoys helping new contributors grapple with Jenkins and giving talks at Jenkins events, where he can offer his insight into open source.
+In his free time, Ulli likes to balance his screen-usage by spending time with his family, being outdoors, and being active through sports or swimming.
+
+== What is your background prior to contributing to Jenkins and outside of Jenkins? 
+
+I was a software developer and architect, and had never contributed to open source before Jenkins. 
+
+Currently, I am the maintainer of several Jenkins plugins, mostly in the area of build result visualization using modern JS based user interfaces.
+For example, I am the maintainer of the link:https://plugins.jenkins.io/warnings-ng/[Warnings], link:https://plugins.jenkins.io/coverage/[Coverage], and link:https://plugins.jenkins.io/git-forensics/[Git Forensics] plugins, as well as several UI related JS wrapper plugins like link:https://plugins.jenkins.io/bootstrap5-api/[Bootstrap], link:https://plugins.jenkins.io/prism-api/[Prism API], or link:https://plugins.jenkins.io/echarts-api/[ECharts].
+I am a member of the Jenkins UX SIG and the Jenkins Governance Board.
+
+During the day, I am a professor of Software Engineering at the University of Applied Sciences Munich, where I also try to win new Jenkins contributors by letting students develop new features in their student projects and theses.
+I am also helping new contributors and students in our Jenkins forums or by giving some talks at our Jenkins Meetups. 
+
+I am a father of two children, and try to spend time with my family as much as possible.
+As a balance to a job that requires a lot of time in front of a computer, I partake in a lot of sports such as basketball and swimming.
+I am a lifeguard and swimming trainer for children in our junior lifeguard group.
+
+== How long have you been using Jenkins?
+
+I have been using Jenkins and contributing to Jenkins for more than 15 years now.
+
+== Why choose Jenkins over other projects?
+
+I needed Jenkins in one of my company projects.
+I was the architect in the team, and one of my responsibilities was to make sure that we deliver only high-quality code. 
+
+== What problems has Jenkins solved for you?
+
+Jenkins helped me ensure that a lot of quality gates, that the team defined in the "Definition of Done", could be automatically checked and reported in a rich user interface.  
+
+== Is there an aspect of Jenkins that you're particularly passionate about?
+
+It is all about the user interface.
+I like to improve the user experience and the look and feel.
+So, in particular, how can we best represent the various results of quality assurance tools such as testing, coverage, and static analysis in Jenkins' user interface.
+
+== What sort of contributions have felt the most successful or impactful?
+
+I think the most impactful contributions are the plugins for static analysis and code coverage, in combination with the git forensics plugin.
+Both plugins have a user base of more than 25,000 installations.
+The static analysis plugins won the first prize of the SUN Open Source Community Innovation Awards Program in 2008.
+
+== Advice for new developers and new members of the open-source community
+
+Do not reinvent the wheel; maintain or improve the quality standards of the existing projects.

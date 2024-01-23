@@ -9,7 +9,7 @@
 :page-location: Hong Kong SAR, China
 :page-firstcommit: 2021
 :page-datepublished: 2024-01-10
-:page-featured: true
+:page-featured: false
 :page-intro: Kris Stern is a problem solver, former astrophysicist, and Jenkins contributor. They have taken on the role of release lead for several Jenkins LTS releases, joined the Jenkins Google Summer of Code as an org admin, and is constantly raising their hand when opportunities to be involved are presented.
 
 Regardless of what role Kris takes on, their passion for self-improvement and determination to find answers is always on display.
