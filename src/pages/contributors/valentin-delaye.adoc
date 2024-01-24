@@ -39,11 +39,13 @@ Jenkins has helped me with automation and employing continuous integration despi
 
 The community of course!
 Jenkins also has a massive plugin ecosystem that provides further customization and abilities.
+I'm also particularly intrigued by cloud-native deployment of Jenkins, like external storage or Jenkinsfile runner.
 
 == What sort of contributions have felt the most successful or impactful?
 
 There isn't one contribution in particular, but over the last two years I've adopted about 30 previously abandoned plugins.
 I've refreshed them and fixed any issues, including security, and I now maintain them regularly.
+However, if I choose the contribution I'm the most proud of, it is the recent additions of OpenCover and NUnit parser into the plugin:coverage[Coverage] plugin.
 
 == Advice for new developers and new members of the open-source community
 
