@@ -45,7 +45,7 @@ I'm also particularly intrigued by cloud-native deployment of Jenkins, like exte
 
 There isn't one contribution in particular, but over the last two years I've adopted about 30 previously abandoned plugins.
 I've refreshed them and fixed any issues, including security, and I now maintain them regularly.
-However, if I choose the contribution I'm the most proud of, it is the recent additions of OpenCover and NUnit parser into the plugin:coverage[Coverage] plugin.
+However, if I choose the contribution I'm the most proud of, it is the recent additions of OpenCover and NUnit parser into the link:https://plugins.jenkins.io/coverage/[Coverage] plugin.
 
 == Advice for new developers and new members of the open-source community
 
