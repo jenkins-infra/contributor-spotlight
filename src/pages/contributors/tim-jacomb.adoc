@@ -53,7 +53,7 @@ Most of my contributions are around performance or stability issues and then gen
 == What sort of contributions have felt the most successful or impactful?
 
 I appreciate the modernization work that's going on.
-Some of the features that Jan Faracik has implemented UI modernization for are fantastic.
+Some of the features that link:https://github.com/janfaracik[Jan Faracik] has implemented UI modernization for are fantastic.
 This modernization is helping us drop all those old technologies and frameworks.
 The link:https://www.jenkins.io/blog/2023/10/09/prototype-removed/[Prototype removal] may not be hugely visible, but its impact is immense.
 This modernization also means there's hacks that can be dropped and modern libraries that were previously affected can now be used.
