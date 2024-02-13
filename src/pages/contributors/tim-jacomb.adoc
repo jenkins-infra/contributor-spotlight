@@ -10,9 +10,9 @@
 :page-firstcommit: 2014
 :page-datepublished: 2024-02-21
 :page-featured: true
-:page-intro: Tim Jacomb is a software engineer based out of Brighton, England and has been involved with the Jenkins project for over 10 years. Over this time, he has implemented several UI/UX updates & optimizations, reviewed thousands of pull requests for multiple areas of Jenkins, and currently serves as the Release officer.
+:page-intro: Tim Jacomb is a software engineer based in Brighton, England and has been involved with the Jenkins project for over 10 years. Over this time, he has implemented several UI/UX updates and optimizations, reviewed thousands of pull requests for multiple areas of Jenkins, and currently serves as the Release Officer.
 
-Tim is originally from New Zealand and has a passion for exploration.
+Tim is originally from New Zealand and loves exploring the world.
 He has traveled to 50 countries thus far, with Gothenburg in Sweden being his favorite place to visit.
 His desire to see Europe led to him settling down in the UK around seven years ago.
 In his free time, Tim likes exploring the countryside, going out for walks, rock climbing, and generally spending time in nature.
@@ -42,7 +42,7 @@ Repeatable builds that show they've built beyond someone's local machine.
 Being able to maintain repeatable deployments, content, and builds helps with scalability.
 This also helps when hundreds of people are using it and creating thousands of builds daily.
 Compared to other options it's fairly cheap, easy to run, and you don't have to rely on a provider or other party.
-We just do it ourselves really easily and it's fairly stable, I can't just find another service like Jenkins.
+We just do it ourselves really easily and it's fairly stable, I just can't find another service like Jenkins.
 
 == Is there an aspect of Jenkins that you're particularly passionate about?
 
