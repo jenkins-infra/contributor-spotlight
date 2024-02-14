@@ -103,8 +103,9 @@ pipeline {
         sh '''
         npm run build
 
-        # Generate a SAS token with 10 minutes expiry date
-        az login --service-principal --user "${STORAGE_APP_CLIENT_ID}" --password "${STORAGE_APP_CLIENT_SECRET}" --tenant "${STORAGE_APP_TENANT_ID}"
+        ## Generate a SAS token with 10 minutes expiry date
+        # Login via the service principal, hiding JSON output from az login
+        az login --service-principal --user "${STORAGE_APP_CLIENT_ID}" --password "${STORAGE_APP_CLIENT_SECRET}" --tenant "${STORAGE_APP_TENANT_ID}" > /dev/null
         expiry=$(date -u -d "$current_date + 10 minutes" +"%Y-%m-%dT%H:%MZ")
         base_url="https://${STORAGE_NAME}.file.core.windows.net/${STORAGE_FILESHARE}"
 
