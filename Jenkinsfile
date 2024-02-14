@@ -94,16 +94,39 @@ pipeline {
         NODE_ENV = 'production'
         GATSBY_MATOMO_SITE_URL = 'https://jenkins-matomo.do.g4v.dev'
         GATSBY_MATOMO_SITE_ID = '4'
+        STORAGE_APP = credentials('contributors-jenkins-io-fileshare-service-principal-writer')
+        STORAGE_NAME = "contributorsjenkinsio"
+        STORAGE_FILESHARE = "contributors-jenkins-io"
+        STORAGE_PERMISSIONS = "dlrw"
       }
       steps {
-        withCredentials([
-          string(credentialsId: 'contributors-jenkins-io-fileshare-sas-querystring', variable: 'FILESHARE_QUERYSTRING')
-        ]) {
-          sh '''
-          npm run build
-          azcopy sync --recursive=true --delete-destination=true ./public/ "https://contributorsjenkinsio.file.core.windows.net/contributors-jenkins-io/${FILESHARE_QUERYSTRING}"
-          '''
-        }
+        sh '''
+        npm run build
+
+        # Generate a SAS token with 10 minutes expiry date
+        az login --service-principal --user "${STORAGE_APP_CLIENT_ID}" --password "${STORAGE_APP_CLIENT_SECRET}" --tenant "${STORAGE_APP_TENANT_ID}"
+        expiry=$(date -u -d "$current_date + 10 minutes" +"%Y-%m-%dT%H:%MZ")
+        base_url="https://${STORAGE_NAME}.file.core.windows.net/${STORAGE_FILESHARE}"
+
+        # Don't show the command using the token
+        set +x
+        token=$(az storage share generate-sas \
+          --name "${STORAGE_FILESHARE}" \
+          --account-name "${STORAGE_NAME}" \
+          --https-only \
+          --permissions "${STORAGE_PERMISSIONS}" \
+          --expiry "${expiry}" \
+          --only-show-errors)
+        az logout
+        url="${base_url}?$(echo ${token} | sed 's/\"//g')"
+
+        # Synchronize the File Share content
+        echo "INFO: Synchronizing ${base_url}..."
+        azcopy sync --recursive=true --delete-destination=true ./public/ "$url"
+        set +x
+
+        echo 'INFO: deployment completed.'
+        '''
       }
     }
   }
