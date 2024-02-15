@@ -1,5 +1,3 @@
-@Library('pipeline-library@pull/839/head') _
-
 pipeline {
   options {
     timeout(time: 60, unit: 'MINUTES')
@@ -110,29 +108,6 @@ pipeline {
             # Synchronize the File Share content
             set +x
             azcopy sync --recursive=true --delete-destination=true ./public/ "${FILESHARE_SIGNED_URL}"
-            '''
-          }
-        }
-      }
-    }
-
-    // TODO: to be removed, just here to demonstrate the pipeline library new function in this PR
-    stage('Test of pipeline-library#839') {
-      when {
-        allOf{
-          expression { infra.isInfra() }
-        }
-      }
-      steps {
-        script {
-          infra.withFileShareServicePrincipal([
-            servicePrincipalCredentialsId: 'contributors-jenkins-io-fileshare-service-principal-writer',
-            fileShare: 'contributors-jenkins-io',
-            fileShareStorageAccount: 'contributorsjenkinsio'
-          ]) {
-            sh '''
-            set +x
-            azcopy list "${FILESHARE_SIGNED_URL}"
             '''
           }
         }
