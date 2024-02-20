@@ -1,0 +1,68 @@
+= Stefan Spieker
+:page-name: Stefan Spieker
+:page-linkedin: stefan-spieker-446168161
+:page-twitter: 
+:page-github: StefanSpieker
+:page-threads:
+:page-email: 
+:page-image: avatar/stefan-spieker.png
+:page-pronouns: He/Him/His
+:page-location: Herzogenrath, Germany
+:page-firstcommit: 2011
+:page-datepublished: 2024-03-06
+:page-featured: true
+:page-intro: Stefan Spieker started early with software development, selling his first software while in 9th grade. As a result result of this early success, his software was used for more than 10 years. At that point, it was a clear path for Stefan to study computer science at the RWTH Aachen University in Aachen, Germany. His first jobs provided experiences that led him to picking up Jenkins, which he then tried to reciprocate by introducing his teams to the project.
+
+Though he switched roles to be a solution architect, he continued to contribute to Jenkins in his free time. When he's not advocating for Jenkins, Stefan enjoys being active by playing volleyball and badminton weekly. Stefan has also written a book for people who use computers constantly, but never got a computer science education titled “52 Stunden Informatik” (52 Hours of Computer Science). In the book, there is a dedicated chapter for open source, further displaying Stefan's affinity for the open-source community and its projects.
+
+== What is your background prior to contributing to Jenkins?
+
+In my first job we did a lot without a build server, just writing make files and executing them manually.
+In my next job, we had a build server which was pretty complicated - link:https://cruisecontrolnet.org/[cruisecontrolnet.org].
+This was already a huge improvement, but also pretty hard to maintain.
+So, I started to use Hudson/Jenkins for some private micro-controller projects and finally convinced my boss to try it out. 
+Before contributing to Jenkins, I started by contributing to small embedded projects.
+But I wanted to contribute to a bigger project, so I checked out Linux Kernel.
+It felt safe to contribute there since they have a longer process to get things applied.
+After getting started, Jenkins was more appealing and the low barrier for entry was attractive from the get go.
+
+== How long have you been using Jenkins?
+
+I started using Hudson in 2010 and switched to Jenkins in 2011.
+Introducing Jenkins in my team was a huge success and soon other teams started using Jenkins.
+At that time, I asked my boss how I could give something back during working hours.
+This request was rejected because of legal concerns.
+However, I really loved the openness and was curious about how open source really worked, so I started to contribute some not-so-small PRs to Jenkins core. 
+
+== Why choose Jenkins over other projects?
+
+I really love the openness of the project.
+I was also able to motivate and help colleagues contribute to Jenkins and other open-source projects, which feels really great.
+I think open source is a very important part of the software business and Jenkins is a great opportunity to get a really good impression of how it should work.
+I believe that almost everyone can and should participate in open-source projects.
+
+== What problems has Jenkins solved for you?
+
+All my automation challenges were solved with Jenkins.
+From traditional software building and testing to automating database maintenance or notifications about new tool releases.
+
+== Is there an aspect of Jenkins that you're particularly passionate about?
+
+The flexibility of Jenkins with this huge number of plugins, over 2500 members, and even more contributors.
+I joined a Contributor summit at FOSDEM in 2020 in person, which was really great to actually meet others working on Jenkins.
+This motivated me a lot to do even more contributions.
+Meanwhile, I changed my role to a solution architect, where I did not program as much as I would like to.
+This felt a little bit like Batman: taking a lot of meetings during the day, but doing the right thing at night by providing some contributions to the open-source community, mainly Jenkins.
+This also helps me keep my feet close to the ground, because I still feel strongly connected to the Jenkins community and their experience when it comes to software development.
+
+== What sort of contributions have felt the most successful or impactful?
+
+I've done a lot of quality related PRs and finally got Jenkins core to zero open SpotBugs issues, with great help from other contributors and maintainers of course.
+
+== Advice for new developers and new members of the open-source community
+
+Start with a small contribution and you will learn something new with every contribution or review you do.
+Learn to value older code and try to understand its existence, instead of why it shouldn't be there.
+Some community members are very fast in responding, while others take their time and have power reviews.
+Don't rush, and since everything is a donation, it feels very good and rewarding.
+
