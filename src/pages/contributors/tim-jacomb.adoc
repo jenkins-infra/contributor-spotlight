@@ -1,0 +1,67 @@
+= Tim Jacomb
+:page-name: Tim Jacomb
+:page-linkedin: 
+:page-twitter: tjaynz
+:page-github: timja
+:page-email: 
+:page-image: avatar/tim-jacomb.jpg
+:page-pronouns: He/Him/His
+:page-location: Brighton, England
+:page-firstcommit: 2014
+:page-datepublished: 2024-02-21
+:page-featured: true
+:page-intro: Tim Jacomb is a software engineer based in Brighton, England and has been involved with the Jenkins project for over 10 years. Over this time, he has implemented several UI/UX updates and optimizations, reviewed thousands of pull requests for multiple areas of Jenkins, and currently serves as the Release Officer.
+
+Tim is originally from New Zealand and loves exploring the world.
+He has traveled to 50 countries thus far, with Gothenburg in Sweden being his favorite place to visit.
+His desire to see Europe led to him settling down in the UK around seven years ago.
+In his free time, Tim likes exploring the countryside, going out for walks, rock climbing, and generally spending time in nature.
+
+== What is your background prior to contributing to Jenkins?
+
+I used Jenkins at my first job out of university.
+It was a tool that we used for our builds, so it's something that I learned as soon as I started working.
+Then, I got more involved with development and started learning about Linux servers and managing them.
+This turned out to be valuable information because we were eventually running these things in our team. 
+
+== How long have you been using Jenkins?
+
+I've been using Jenkins for roughly 10 to 11 years.
+
+== Why choose Jenkins over other projects?
+
+Back then it was pretty much the only free option.
+Our team was entirely focused on open source, so being free and open source were the ideal criteria.
+Our work was Java based and everything we ran or used was open source.
+It was just easy to get up and going, without having to worry about licensing or funding.
+As far as I knew, Jenkins was the best tool for that sort of thing at the time.
+
+== What problems has Jenkins solved for you?
+
+Repeatable builds that show they've built beyond someone's local machine.
+Being able to maintain repeatable deployments, content, and builds helps with scalability.
+This also helps when hundreds of people are using it and creating thousands of builds daily.
+Compared to other options it's fairly cheap, easy to run, and you don't have to rely on a provider or other party.
+We just do it ourselves really easily and it's fairly stable, I just can't find another service like Jenkins.
+
+== Is there an aspect of Jenkins that you're particularly passionate about?
+
+I like to work on the UI side of it.
+I feel like there's a lot to improve there and there's a lot that can be done to make it even nicer.
+Most of my contributions are around performance or stability issues and then general improvements that I'm working on.
+
+== What sort of contributions have felt the most successful or impactful?
+
+I appreciate the modernization work that's going on.
+Some of the features that link:https://github.com/janfaracik[Jan Faracik] has implemented UI modernization for are fantastic.
+This modernization is helping us drop all those old technologies and frameworks.
+The link:https://www.jenkins.io/blog/2023/10/09/prototype-removed/[Prototype removal] may not be hugely visible, but its impact is immense.
+This modernization also means there's hacks that can be dropped and modern libraries that were previously affected can now be used.
+
+== Advice for new developers and new members of the open-source community
+
+Getting started as a contributor is really hard, especially when you're trying to figure out how the project works, but the guides, documentation, and best practices really help when contributing.
+At first, I would say start with small changes and fixes so you can learn about the project as you go.
+Don't try to bite off something too big, just learn how it works and get familiar with stuff.
+Keep in mind there's a lot of history to the project and there's a lot of things there to understand.
+There's always opportunities to improve and there are several areas with open issues to be worked on.
