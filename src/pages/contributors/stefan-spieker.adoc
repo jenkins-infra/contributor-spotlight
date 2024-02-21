@@ -11,14 +11,14 @@
 :page-firstcommit: 2011
 :page-datepublished: 2024-03-06
 :page-featured: true
-:page-intro: Stefan Spieker started early with software development, selling his first software while in 9th grade. As a result result of this early success, his software was used for more than 10 years. At that point, it was a clear path for Stefan to study computer science at the RWTH Aachen University in Aachen, Germany. His first jobs provided experiences that led him to picking up Jenkins, which he then tried to reciprocate by introducing his teams to the project.
+:page-intro: Stefan Spieker started early with software development, selling his first software while in 9th grade. As a result result of this early success, his software was used for more than 10 years. At that point, it was a clear path for Stefan to study computer science at the RWTH Aachen University in Aachen, Germany. His first jobs provided experiences that led him to picking up Jenkins, that he then tried to reciprocate by introducing his teams to the project.
 
 Though he switched roles to be a solution architect, he continued to contribute to Jenkins in his free time. When he's not advocating for Jenkins, Stefan enjoys being active by playing volleyball and badminton weekly. Stefan has also written a book for people who use computers constantly, but never got a computer science education titled “52 Stunden Informatik” (52 Hours of Computer Science). In the book, there is a dedicated chapter for open source, further displaying Stefan's affinity for the open-source community and its projects.
 
 == What is your background prior to contributing to Jenkins?
 
-In my first job we did a lot without a build server, just writing make files and executing them manually.
-In my next job, we had a build server which was pretty complicated - link:https://cruisecontrolnet.org/[cruisecontrolnet.org].
+In my first job we did a lot without a build server, we just wrote makefiles and executed them manually.
+In my next job, we had a build server that was pretty complicated - link:https://cruisecontrolnet.org/[cruisecontrolnet.org].
 This was already a huge improvement, but also pretty hard to maintain.
 So, I started to use Hudson/Jenkins for some private micro-controller projects and finally convinced my boss to try it out. 
 Before contributing to Jenkins, I started by contributing to small embedded projects.
@@ -44,20 +44,20 @@ I believe that almost everyone can and should participate in open-source project
 == What problems has Jenkins solved for you?
 
 All my automation challenges were solved with Jenkins.
-From traditional software building and testing to automating database maintenance or notifications about new tool releases.
+For example, from traditional software building and testing to automating database maintenance or notifications about new tool releases.
 
 == Is there an aspect of Jenkins that you're particularly passionate about?
 
 The flexibility of Jenkins with this huge number of plugins, over 2500 members, and even more contributors.
-I joined a Contributor summit at FOSDEM in 2020 in person, which was really great to actually meet others working on Jenkins.
-This motivated me a lot to do even more contributions.
+I joined the Contributor summit at FOSDEM in 2020 in person and that was really great to actually meet others who work on Jenkins.
+This motivated me a lot to make even more contributions.
 Meanwhile, I changed my role to a solution architect, where I did not program as much as I would like to.
 This felt a little bit like Batman: taking a lot of meetings during the day, but doing the right thing at night by providing some contributions to the open-source community, mainly Jenkins.
 This also helps me keep my feet close to the ground, because I still feel strongly connected to the Jenkins community and their experience when it comes to software development.
 
 == What sort of contributions have felt the most successful or impactful?
 
-I've done a lot of quality related PRs and finally got Jenkins core to zero open SpotBugs issues, with great help from other contributors and maintainers of course.
+I've created a lot of quality-related PRs and finally got Jenkins core to zero open SpotBugs issues, with great help from other contributors and maintainers, of course.
 
 == Advice for new developers and new members of the open-source community
 
