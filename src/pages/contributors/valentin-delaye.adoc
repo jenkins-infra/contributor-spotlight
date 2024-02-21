@@ -9,7 +9,7 @@
 :page-location: Lausanne, Switzerland
 :page-firstcommit: 2018
 :page-datepublished: 2024-02-07
-:page-featured: true
+:page-featured: false
 :page-intro: Valentin is a Jenkins contributor and plugin maintainer passionate about technology and programming. This passion is so great that it has spread as his profession and hobby. He believes strongly in the power of open source and has been a Linux user since his teenage years. Valentin believes that open source is about consuming, taking advantage of, and contributing to it.
 
 == What is your background prior to contributing to Jenkins?

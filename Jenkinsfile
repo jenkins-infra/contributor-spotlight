@@ -96,13 +96,20 @@ pipeline {
         GATSBY_MATOMO_SITE_ID = '4'
       }
       steps {
-        withCredentials([
-          string(credentialsId: 'contributors-jenkins-io-fileshare-sas-querystring', variable: 'FILESHARE_QUERYSTRING')
-        ]) {
-          sh '''
-          npm run build
-          azcopy sync --recursive=true --delete-destination=true ./public/ "https://contributorsjenkinsio.file.core.windows.net/contributors-jenkins-io/${FILESHARE_QUERYSTRING}"
-          '''
+        script {
+          infra.withFileShareServicePrincipal([
+            servicePrincipalCredentialsId: 'contributors-jenkins-io-fileshare-service-principal-writer',
+            fileShare: 'contributors-jenkins-io',
+            fileShareStorageAccount: 'contributorsjenkinsio'
+          ]) {
+            sh '''
+            npm run build
+
+            # Synchronize the File Share content
+            set +x
+            azcopy sync --recursive=true --delete-destination=true ./public/ "${FILESHARE_SIGNED_URL}"
+            '''
+          }
         }
       }
     }
