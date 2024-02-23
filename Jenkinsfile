@@ -107,7 +107,11 @@ pipeline {
 
             # Synchronize the File Share content
             set +x
-            azcopy sync --recursive=true --delete-destination=true ./public/ "${FILESHARE_SIGNED_URL}"
+            azcopy sync \
+              --skip-version-check \
+              --recursive=true \
+              --delete-destination=true \
+              ./public/ "${FILESHARE_SIGNED_URL}"
             '''
           }
         }
