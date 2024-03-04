@@ -1,0 +1,143 @@
+= Bruno Verachten
+:page-name: Bruno Verachten
+:page-linkedin: poddingue
+:page-twitter: Poddingue
+:page-github: gounthar
+:page-email: 
+:page-image: avatar/bruno-verachten.png
+:page-pronouns: He/Him/His
+:page-location: Lille, Nord, France
+:page-firstcommit: 2022
+:page-datepublished: 2024-03-20
+:page-featured: true
+:page-intro: Bruno is a 50-year-old with the heart of a university freshman, a head full of curiosity, and a clock that's always running too fast. He's a husband to one, father to two, and a man of many interests, from beekeeping to Art Nouveau to permaculture to Linux. He's spent his career in the open-source world, trying to get the industry to embrace the movement.
+
+It's been a tough road, but he's learned a thing or two along the way, such as how to stay passionate about the things that matter, even when the work gets tedious, and how to recognize when it's time to move on, even when you're leaving behind friends and familiarity.
+When the world went remote, he took it as a sign.
+Bruno found a new gig where open source isn't just a buzzword; it's the business model, and he's made some new friends along the way despite the distance.
+
+
+== What is your background prior to contributing to Jenkins and outside of Jenkins? 
+
+My journey started with A.I. when it was more science fiction than reality.
+However, I quickly found my calling in the Java world, where I spent most of my time coding, teaching, and speaking at conferences.
+In 2016, I decided to shake things up and dive headfirst into the deep end of CI/CD, DevOps, containerization, and Edge computing.
+I hung up my Java hat and embraced the brave new world of containerization and open-source software.
+
+I got my first taste of open source in '93 when we were liberating Windows machines by installing Linux on them; it was like a shot of adrenaline that hooked me in and has yet to release its grip.
+I became an open-source advocate, preaching the good word at home, with friends, and at work.
+The company I worked for was a bit slow on the uptake but eventually saw the light.
+They started using open-source software, even integrating it into their own products.
+However, contributing to open-source projects was still a no-go.
+It wasn't until my last few years there that they finally loosened the reins.
+I went from being an open-source advocate to an open-source contributor.
+
+My GitHub and GitLab profiles tell the tale: a slow start followed by an accelerating pace.
+However, contributing to open-source isn't just about code; it's about being part of a community, engaging in forums, creating issues, chatting on IRC, giving talks, and writing articles.
+My first contributions weren't code, but they were just as valuable.
+Before joining the Jenkins project, I was a regular on the speaking circuit, talking about everything from Edge computing to the arm ecosystem.
+
+== How long have you been using Jenkins?
+
+I first dipped my toes into the murky waters of Jenkins around 2013 or 2014 in my old gig.
+You could say I was a bit of a hybrid user, since I was cobbling templates together to help the other poor souls get their web and mobile applications off the ground.
+I wasn't a Jenkins admin, and certainly wasn't just an end user.
+I spent a lot of time nudging Jenkins administrators to install the latest plugins, keep the existing ones up to snuff, and so on.
+
+Then, our company decided to hitch its wagon to GitLab Community Edition.
+Keeping Jenkins in fighting shape started feeling like swimming upstream in a river of molasses.
+So, around 2017, I said goodbye to Jenkins and embraced GitLab.
+But, like a moth drawn to a flame, I returned to Jenkins' embrace in 2022 when I decided to part ways with the company.
+
+== Why choose Jenkins over other projects?
+
+Ah, there's no place like home and no project quite like Jenkins.
+I'm up to my eyeballs in CI/CD, Docker, esoteric architectures, and the whole open-source shebang.
+In my humble opinion, no other open-source CI/CD tool can hold a candle to the perks of the Jenkins community.
+
+It's a free-for-all, with decisions made by the community.
+Every decision is a group effort, with the Jenkins project rallying feedback from the community.
+The meetings are as open and public as a town square, and every voice carries weight.
+That is the essence of open source.
+It's not just about having the code base sitting pretty on a public SCM.
+The Jenkins project embodies the spirit of open-source, hook, line, and sinker.
+
+And the cherry on top?
+The Jenkins project throws its hat in the ring for the Google Summer of Code, Hacktoberfest, and other events aimed at helping folks spread their wings.
+The project invests time in schooling green developers about the ins and outs of open-source and naturally, Jenkins.
+
+I'm all for this approach, this benevolence, and the overall vibe of the Jenkins community.
+It's like a breath of fresh air in a world that's often as stifling as a smoke-filled speakeasy.
+
+== What problems has Jenkins solved for you?
+
+I'm not sure we've got the time to wade through the laundry list of problems Jenkins has solved for me, but I'll give it a shot:
+
+Jenkins has given me the keys to the kingdom when it comes to building and publishing Android applications, all thanks to Docker.
+It's like a magic wand, only better.
+
+Jenkins has let me dust off my old, trusty arm32 machines and put them to work as Jenkins agents.
+It's like seeing an old friend again.
+
+Jenkins has also let me take my shiny, new RISC-V machines out for a spin as Jenkins agents or controllers.
+It's like driving a brand-new car straight off the lot.
+
+Jenkins has even let me create the first-ever cluster of three architectures (arm32, arm64, risc-v).
+It's like being the first man on the moon.
+
+To cut a long story short, no matter the architecture, I can manipulate or contribute to Jenkins to make it dance to my tune.
+It's like having a Swiss Army knife in a world of butter knives.
+
+== Is there an aspect of Jenkins that you're particularly passionate about?
+
+Platforms, my friends, platforms:
+
+Whenever I can slap another CPU family onto the ever-growing list of supported ones (especially when Docker is involved), I'm as happy as a clam at high tide.
+
+The moment a new JDK version hits the streets, I'm chomping at the bit to take it for a spin on different platforms.
+We're still duking it out with JDK21, but I've already got one eye on JDK22.
+Keep that part under your hat since it's our little secret.
+
+Is it any wonder I try to keep the Jenkins Platform SIG running like clockwork on a biweekly basis?
+I get a kick out of chewing the fat with the community about the latest tweaks to our Docker images, our experiments with the newest JDK, and all that jazz.
+
+== What sort of contributions have felt the most successful or impactful?
+
+I'd be inclined to say that link:https://www.jenkins.io/blog/2023/03/10/miniJen-and-RISC-V/[miniJen] was my crowning glory, but that was just a flash in the pan, a few weeks of joy and clicks, not a lasting legacy.
+It's like comparing a bonfire on the beach to the steady hum of a boiler in the basement.
+Sure, I was tickled pink by the e-press coverage of the first multi-arch Jenkins instance, but let's be honest, it didn't _quite_ revolutionize developer lives.
+
+I've also done a fair bit of work with link:https://github.com/updatecli/updatecli[updatecli], a handy little tool that keeps your dependencies as fresh as a daisy.
+It's not glamorous since it's the kind of work that goes on behind the scenes, but it's been a godsend when it comes to handling CVEs and keeping the project spick and span.
+
+== Advice for new developers and new members of the open-source community
+
+It's tempting to draw parallels between an open-source community and the permaculture approach to a new place or project.
+It's like comparing apples and oranges but bear with me.
+
+Observation is the first order of business when dipping your toes into the permaculture of a new place.
+Take a moment to study the ecosystem, examine the relationships between the various cogs in the system, and jot down your observations.
+
+Trust your gut.
+Does it feel like you could be a cog in this ecosystem, or does it feel like a square peg in a round hole?
+If the project is too disconnected from who you are or you feel like a wallflower at a party, don't beat your head against a brick wall.
+There's always another project or place out there.
+Sure, you could stick around and revamp the project until it's the spitting image of your dream, but at what cost?
+
+If the place or project rolls out the welcome mat, take it slow and start small.
+Suggest a minor tweak, and lend an ear to the feedback.
+Propose another tweak and listen again.
+Congratulations, you're now part of an informational feedback loop.
+Now rinse and repeat. 
+
+Before you know it, you're a cog in the ecosystem, marveling at the interplay between its various parts.
+
+I could've given you the abridged version by quoting the now-famous link:https://www.jenkins.io/blog/authors/jmmeessen/[Jean-Marc Meessen]: "Build your Jenkins muscles."
+Take part in Hacktoberfest, maybe even the Google Summer of Code, but start small, flex your muscles, and you'll be a contributor before you know it.
+
+What is the moral of my story?
+People matter.
+Whether you're doing mind-numbing work or groundbreaking projects, people make all the difference.
+Surround yourself with those who lift you up, not drag you down.
+Remember, there's always something new to learn or discover.
+So keep that curiosity alive, keep that passion burning, and maybe you'll end up with a story like mine.
