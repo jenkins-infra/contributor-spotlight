@@ -9,7 +9,7 @@
 :page-location: Brighton, England
 :page-firstcommit: 2014
 :page-datepublished: 2024-02-21
-:page-featured: true
+:page-featured: false
 :page-intro: Tim Jacomb is a software engineer based in Brighton, England and has been involved with the Jenkins project for over 10 years. Over this time, he has implemented several UI/UX updates and optimizations, reviewed thousands of pull requests for multiple areas of Jenkins, and currently serves as the Release Officer.
 
 Tim is originally from New Zealand and loves exploring the world.
