@@ -11,7 +11,7 @@
 :page-firstcommit: 2011
 :page-datepublished: 2024-03-06
 :page-featured: true
-:page-intro: Stefan Spieker started early with software development, selling his first software while in 9th grade. As a result result of this early success, his software was used for more than 10 years. At that point, it was a clear path for Stefan to study computer science at the RWTH Aachen University in Aachen, Germany. His first jobs provided experiences that led him to picking up Jenkins, that he then tried to reciprocate by introducing his teams to the project.
+:page-intro: Stefan Spieker started early with software development, selling his first software while in 9th grade. As a result of this early success, his software was used for more than 10 years. At that point, it was a clear path for Stefan to study computer science at the RWTH Aachen University in Aachen, Germany. His first jobs provided experiences that led him to picking up Jenkins, that he then tried to reciprocate by introducing his teams to the project.
 
 Though he switched roles to be a solution architect, he continued to contribute to Jenkins in his free time. When he's not advocating for Jenkins, Stefan enjoys being active by playing volleyball and badminton weekly. Stefan has also written a book for people who use computers constantly, but never got a computer science education titled “52 Stunden Informatik” (52 Hours of Computer Science). In the book, there is a dedicated chapter for open source, further displaying Stefan's affinity for the open-source community and its projects.
 
