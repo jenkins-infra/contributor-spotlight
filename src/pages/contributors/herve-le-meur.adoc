@@ -1,0 +1,76 @@
+= Hervé Le Meur
+:page-name: Hervé Le Meur
+:page-linkedin: 
+:page-twitter: 
+:page-github: hlemeur
+:page-email: 
+:page-image: avatar/herve-le-meur.jpg
+:page-pronouns: He/Him/His
+:page-location: Paris, France
+:page-firstcommit: 2020
+:page-datepublished: 2024-01-10
+:page-featured: true
+:page-intro: Hervé Le Meur is a software architect and current member of the Jenkins Infrastructure team. He was introduced to the project via Jenkins-x and then moved on to work on Jenkins as part of the Infrastructure team.
+
+Despite coming from a more analog background, Hervé got his first real taste for technology with the Amstrad CPC 464 computer.
+Today, when he's not working on Jenkins tasks, Hervé likes to go for walks outside with his family, catch up on reading, and unwind watching his favorite shows.
+
+== What is your background prior to contributing to Jenkins? 
+
+After graduating university, I worked at a company for 10 years, but there was no CI/CD there.
+I did not have an opportunity to use open-source products there, but my next job had teams using Jenkins.
+I started befriending developers there, worked to become a software architect, and spent half a year integrating CD.
+Through my work, I learned more about Kubernetes & CI/CD, and in doing so I contributed quite a lot to Jenkins-x, which is what we used as the CI/CD tool.
+However, due to the project being in BETA, it was more complicated than I anticipated.
+After being let go from this job, I reached out to link:https://www.jenkins.io/blog/authors/jstrachan/[James Strachan] and link:https://www.jenkins.io/blog/authors/jrawlings/[James Rawlings], who then gave me a link to a job opening from link:https://www.jenkins.io/blog/authors/oleg_nenashev/[Oleg Nenashev] at CloudBees for the role that I am currently in.
+
+In my head I was a programmer, not a sysadmin.
+So when link:https://www.jenkins.io/blog/authors/markewaite/[Mark Waite] was interviewing me and asked me some network questions, this was a bit daunting and seemed potentially impossible.
+However, I had an interview with Mark, link:https://www.jenkins.io/blog/authors/dduportal/[Damien Duportal], and link:https://www.jenkins.io/blog/authors/olblak/[Olivier Vernin] that was a fantastic experience.
+We were able to have a meaningful discussion that helped me feel more comfortable, and made my decision easier.
+15 minutes before my interview, I got a final offer from another company (where Damien & link:https://www.jenkins.io/blog/authors/jmmeessen/[Jean-Marc Meessen] had previously worked), hesitated and it turned out for the best since I'm still part of the Jenkins project today.
+I also had experience moderating an online forum, so the community part of the role was familiar to me.
+
+== How long have you been using Jenkins?
+
+I started with Jenkins-x but had never touched Jenkins proper.
+My initial impression of Jenkins was not positive, thinking it was due to how bad and unstable it was.
+However, once I started using Jenkins, it was the comparrison was night and day.
+My first impression was that it was heavy & slow compared to others.
+I was not alone in thinking that Jenkins is not necessarily the best, fastest, or newest project, but was proven wrong once I started working on the project.
+
+== Why choose Jenkins over other projects?
+
+I didn't necessarily choose Jenkins as much as it is the main part of my job.
+As part of my role, I've spent time looking at what Olivier, Damien & Mark have put in place for infrastructure.
+Jenkins is much more improved and efficient, with complete integration from server to image delivery, we have control and segmentation over every aspect.
+I love the fact that we are using Jenkins to develop and distribute Jenkins.
+This is unique because most open-source tools don't have transference success, where Jenkins has spent so much time and effort building to work with developer processes and functionalities.
+In my eyes, this is one of the main aspects of why Jenkins is successful.
+Jenkins has also integrated other tools, such as Terraform, Puppet, academage, and M-Files with Jenkins, but Jenkins is the main orchestrator of these.
+Other projects and tools do not own their issues, but Jenkins owns, and works on its issues, in order to improve.
+I've always liked creating and working on tools, so working on Jenkins is a crowning achievement for me, even if it's not core.
+
+== What growth have you seen in Jenkins since joining the project?
+
+We have been getting more and more instances defined as code, this means that they do not have to go in and configure settings manually since the code is pre-defined.
+We are also slowly progressing to have ci.jenkins.io to being defined and managed as code.
+Currently, there are some small areas in Jenkins infrastructure using this. 
+
+== Is there an aspect of Jenkins that you're particularly passionate about?
+
+Right now, I'm having fun with refactoring Windows build process, using the docker controller on the agent image.
+I like working on the contributor side as well, because it's like a puzzle and knowing what I need to get to and where I'm starting from makes it much more enjoyable..
+
+== What sort of contributions have felt the most successful or impactful?
+
+link:https://www.jenkins.io/blog/authors/basil/[Basil Crow] proposed an interesting idea to use SQLite instead of a file system, which is very interesting.
+However, this idea is competing with other proposals.
+The switch to JDK 17 has been very successful and with the availability of JDK 21, Jenkins is running on newer platforms and keeping up with progress to stay current.
+Plugin health score identification has also been great for the visualization of overall plugin ecosystem health.
+
+== Advice for new developers and new members of the open-source community
+One of the first things that I was warned about was the vastness of the project, and was instructed to choose one thing to focus on at first.
+Don't hesitate to try it out, open source means that it is open to all.
+Don't be afraid to open a pull request, it does not need to be perfect.
+You might end up liking it and continue to submit contributions!

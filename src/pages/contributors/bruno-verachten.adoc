@@ -9,7 +9,7 @@
 :page-location: Lille, Nord, France
 :page-firstcommit: 2022
 :page-datepublished: 2024-03-20
-:page-featured: true
+:page-featured: false
 :page-intro: Bruno is a 50-year-old with the heart of a university freshman, a head full of curiosity, and a clock that's always running too fast. He's a husband to one, father to two, and a man of many interests, from beekeeping to Art Nouveau to permaculture to Linux. He's spent his career in the open-source world, trying to get the industry to embrace the movement.
 
 It's been a tough road, but he's learned a thing or two along the way, such as how to stay passionate about the things that matter, even when the work gets tedious, and how to recognize when it's time to move on, even when you're leaving behind friends and familiarity.
