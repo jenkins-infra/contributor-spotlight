@@ -21,7 +21,7 @@ After graduating university, I worked at a company for 10 years, but there was n
 I did not have an opportunity to use open-source products there, but my next job had teams using Jenkins.
 I started befriending developers there, worked to become a software architect, and spent half a year integrating CD.
 Through my work, I learned more about Kubernetes & CI/CD, and in doing so I contributed quite a lot to Jenkins-x, which is what we used as the CI/CD tool.
-However, due to the project being in BETA, it was more complicated than I anticipated.
+However, due to the project being in beta, it was more complicated than I anticipated.
 After being let go from this job, I reached out to link:https://www.jenkins.io/blog/authors/jstrachan/[James Strachan] and link:https://www.jenkins.io/blog/authors/jrawlings/[James Rawlings], who then gave me a link to a job opening from link:https://www.jenkins.io/blog/authors/oleg_nenashev/[Oleg Nenashev] at CloudBees for the role that I am currently in.
 
 In my head I was a programmer, not a sysadmin.
@@ -35,26 +35,28 @@ I also had experience moderating an online forum, so the community part of the r
 
 I started with Jenkins-x but had never touched Jenkins proper.
 My initial impression of Jenkins was not positive, thinking it was due to how bad and unstable it was.
-However, once I started using Jenkins, it was the comparrison was night and day.
-My first impression was that it was heavy & slow compared to others.
+I thought it was heavy and slow compared to alternatives.
+However, once I started using Jenkins the comparison was night and day.
 I was not alone in thinking that Jenkins is not necessarily the best, fastest, or newest project, but was proven wrong once I started working on the project.
 
 == Why choose Jenkins over other projects?
 
 I didn't necessarily choose Jenkins as much as it is the main part of my job.
 As part of my role, I've spent time looking at what Olivier, Damien & Mark have put in place for infrastructure.
-Jenkins is much more improved and efficient, with complete integration from server to image delivery, we have control and segmentation over every aspect.
+Jenkins is much improved and efficient.
+With complete integration from server to image delivery, we have control and segmentation over every aspect.
 I love the fact that we are using Jenkins to develop and distribute Jenkins.
-This is unique because most open-source tools don't have transference success, where Jenkins has spent so much time and effort building to work with developer processes and functionalities.
+This is unique because most open-source tools don't have transference success, whereas Jenkins has spent so much time and effort building to work with developer processes and functionalities.
 In my eyes, this is one of the main aspects of why Jenkins is successful.
-Jenkins has also integrated other tools, such as Terraform, Puppet, academage, and M-Files with Jenkins, but Jenkins is the main orchestrator of these.
-Other projects and tools do not own their issues, but Jenkins owns, and works on its issues, in order to improve.
+Jenkins has also integrated other tools, such as Terraform, Puppet, Academage, and M-Files with Jenkins, but Jenkins is the main orchestrator of these.
+Other projects and tools do not own their issues, but Jenkins owns and works on its issues in order to improve.
 I've always liked creating and working on tools, so working on Jenkins is a crowning achievement for me, even if it's not core.
 
 == What growth have you seen in Jenkins since joining the project?
 
-We have been getting more and more instances defined as code, this means that they do not have to go in and configure settings manually since the code is pre-defined.
-We are also slowly progressing to have ci.jenkins.io to being defined and managed as code.
+We have been getting more and more instances defined as code.
+This means that users do not have to go in and configure settings manually since the code is pre-defined.
+We are also slowly progressing towards ci.jenkins.io being defined and managed as code.
 Currently, there are some small areas in Jenkins infrastructure using this. 
 
 == Is there an aspect of Jenkins that you're particularly passionate about?
