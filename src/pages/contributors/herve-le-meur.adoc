@@ -61,7 +61,7 @@ Currently, there are some small areas in Jenkins infrastructure using this.
 
 == Is there an aspect of Jenkins that you're particularly passionate about?
 
-Right now, I'm having fun with refactoring Windows build process, using the docker controller on the agent image.
+Right now, I'm having fun with refactoring Windows build processes utilizing the docker controller on the agent image.
 I like working on the contributor side as well, because it's like a puzzle and knowing what I need to get to and where I'm starting from makes it much more enjoyable..
 
 == What sort of contributions have felt the most successful or impactful?
