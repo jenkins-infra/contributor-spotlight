@@ -8,7 +8,7 @@
 :page-pronouns: He/Him/His
 :page-location: Paris, France
 :page-firstcommit: 2020
-:page-datepublished: 2024-01-10
+:page-datepublished: 2024-04-10
 :page-featured: true
 :page-intro: Hervé Le Meur is a software architect and current member of the Jenkins Infrastructure team. He was introduced to the project via Jenkins-x and then moved on to work on Jenkins as part of the Infrastructure team.
 
