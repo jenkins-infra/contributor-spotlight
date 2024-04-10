@@ -1,0 +1,82 @@
+= Hervé Le Meur
+:page-name: Hervé Le Meur
+:page-linkedin: herve-le-meur
+:page-twitter: 
+:page-github: lemeurherve
+:page-email: 
+:page-image: avatar/herve-le-meur.png
+:page-pronouns: He/Him/His
+:page-location: Paris, France
+:page-firstcommit: 2020
+:page-datepublished: 2024-01-10
+:page-featured: true
+:page-intro: Hervé Le Meur is a site reliability engineer and current member of the Jenkins Infrastructure team. He was introduced to the open-source community via Jenkins X and then moved on to work on Jenkins infrastructure.
+
+Hervé comes from a more analog background, with his father being a carpenter and his mother being an upholsterer, but got his first real taste for technology with the Amstrad CPC 464 computer at the age of six.
+Today, when he's not working on Jenkins tasks, Hervé likes to go for walks outside with his family, catch up on reading, and unwind watching his favorite shows.
+
+== What is your background prior to contributing to Jenkins? 
+
+After graduating from university, I worked at a small B2B marketing consultancy company for 10 years as a jack of all trades developing the tools we used, but there was no CI/CD nor open source there.
+After that, I went into a building information modeling (BIM) software company, starting as a software developer.
+Some teams were using Jenkins, but it seemed cumbersome and slow for them at the time.
+As I grew into the role of software architect, I was tasked with setting up a new CI/CD based on Jenkins X, which took me several trimesters.
+As Jenkins X was fresh from the oven and as I was new to Kubernetes, this was a much more difficult task than anticipated, especially since the passage of Jenkins X to beta, making me redo most of what I put in place several times.
+Through this work, I learned a lot about Kubernetes & CI/CD, and in doing so I contributed quite a lot to Jenkins X.
+These were my first contributions to the open-source world.
+After being let go from this job, I reached out to link:https://www.jenkins.io/blog/authors/jstrachan/[James Strachan] and link:https://www.jenkins.io/blog/authors/jrawlings/[James Rawlings], who then gave me a link to a job opening from link:https://www.jenkins.io/blog/authors/oleg_nenashev/[Oleg Nenashev] at CloudBees for the role that I am currently in.
+
+In my head, I was a programmer, not a sysadmin.
+So, when link:https://www.jenkins.io/blog/authors/markewaite/[Mark Waite] explained that the last round of interviews would be about networking, this was a bit daunting.
+I thought my opportunity would be lost because of this since it felt potentially impossible.
+However, when the time for my interview came with Mark, link:https://www.jenkins.io/blog/authors/dduportal/[Damien Duportal], and link:https://www.jenkins.io/blog/authors/olblak/[Olivier Vernin], they asked me how I integrated the CI/CD with Jenkins X instead: that was a fantastic experience.
+We were able to have a meaningful discussion that helped me feel more comfortable and made my decision easier.
+15 minutes before my interview, I got a final offer from another company (where Damien & link:https://www.jenkins.io/blog/authors/jmmeessen/[Jean-Marc Meessen] had coincidentally previously worked) and hesitated, but it turned out for the best since I'm still part of the Jenkins project today in what I could call a dream job.
+I also had experience moderating an online forum, so the community part of the role was familiar to me.
+
+== How long have you been using Jenkins?
+
+I started with Jenkins X but had never touched Jenkins proper.
+Apart from sharing the Jenkins name, they have nothing in common.
+My preconceptions of Jenkins were negative.
+I thought it was an unwieldy, outdated, and complicated Java program.
+These impressions manifested from what I had heard from others dealing with it in my previous company.
+However, once I started using Jenkins, the comparison was night and day.
+My preconception was that it was heavy & slow compared to others.
+I was not alone in thinking that Jenkins is not necessarily the best, fastest, or newest project, but I was proven wrong once I started working on the project.
+
+== Why choose Jenkins over other projects?
+
+I didn't necessarily choose Jenkins as much as it is the main part of my job.
+As soon as I started reviewing what Tyler, Olivier, Damien, and Mark have put in place for Jenkins infrastructure, I realized that Jenkins is much more improved and efficient than I thought.
+I also love the fact that we are using Jenkins to develop and distribute Jenkins.
+This usage is unique because most open-source tools don't have transitive success.
+Jenkins has spent so much time and effort building to work with developer processes and functionalities.
+In my eyes, this is one of the main aspects of why Jenkins is successful.
+Jenkins has also integrated other tools, such as Terraform and Puppet, but Jenkins remains the orchestrator of these.
+Jenkins has also integrated other tools, such as Terraform, Puppet, Kubernetes, and Helmfile amongst others, but Jenkins remains the orchestrator of these.
+Working on Jenkins is a crowning achievement for me, since I've always liked creating and working on tools, even if I'm not working on the core of Jenkins.
+
+== What growth have you seen in Jenkins since joining the project?
+
+We have been getting more and more instances defined as code.
+As a result, we can recreate any of our instances without having to configure settings manually, vastly increasing our resilience.
+We are also slowly progressing to the point where ci.jenkins.io is defined and managed as code.
+
+== Is there an aspect of Jenkins that you're particularly passionate about?
+
+Right now, I'm having fun refactoring the build process of the official Docker images for Jenkins controllers and agents.
+I also like working on the contributor side because it's like a puzzle, and knowing what I need to get to and where I'm starting from makes it much more enjoyable.
+
+== What sort of contributions have felt the most successful or impactful?
+
+link:https://www.jenkins.io/blog/authors/basil/[Basil Crow] proposed an interesting idea to use SQLite instead of a file system.
+The switch to JDK 17 has been very successful, and with the availability of JDK 21, Jenkins is running on newer platforms and keeping up with progress to stay current.
+As we like to keep the Jenkins infrastructure on the edge (such as always running the last Jenkins Weekly), the next step is introducing JDK22.
+Plugin health score identification has been great for visualizing the overall plugin ecosystem health.
+
+== Advice for new developers and new members of the open-source community
+One of the first things I was warned about was the vastness of the project and was instructed to choose one thing to focus on at first.
+Don't hesitate to try it out; open source means that it is open to all.
+Don't be afraid to open a pull request; it does not need to be perfect.
+You might end up liking it and continue to submit contributions!
