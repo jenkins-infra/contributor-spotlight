@@ -42,20 +42,19 @@ My preconceptions of Jenkins were negative.
 I thought it was an unwieldy, outdated, and complicated Java program.
 These impressions manifested from what I had heard from others dealing with it in my previous company.
 However, once I started using Jenkins, the comparison was night and day.
-My first impression was that it was heavy & slow compared to others.
+My preconception was that it was heavy & slow compared to others.
 I was not alone in thinking that Jenkins is not necessarily the best, fastest, or newest project, but I was proven wrong once I started working on the project.
 
 == Why choose Jenkins over other projects?
 
 I didn't necessarily choose Jenkins as much as it is the main part of my job.
-As part of my role, I've reviewed what Tyler, Olivier, Damien & Mark have put in place for infrastructure.
-Jenkins is much more improved and efficient than I thought.
+As soon as I started reviewing what Tyler, Olivier, Damien, and Mark have put in place for Jenkins infrastructure, I realized that Jenkins is much more improved and efficient than I thought.
 I also love the fact that we are using Jenkins to develop and distribute Jenkins.
 This usage is unique because most open-source tools don't have transitive success.
 Jenkins has spent so much time and effort building to work with developer processes and functionalities.
 In my eyes, this is one of the main aspects of why Jenkins is successful.
 Jenkins has also integrated other tools, such as Terraform and Puppet, but Jenkins remains the orchestrator of these.
-Jenkins also owns and works on its issues in order to improve.
+Jenkins has also integrated other tools, such as Terraform, Puppet, Kubernetes, and Helmfile amongst others, but Jenkins remains the orchestrator of these.
 Working on Jenkins is a crowning achievement for me, since I've always liked creating and working on tools, even if I'm not working on the core of Jenkins.
 
 == What growth have you seen in Jenkins since joining the project?
