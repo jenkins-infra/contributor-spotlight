@@ -9,7 +9,7 @@
 :page-location: Paris, France
 :page-firstcommit: 2020
 :page-datepublished: 2024-01-10
-:page-featured: true
+:page-featured: false
 :page-intro: Hervé Le Meur is a site reliability engineer and current member of the Jenkins Infrastructure team. He was introduced to the open-source community via Jenkins X and then moved on to work on Jenkins infrastructure.
 
 Hervé comes from a more analog background, with his father being a carpenter and his mother being an upholsterer, but got his first real taste for technology with the Amstrad CPC 464 computer at the age of six.
