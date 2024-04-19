@@ -75,11 +75,11 @@ Find areas in the Jenkins project that are involved in that area of interest.
 Contribute your skills and your passion in that area.
 Help others do the same.
 
-I was interested in test automation, so I wrote automated tests for the Jenkins git plugin.
-As a result, I learned much more about git, Java, and test automation.
+I was interested in test automation, so I wrote automated tests for the Jenkins Git plugin.
+As a result, I learned much more about Git, Java, and test automation.
 
-I was interested in git performance, so I experimented with options to improve git performance.
-Through this, I learned more about git and performance.
+I was interested in Git performance, so I experimented with options to improve Git performance.
+Through this, I learned more about Git and performance.
 
 I was interested in operating systems and platforms, so I experimented with uncommon processors and operating systems.
 I learned more about operating systems, file systems, and their interactions.
