@@ -56,7 +56,7 @@ Jenkins builds my code, runs my tests, and shows the results across a wide range
 
 == Is there an aspect of Jenkins that you're particularly passionate about?
 
-I have been involved in each area of Jenkins at some point, but I'm proud of the link:https://plugins.jenkins.io/git/[Git] and link:https://plugins.jenkins.io/git-client/[Git client] plugins that I created and maintain.
+I have been involved in each area of Jenkins at some point, but I'm proud of the link:https://plugins.jenkins.io/git/[Git] and link:https://plugins.jenkins.io/git-client/[Git client] plugins that I maintain.
 I'm also involved in the platforms and documentation SIGs, where I host the later Jenkins documentation office hours.
 
 == What sort of contributions have felt the most successful or impactful?
