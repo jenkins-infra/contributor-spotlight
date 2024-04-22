@@ -9,7 +9,7 @@
 :page-location: Loveland, Colorado, USA
 :page-firstcommit: 2008
 :page-datepublished: 2024-04-29
-:page-featured: false
+:page-featured: true
 :page-intro: Mark Waite is a father of eight, grandfather of 13, Jenkins Governance board member, Jenkins core maintainer, and the maintainer of several plugins. This is the long way of saying Mark wears many hats. However, his passion for open source and Jenkins is clear through all of his work and contributions to the Jenkins project.
 
 Mark loves to travel with his wife to visit and spend time with their children, who live in fun and interesting parts of the United States, including Alaska, Texas, California, and Colorado.
