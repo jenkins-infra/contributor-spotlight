@@ -4,7 +4,7 @@
 :page-twitter: MarkEWaite
 :page-github: MarkEWaite
 :page-email: 
-:page-image: avatar/mark-waite.jpg
+:page-image: avatar/mark-waite.png
 :page-pronouns: He/Him/His
 :page-location: Loveland, Colorado, USA
 :page-firstcommit: 2008
