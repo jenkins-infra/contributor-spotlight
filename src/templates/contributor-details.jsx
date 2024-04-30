@@ -16,16 +16,17 @@ function ContributorDetails(props) {
     const isDesktop = useMediaQuery(theme.breakpoints.up('lg'))
     const isTablet = useMediaQuery(theme.breakpoints.between('lg', 'sm'))
     const isMobile = useMediaQuery(theme.breakpoints.down('sm'))
+    const title = props.data.asciidoc.pageAttributes.name + ' - Jenkins Contributor Spotlight'
 
     return (
         <>
             <Helmet>
                 <meta charSet='utf-8' />
-                <title>{props.data.asciidoc.pageAttributes.name}</title>
+                <title>{title}</title>
                 <meta
                     name='title'
                     property='og:title'
-                    content={props.data.asciidoc.pageAttributes.name}
+                    content={title}
                 />
                 <meta
                     property='og:image'
