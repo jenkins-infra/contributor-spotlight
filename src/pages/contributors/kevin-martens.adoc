@@ -19,14 +19,15 @@ On top of all that, Kevin loves to explore around New England with his wife and 
 == What is your background prior to contributing to Jenkins?
 
 My first experiences with open source involved game emulation, but I was strictly a user in these cases.
-Eventually, when I went to college I utilized open-source versions of documentation and presentation tools since there was no cost involved.
+In college, I utilized open-source versions of documentation and presentation tools, since there was no cost involved.
 I went to school for communication & education, going on to teach after graduation.
-However, during this time I learned that despite my passion, teaching was not going to be my career.
+However, I learned during this time that despite my passion, teaching was not going to be my career.
 
-After realizing this, I spent time in different areas of the tech space, doing support and training on various hardware and software platforms.
+After realizing this, I spent time in different areas of the tech space, providing support and training on various hardware and software platforms.
 Ultimately, these roles were not as fulfilling as I had hoped.
 Even though I enjoyed helping users figure out their issues, I felt like something was missing.
 Thanks to my wife's encouragement, I decided to break out from what I had been doing and apply for roles that would utilize my writing skills and background.
+This change brought me to CloudBees, and through this role I was introduced to the Jenkins project.
 
 == How long have you been using Jenkins?
 
@@ -34,7 +35,7 @@ I have only been contributing to Jenkins for the last two years, so I am still n
 
 == Why choose Jenkins over other projects?
 
-It wasn't so much a choice of Jenkins over other projects, but more an opportunity presented itself to me where I would be able to contribute to Jenkins as a technical content developer.
+It wasn't so much a choice of Jenkins over other projects, but more of being given an opportunity to contribute to Jenkins as a technical content developer.
 Since I am a CloudBees employee, my relationship with Jenkins is a bit different than most.
 However, since joining the Jenkins community and contributing to the project, I wouldn't have it any other way.
 
@@ -53,7 +54,7 @@ I am very happy to be part of the Jenkins project, and hope that I am paying it 
 
 I am primarily involved in documentation, while also working with the other SIGs and officers on various projects. 
 I have the utmost respect for the community as a whole, as I have formed bonds & relationships with people from all over the globe.
-Jenkins' community has welcomed me with open arms & shown just how exceptional an open-source project can be.
+The Jenkins community has welcomed me with open arms, and shown just how exceptional an open-source project can be.
 
 == What sort of contributions have felt the most successful or impactful?
 
@@ -66,5 +67,5 @@ This is no easy feat and takes the effort of several people to make sure is read
 == Advice for new developers and new members of the open-source community
 
 Never be afraid to ask for help when it comes to joining a project.
-The project has lots of elements to it, so no one expects you to know everything right away.
-Take time and learn about the project and its structure so that you can ask the right questions and get the full picture.
+Jenkins has lots of elements to it, and no one expects you to know everything right away.
+Take time and learn about the project and its structure, so you can ask the right questions and get the full picture.
