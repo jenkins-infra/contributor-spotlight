@@ -1,0 +1,71 @@
+= Kevin Martens
+:page-name: Kevin Martens
+:page-linkedin: kevinmartens27
+:page-twitter: 
+:page-github: kmartens27
+:page-email: 
+:page-image: avatar/kevin-martens.jpeg
+:page-pronouns: He/Him/His
+:page-location: Boston, Massachusetts, USA
+:page-firstcommit: 2022
+:page-datepublished: 2024-05-08
+:page-featured: true
+:page-intro: Kevin Martens is a technical content developer and the Documentation Officer for Jenkins. He is a musician at heart, with a love for education and writing. Despite joining the Jenkins project somewhat recently, Kevin's presence is felt whether leading documentation office hours or providing reviews for contributors.
+
+Outside of documentation, Kevin can usually be found picking out a record to listen to or playing guitar along to his favorite artists.
+He's also a fan of all kinds of games, favoring card and video games the most.
+On top of all that, Kevin loves to explore around New England with his wife and then come home to their four cats.
+
+== What is your background prior to contributing to Jenkins?
+
+My first experiences with open source involved game emulation, but I was strictly a user in these cases.
+In college, I utilized open-source versions of documentation and presentation tools, since there was no cost involved.
+I went to school for communication & education, going on to teach after graduation.
+However, I learned during this time that despite my passion, teaching was not going to be my career.
+
+After realizing this, I spent time in different areas of the tech space, providing support and training on various hardware and software platforms.
+Ultimately, these roles were not as fulfilling as I had hoped.
+Even though I enjoyed helping users figure out their issues, I felt like something was missing.
+Thanks to my wife's encouragement, I decided to break out from what I had been doing and apply for roles that would utilize my writing skills and background.
+This change brought me to CloudBees, and through this role I was introduced to the Jenkins project.
+
+== How long have you been using Jenkins?
+
+I have only been contributing to Jenkins for the last two years, so I am still new to the project.
+
+== Why choose Jenkins over other projects?
+
+It wasn't so much a choice of Jenkins over other projects, but more of being given an opportunity to contribute to Jenkins as a technical content developer.
+Since I am a CloudBees employee, my relationship with Jenkins is a bit different than most.
+However, since joining the Jenkins community and contributing to the project, I wouldn't have it any other way.
+
+I have been welcomed and encouraged by the Jenkins community through every step of my journey and truly appreciate just how open everyone has been.
+I am a newer technical content developer, so I was incredibly nervous at first due to the project being so established.
+However, my concerns soon faded as I got more familiarized with Jenkins.
+
+== What problems has Jenkins solved for you?
+
+Jenkins has not necessarily solved problems for me, but it has afforded me several opportunities that I fully believe I would not have had elsewhere.
+I am able to work with the Jenkins community on documentation and have taken on the role of Documentation Officer since joining the project.
+My knowledge and skills have grown exponentially thanks to the work being done around me and the availability of community members.
+I am very happy to be part of the Jenkins project, and hope that I am paying it forward to the existing and future contributors.
+
+== Is there an aspect of Jenkins that you're particularly passionate about?
+
+I am primarily involved in documentation, while also working with the other SIGs and officers on various projects. 
+I have the utmost respect for the community as a whole, as I have formed bonds & relationships with people from all over the globe.
+The Jenkins community has welcomed me with open arms, and shown just how exceptional an open-source project can be.
+
+== What sort of contributions have felt the most successful or impactful?
+
+Topical, but the contributor spotlight has been very rewarding to work on, as it not only showcases the hard work that goes into Jenkins, but gives everyone a glimpse into the people that are doing this work.
+I've learned a lot just from working with contributors and understanding what drives them.
+
+I have also seen the work that is done in preparing Jenkins releases, so all of my respect and thanks to those that participate in the release process.
+This is no easy feat and takes the effort of several people to make sure is ready for launch.
+
+== Advice for new developers and new members of the open-source community
+
+Never be afraid to ask for help when it comes to joining a project.
+Jenkins has lots of elements to it, and no one expects you to know everything right away.
+Take time and learn about the project and its structure, so you can ask the right questions and get the full picture.
