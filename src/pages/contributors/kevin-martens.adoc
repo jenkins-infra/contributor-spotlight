@@ -9,7 +9,7 @@
 :page-location: Boston, Massachusetts, USA
 :page-firstcommit: 2022
 :page-datepublished: 2024-05-08
-:page-featured: true
+:page-featured: false
 :page-intro: Kevin Martens is a technical content developer and the Documentation Officer for Jenkins. He is a musician at heart, with a love for education and writing. Despite joining the Jenkins project somewhat recently, Kevin's presence is felt whether leading documentation office hours or providing reviews for contributors.
 
 Outside of documentation, Kevin can usually be found picking out a record to listen to or playing guitar along to his favorite artists.
