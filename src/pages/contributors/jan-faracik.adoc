@@ -10,10 +10,7 @@
 :page-firstcommit: 2018
 :page-datepublished: 2024-05-22
 :page-featured: true
-:page-intro: Jan Faracik is a Lead Software Engineer based in sunny London, UK. Jan possesses a deep interest in the combination of design and technology, and how they can be used to enrich user's lives. This started from his early days of messing around in VB.NET and Adobe Fireworks.
-
-Now, he's been fortunate enough to make it a career in his later years, largely working in the public sector.
-In his free time, you'll often find him walking in the many parks London has to offer, listening to music and going to concerts.
+:page-intro: Jan Faracik is a Lead Software Engineer based in sunny London, UK. Jan possesses a deep interest in the combination of design and technology, and how they can be used to enrich user's lives. This started from his early days of messing around in VB.NET and Adobe Fireworks. Now, he's been fortunate enough to make it a career in his later years, largely working in the public sector. In his free time, you'll often find him walking in the many parks London has to offer, listening to music and going to concerts.
 
 == What is your background prior to contributing to Jenkins?
 
