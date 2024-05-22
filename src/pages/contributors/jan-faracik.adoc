@@ -1,0 +1,67 @@
+= Jan Faracik
+:page-name: Jan Faracik
+:page-linkedin: 
+:page-twitter: 
+:page-github: janfaracik
+:page-email: 
+:page-image: avatar/jan-faracik.jpg
+:page-pronouns: He/Him/His
+:page-location: London, England, United Kingdom
+:page-firstcommit: 2018
+:page-datepublished: 2024-05-22
+:page-featured: true
+:page-intro: Jan Faracik is a Lead Software Engineer based in sunny London, UK. Jan possesses a deep interest in the combination of design and technology, and how they can be used to enrich users' lives. This started from his early days of mucking about in VB.NET and Adobe Fireworks. He's been fortunate enough to make it a career in his later years, largely working in the public sector. In his free time, you'll often find him walking in the many parks London has to offer, listening to music and going to concerts.
+
+== What is your background prior to contributing to Jenkins?
+
+While tinkering with various languages and frameworks throughout school and university, I discovered a passion for technology and design, which grew stronger over the years. 
+
+However, it wasn't until my first job post-graduation that I found myself using Jenkins regularly for standard CI/CD tasks.
+
+During a particularly heavy backend project, I often found myself grumbling about the lack of design work and scratching that particular itch in my brain.
+Then, serendipitously, I stumbled upon link:https://github.com/timja[Tim Jacomb's GitHub profile].
+He was looking for Jenkins contributors to enhance the user experience (UX), and I thought, "Why not?"
+Fast forward three years, and they still can't get rid of me.
+
+== How long have you been using Jenkins?
+
+I've been using Jenkins since 2018.
+
+== Why choose Jenkins over other projects?
+
+Jenkins is widely known and used, and it doesn't cost anything.
+It has tons of online documentation and is straightforward to work with. 
+
+Jenkins is also a fantastic opportunity for developers looking to get into the world of OSS, because Jenkins is used globally and has an expansive ecosystem of plugins and services to work with.
+The community is also incredibly supportive and is more than open to newcomers.
+
+== What problems has Jenkins solved for you?
+
+I've used Jenkins consistently throughout my career since it's always a great experience.
+Recently, we've been using it to manage deploys for a suite of microservices.
+Features like shared libraries have been essential to our work, making it a breeze.
+
+== Is there an aspect of Jenkins that you're particularly passionate about?
+
+I'm particularly passionate about improving the UX of Jenkins.
+Over the last few years, it's been great to see and contribute to the UX of Jenkins -- it's really come a long way -- becoming nicer to use and more accessible.
+
+Working with link:https://www.jenkins.io/blog/authors/timja/[Tim Jacomb] on a presentation for DevOps World exploring link:https://www.jenkins.io/blog/2022/08/26/jenkins-design/[the future of Jenkins' user interface] has been a particular highlight, and was a first for me.
+
+== What sort of contributions have felt the most successful or impactful?
+
+I've really enjoyed making UX contributions, as they're often immediately visible to users.
+Contributions such as the Tango icons to SVGs, new tables and widgets, and a standardized color palette help keep the Jenkins user experience fresh.
+While walking through my office, it's rare to see somebody not using the dark theme.
+
+I'm keen to see and port features of BlueOcean that haven't yet made it to Jenkins core.
+The link:https://plugins.jenkins.io/pipeline-graph-view/[Pipeline Graph View plugin] is an example of this, and it's great to see it integrated with core Jenkins.
+
+Work on reducing or removing code such as YUI, Prototype, legacy CSS/JS, and legacy icons has been fantastic to see.
+Despite not being visible to users, they make it easier for newcomers to work on the Jenkins project.
+
+== Advice for new developers and new members of the open-source community
+
+Go for it!
+Start small and work your way up.
+The community is very welcoming to newcomers and new ideas, and we are more than happy to support you as you gain confidence and knowledge of the codebase.
