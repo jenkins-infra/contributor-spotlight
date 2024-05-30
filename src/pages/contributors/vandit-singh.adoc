@@ -9,7 +9,7 @@
 :page-location: Delhi NCR, India
 :page-firstcommit: 2022
 :page-datepublished: 2024-06-05
-:page-featured: false
+:page-featured: true
 :page-intro:  Vandit Singh is a Jenkins contributor currently based in India.
 During the day, he enjoys tinkering with code.
 When he's not deep in Jenkins code, Vandit loves creating music or strumming his guitar.
