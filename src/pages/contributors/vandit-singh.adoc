@@ -10,14 +10,7 @@
 :page-firstcommit: 2022
 :page-datepublished: 2024-06-05
 :page-featured: true
-:page-intro:  Vandit Singh is a Jenkins contributor currently based in India.
-During the day, he enjoys tinkering with code.
-When he's not deep in Jenkins code, Vandit loves creating music or strumming his guitar.
-Open source and music are very close to his heart.
-Vandit's tech journey started when he learned Java and started exploring open source by contributing to Jenkins.
-He had developed a particular interest in DevOps during his first year of university, and Jenkins seemed like the perfect starting point.
-At first, the large codebase scared him.
-However, by taking one step at a time, Vandit keeps progressing.
+:page-intro:  Vandit Singh is a Jenkins contributor currently based in India. During the day, he enjoys tinkering with code. When he's not deep in Jenkins code, Vandit loves creating music or strumming his guitar. Open source and music are very close to his heart. Vandit's tech journey started when he learned Java and started exploring open source by contributing to Jenkins. He had developed a particular interest in DevOps during his first year of university, and Jenkins seemed like the perfect starting point. At first, the large codebase scared him. However, by taking one step at a time, Vandit keeps progressing.
 
 == What is your background prior to contributing to Jenkins?
 
