@@ -10,12 +10,12 @@
 :page-firstcommit: 2022
 :page-datepublished: 2024-06-05
 :page-featured: true
-:page-intro:  Vandit Singh is a Jenkins contributor currently based in India. During the day, he enjoys tinkering with code. When he's not deep in Jenkins code, Vandit loves creating music or strumming his guitar. Open source and music are very close to his heart. Vandit's tech journey started when he learned Java and started exploring open source by contributing to Jenkins. He had developed a particular interest in DevOps during his first year of university, and Jenkins seemed like the perfect starting point. At first, the large codebase scared him. However, by taking one step at a time, Vandit keeps progressing.
+:page-intro:  Vandit Singh is a Jenkins contributor currently based in India. During the day, he enjoys tinkering with code. When he's not deep in Jenkins code, Vandit loves to create music or strum his guitar. Open source and music are very close to his heart. Vandit's tech journey started when he learned Java and started to explore open source by contributing to Jenkins. He had developed a particular interest in DevOps during his first year of university, and Jenkins seemed like the perfect starting point. At first, the large codebase scared him. However, by taking one step at a time, Vandit keeps progressing.
 
 == What is your background prior to contributing to Jenkins?
 
 Before contributing to Jenkins, I had little knowledge of CI/CD, DevOps, and Java.
-While in my Freshman year of university, with only basic tech knowledge, it was during this time that the love for open source was instilled into me by my seniors and university mates.
+During my freshman year at university, with only basic tech knowledge, the love for open source was instilled into me by my seniors and university mates.
 I know basic Java and have an interest in DevOps and Cloud-Native Technologies.
 
 == How long have you been using Jenkins?
@@ -46,11 +46,11 @@ I'm passionate about Jenkins Infrastructure and the Remoting component of Jenkin
 == What sort of contributions have felt the most successful or impactful?
 
 The work I did in Google of Summer of Code 2023 seems the most successful for me.
-I got to link:https://www.jenkins.io/projects/gsoc/2023/projects/alternative-jenkinsio-build-tool/[build a complete project from scratch] which will be used by many users of Jenkins.
+I got to link:https://www.jenkins.io/projects/gsoc/2023/projects/alternative-jenkinsio-build-tool/[build a complete project from scratch] that will be used by many Jenkins users.
 
 == Advice for new developers and new members of the open-source community
 
-The vastness of Jenkins' codebase is a boon for all but can confuse new contributors. 
+The vastness of Jenkins' codebase is a boon for all, but can confuse new contributors. 
 Be patient and keep treading forward every day.
 Focus on one thing at a time; you'll get things up and running accordingly.
 Enjoy the process while you're at it.
