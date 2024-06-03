@@ -46,7 +46,7 @@ I'm passionate about Jenkins Infrastructure and the Remoting component of Jenkin
 == What sort of contributions have felt the most successful or impactful?
 
 The work I did in Google of Summer of Code 2023 seems the most successful for me.
-I got to link:https://www.jenkins.io/projects/gsoc/2023/projects/alternative-jenkinsio-build-tool/[build a complete project from scratch] that will be used by many Jenkins users.
+I got to link:https://www.jenkins.io/projects/gsoc/2023/projects/alternative-jenkinsio-build-tool/[adopt a different tooling for the jenkins.io website] that will be used by many Jenkins users.
 
 == Advice for new developers and new members of the open-source community
 
