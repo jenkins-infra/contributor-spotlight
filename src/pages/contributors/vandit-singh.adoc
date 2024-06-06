@@ -1,0 +1,63 @@
+= Vandit Singh
+:page-name: Vandit Singh
+:page-linkedin: vandit-singh
+:page-twitter: vandittweets
+:page-github: Vandit1604
+:page-email: 
+:page-image: avatar/vandit-singh.png
+:page-pronouns: He/Him/His
+:page-location: Delhi NCR, India
+:page-firstcommit: 2022
+:page-datepublished: 2024-06-05
+:page-featured: true
+:page-intro:  Vandit Singh is a Jenkins contributor currently based in India. During the day, he enjoys tinkering with code. When he's not deep in Jenkins code, Vandit loves to create music or strum his guitar. Open source and music are very close to his heart. Vandit's tech journey started when he learned Java and started to explore open source by contributing to Jenkins. He had developed a particular interest in DevOps during his first year of university, and Jenkins seemed like the perfect starting point. At first, the large codebase scared him. However, by taking one step at a time, Vandit keeps progressing.
+
+== What is your background prior to contributing to Jenkins?
+
+Before contributing to Jenkins, I had little knowledge of CI/CD, DevOps, and Java.
+During my freshman year at university, with only basic tech knowledge, the love for open source was instilled into me by my seniors and university mates.
+I know basic Java and have an interest in DevOps and Cloud-Native Technologies.
+
+== How long have you been using Jenkins?
+
+I have been contributing to Jenkins since July 2022.
+
+== Why choose Jenkins over other projects?
+
+One of the most exciting aspects for me is the idea of creating something that can be used by other people. 
+The bar is not very high for anyone to start contributing.
+If you can code, you can get involved.
+If you can design, you're welcome in the community.
+You can write?
+Awesome!
+You help us with the documentation.
+The ease of getting involved with the community was a deciding factor for me in choosing to work with Jenkins over other projects.
+
+== What problems has Jenkins solved for you?
+
+Jenkins is used for CI/CD pipelining and automating tasks on the internet.
+You can automate many tasks in your web app with Jenkins.
+Additionally, Jenkins is used to improve the software development cycle by testing new pull requests every day.
+
+== Is there an aspect of Jenkins that you're particularly passionate about?
+
+I'm passionate about Jenkins Infrastructure and the Remoting component of Jenkins.
+
+== What sort of contributions have felt the most successful or impactful?
+
+The work I did in Google of Summer of Code 2023 seems the most successful for me.
+I got to link:https://www.jenkins.io/projects/gsoc/2023/projects/alternative-jenkinsio-build-tool/[adopt a different tooling for the jenkins.io website] that will be used by many Jenkins users.
+
+== Advice for new developers and new members of the open-source community
+
+The vastness of Jenkins' codebase is a boon for all, but can confuse new contributors. 
+Be patient and keep treading forward every day.
+Focus on one thing at a time; you'll get things up and running accordingly.
+Enjoy the process while you're at it.
+
+If you get stuck somewhere, try to figure it out first.
+Embrace the challenge and try to tackle it on your own.
+The skills you'll gain while figuring things out are invaluable and can't be taught by anyone, only by yourself.
+
+One thing anyone can take from my journey is to be persistent and enjoy the process.
+Open source has a lot of opportunities for everyone to learn and grow from.
