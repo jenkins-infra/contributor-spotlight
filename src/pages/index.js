@@ -62,14 +62,18 @@ const IndexPage = (props) => {
     const [thankYou, setThankYou] = React.useState([]);
 
     useEffect(() => {
-        axios
-            .get(
-                'https://raw.githubusercontent.com/jmMeessen/jenkins-submitter-stats/main/data/honored_contributor.csv',
-                { responseType: 'text' }
-            )
-            .then((response) => {
-                setThankYou(Papa.parse(response.data)?.data[1]);
-            });
+        const interval = setInterval(() => {
+            axios
+                .get(
+                    'https://raw.githubusercontent.com/jmMeessen/jenkins-submitter-stats/main/data/honored_contributor.csv',
+                    { responseType: 'text' }
+                )
+                .then((response) => {
+                    setThankYou(Papa.parse(response.data)?.data[1]);
+                });
+        }, 3600000);
+
+        return () => clearInterval(interval);
     }, []);
 
     useEffect(() => {
