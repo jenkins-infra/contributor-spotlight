@@ -1,33 +1,31 @@
-import React from 'react'
-import { graphql, Link } from 'gatsby'
-import { Box, Stack, Typography, useTheme } from '@mui/material'
-import LinkedInIcon from '@mui/icons-material/LinkedIn'
-import GitHubIcon from '@mui/icons-material/GitHub'
-import TwitterIcon from '@mui/icons-material/Twitter'
-import AlternateEmailIcon from '@mui/icons-material/AlternateEmail'
-import ArrowBackIcon from '@mui/icons-material/ArrowBack'
-import '../styles/contributor-details.css'
-import useMediaQuery from '@mui/material/useMediaQuery'
-import { Helmet } from 'react-helmet'
-import dayjs from 'dayjs'
+import React from 'react';
+import { graphql, Link } from 'gatsby';
+import { Box, Stack, Typography, useTheme } from '@mui/material';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import GitHubIcon from '@mui/icons-material/GitHub';
+import TwitterIcon from '@mui/icons-material/Twitter';
+import AlternateEmailIcon from '@mui/icons-material/AlternateEmail';
+import ArrowBackIcon from '@mui/icons-material/ArrowBack';
+import '../styles/contributor-details.css';
+import useMediaQuery from '@mui/material/useMediaQuery';
+import { Helmet } from 'react-helmet';
+import dayjs from 'dayjs';
 
 function ContributorDetails(props) {
-    const theme = useTheme()
-    const isDesktop = useMediaQuery(theme.breakpoints.up('lg'))
-    const isTablet = useMediaQuery(theme.breakpoints.between('lg', 'sm'))
-    const isMobile = useMediaQuery(theme.breakpoints.down('sm'))
-    const title = props.data.asciidoc.pageAttributes.name + ' - Jenkins Contributor Spotlight'
+    const theme = useTheme();
+    const isDesktop = useMediaQuery(theme.breakpoints.up('lg'));
+    const isTablet = useMediaQuery(theme.breakpoints.between('lg', 'sm'));
+    const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
+    const title =
+        props.data.asciidoc.pageAttributes.name +
+        ' - Jenkins Contributor Spotlight';
 
     return (
         <>
             <Helmet>
                 <meta charSet='utf-8' />
                 <title>{title}</title>
-                <meta
-                    name='title'
-                    property='og:title'
-                    content={title}
-                />
+                <meta name='title' property='og:title' content={title} />
                 <meta
                     property='og:image'
                     content={
@@ -192,10 +190,10 @@ function ContributorDetails(props) {
                 </Box>
             </Box>
         </>
-    )
+    );
 }
 
-export default ContributorDetails
+export default ContributorDetails;
 
 export const pageQuery = graphql`
     query ($id: String!) {
@@ -222,4 +220,4 @@ export const pageQuery = graphql`
             }
         }
     }
-`
+`;
