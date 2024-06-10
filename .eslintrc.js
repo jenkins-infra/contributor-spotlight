@@ -35,4 +35,4 @@ module.exports = {
         'no-unused-vars': 'off',
         'require-jsdoc': 'off',
     },
-}
+};

@@ -1,20 +1,21 @@
-import * as React from 'react'
-import '../../styles/index.css'
-import { Box, Stack, Typography, useTheme } from '@mui/material'
-import { graphql, Link } from 'gatsby'
-import useMediaQuery from '@mui/material/useMediaQuery'
-import { Helmet } from 'react-helmet'
-import dayjs from 'dayjs'
+import React, { useEffect } from 'react';
+import '../../styles/index.css';
+import { Box, Stack, Typography, useTheme } from '@mui/material';
+import { graphql, Link } from 'gatsby';
+import useMediaQuery from '@mui/material/useMediaQuery';
+import { Helmet } from 'react-helmet';
+import dayjs from 'dayjs';
+import axios from 'axios';
+import Papa from 'papaparse';
 
 const IndexPage = (props) => {
-    const theme = useTheme()
-    const isDesktop = useMediaQuery(theme.breakpoints.up('lg'))
-    const isTablet = useMediaQuery(theme.breakpoints.between('lg', 'sm'))
-    const isMobile = useMediaQuery(theme.breakpoints.down('sm'))
+    const theme = useTheme();
+    const isDesktop = useMediaQuery(theme.breakpoints.up('lg'));
+    const isTablet = useMediaQuery(theme.breakpoints.between('lg', 'sm'));
+    const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
 
-    const { data } = props
-    console.log('edges', data.allAsciidoc.edges)
-    const contributors = data.allAsciidoc.edges
+    const { data } = props;
+    const contributors = data.allAsciidoc.edges;
     const contributorCards = contributors.map((contributor, idx) => {
         if (contributor.node.pageAttributes.featured === 'false') {
             return (
@@ -54,9 +55,26 @@ const IndexPage = (props) => {
                         </Box>
                     </Box>
                 </Link>
-            )
+            );
         }
-    })
+    });
+
+    const [thankYou, setThankYou] = React.useState([]);
+
+    useEffect(() => {
+        axios
+            .get(
+                'https://raw.githubusercontent.com/jmMeessen/jenkins-submitter-stats/main/data/honored_contributor.csv',
+                { responseType: 'text' }
+            )
+            .then((response) => {
+                setThankYou(Papa.parse(response.data)?.data[1]);
+            });
+    }, []);
+
+    useEffect(() => {
+        console.log(thankYou);
+    }, [thankYou]);
 
     return (
         <main>
@@ -316,7 +334,7 @@ const IndexPage = (props) => {
                                     </Stack>
                                 </Stack>
                             </Link>
-                        )
+                        );
                     }
                 })}
                 <Box
@@ -335,11 +353,70 @@ const IndexPage = (props) => {
                     {contributorCards}
                 </Box>
             </Box>
+            <Box
+                sx={{
+                    padding: theme.spacing(5, 0),
+                    display: 'flex',
+                    justifyContent: 'center',
+                    alignItems: 'center',
+                }}
+            >
+                <Stack direction='row' gap={3}>
+                    <Box
+                        sx={{
+                            display: 'flex',
+                            justifyContent: 'center',
+                            alignItems: 'center',
+                        }}
+                    >
+                        <img
+                            src={thankYou[6]?.replace(/['"]+/g, '')}
+                            alt='Random contributor image'
+                            width={isDesktop ? 100 : isMobile ? 50 : 90}
+                            height={isDesktop ? 100 : isMobile ? 50 : 90}
+                        />
+                    </Box>
+                    <Box
+                        sx={{
+                            fontFamily: 'Princess Sofia',
+                            fontSize: isMobile ? 'medium' : 'x-large',
+                        }}
+                    >
+                        Thank you
+                        {Boolean(thankYou) && (
+                            <a href={thankYou[5]?.replace(/['"]+/g, '')}>
+                                {thankYou[3]?.replace(/['"]+/g, '') ??
+                                    thankYou[2]?.replace(/['"]+/g, '')}
+                            </a>
+                        )}
+                        <br />
+                        for making {thankYou[7]?.replace(/['"]+/g, '')} pull
+                        requests(s)
+                        <br />
+                        to the{' '}
+                        {thankYou[8]
+                            ?.replace(/['"]+/g, '')
+                            .split(/\s+/)
+                            .filter(Boolean)
+                            .map((repo, idx) => (
+                                <>
+                                    <a href={`https://github.com/${repo}`}>
+                                        {repo}
+                                    </a>
+                                    {idx < thankYou[8].split(' ').length - 1
+                                        ? ', '
+                                        : ' '}
+                                </>
+                            ))}{' '}
+                        repo(s).
+                    </Box>
+                </Stack>
+            </Box>
         </main>
-    )
-}
+    );
+};
 
-export default IndexPage
+export default IndexPage;
 
 export const pageQuery = graphql`
     query {
@@ -373,4 +450,4 @@ export const pageQuery = graphql`
             }
         }
     }
-`
+`;
