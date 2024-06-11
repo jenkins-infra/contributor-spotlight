@@ -76,10 +76,6 @@ const IndexPage = (props) => {
         return () => clearInterval(interval);
     }, []);
 
-    useEffect(() => {
-        console.log(thankYou);
-    }, [thankYou]);
-
     return (
         <main>
             <Helmet>
