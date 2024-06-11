@@ -62,6 +62,15 @@ const IndexPage = (props) => {
     const [thankYou, setThankYou] = React.useState([]);
 
     useEffect(() => {
+        axios
+            .get(
+                'https://raw.githubusercontent.com/jmMeessen/jenkins-submitter-stats/main/data/honored_contributor.csv',
+                { responseType: 'text' }
+            )
+            .then((response) => {
+                setThankYou(Papa.parse(response.data)?.data[1]);
+            });
+
         const interval = setInterval(() => {
             axios
                 .get(
@@ -384,7 +393,10 @@ const IndexPage = (props) => {
                     >
                         Thank you
                         {Boolean(thankYou) && (
-                            <a href={thankYou[5]?.replace(/['"]+/g, '')}>
+                            <a
+                                target='_blank'
+                                href={thankYou[5]?.replace(/['"]+/g, '')}
+                            >
                                 {thankYou[3]?.replace(/['"]+/g, '') ??
                                     thankYou[2]?.replace(/['"]+/g, '')}
                             </a>
@@ -400,7 +412,10 @@ const IndexPage = (props) => {
                             .filter(Boolean)
                             .map((repo, idx) => (
                                 <>
-                                    <a href={`https://github.com/${repo}`}>
+                                    <a
+                                        target='_blank'
+                                        href={`https://github.com/${repo}`}
+                                    >
                                         {repo}
                                     </a>
                                     {idx < thankYou[8].split(' ').length - 1
