@@ -370,62 +370,76 @@ const IndexPage = (props) => {
                     alignItems: 'center',
                 }}
             >
-                <Stack direction='row' gap={3}>
-                    <Box
-                        sx={{
-                            display: 'flex',
-                            justifyContent: 'center',
-                            alignItems: 'center',
-                        }}
-                    >
-                        <img
-                            src={thankYou[6]?.replace(/['"]+/g, '')}
-                            alt='Random contributor image'
-                            width={isDesktop ? 100 : isMobile ? 50 : 90}
-                            height={isDesktop ? 100 : isMobile ? 50 : 90}
-                        />
-                    </Box>
-                    <Box
-                        sx={{
-                            fontFamily: 'Princess Sofia',
-                            fontSize: isMobile ? 'medium' : 'x-large',
-                        }}
-                    >
-                        Thank you
-                        {Boolean(thankYou) && (
-                            <a
-                                target='_blank'
-                                href={thankYou[5]?.replace(/['"]+/g, '')}
-                            >
-                                {thankYou[3]?.replace(/['"]+/g, '') ??
-                                    thankYou[2]?.replace(/['"]+/g, '')}
-                            </a>
-                        )}
-                        <br />
-                        for making {thankYou[7]?.replace(/['"]+/g, '')} pull
-                        requests(s)
-                        <br />
-                        to the{' '}
-                        {thankYou[8]
-                            ?.replace(/['"]+/g, '')
-                            .split(/\s+/)
-                            .filter(Boolean)
-                            .map((repo, idx) => (
-                                <>
-                                    <a
-                                        target='_blank'
-                                        href={`https://github.com/${repo}`}
-                                    >
-                                        {repo}
-                                    </a>
-                                    {idx < thankYou[8].split(' ').length - 1
-                                        ? ', '
-                                        : ' '}
-                                </>
-                            ))}{' '}
-                        repo(s).
-                    </Box>
-                </Stack>
+                <Box
+                    sx={{
+                        padding: theme.spacing(5),
+                        borderRadius: 5,
+                        maxWidth: isMobile ? 350 : 750,
+                        backgroundColor: 'rgb(218, 209, 198, 0.3)',
+                    }}
+                >
+                    <Stack direction='row' gap={3}>
+                        <Box
+                            sx={{
+                                display: 'flex',
+                                justifyContent: 'center',
+                                alignItems: 'center',
+                            }}
+                        >
+                            <img
+                                src={thankYou[6]?.replace(/['"]+/g, '')}
+                                alt='Random contributor image'
+                                width={isDesktop ? 100 : isMobile ? 50 : 90}
+                                height={isDesktop ? 100 : isMobile ? 50 : 90}
+                            />
+                        </Box>
+                        <Box
+                            sx={{
+                                fontSize: isMobile ? 'small' : 'medium',
+                            }}
+                        >
+                            Thank you
+                            {Boolean(thankYou) && (
+                                <a
+                                    target='_blank'
+                                    href={thankYou[5]?.replace(/['"]+/g, '')}
+                                >
+                                    {thankYou[3]?.replace(/['"]+/g, '') ??
+                                        thankYou[2]?.replace(/['"]+/g, '')}
+                                </a>
+                            )}
+                            <br />
+                            for making {thankYou[7]?.replace(/['"]+/g, '')} pull
+                            requests(s)
+                            <br />
+                            to the{' '}
+                            {thankYou[8]
+                                ?.replace(/['"]+/g, '')
+                                .split(/\s+/)
+                                .filter(Boolean)
+                                .map((repo, idx) => (
+                                    <>
+                                        <a
+                                            target='_blank'
+                                            href={`https://github.com/${repo}`}
+                                        >
+                                            {repo.split('/')[1]}
+                                        </a>
+                                        {idx <
+                                        thankYou[8].split(' ').length - 1 ? (
+                                            <>
+                                                ,
+                                                <br />
+                                            </>
+                                        ) : (
+                                            ' '
+                                        )}
+                                    </>
+                                ))}{' '}
+                            repo(s)!
+                        </Box>
+                    </Stack>
+                </Box>
             </Box>
         </main>
     );
