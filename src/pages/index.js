@@ -372,13 +372,22 @@ const IndexPage = (props) => {
             >
                 <Box
                     sx={{
-                        padding: theme.spacing(5),
+                        padding: theme.spacing(3),
                         borderRadius: 5,
-                        maxWidth: isMobile ? 350 : 750,
+                        maxWidth: 'fit-content',
+                        height: 'fit-content',
                         backgroundColor: 'rgb(218, 209, 198, 0.3)',
+                        display: 'flex',
+                        justifyContent: 'center',
+                        alignItems: 'center',
                     }}
                 >
-                    <Stack direction='row' gap={3}>
+                    <Stack
+                        direction='row'
+                        gap={3}
+                        justifyItems='center'
+                        alignItems='center'
+                    >
                         <Box
                             sx={{
                                 display: 'flex',
@@ -391,6 +400,10 @@ const IndexPage = (props) => {
                                 alt='Random contributor image'
                                 width={isDesktop ? 100 : isMobile ? 50 : 90}
                                 height={isDesktop ? 100 : isMobile ? 50 : 90}
+                                style={{
+                                    marginTop: 'auto',
+                                    marginBottom: 'auto',
+                                }}
                             />
                         </Box>
                         <Box
