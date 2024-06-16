@@ -64,7 +64,7 @@ const IndexPage = (props) => {
     useEffect(() => {
         axios
             .get(
-                'https://raw.githubusercontent.com/jmMeessen/jenkins-submitter-stats/main/data/honored_contributor.csv',
+                'https://raw.githubusercontent.com/jenkins-infra/jenkins-contribution-stats/main/data/honored_contributor.csv',
                 { responseType: 'text' }
             )
             .then((response) => {
