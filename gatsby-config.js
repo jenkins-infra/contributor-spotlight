@@ -53,12 +53,6 @@ module.exports = {
                     `https://fonts.googleapis.com`,
                     `https://fonts.gstatic.com`,
                 ],
-                web: [
-                    {
-                        name: `Princess Sofia`,
-                        file: `https://fonts.googleapis.com/css2?family=Princess+Sofia:wght@400;600;700&display=swap`,
-                    },
-                ],
             },
         },
     ],
