@@ -439,6 +439,11 @@ const IndexPage = (props) => {
                                 .filter(Boolean)
                                 .map((repo, idx) => (
                                     <>
+                                        {thankYou[8].split(' ').length >= 2 &&
+                                            idx ===
+                                                thankYou[8].split(' ').length -
+                                                    2 &&
+                                            'and '}
                                         <a
                                             target='_blank'
                                             href={`https://github.com/${repo}`}
