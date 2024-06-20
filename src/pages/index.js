@@ -412,8 +412,8 @@ const IndexPage = (props) => {
                             }}
                         >
                             Thank you{' '}
-                            {thankYou.filter((item) => item === '').length ===
-                                0 && (
+                            {thankYou.filter((item) => item?.trim() === '')
+                                .length === 0 && (
                                 <a
                                     target='_blank'
                                     href={thankYou[5]?.replace(/['"]+/g, '')}
