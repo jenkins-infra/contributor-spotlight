@@ -411,14 +411,16 @@ const IndexPage = (props) => {
                                 fontSize: isMobile ? 'small' : 'medium',
                             }}
                         >
-                            Thank you
-                            {Boolean(thankYou) && (
+                            Thank you{' '}
+                            {thankYou.filter((item) => item === '').length ===
+                                0 && (
                                 <a
                                     target='_blank'
                                     href={thankYou[5]?.replace(/['"]+/g, '')}
                                 >
-                                    {thankYou[3]?.replace(/['"]+/g, '') ??
-                                        thankYou[2]?.replace(/['"]+/g, '')}
+                                    {thankYou[3] === true
+                                        ? thankYou[3]?.replace(/['"]+/g, '')
+                                        : thankYou[2]?.replace(/['"]+/g, '')}
                                 </a>
                             )}
                             <br />
