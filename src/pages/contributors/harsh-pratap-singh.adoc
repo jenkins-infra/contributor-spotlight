@@ -1,0 +1,47 @@
+= Harsh Pratap Singh
+:page-name: Harsh Pratap Singh
+:page-linkedin: harsh-pratap-singh-787485255
+:page-twitter: harsh_ps2003
+:page-github: harsh-ps-2003
+:page-email: 
+:page-image: avatar/harsh-pratap-singh.jpg
+:page-pronouns: He/Him/His
+:page-location: India
+:page-firstcommit: 2023
+:page-datepublished: 2024-06-19
+:page-featured: true
+:page-intro:  Harsh Pratap Singh is a newer contributor to Jenkins and has participated in the Jenkins Google Summer of Code project since 2023. He has a whole universe inside of him, made of beautiful stories with ugly depths and a full heart, a world entitled to his love. Even though he is into mathematics, he is less calculative at heart. He is inspired by death, which gives him the courage to live intensely. His motto is "Eat well, work hard, help people, and sleep plenty." Every moment of self-realization is close to his heart, and every smile he has brought to people is near his soul. He has yet to have a more expansive journey since he is only 19, but something he learned was not to take his thoughts too seriously.
+
+== What is your background prior to contributing to Jenkins?
+
+I am just a teenager who loves Computer Science, Physics, Mathematics, Philosophy, and Psychology with a sprinkle of talking with random books.
+I enjoy helping people, and thus became a problem solver.
+
+== How long have you been using Jenkins?
+
+I have been using Jenkins for about a year, since early 2023.
+
+== Why choose Jenkins over other projects?
+
+It was not Jenkins vs other open-source communities for me.
+It was just who needed help and how can I help.
+The community was very welcoming and warm to newbies like me and gave me confidence that I could do a lot of things I never thought I would be able to accomplish.
+I love exploring open-source organizations!
+
+== What problems has Jenkins solved for you?
+
+Among other things, I use Jenkins for automation of test builds.
+
+== Is there an aspect of Jenkins that you're particularly passionate about?
+
+Learning about the Jenkins infrastructure!
+
+== What sort of contributions have felt the most successful or impactful?
+
+For me, my Google Summer of Code work to link:https://www.jenkins.io/blog/2023/08/24/gitlab-plugin-modernization-report/[modernize the GitLab plugin] and its further maintenance has been fruitful. 
+
+== Advice for new developers and new members of the open-source community
+
+First of all, you are welcome and we need you!
+You can contribute not just by submitting code, but with ideas, discussions, reporting issues, and improving documentation.
+Don't shy away from asking for help, nobody is a know-it-all here! 
