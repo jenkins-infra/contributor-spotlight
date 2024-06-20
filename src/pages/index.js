@@ -424,8 +424,13 @@ const IndexPage = (props) => {
                                 </a>
                             )}
                             <br />
-                            for making {thankYou[7]?.replace(/['"]+/g, '')} pull
-                            requests(s)
+                            for making {thankYou[7]?.replace(
+                                /['"]+/g,
+                                ''
+                            )} pull{' '}
+                            {parseInt(thankYou[7]?.replace(/['"]+/g, '')) >= 2
+                                ? 'requests'
+                                : 'request'}
                             <br />
                             to the{' '}
                             {thankYou[8]
@@ -440,8 +445,10 @@ const IndexPage = (props) => {
                                         >
                                             {repo.split('/')[1]}
                                         </a>
-                                        {idx <
-                                        thankYou[8].split(' ').length - 1 ? (
+                                        {thankYou[8].split(' ').length >= 2 &&
+                                        idx <
+                                            thankYou[8].split(' ').length -
+                                                2 ? (
                                             <>
                                                 ,
                                                 <br />
@@ -451,7 +458,9 @@ const IndexPage = (props) => {
                                         )}
                                     </>
                                 ))}{' '}
-                            repo(s)!
+                            {thankYou[8]?.split(' ').length >= 2
+                                ? 'repos!'
+                                : 'repo!'}
                         </Box>
                     </Stack>
                 </Box>
