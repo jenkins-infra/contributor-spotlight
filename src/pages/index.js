@@ -432,37 +432,45 @@ const IndexPage = (props) => {
                                 ? 'requests'
                                 : 'request'}
                             <br />
-                            to the{' '}
-                            {thankYou[8]
-                                ?.replace(/['"]+/g, '')
-                                .split(/\s+/)
-                                .filter(Boolean)
-                                .map((repo, idx) => (
-                                    <>
-                                        {thankYou[8].split(' ').length >= 2 &&
-                                            idx ===
+                            to{' '}
+                            {thankYou[8].split(' ').length >= 4
+                                ? parseInt(thankYou[8].split(' ').length) +
+                                  ' Jenkins'
+                                : 'the'}
+                            {thankYou[8].split(' ').length < 4 &&
+                                thankYou[8]
+                                    ?.replace(/['"]+/g, '')
+                                    .split(/\s+/)
+                                    .filter(Boolean)
+                                    .map((repo, idx) => (
+                                        <>
+                                            {2 <=
+                                                thankYou[8].split(' ').length &&
+                                                idx ===
+                                                    thankYou[8].split(' ')
+                                                        .length -
+                                                        2 &&
+                                                'and '}
+                                            <a
+                                                target='_blank'
+                                                href={`https://github.com/${repo}`}
+                                            >
+                                                {repo.split('/')[1]}
+                                            </a>
+                                            {thankYou[8].split(' ').length >=
+                                                2 &&
+                                            idx <
                                                 thankYou[8].split(' ').length -
-                                                    2 &&
-                                            'and '}
-                                        <a
-                                            target='_blank'
-                                            href={`https://github.com/${repo}`}
-                                        >
-                                            {repo.split('/')[1]}
-                                        </a>
-                                        {thankYou[8].split(' ').length >= 2 &&
-                                        idx <
-                                            thankYou[8].split(' ').length -
-                                                2 ? (
-                                            <>
-                                                ,
-                                                <br />
-                                            </>
-                                        ) : (
-                                            ' '
-                                        )}
-                                    </>
-                                ))}{' '}
+                                                    2 ? (
+                                                <>
+                                                    ,
+                                                    <br />
+                                                </>
+                                            ) : (
+                                                ' '
+                                            )}
+                                        </>
+                                    ))}{' '}
                             {thankYou[8]?.split(' ').length >= 2
                                 ? 'repos!'
                                 : 'repo!'}
