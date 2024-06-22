@@ -418,7 +418,7 @@ const IndexPage = (props) => {
                                     target='_blank'
                                     href={thankYou[5]?.replace(/['"]+/g, '')}
                                 >
-                                    {thankYou[3] === true
+                                    {thankYou[3]?.replace(/['"]+/g, '')
                                         ? thankYou[3]?.replace(/['"]+/g, '')
                                         : thankYou[2]?.replace(/['"]+/g, '')}
                                 </a>
