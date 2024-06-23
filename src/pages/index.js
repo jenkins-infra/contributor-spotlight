@@ -416,11 +416,10 @@ const IndexPage = (props) => {
                                 .length === 0 && (
                                 <a
                                     target='_blank'
+                                    rel='noreferrer'
                                     href={thankYou[5]?.replace(/['"]+/g, '')}
                                 >
-                                    {thankYou[3]
-                                            ?.replace(/['"]+/g, '')
-                                            .trim()
+                                    {thankYou[3]?.replace(/['"]+/g, '').trim()
                                         ? thankYou[3]?.replace(/['"]+/g, '')
                                         : thankYou[2]?.replace(/['"]+/g, '')}
                                 </a>
@@ -456,6 +455,7 @@ const IndexPage = (props) => {
                                                 'and '}
                                             <a
                                                 target='_blank'
+                                                rel='noreferrer'
                                                 href={`https://github.com/${repo}`}
                                             >
                                                 {repo?.split('/')[1]}
