@@ -418,7 +418,9 @@ const IndexPage = (props) => {
                                     target='_blank'
                                     href={thankYou[5]?.replace(/['"]+/g, '')}
                                 >
-                                    {thankYou[3]?.replace(/['"]+/g, '')
+                                    {thankYou[3]
+                                            ?.replace(/['"]+/g, '')
+                                            .trim()
                                         ? thankYou[3]?.replace(/['"]+/g, '')
                                         : thankYou[2]?.replace(/['"]+/g, '')}
                                 </a>
@@ -436,7 +438,7 @@ const IndexPage = (props) => {
                             {thankYou[8]?.split(' ')?.length >= 4
                                 ? parseInt(thankYou[8]?.split(' ')?.length) +
                                   ' Jenkins'
-                                : 'the'}
+                                : 'the '}
                             {thankYou[8]?.split(' ').length < 4 &&
                                 thankYou[8]
                                     ?.replace(/['"]+/g, '')
