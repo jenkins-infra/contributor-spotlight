@@ -412,7 +412,7 @@ const IndexPage = (props) => {
                             }}
                         >
                             Thank you{' '}
-                            {thankYou.filter((item) => item?.trim() === '')
+                            {thankYou?.filter((item) => item?.trim() === '')
                                 .length === 0 && (
                                 <a
                                     target='_blank'
@@ -433,11 +433,11 @@ const IndexPage = (props) => {
                                 : 'request'}
                             <br />
                             to{' '}
-                            {thankYou[8].split(' ').length >= 4
-                                ? parseInt(thankYou[8].split(' ').length) +
+                            {thankYou[8]?.split(' ')?.length >= 4
+                                ? parseInt(thankYou[8]?.split(' ')?.length) +
                                   ' Jenkins'
                                 : 'the'}
-                            {thankYou[8].split(' ').length < 4 &&
+                            {thankYou[8]?.split(' ').length < 4 &&
                                 thankYou[8]
                                     ?.replace(/['"]+/g, '')
                                     .split(/\s+/)
@@ -445,9 +445,10 @@ const IndexPage = (props) => {
                                     .map((repo, idx) => (
                                         <>
                                             {2 <=
-                                                thankYou[8].split(' ').length &&
+                                                thankYou[8]?.split(' ')
+                                                    .length &&
                                                 idx ===
-                                                    thankYou[8].split(' ')
+                                                    thankYou[8]?.split(' ')
                                                         .length -
                                                         2 &&
                                                 'and '}
@@ -455,12 +456,12 @@ const IndexPage = (props) => {
                                                 target='_blank'
                                                 href={`https://github.com/${repo}`}
                                             >
-                                                {repo.split('/')[1]}
+                                                {repo?.split('/')[1]}
                                             </a>
-                                            {thankYou[8].split(' ').length >=
+                                            {thankYou[8]?.split(' ').length >=
                                                 2 &&
                                             idx <
-                                                thankYou[8].split(' ').length -
+                                                thankYou[8]?.split(' ').length -
                                                     2 ? (
                                                 <>
                                                     ,
