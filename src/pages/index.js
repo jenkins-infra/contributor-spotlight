@@ -472,8 +472,13 @@ const IndexPage = (props) => {
                                         </>
                                     ))}{' '}
                             {thankYou[8]?.split(' ').length >= 2
-                                ? 'repos!'
-                                : 'repo!'}
+                                ? 'repos'
+                                : 'repo'}{' '}
+                            in{' '}
+                            {dayjs(thankYou[1]?.replace(/['"]+/g, '')).format(
+                                'MMM YYYY'
+                            )}
+                            !
                         </Box>
                     </Stack>
                 </Box>
