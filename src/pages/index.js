@@ -445,9 +445,8 @@ const IndexPage = (props) => {
                                     .filter(Boolean)
                                     .map((repo, idx) => (
                                         <>
-                                            {2 <=
-                                                thankYou[8]?.split(' ')
-                                                    .length &&
+                                            {thankYou[8]?.split(' ').length >
+                                                2 &&
                                                 idx ===
                                                     thankYou[8]?.split(' ')
                                                         .length -
