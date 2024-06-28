@@ -1,13 +1,13 @@
 = Rajiv Singh
 :page-name: Rajiv Singh
-:page-linkedin: https://www.linkedin.com/in/iamrajivranjansingh
-:page-twitter: https://x.com/therajiv
+:page-linkedin: iamrajivranjansingh
+:page-twitter: therajiv
 :page-github: iamrajiv
 :page-email: 
 :page-image: 
 :page-pronouns: He/Him/His
 :page-location: Bengaluru, India
-:page-firstcommit: 2018
+:page-firstcommit: 2023
 :page-datepublished: 2024-07-02
 :page-featured: false
 :page-intro: Rajiv works as a software engineer at A.P. Moller - Maersk based in India. In 2022 he graduated from JSS Academy of Technical Education with a Bachelor in Information Science & Engineering. Fascinated by the extensive impact computers have on solving real world problems, he writes software for a living and has primarily worked on backend systems and infrastructure. His focus is on the fields of algorithms and distributed systems.
