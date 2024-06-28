@@ -4,7 +4,7 @@
 :page-twitter: therajiv
 :page-github: iamrajiv
 :page-email: 
-:page-image: 
+:page-image: avatar/rajiv-singh.png
 :page-pronouns: He/Him/His
 :page-location: Bengaluru, India
 :page-firstcommit: 2023
