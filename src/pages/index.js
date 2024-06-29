@@ -473,7 +473,7 @@ const IndexPage = (props) => {
                                             )}
                                         </>
                                     ))}{' '}
-                            {thankYou[8]?.split(' ').length >= 2
+                            {thankYou[8]?.split(' ').length > 2
                                 ? 'repos'
                                 : 'repo'}{' '}
                             in{' '}
