@@ -436,7 +436,7 @@ const IndexPage = (props) => {
                             to{' '}
                             {thankYou[8]?.split(' ')?.length >= 4
                                 ? parseInt(thankYou[8]?.split(' ')?.length) +
-                                  ' Jenkins'
+                                  ' Jenkins '
                                 : 'the '}
                             {thankYou[8]?.split(' ').length < 4 &&
                                 thankYou[8]
