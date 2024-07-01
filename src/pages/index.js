@@ -372,7 +372,7 @@ const IndexPage = (props) => {
             >
                 <Box
                     sx={{
-                        padding: theme.spacing(3),
+                        padding: isMobile ? theme.spacing(2) : theme.spacing(3),
                         borderRadius: 5,
                         maxWidth: 'fit-content',
                         height: 'fit-content',
@@ -384,7 +384,7 @@ const IndexPage = (props) => {
                 >
                     <Stack
                         direction='row'
-                        gap={3}
+                        gap={isMobile ? 1 : 3}
                         justifyItems='center'
                         alignItems='center'
                     >
@@ -398,8 +398,10 @@ const IndexPage = (props) => {
                             <img
                                 src={thankYou[6]?.replace(/['"]+/g, '')}
                                 alt='Random contributor image'
-                                width={isDesktop ? 100 : isMobile ? 50 : 90}
-                                height={isDesktop ? 100 : isMobile ? 50 : 90}
+                                width={isDesktop ? 100 : isMobile ? 36 : 90}
+                                height={
+                                    isDesktop ? 100 : isMobile ? '100%' : 90
+                                }
                                 style={{
                                     marginTop: 'auto',
                                     marginBottom: 'auto',
