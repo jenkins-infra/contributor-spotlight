@@ -25,7 +25,11 @@ const IndexPage = (props) => {
                     key={idx}
                 >
                     <Box padding={isDesktop ? 5 : 2} key={idx}>
-                        <Box>
+                        <Box
+                            display='flex'
+                            justifyContent='center'
+                            alignItems='center'
+                        >
                             <img
                                 src={contributor.node.pageAttributes.image}
                                 alt='Contributor avatar'
