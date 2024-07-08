@@ -9,7 +9,7 @@
 :page-location: India
 :page-firstcommit: 2023
 :page-datepublished: 2024-06-19
-:page-featured: true
+:page-featured: false
 :page-intro:  Harsh Pratap Singh is a newer contributor to Jenkins and has participated in the Jenkins Google Summer of Code project since 2023. He has a whole universe inside of him, made of beautiful stories with ugly depths and a full heart, a world entitled to his love. Even though he is into mathematics, he is less calculative at heart. He is inspired by death, which gives him the courage to live intensely. His motto is "Eat well, work hard, help people, and sleep plenty." Every moment of self-realization is close to his heart, and every smile he has brought to people is near his soul. He has yet to have a more expansive journey since he is only 19, but something he learned was not to take his thoughts too seriously.
 
 == What is your background prior to contributing to Jenkins?
