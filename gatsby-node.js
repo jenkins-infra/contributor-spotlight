@@ -1,14 +1,14 @@
-const _ = require(`lodash`)
-const path = require(`path`)
-const { slash } = require(`gatsby-core-utils`)
-const { createFilePath } = require(`gatsby-source-filesystem`)
+const _ = require(`lodash`);
+const path = require(`path`);
+const { slash } = require(`gatsby-core-utils`);
+const { createFilePath } = require(`gatsby-source-filesystem`);
 
 // Implement the Gatsby API “createPages”. This is
-// called after the Gatsby bootstrap is finished so you have
+// called after the Gatsby bootstrap is finished, so you have
 // access to any information necessary to programmatically
 // create pages.
 exports.createPages = ({ graphql, actions }) => {
-    const { createPage } = actions
+    const { createPage } = actions;
 
     // The “graphql” function allows us to run arbitrary
     // queries against the local Drupal graphql schema. Think of
@@ -48,13 +48,13 @@ exports.createPages = ({ graphql, actions }) => {
         }
     `).then((result) => {
         if (result.errors) {
-            throw result.errors
+            throw result.errors;
         }
 
         // Create Asciidoc pages.
         const articleTemplate = path.resolve(
             `./src/templates/contributor-details.jsx`
-        )
+        );
         _.each(result.data.allAsciidoc.edges, (edge) => {
             // Gatsby uses Redux to manage its internal state.
             // Plugins and sites can use functions like "createPage"
@@ -69,20 +69,20 @@ exports.createPages = ({ graphql, actions }) => {
                 context: {
                     id: edge.node.id,
                 },
-            })
-        })
-    })
-}
+            });
+        });
+    });
+};
 
 exports.onCreateNode = async ({ node, actions, getNode, loadNodeContent }) => {
-    const { createNodeField } = actions
+    const { createNodeField } = actions;
 
     if (node.internal.type === `Asciidoc`) {
-        const value = createFilePath({ node, getNode })
+        const value = createFilePath({ node, getNode });
         createNodeField({
             name: `slug`,
             node,
             value,
-        })
+        });
     }
-}
+};
