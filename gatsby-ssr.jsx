@@ -1,9 +1,9 @@
 // Import React so that you can use JSX in HeadComponents
-const React = require('react')
+const React = require('react');
 
 const HtmlAttributes = {
     lang: 'en',
-}
+};
 
 const HeadComponents = [
     <React.Fragment key='head-1'>
@@ -25,9 +25,9 @@ const HeadComponents = [
         ></script>
         <jio-navbar property='https://contributors.jenkins.io'></jio-navbar>
     </React.Fragment>,
-]
+];
 
-const BodyAttributes = {}
+const BodyAttributes = {};
 
 const PostBodyComponents = [
     <React.Fragment key='body-1'>
@@ -37,7 +37,7 @@ const PostBodyComponents = [
         ></script>
         <jio-footer property='https://contributors.jenkins.io'></jio-footer>
     </React.Fragment>,
-]
+];
 
 exports.onRenderBody = (
     {
@@ -48,8 +48,8 @@ exports.onRenderBody = (
     },
     pluginOptions
 ) => {
-    setHtmlAttributes(HtmlAttributes)
-    setHeadComponents(HeadComponents)
-    setBodyAttributes(BodyAttributes)
-    setPostBodyComponents(PostBodyComponents)
-}
+    setHtmlAttributes(HtmlAttributes);
+    setHeadComponents(HeadComponents);
+    setBodyAttributes(BodyAttributes);
+    setPostBodyComponents(PostBodyComponents);
+};
