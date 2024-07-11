@@ -30,11 +30,11 @@ We were able to build a single, huge C/C++ project on Jenkins with 170 agents. I
 
 == Is there an aspect of Jenkins that you're particularly passionate about?
 
-I like working on UI/UX improvements but also working on topics that do not belong to Jenkins core but yet bring value to everyone as a plugin (https://github.com/jenkinsci/agent-maintenance-plugin, https://github.com/jenkinsci/pipeline-agent-build-history-plugin).
+I like working on UI/UX improvements but also working on topics that do not belong to Jenkins core but yet bring value to everyone as a plugin link:https://github.com/jenkinsci/agent-maintenance-plugin[Agent Maintenance plugin], link:https://github.com/jenkinsci/pipeline-agent-build-history-plugin[Pipeline Agent Build History plugin].
 
 == What sort of contributions have felt the most successful or impactful?
 
-Developing the https://github.com/jenkinsci/customizable-header-plugin plugin was the most impactful for me. It allowed for customization, giving your Jenkins a personal touch, and making it very easy to see and access multiple instances. I typically have 7 to 8 instances where I regularly need to access. But also contributing the dialogs (https://weekly.ci.jenkins.io/design-library/Dialogs/) to Jenkins core was a great experience.
+Developing the link:https://github.com/jenkinsci/customizable-header-plugin[Customizable Header plugin] was the most impactful for me. It allowed for customization, giving your Jenkins a personal touch, and making it very easy to see and access multiple instances. I typically have 7 to 8 instances where I regularly need to access. But also contributing the link:https://weekly.ci.jenkins.io/design-library/Dialogs/[dialogs] to Jenkins core was a great experience.
 
 == Advice for new developers and new members of the open-source community
 
