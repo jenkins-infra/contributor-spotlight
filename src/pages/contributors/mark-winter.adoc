@@ -4,7 +4,7 @@
 :page-twitter: 
 :page-github: mawinter69
 :page-email: 
-:page-image: 
+:page-image: avatar/markus-winter.JPG 
 :page-pronouns: He/Him/His
 :page-location: Wiesloch, Germany
 :page-firstcommit: 2015
