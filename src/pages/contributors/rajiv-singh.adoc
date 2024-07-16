@@ -9,7 +9,7 @@
 :page-location: Bengaluru, India
 :page-firstcommit: 2023
 :page-datepublished: 2024-07-02
-:page-featured: true
+:page-featured: false
 :page-intro: Rajiv works as a software engineer at A.P. Moller - Maersk based in India. In 2022 he graduated from JSS Academy of Technical Education with a Bachelor in Information Science and Engineering. Fascinated by the extensive impact computers have on solving real world problems, he writes software for a living and has primarily worked on backend systems and infrastructure. His focus is on the fields of algorithms and distributed systems.
 
 Rajiv's hobbies include cycling, gardening, reading, photography, traveling, and more.
