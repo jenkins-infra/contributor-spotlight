@@ -1,0 +1,43 @@
+= Darin Pope
+:page-name: Darin Pope
+:page-linkedin: darin-pope
+:page-twitter: DarinPope
+:page-github: darinpope
+:page-email: 
+:page-image: 
+:page-pronouns: 
+:page-location: Charlotte, North Carolina
+:page-firstcommit: 2019
+:page-datepublished: 2024-07-30
+:page-featured: true
+:page-intro: Darin Pope is a developer advocate at CloudBees, residing in Charlotte, North Carolina.  Since 2021, Darin has been publishing Jenkins tutorials on YouTube. His videos have helped thousands of Jenkins users from learning how to run a shell script in Jenkins to working with Docker and Jenkins. You can see his videos are shared by others on LinkedIn as a source to get other Jenkins users ‘unstuck’. 
+
+When not planning for or working on the next Jenkins tutorial, Darin enjoys volunteering at his church where he serves on the production team. 
+
+== What is your background prior to contributing to Jenkins?
+
+I was just a software developer from 1988 up until 1999. After 1999, I became a consultant, where I visited many clients. Through talking to them, I learned how businesses actually worked. From 2003 to 2005, the company I worked for had 29 layoffs. This experience led me to rethink working just as a software developer. I learned that coding isn’t always the answer. I needed to retool myself and change my approach to things so as to have a better impact for my clients.
+
+== How long have you been using Jenkins?
+
+I’ve been using Jenkins since 2012.
+
+== Why choose Jenkins over other projects?
+
+At the time there wasn’t anything else out there that had what we needed for our startup. Jenkins was good enough for what we needed.
+
+== What problems has Jenkins solved for you?
+
+Jenkins allowed our startup to work quickly and reliably ship our software to production without us having to spend the weekends trying to figure out what went wrong. Plus, there was enough community around it that we could trust. In the event that something broke, someone would be able to let us know whether it’s an issue isolated to us and not something systemic.
+
+== Is there an aspect of Jenkins that you're particularly passionate about?
+
+I think what everyone wants is a level of confidence in how things work. I see that with the community we are really focused on being careful not to break things. There’s focus on being backward compatible as long as possible and the community approach to maintenance, which I don't see other projects doing.
+
+== What sort of contributions have felt the most successful or impactful?
+
+Producing content that is useful for Jenkins and CloudBees CI has been impactful for me. There is documentation, however not everyone has the time to scroll through pages of it to understand it.  By creating 3-10 minute videos about how something actually works, alongside documentation, is beneficial for those with time constraints and or who aren’t so much as text learners but audio/visual learners.
+
+== Advice for new developers and new members of the open-source community
+
+When I first came into the Jenkins community, I thought I knew a lot about it because I’ve used it for four years. I quickly learned that I knew nothing about Jenkins. My advice would be, when you come into any open source project, know your place. Come in with the mindset ‘how can I help’ vs ‘I know everything’. If a community says we need help with documentation, don’t look at this as below you but put your efforts where the help is needed.
