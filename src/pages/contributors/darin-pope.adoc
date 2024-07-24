@@ -4,7 +4,7 @@
 :page-twitter: DarinPope
 :page-github: darinpope
 :page-email: 
-:page-image: 
+:page-image: avatar/darin-pope.jpg
 :page-pronouns: 
 :page-location: Charlotte, North Carolina
 :page-firstcommit: 2019
