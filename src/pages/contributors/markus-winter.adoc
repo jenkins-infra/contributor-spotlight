@@ -9,7 +9,7 @@
 :page-location: Wiesloch, Germany
 :page-firstcommit: 2015
 :page-datepublished: 2024-07-16
-:page-featured: true
+:page-featured: false
 :page-intro: Markus Winter works as a software engineer at SAP SE and is based in Wiesloch, Germany. He has been contributing to Jenkins since 2016, providing bug fixes and enhancements in core and various plugins. Outside of his work, Markus enjoys traveling, reading books (mostly Sci-Fi), watching movies, and working on his Jenkins plugins.
 
 == What is your background prior to contributing to Jenkins?
