@@ -1,20 +1,21 @@
-import * as React from 'react'
-import '../../styles/index.css'
-import { Box, Stack, Typography, useTheme } from '@mui/material'
-import { graphql, Link } from 'gatsby'
-import useMediaQuery from '@mui/material/useMediaQuery'
-import { Helmet } from 'react-helmet'
-import dayjs from 'dayjs'
+import React, { useEffect } from 'react';
+import '../../styles/index.css';
+import { Box, Stack, Typography, useTheme } from '@mui/material';
+import { graphql, Link } from 'gatsby';
+import useMediaQuery from '@mui/material/useMediaQuery';
+import { Helmet } from 'react-helmet';
+import dayjs from 'dayjs';
+import axios from 'axios';
+import Papa from 'papaparse';
 
 const IndexPage = (props) => {
-    const theme = useTheme()
-    const isDesktop = useMediaQuery(theme.breakpoints.up('lg'))
-    const isTablet = useMediaQuery(theme.breakpoints.between('lg', 'sm'))
-    const isMobile = useMediaQuery(theme.breakpoints.down('sm'))
+    const theme = useTheme();
+    const isDesktop = useMediaQuery(theme.breakpoints.up('lg'));
+    const isTablet = useMediaQuery(theme.breakpoints.between('lg', 'sm'));
+    const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
 
-    const { data } = props
-    console.log('edges', data.allAsciidoc.edges)
-    const contributors = data.allAsciidoc.edges
+    const { data } = props;
+    const contributors = data.allAsciidoc.edges;
     const contributorCards = contributors.map((contributor, idx) => {
         if (contributor.node.pageAttributes.featured === 'false') {
             return (
@@ -24,7 +25,11 @@ const IndexPage = (props) => {
                     key={idx}
                 >
                     <Box padding={isDesktop ? 5 : 2} key={idx}>
-                        <Box>
+                        <Box
+                            display='flex'
+                            justifyContent='center'
+                            alignItems='center'
+                        >
                             <img
                                 src={contributor.node.pageAttributes.image}
                                 alt='Contributor avatar'
@@ -54,9 +59,35 @@ const IndexPage = (props) => {
                         </Box>
                     </Box>
                 </Link>
-            )
+            );
         }
-    })
+    });
+
+    const [thankYou, setThankYou] = React.useState([]);
+
+    useEffect(() => {
+        axios
+            .get(
+                'https://raw.githubusercontent.com/jenkins-infra/jenkins-contribution-stats/main/data/honored_contributor.csv',
+                { responseType: 'text' }
+            )
+            .then((response) => {
+                setThankYou(Papa.parse(response.data)?.data[1]);
+            });
+
+        const interval = setInterval(() => {
+            axios
+                .get(
+                    'https://raw.githubusercontent.com/jenkins-infra/jenkins-contribution-stats/main/data/honored_contributor.csv',
+                    { responseType: 'text' }
+                )
+                .then((response) => {
+                    setThankYou(Papa.parse(response.data)?.data[1]);
+                });
+        }, 3600000);
+
+        return () => clearInterval(interval);
+    }, []);
 
     return (
         <main>
@@ -316,7 +347,7 @@ const IndexPage = (props) => {
                                     </Stack>
                                 </Stack>
                             </Link>
-                        )
+                        );
                     }
                 })}
                 <Box
@@ -335,11 +366,136 @@ const IndexPage = (props) => {
                     {contributorCards}
                 </Box>
             </Box>
+            <Box
+                sx={{
+                    padding: theme.spacing(5, 0),
+                    display: 'flex',
+                    justifyContent: 'center',
+                    alignItems: 'center',
+                }}
+            >
+                <Box
+                    sx={{
+                        padding: isMobile ? theme.spacing(2) : theme.spacing(3),
+                        borderRadius: 5,
+                        maxWidth: 'fit-content',
+                        height: 'fit-content',
+                        backgroundColor: 'rgb(218, 209, 198, 0.3)',
+                        display: 'flex',
+                        justifyContent: 'center',
+                        alignItems: 'center',
+                    }}
+                >
+                    <Stack
+                        direction='row'
+                        gap={isMobile ? 1 : 3}
+                        justifyItems='center'
+                        alignItems='center'
+                    >
+                        <Box
+                            sx={{
+                                display: 'flex',
+                                justifyContent: 'center',
+                                alignItems: 'center',
+                            }}
+                        >
+                            <img
+                                src={thankYou[6]?.replace(/['"]+/g, '')}
+                                alt='Random contributor image'
+                                width={isDesktop ? 100 : isMobile ? 36 : 90}
+                                height={
+                                    isDesktop ? 100 : isMobile ? '100%' : 90
+                                }
+                                style={{
+                                    marginTop: 'auto',
+                                    marginBottom: 'auto',
+                                }}
+                            />
+                        </Box>
+                        <Box
+                            sx={{
+                                fontSize: isMobile ? 'small' : 'medium',
+                            }}
+                        >
+                            Thank you{' '}
+                            {thankYou?.filter((item) => item?.trim() === '')
+                                .length === 0 && (
+                                <a
+                                    target='_blank'
+                                    rel='noreferrer'
+                                    href={thankYou[5]?.replace(/['"]+/g, '')}
+                                >
+                                    {thankYou[3]?.replace(/['"]+/g, '').trim()
+                                        ? thankYou[3]?.replace(/['"]+/g, '')
+                                        : thankYou[2]?.replace(/['"]+/g, '')}
+                                </a>
+                            )}
+                            <br />
+                            for making {thankYou[7]?.replace(
+                                /['"]+/g,
+                                ''
+                            )} pull{' '}
+                            {parseInt(thankYou[7]?.replace(/['"]+/g, '')) >= 2
+                                ? 'requests'
+                                : 'request'}
+                            <br />
+                            to{' '}
+                            {thankYou[8]?.split(' ')?.length >= 4
+                                ? parseInt(thankYou[8]?.split(' ')?.length) +
+                                  ' Jenkins '
+                                : 'the '}
+                            {thankYou[8]?.split(' ').length < 4 &&
+                                thankYou[8]
+                                    ?.replace(/['"]+/g, '')
+                                    .split(/\s+/)
+                                    .filter(Boolean)
+                                    .map((repo, idx) => (
+                                        <>
+                                            {thankYou[8]?.split(' ').length >
+                                                2 &&
+                                                idx ===
+                                                    thankYou[8]?.split(' ')
+                                                        .length -
+                                                        2 &&
+                                                'and '}
+                                            <a
+                                                target='_blank'
+                                                rel='noreferrer'
+                                                href={`https://github.com/${repo}`}
+                                            >
+                                                {repo?.split('/')[1]}
+                                            </a>
+                                            {thankYou[8]?.split(' ').length >=
+                                                2 &&
+                                            idx <
+                                                thankYou[8]?.split(' ').length -
+                                                    2 ? (
+                                                <>
+                                                    ,
+                                                    <br />
+                                                </>
+                                            ) : (
+                                                ' '
+                                            )}
+                                        </>
+                                    ))}{' '}
+                            {thankYou[8]?.split(' ').length > 2
+                                ? 'repos'
+                                : 'repo'}{' '}
+                            in{' '}
+                            {dayjs(thankYou[1]?.replace(/['"]+/g, '')).format(
+                                'MMM YYYY'
+                            )}
+                            !
+                        </Box>
+                    </Stack>
+                </Box>
+            </Box>
         </main>
-    )
-}
+    );
+};
 
-export default IndexPage
+export default IndexPage;
 
 export const pageQuery = graphql`
     query {
@@ -373,4 +529,4 @@ export const pageQuery = graphql`
             }
         }
     }
-`
+`;

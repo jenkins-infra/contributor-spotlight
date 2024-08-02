@@ -1,0 +1,45 @@
+= Rajiv Singh
+:page-name: Rajiv Singh
+:page-linkedin: iamrajivranjansingh
+:page-twitter: therajiv
+:page-github: iamrajiv
+:page-email: 
+:page-image: avatar/rajiv-singh.png
+:page-pronouns: He/Him/His
+:page-location: Bengaluru, India
+:page-firstcommit: 2023
+:page-datepublished: 2024-07-02
+:page-featured: false
+:page-intro: Rajiv works as a software engineer at A.P. Moller - Maersk based in India. In 2022 he graduated from JSS Academy of Technical Education with a Bachelor in Information Science and Engineering. Fascinated by the extensive impact computers have on solving real world problems, he writes software for a living and has primarily worked on backend systems and infrastructure. His focus is on the fields of algorithms and distributed systems.
+
+Rajiv's hobbies include cycling, gardening, reading, photography, traveling, and more.
+
+== What is your background prior to contributing to Jenkins?
+
+I am an open source enthusiast and have made many contributions to various projects and open source programs like Google Season of Docs, LFX Mentorship, and Google Summer of Code.
+
+Additionally, I have mentored new contributors who are passionate about open source and want to make contributions to it. This led me to become involved with the Jenkins project by mentoring in the Google Summer of Code program with Jenkins.
+
+== How long have you been using Jenkins?
+
+I did not use Jenkins much, but I did use it in one of my personal projects during my college days. Later, I used Jenkins in production in my corporate job, but not heavily. Therefore, I consider myself still pretty new to Jenkins.
+
+== Why choose Jenkins over other projects?
+
+I wanted to contribute to open source as much as I could, both as a contributor and a mentor. I came across the Jenkins community and liked the work they were doing, it was quite fascinating to me. Additionally, I found the Jenkins community to be very welcoming and approachable.
+
+== What problems has Jenkins solved for you?
+
+Mostly, I have used Jenkins to automate tasks such as the testing of builds.
+
+== Is there an aspect of Jenkins that you're particularly passionate about?
+
+While I appreciate many aspects of Jenkins, one aspect that particularly resonates with me is the welcoming and approachable nature of the Jenkins community.
+
+== What sort of contributions have felt the most successful or impactful?
+
+In my experience, serving as a mentor in Google Summer of Code has been the most fulfilling and impactful aspect of my contributions.
+
+== Advice for new developers and new members of the open-source community
+
+Always keep learning and stay curious to know more.

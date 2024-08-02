@@ -24,12 +24,14 @@
         "@mui/icons-material": "^5.14.12",
         "@mui/material": "^5.14.12",
         "asciidoctor.js": "^1.5.9",
+        "axios": "^1.7.2",
         "dayjs": "^1.11.10",
         "gatsby": "^5.13.3",
         "gatsby-core-utils": "^4.13.1",
+        "gatsby-omni-font-loader": "^2.0.2",
         "gatsby-plugin-image": "^3.13.1",
         "gatsby-plugin-manifest": "^5.13.1",
-        "gatsby-plugin-offline": "^6.13.1",
+        "gatsby-plugin-offline": "^6.13.2",
         "gatsby-plugin-react-helmet": "^6.13.1",
         "gatsby-plugin-sharp": "^5.13.1",
         "gatsby-plugin-sitemap": "^6.13.1",
@@ -39,6 +41,7 @@
         "gatsby-transformer-sharp": "^5.13.1",
         "loader-utils": "^3.2.1",
         "lodash": "^4.17.21",
+        "papaparse": "^5.4.1",
         "react": "^18.2.0",
         "react-dom": "^18.2.0",
         "react-helmet": "^6.1.0",
@@ -48,8 +51,10 @@
         "typography-breakpoint-constants": "^0.16.19"
     },
     "overrides": {
-        "axios": "^1.6.2",
-        "webpack-dev-middleware": "^7.2.1"
+        "webpack-dev-middleware": "^7.2.1",
+        "gatsby": {
+            "axios": "^1.7.2"
+        }
     },
     "license": "MIT",
     "devDependencies": {
@@ -59,7 +64,7 @@
         "eslint-plugin-react": "^7.33.2",
         "husky": "^9.0.0",
         "lint-staged": "^15.2.0",
-        "prettier": "3.3.2"
+        "prettier": "3.3.3"
     },
     "lint-staged": {
         "*.js": "eslint --cache --fix",
