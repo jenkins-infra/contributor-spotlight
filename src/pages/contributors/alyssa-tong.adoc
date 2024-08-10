@@ -1,0 +1,49 @@
+= Alyssa Tong
+:page-name: Alyssa Tong
+:page-linkedin: alyssa-tong
+:page-twitter: 
+:page-github: alyssat
+:page-email: 
+:page-image: avatar/darin-pope.jpg
+:page-pronouns: 
+:page-location: San Diego, California
+:page-firstcommit: 2019
+:page-datepublished: 2024-08-13
+:page-featured: true
+:page-intro: Alyssa Tong is the Jenkins events officer, chair for the Advocacy & Outreach SIG, and org admin for Google of Summer of Code. Prior to this, she spent many years directing and producing the Jenkins User conference and Jenkins World. She established Jenkins Area Meetups around the world and started the Jenkins Ambassador program which are now part of the Continuous Delivery Foundation.
+
+Alyssa resides in sunny San Diego, California. She is a mom to two sons. They are a family of foodies, and enjoy cooking non-traditional dishes together.
+
+In her free time, she is passionate about all things health related; mental, physical, spiritual, and sleep! Yes, sleep is important!  Her goal is to eat, exercise, and meditate her way through life for longevity so to improve lifespan as well as healthspan. 
+
+== What is your background prior to contributing to Jenkins?
+
+Prior to contributing to Jenkins I worked at SUN Microsystems for 13 years, holding various roles in corporate technical escalations, new product introduction, and product marketing. 
+
+== How long have you been using Jenkins?
+
+2008 was my first open source engagement, it was with Hudson. I was part of the product marketing team to help launch new products for SUN Microsystems, which involved Hudson.  
+
+== Why choose Jenkins over other projects?
+
+I had the good fortune to work with Jenkins in 2011 in the events and program management capacity. Having produced and attended so many Jenkins conferences, I got to meet and befriended so many wonderful people, many of whom were long time heavy contributors, many of whom are still contributing today.
+
+== What problems has Jenkins solved for you?
+
+Jenkins brings people together. There are so many people doing great things with Jenkins, with that comes different technical challenges but what’s great to see is in a remote world someone has an answer to help another. It is a community built on a common interest, with people actively helping one another, because at the end of the day all it takes is just 1 person to make an impact.
+
+== Is there an aspect of Jenkins that you're particularly passionate about?
+
+I’m most impressed about the community, the Jenkins user base is so wide and vast. Everywhere I go the feedback is consistently positive, which is “I love Jenkins!”
+
+== What sort of contributions have felt the most successful or impactful?
+
+The most rewarding moments for me would be the years of producing, directing, and watching the Jenkins User Conferences come to life from 300 to thousands of attendees. It’s exciting to experience the coming together of so many people who use and depend on Jenkins on a daily basis. 
+
+These years consisted of a few hours of sleep a night, a lot of sweat and tears but yet very rewarding for me.
+
+== Advice for new developers and new members of the open-source community
+
+I'm well aware that joining an open source community could be intimidating. I've been there and have made my fair share of mistakes in public, I'm still making mistakes (just a different kind nowadays). But don’t be intimidated. I can vouch that the Jenkins community consists of many really nice and helpful people, many of whom I have the honor to establish friendships with. 
+
+My advice is to dive right in, there’s a place for you here. And if you see a need, fill a need!
