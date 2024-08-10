@@ -4,7 +4,7 @@
 :page-twitter: 
 :page-github: alyssat
 :page-email: 
-:page-image: avatar/darin-pope.jpg
+:page-image: avatar/alyssa-tong.jpeg
 :page-pronouns: She/Her/Hers
 :page-location: San Diego, California
 :page-firstcommit: 2015
