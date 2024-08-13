@@ -10,7 +10,7 @@
 :page-firstcommit: 2015
 :page-datepublished: 2024-08-13
 :page-featured: true
-:page-intro: Alyssa Tong is the Jenkins events officer, chair for the Advocacy & Outreach SIG, and org admin for Google Summer of Code. Prior to this, she spent many years directing and producing the Jenkins User conference and Jenkins World. She established Jenkins Area Meetups around the world and started the Jenkins Ambassador program which are now part of the Continuous Delivery Foundation.
+:page-intro: Alyssa Tong is the Jenkins events officer, chair for the Advocacy {amp} Outreach SIG, and org admin for Google Summer of Code. Prior to this, she spent many years directing and producing the Jenkins User conference and Jenkins World. She established Jenkins Area Meetups around the world and started the Jenkins Ambassador program which are now part of the Continuous Delivery Foundation.
 
 Alyssa resides in sunny San Diego, California. She is a mom to two sons. They are a family of foodies, and enjoy cooking non-traditional dishes together.
 
