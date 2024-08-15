@@ -9,7 +9,7 @@
 :page-location: Charlotte, North Carolina
 :page-firstcommit: 2019
 :page-datepublished: 2024-07-30
-:page-featured: true
+:page-featured: false
 :page-intro: Darin Pope is a developer advocate at CloudBees, residing in Charlotte, North Carolina.  Since 2021, Darin has been publishing Jenkins tutorials on YouTube. His videos have helped thousands of Jenkins users from learning how to run a shell script in Jenkins to working with Docker and Jenkins. You can see his videos are shared by others on LinkedIn as a source to get other Jenkins users ‘unstuck’. 
 
 When not planning for or working on the next Jenkins tutorial, Darin enjoys volunteering at his church where he serves on the production team. 
