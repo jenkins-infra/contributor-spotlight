@@ -4,7 +4,7 @@
 :page-twitter: strangelookingnerd
 :page-github: strangelookingnerd
 :page-email: 
-:page-image: avatar/daniel-krämer.jpeg
+:page-image: avatar/daniel-kramer.jpeg
 :page-pronouns: 
 :page-location: Darmstadt, Germany
 :page-firstcommit: 2019
