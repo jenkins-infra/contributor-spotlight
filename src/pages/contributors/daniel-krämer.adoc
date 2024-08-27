@@ -1,0 +1,53 @@
+= Daniel Krämer
+:page-name: Daniel Krämer
+:page-linkedin: daniel-krämer
+:page-twitter: strangelookingnerd
+:page-github: strangelookingnerd
+:page-email: 
+:page-image: avatar/daniel-kramer.jpeg
+:page-pronouns: 
+:page-location: Darmstadt, Germany
+:page-firstcommit: 2019
+:page-datepublished: 2024-08-27
+:page-featured: true
+:page-intro: My passion for computers began early, the day my dad brought home a big grey box. I didn't understand anything happening on the screen, but my fascination was born. From then on, I spent more and more time in front of that box, gradually learning what was happening behind the screen. I was (and probably still am) a proud nerd.
+
+Unfortunately, being a nerd alone wasn't enough to make a living. I became a father for the first time at 19 and quickly realized I needed a profession that could provide for both my son and me. Going into IT came naturally, as it was something I had always loved, and after earning my degree I began my journey in software development. One of the first things I learned on the job was rubber-duck debugging — a methodology that stuck with me and that I still preach to everyone. It also explains my collection of rubber ducks gathered over the years.
+
+For me, it became essential not only to write code all day but also to get out there and talk about it. Being able to explain to everyone what that big grey box does was something I always wanted to pursue. Now, with my second child on the way, I'm grateful to have gone down this path, as it has brought me exactly where I want to be in life.
+
+Besides computers and software, I love nature. Over the years, I developed an obsession with sloths. Thanks to my wife, who got me away from the screen, I was able to meet them multiple times in Costa Rica and Panama. Since then, my workspace has been filled with stuffed animals and photos of sloths.
+
+
+== What is your background prior to contributing to Jenkins?
+
+I began my professional career in software development in 2012 and have since held various positions in the field. Starting as a Java developer, I quickly evolved into roles such as architect and product owner. Advocating the principles and methodologies of software development, such as clean code and security, to my colleagues became a significant part of my daily work.
+
+During this time, I also had the opportunity to be a speaker at JavaLand, one of the largest Java conferences in Europe (link:https://meine.doag.org/events/javaland/2022/agenda/#eventDay.1647298800[JavaLand 2022]). However, my passion for writing code remains strong. I found open source development to be an excellent avenue to continue coding while also contributing to the broader community.
+
+
+== How long have you been using Jenkins?
+
+I have been using Jenkins since around 2016. In my previous job, we rebuilt the CI/CD infrastructure from scratch, and after careful consideration, we decided to switch to Jenkins.
+
+== Why choose Jenkins over other projects?
+
+Besides being free and widely used, Jenkins offers extensive functionality right out of the box and can be easily enhanced and adapted to specific needs, thanks to its vast ecosystem of plugins. The large and active Jenkins community continuously works to improve the platform, ensuring a better experience for everyone.
+
+== What problems has Jenkins solved for you?
+
+Being able to automate nearly everything with Jenkins saves time and resources during development, allowing me to focus on more critical tasks. It's not just about building applications - Jenkins also enables the generation of metrics, the creation of robust processes, and the handling of various other aspects of my daily work.
+
+== Is there an aspect of Jenkins that you're particularly passionate about?
+
+Jenkins offers a professional environment that can be easily utilized by everyone, even those who are not technically savvy. In today's software development landscape, tooling needs to integrate seamlessly into many aspects of the application lifecycle, requiring both ease of entry and robust functionality. Jenkins excels in this regard, providing a user-friendly interface without compromising on features.
+
+== What sort of contributions have felt the most successful or impactful?
+
+I recently began enabling the Jenkins Security Scan for an ever-growing number of link:https://groups.google.com/g/jenkinsci-dev/c/cxjQWnZ0S58[Jenkins plugins], doing my part to make Jenkins and its ecosystem a secure and robust solution. Another contribution I am particularly proud of is creating the link:https://plugins.jenkins.io/custom-folder-icon/[custom-folder-icon-plugin]. I still find myself regularly checking the number of installations and feel a sense of accomplishment knowing that something I created is useful to so many people.
+
+== Advice for new developers and new members of the open-source community
+
+For new developers, I would emphasize that beyond writing and understanding code, one of the most important yet often overlooked aspects of software development is the ability to communicate about it. Being able to explain your code and methodologies to someone who may not be as tech-savvy or effectively communicating with your colleagues on a technical level are both incredibly important skills to master.
+
+Regarding getting into open-source development, my advice is to start with something you like or even use yourself. Your contributions don't need to change the world right away - they can start small. You'll quickly find that even simple tasks, like fixing a typo in the documentation, are highly appreciated by others in the community.
