@@ -32,7 +32,7 @@ There really isn't an open source CI server that offers what Jenkins does.
 
 At the Apache Software foundation, while working on different projects with contributors in different timezones, we definitely need to have such CI solutions to help check the committed code and/or the proposed patch.
 So, I introduced Hudson to Apache and maintained the infrastructure.
-This has since been taken over by the dedicated Apache infra team, who have upgraded to a more scalable solution based on Cloudbees CI rather than the open-source solution I was maintaining and regularly breaking (but this part needs to be kept secret).
+This has since been taken over by the dedicated Apache infra team, who have upgraded to a more scalable solution based on CloudBees CI rather than the open-source solution I was maintaining and regularly breaking (but this part needs to be kept secret).
 
 == Is there an aspect of Jenkins that you're particularly passionate about?
 
@@ -41,10 +41,10 @@ There's not necessarily one thing, I really like Jenkins as a whole.
 == What sort of contributions have felt the most successful or impactful?
 
 A very long time ago, I contributed to the Jenkins project, which helped me improve and gain more visibility for both Apache Maven and Jenkins.
-During the rewrite of Apache Maven 3, the old and widely used maven-plugin didn't work anymore.
+During the rewrite of Apache Maven 3, the old and widely used Maven-plugin didn't work anymore.
 At this time, Apache Maven and Jenkins were both very popular projects and without this enhancement, both might have suffered.
 So, due to my long time involvement with Apache Maven, I was thrilled to help adopt the new version and make Jenkins the first CI tool to integrate Apache Maven 3.
-Maybe I shouldn't have done this, as it now takes some time to get rid of the old maven-plugin.
+Maybe I shouldn't have done this, as it now takes some time to get rid of the old Maven-plugin.
 
 == Advice for new developers and new members of the open-source community
 
