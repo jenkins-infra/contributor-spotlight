@@ -2,7 +2,7 @@
 :page-name: Shivay Lamba
 :page-linkedin:
 :page-twitter: howdevelop
-:page-github: 
+:page-github: shivaylamba
 :page-email:
 :page-image: avatar/shivay-lamba.png
 :page-pronouns: He/Him/His
