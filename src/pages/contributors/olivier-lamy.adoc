@@ -1,0 +1,49 @@
+= Olivier Lamy
+:page-name: Olivier Lamy
+:page-linkedin:
+:page-twitter: olamy
+:page-github: olamy
+:page-email:
+:page-image: avatar/olivier-lamy.jpeg
+:page-pronouns:
+:page-location: Brisbane, Queensland, Australia
+:page-firstcommit: 2009
+:page-datepublished: 2024-09-10
+:page-featured: true
+:page-intro: Olivier is a software engineer based in Brisbane, Australia. He has been involved in the open-source community for almost 20 years. He is a father of 4 and has a real passion for running, especially ultra trail. His involvement with open-source communities started with Apache, where he is now a member of the foundation, and working with projects such as Apache Maven (a project he acted on as a chair), Apache Tomcat, Apache Commons, Apache Cloudstack, and Apache incubator, which was designed to help projects entering to the foundation. He is still contributing to the Eclipse Jetty project and is now a member of the JakartaEE servlet group and JakartaEE TCK.
+
+== What is your background prior to contributing to Jenkins?
+
+Prior to contributing to Jenkins, I was in the group of people who participated in creating Maven2/3.
+At the time there weren't many options for CI tooling and we decided to create the Apache Continuum, which was primarily focused on a CI server to build Apache Maven projects.
+However, some limitations appeared and the team had some other projects to work on by the time Hudson came.
+
+== How long have you been using Jenkins?
+
+I've been using Jenkins for more than 15 years now.
+
+== Why choose Jenkins over other projects?
+
+There really isn't an open source CI server that offers what Jenkins does.
+
+== What problems has Jenkins solved for you?
+
+At the Apache Software foundation, while working on different projects with contributors in different timezones, we definitely need to have such CI solutions to help check the committed code and/or the proposed patch.
+So, I introduced Hudson to Apache and maintained the infrastructure.
+This has since been taken over by the dedicated Apache infra team, who have upgraded to a more scalable solution based on CloudBees CI rather than the open-source solution I was maintaining and regularly breaking (but this part needs to be kept secret).
+
+== Is there an aspect of Jenkins that you're particularly passionate about?
+
+There's not necessarily one thing, I really like Jenkins as a whole.
+
+== What sort of contributions have felt the most successful or impactful?
+
+A very long time ago, I contributed to the Jenkins project, which helped me improve and gain more visibility for both Apache Maven and Jenkins.
+During the rewrite of Apache Maven 3, the old and widely used Maven-plugin didn't work anymore.
+At this time, Apache Maven and Jenkins were both very popular projects and without this enhancement, both might have suffered.
+So, due to my long time involvement with Apache Maven, I was thrilled to help adopt the new version and make Jenkins the first CI tool to integrate Apache Maven 3.
+Maybe I shouldn't have done this, as it now takes some time to get rid of the old Maven-plugin.
+
+== Advice for new developers and new members of the open-source community
+
+Participating in an open-source community is a really good opportunity to improve your technical skills and your resilience as well.
