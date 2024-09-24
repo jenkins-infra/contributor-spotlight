@@ -9,7 +9,7 @@
 :page-location: Brisbane, Queensland, Australia
 :page-firstcommit: 2009
 :page-datepublished: 2024-09-10
-:page-featured: true
+:page-featured: false
 :page-intro: Olivier is a software engineer based in Brisbane, Australia. He has been involved in the open-source community for almost 20 years. He is a father of 4 and has a real passion for running, especially ultra trail. His involvement with open-source communities started with Apache, where he is now a member of the foundation, and working with projects such as Apache Maven (a project he acted on as a chair), Apache Tomcat, Apache Commons, Apache Cloudstack, and Apache incubator, which was designed to help projects entering to the foundation. He is still contributing to the Eclipse Jetty project and is now a member of the JakartaEE servlet group and JakartaEE TCK.
 
 == What is your background prior to contributing to Jenkins?

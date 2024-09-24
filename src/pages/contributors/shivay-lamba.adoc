@@ -1,0 +1,89 @@
+= Shivay Lamba
+:page-name: Shivay Lamba
+:page-linkedin:
+:page-twitter: howdevelop
+:page-github: shivaylamba
+:page-email:
+:page-image: avatar/shivay-lamba.png
+:page-pronouns: He/Him/His
+:page-location: New Delhi, India
+:page-firstcommit: 2018
+:page-datepublished: 2024-09-24
+:page-featured: true
+:page-intro: Shivay Lamba is a software developer that was born and has lived his entire life in New Delhi. While his main focus and passion is directed towards AI and MLOps, he is at home with the entire tech space, engaging with it through multiple endeavors from building robots to writing software. Shivay also participated as a Jenkins mentor during Google Summer of Code 2020 and 2024. Beyond his love for technology, Shivay plays sports like cricket and table tennis, and he recently took up scuba diving. He also enjoys playing the piano and singing, providing a very well-rounded set of interests.
+
+At college, he initially found it hard to understand the more advanced data structures and algorithm concepts, such as trees and dynamic programming. However, he soon realized that he did not need to be the best at these concepts in order to have an impact. Open-source programming is equally rewarding, and being the most competitive programmer is not needed to land a good role.  
+
+== What is your background prior to contributing to Jenkins?
+
+I started my tech journey in 2016 with my undergrad degree in computer science.
+Before I graduated, I was mainly working on web development with PHP and Node.js.
+I didn't have any background in Jenkins or other CI/CD DevOps tools.
+In 2018, during my first official software engineering internship at Tech Mahindra, I got to know about Jenkins, while I worked on Apache OFBiz ERP software.
+My tech stack included Java, PL/SQL, JavaScript, and FTL. 
+I used Jenkins and SVN for the first time in 2019 for deployment to production and automated testing, and that's how my journey into open source started.
+
+I made contributions to TensorFlow and link:https://fossasia.org/[FOSSASIA] before returning to Jenkins for 2020.
+During my return, I made contributions to the link:https://plugins.jenkins.io/machine-learning/[Jenkins Machine Learning plugin] as a Google Summer of Code mentor.
+I had become interested in machine learning (ML) in 2019 and felt there was a huge gap in the ML ecosystem when it came to deployment.
+The ML plugin for Jenkins was a huge step towards automating MLOps, while also showing ML/Data Science communities how DevOps can be integrated in ML.
+This is also how my love of DevOps got kick-started.
+
+== How long have you been using Jenkins?
+
+I initially started using Jenkins in 2018 as part of my internship and immediately fell in love with the tool because it just made it so easy to be able to build, test, and deploy projects in multiple environments and overall helped reduce the complexity of the software development process. 
+Later in 2019, when I started to dive deeper into machine learning, I immediately felt a missing link - I have always been a big advocate for research-to-production modeling and there was not necessarily a way to do this easily.
+There weren't many tools around that would allow one to easily move code written by machine learning engineers or data scientists into production using Jupyter notebooks.
+Then I reached out to the Jenkins community, and I discussed with link:https://www.jenkins.io/blog/2020/08/27/machine-learning-plugin-coding-phase3/#acknowledgement[Marky, Bruno, and Ioannis] and we discussed how we can resolve this issue through Jenkins.
+This discussion generated the idea for the link:https://www.jenkins.io/projects/gsoc/2020/projects/machine-learning/[Jenkins ML/Data Science plugin] and it was accepted as a project for the Google Summer of Code 2020 where I was mentoring. 
+
+Apart from that, I was responsible for the deployment of our entire infrastructure as part of my first job out of college and I, of course, chose Jenkins for the development/staging and production environments while scaling up all our infrastructure.
+Later in 2024, I have been mentoring the link:https://www.jenkins.io/projects/gsoc/2024/projects/enhancing-an-existing-llm-model-with-domain-specific-jenkins-knowledge/[Enhancing LLM with Jenkins Knowledge project]. 
+
+== Why choose Jenkins over other projects?
+
+The developer community and the plugin ecosystem richness is what makes Jenkins stand out amongst other projects in the community.
+Jenkins has world class contributors and documentation, and a vast plugin ecosystem, which makes it super easy to integrate and apply in a project.
+That is what makes Jenkins stand out. 
+
+== What problems has Jenkins solved for you?
+
+The biggest problem that Jenkins has solved is automating deployments and CI/CD when working in different types of environments.
+The ability to automate your builds and testing suite all in one platform is absolutely critical.
+Jenkins is indeed the number one tool for CI/CD automation, and it helped me from my first internship tasks in 2018 to managing an entire tech team in my first ever full-time role.
+The ability to integrate Jenkins reduces the time required to set up automation.
+
+In addition, Jenkins has also helped automate the deployment of Jupyter notebooks, the flagship project for Google Summer of Code 2020 with the Jenkins Data Science plugin.
+This project shows the capability and extensibility of being able to automate builds and testing for different types of applications. 
+
+== Is there an aspect of Jenkins that you're particularly passionate about?
+
+I am really passionate about how easy Jenkins makes it for DevOps engineers and engineering teams to make it super scalable for different environments.
+The ease of use, great developer experience, and community support, and open-source environment for Jenkins is unmatched, making it the best choice for self-deployment of CI/CD and build automation. 
+
+I am definitely passionate about both the project and the extensive list of integrations supported by Jenkins, which makes it even more valuable.
+
+== What sort of contributions have felt the most successful or impactful?
+
+I personally feel that it doesn't really matter whether your contribution is big or small, in terms of lines of code, what matters is how it impacts the ecosystem or the users.
+Any contribution that can make an impact is a success.
+For example, the ML plugin for Jenkins is a huge stepping stone for the ML community to understand that Jupyter notebooks can be automated.
+They are not just for research.
+It also helps address misconceptions related to MLOps. 
+
+== Advice for new developers and new members of the open-source community
+
+My advice for any developer or new members of the open-source community is to always go through the beginner-friendly resources provided around the project.
+This includes reading both the contributor guide and the README carefully.
+Also, don't feel shy to ask questions in the community.
+Communities are built for folks to collaborate with each other.
+Just keep one thing in mind, please try to do your own initial research, then ask a question if you are still confused.
+Most communities have good starting resources, so do follow those.
+
+It is all right to acknowledge that one can't be the best at everything.
+You don't have to be in competition with everyone.
+What worked for me were open-source contributions, because that unlocked an entirely different set of opportunities for me to showcase my skills.
+Explore different paths in life and see what works for you.
+If you are passionate about something and do it wholeheartedly, then opportunities will definitely come to you.
+That's what happened for me, ever since I acknowledged my own limitations and focused on the things I do well.
+So explore as much as possible. 
