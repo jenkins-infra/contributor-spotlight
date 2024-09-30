@@ -9,7 +9,7 @@
 :page-location: New Delhi, India
 :page-firstcommit: 2018
 :page-datepublished: 2024-09-24
-:page-featured: true
+:page-featured: false
 :page-intro: Shivay Lamba is a software developer that was born and has lived his entire life in New Delhi. While his main focus and passion is directed towards AI and MLOps, he is at home with the entire tech space, engaging with it through multiple endeavors from building robots to writing software. Shivay also participated as a Jenkins mentor during Google Summer of Code 2020 and 2024. Beyond his love for technology, Shivay plays sports like cricket and table tennis, and he recently took up scuba diving. He also enjoys playing the piano and singing, providing a very well-rounded set of interests.
 
 At college, he initially found it hard to understand the more advanced data structures and algorithm concepts, such as trees and dynamic programming. However, he soon realized that he did not need to be the best at these concepts in order to have an impact. Open-source programming is equally rewarding, and being the most competitive programmer is not needed to land a good role.  

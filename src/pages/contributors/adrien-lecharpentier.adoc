@@ -1,0 +1,84 @@
+= Adrien Lecharpentier
+:page-name: Adrien Lecharpentier
+:page-linkedin:
+:page-twitter: 
+:page-github: alecharp
+:page-email:
+:page-image: avatar/adrien-lecharpentier.jpg
+:page-pronouns: He/Him/His
+:page-location: Nantes, France
+:page-firstcommit: 2009
+:page-datepublished: 2024-10-08
+:page-featured: true
+:page-intro: Adrien is a software engineer currently based in Nantes, France. While originally born in Normandy, Adrien called Brittany and Paris home while working on his education. Thanks to having teachers for parents, Adrien was always encouraged in both mental and physical pursuits, enjoying activities such as football, basketball, Aikido, and handball. After getting his baccalaureate, Adrien studied IT sciences, such as networking and the more physical layers, for two years before diving into IT programming. After getting an additional diploma for these studies, Adrien found an engineering school in Nantes, but found their way of teaching wasn't ideal for his learning. This led him to find another school in Paris where his time was split between school and on-site work. Being in this structure allowed him to focus more on programming, gain industry exposure, and better understand industry standards.
+
+While he tried to keep up with physical activities, Paris made it a bit tough. However, it was at this point that he discovered hiking with his partner. It was also during this time that Adrien got into photography. Throughout his life, he has always been tinkering with electronics, which eventually led to 3D printing. Adrien has found that 3D printing allows him to discover and try new things when he comes across an interesting project. It also provides him with space to make things that solve problems, even creating some multi-problem-solving tools. Thanks to 3D printing, being able to customize and create solutions for any problem encountered has pushed his creativity and problem-solving skills further than even before. Recently, Adrien also started woodworking with his father, using his eye for detail and love for making things to do something more analog. While there is a difference in the medium, his desires to create and problem solve transfer directly over to his new hobby.
+
+== What is your background prior to contributing to Jenkins?
+
+I received my A level in 2005, my technical certificate diploma in 2007, and my engineering diploma in 2011 while working part time at Alcatel-Lucent.
+I was working in the CI team, which had just been created shortly before I joined.
+The leader of the team asked me to look at Jenkins, then Hudson, to determine if it would fit the needs of the company.
+My first plugin for Hudson was created in 2009 and I have been working in Jenkins since then.
+After I received my diploma, I moved to Zenika where I was in a consultant role, helping with training and specialized in CI/CD.
+My consultant work came down to answering the questions “what is the need for that specific customer?” and “what is the cost of getting there?”.
+In 2014, I joined CloudBees as a support engineer for three years before moving on to engineering.
+It's surreal to be in the field and using Jenkins for so long without being bored.
+CI has changed from what it was then to what it is now.
+Before, CI was “Is it compiling?” compared to now where pull requests are being created and merged regularly.
+
+== How long have you been using Jenkins?
+
+I have been using Jenkins since 2009.
+
+== Why choose Jenkins over other projects?
+
+I didn't choose Jenkins as much as it was a mutual decision between myself & Jenkins.
+Previously, the company I was at was consuming open source as opposed to contributing to it.
+I had been looking at Jenkins since it was open source, young, and had a responsive community.
+My first time posting in the mailing list, concerning a bug with my plugin, resulted in Kohsuke informing me of the bug and sharing that a release of Jenkins core was pushed later that day with a fix.
+If there is a problem, the community around the project is very responsive.
+It's also possible to create plugins to match a need.
+My experience started when it was just one big project and has evolved along with Jenkins to now, where the plugin ecosystem has exploded with many new ones being introduced.
+The kindness and attentiveness of the community was also a big part of my introduction. 
+
+== What problems has Jenkins solved for you?
+
+I saw Jenkins as a way to move what other teams were doing more quickly into the customers hands.
+At Alcatel-Lucent, this meant constantly moving and making sure the team velocity was not reduced by compilation, merging, and organizing everyone's work.
+The idea is that something is tedious but not working well enough on its own.
+However, other teams were working with CI and it was helping streamline the work.
+Reassurance came from seeing what they were doing was still working with how others were operating outside of that team.
+Jenkins is a problem-solver for CI issues and keeping things updated, aligned, and working.
+Throughout my work with Jenkins, core has always been intimidating, so I have focused more on maintaining and enhancing plugins.
+Most of my support engineer experience with CloudBees had to do with bugs in plugins.
+Core was rarely the issue brought to our attention, so my work was primarily ensuring that plugins and their code were functioning as expected.
+Plugins are fascinating because the ecosystem has expanded greatly and they are so malleable.
+You can propose new solutions to a plugin maintainer or suggest new functions and fixes, and if there isn't an exact solution that already exists, you can always create your own plugin to fulfil the need.
+
+== Is there an aspect of Jenkins that you're particularly passionate about?
+
+I like to make things easier for others to use, like what the UX team has been doing over the last couple years with modernization and updating the whole experience.
+It's not just colors and rounded corners, it's the entire user experience of using Jenkins that feels refreshed and easier to use.
+I have deep admiration for the what the UX team has provided to the project.
+Especially where the number of plugins has expanded, it can be a bit intimidating to find what you need, and the community members working on Jenkins' UX have made great strides to help users navigate the Jenkins plugin ecosystem.
+Most of the UX work has also reached other areas of the project, beyond just core and plugins.
+
+== What sort of contributions have felt the most successful or impactful?
+
+For my own contributions, I've worked on the Java upgrades (8 → 11 → 17 → 21) and recently, the Spring Security 6 migration.
+These upgrades are necessary to ensure that Jenkins is up to date and safeguarded in multiple ways.
+The reasoning is that these upgrades are hugely important in making sure that Jenkins continues working in the future and does not get stuck in the past.
+While not necessarily visible like the UX improvements, our goal with these migrations is to not have any sort of interruption when it comes to users.
+A successful migration means our work happens without users even noticing.
+They might need to upgrade their Java version, but that should be the extent of what they run into.
+
+== Advice for new developers and new members of the open-source community
+
+Don't be afraid to reach out.
+Don't be afraid to get started.
+There's no such thing as a small contribution.
+We all started from 0 so there's no shame or embarrassment to be had, as most people are still learning and not perfect by any means.
+The community is very respectful of everyone and all opinions.
+If you have questions, concerns, or an opinion on how something should work, make sure you can back up your thoughts.
+Plugins are a good way to get into the community.
