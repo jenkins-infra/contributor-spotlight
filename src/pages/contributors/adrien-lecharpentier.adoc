@@ -10,18 +10,18 @@
 :page-firstcommit: 2009
 :page-datepublished: 2024-10-08
 :page-featured: true
-:page-intro: Adrien is a software engineer currently based in Nantes, France. While originally born in Normandy, Adrien called Brittany and Paris home while working on his education. Thanks to having teachers for parents, Adrien was always encouraged in both mental and physical pursuits, enjoying activities such as football, basketball, Aikido, and handball. After getting his baccalaureate, Adrien studied IT sciences, such as networking and the more physical layers, for two years before diving into IT programming. After getting an additional diploma for these studies, Adrien found an engineering school in Nantes, but found their way of teaching wasn't ideal for his learning. This led him to find another school in Paris where his time was split between school and on-site work. Being in this structure allowed him to focus more on programming, gain industry exposure, and better understand industry standards.
+:page-intro: Adrien is a software engineer currently based in Nantes, France. While originally born in Normandy, Adrien called Brittany and Paris home while working on his education. Thanks to having teachers for parents, Adrien was always encouraged in both mental and physical pursuits, enjoying activities such as football, basketball, Aikido, and handball. After getting his baccalaureate, Adrien studied IT sciences, such as networking and the more physical layers, for two years before diving into IT programming. After getting an additional diploma for these studies, Adrien found an engineering school in Nantes, but soon felt he needed a more hands on way of learning. This led him to find another school in Paris where his time was split between school and on-site work. Being in this structure allowed him to focus more on programming, gain industry exposure, and better understand industry standards.
 
-While he tried to keep up with physical activities, Paris made it a bit tough. However, it was at this point that he discovered hiking with his partner. It was also during this time that Adrien got into photography. Throughout his life, he has always been tinkering with electronics, which eventually led to 3D printing. Adrien has found that 3D printing allows him to discover and try new things when he comes across an interesting project. It also provides him with space to make things that solve problems, even creating some multi-problem-solving tools. Thanks to 3D printing, being able to customize and create solutions for any problem encountered has pushed his creativity and problem-solving skills further than even before. Recently, Adrien also started woodworking with his father, using his eye for detail and love for making things to do something more analog. While there is a difference in the medium, his desires to create and problem solve transfer directly over to his new hobby.
+While he tried to keep up with physical activities, Paris made it a bit tough. However, it was at this point that he discovered hiking with his partner. It was also during this time that Adrien got into photography. Throughout his life, he has always been tinkering with electronics and that eventually led to 3D printing. Adrien found that 3D printing allows him to discover and try new things when he comes across an interesting project. It also provides him with space to make things that solve problems, even creating some multi-problem-solving tools. Thanks to 3D printing, being able to customize and create solutions for any problem encountered has pushed his creativity and problem-solving skills even further than before. Recently, Adrien also started woodworking with his father, using his eye for detail and love for making things to do something more analog. While there is a difference in the medium, his desires to create and problem solve transfer directly over to his new hobby.
 
 == What is your background prior to contributing to Jenkins?
 
 I received my A level in 2005, my technical certificate diploma in 2007, and my engineering diploma in 2011 while working part time at Alcatel-Lucent.
-I was working in the CI team, which had just been created shortly before I joined.
+I was working in the CI team that had just been created shortly before I joined.
 The leader of the team asked me to look at Jenkins, then Hudson, to determine if it would fit the needs of the company.
-My first plugin for Hudson was created in 2009 and I have been working in Jenkins since then.
+My first plugin for Hudson was created in 2009 and I have been working in Jenkins ever since then.
 After I received my diploma, I moved to Zenika where I was in a consultant role, helping with training and specialized in CI/CD.
-My consultant work came down to answering the questions “what is the need for that specific customer?” and “what is the cost of getting there?”.
+My consultant work came down to answering the questions “What is the need for that specific customer?” and “What is the cost of getting there?”.
 In 2014, I joined CloudBees as a support engineer for three years before moving on to engineering.
 It's surreal to be in the field and using Jenkins for so long without being bored.
 CI has changed from what it was then to what it is now.
@@ -60,7 +60,7 @@ You can propose new solutions to a plugin maintainer or suggest new functions an
 
 I like to make things easier for others to use, like what the UX team has been doing over the last couple years with modernization and updating the whole experience.
 It's not just colors and rounded corners, it's the entire user experience of using Jenkins that feels refreshed and easier to use.
-I have deep admiration for the what the UX team has provided to the project.
+I have deep admiration for what the UX team has provided to the project.
 Especially where the number of plugins has expanded, it can be a bit intimidating to find what you need, and the community members working on Jenkins' UX have made great strides to help users navigate the Jenkins plugin ecosystem.
 Most of the UX work has also reached other areas of the project, beyond just core and plugins.
 
