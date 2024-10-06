@@ -47,14 +47,4 @@ export default [
             'jsdoc/require-description': 'off',
         },
     },
-    // {
-    //     languageOptions: {
-    //         globals: {
-    //             ...globals.node,
-    //         },
-    //
-    //         ecmaVersion: 5,
-    //         sourceType: 'commonjs',
-    //     },
-    // },
 ];
