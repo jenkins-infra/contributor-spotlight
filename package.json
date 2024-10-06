@@ -61,7 +61,7 @@
     },
     "license": "MIT",
     "devDependencies": {
-        "eslint": "^8.57.1",
+        "eslint": "^9.0.0",
         "eslint-config-google": "^0.14.0",
         "eslint-config-prettier": "^9.1.0",
         "eslint-plugin-jsdoc": "^50.3.1",
