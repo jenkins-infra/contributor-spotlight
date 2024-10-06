@@ -9,7 +9,7 @@
 :page-location: Darmstadt, Germany
 :page-firstcommit: 2019
 :page-datepublished: 2024-08-27
-:page-featured: true
+:page-featured: false
 :page-intro: My passion for computers began early, the day my dad brought home a big grey box. I didn't understand anything happening on the screen, but my fascination was born. From then on, I spent more and more time in front of that box, gradually learning what was happening behind the screen. I was (and probably still am) a proud nerd.
 
 Unfortunately, being a nerd alone wasn't enough to make a living. I became a father for the first time at 19 and quickly realized I needed a profession that could provide for both my son and me. Going into IT came naturally, as it was something I had always loved, and after earning my degree I began my journey in software development. One of the first things I learned on the job was rubber-duck debugging — a methodology that stuck with me and that I still preach to everyone. It also explains my collection of rubber ducks gathered over the years.
