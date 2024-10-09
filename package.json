@@ -14,7 +14,7 @@
         "serve": "gatsby serve",
         "info": "gatsby info",
         "clean": "gatsby clean",
-        "prepare": "husky install",
+        "prepare": "husky",
         "lint": "ESLINT_USE_FLAT_CONFIG=true npx eslint --fix src/",
         "format": "npx prettier . --write"
     },
