@@ -41,7 +41,7 @@ Certainly, there are a lot of unusual things in Jenkins due to this age and the 
 == What problems has Jenkins solved for you?
 
 Although I work on Jenkins a lot, my usage of it is pretty light.
-I'm rarely configuring Jenkins for "proper" usage.
+I rarely configure Jenkins for "proper" usage.
 I basically use it at the most basic developer level of looking at build logs.
 My usage is focused on debugging problems with Jenkins and that is a very unusual use case compared to most people.
 But for me, I'm totally happy to work on an open-source project because Jenkins has a huge user base.
@@ -96,7 +96,7 @@ Before you make any changes you may want to ask:
 
 * Is this safe?
 * Can I fix this bug this way?
-* How have other people try to fix this kind of issue before?
+* How have other people tried to fix this kind of issue before?
 * Are there any patterns or similarities?
 
 I think one of the biggest things working on Jenkins has shown me is the value of your version control history.
