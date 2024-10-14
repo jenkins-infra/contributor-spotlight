@@ -24,17 +24,17 @@ At the time, I thought Maven was nice and easy to use but wasn't as familiar wit
 
 == How long have you been using Jenkins?
 
-My first experience with Jenkins was at the finance company back in 2016, prior to joining CloudBees.
-My boss had asked me to set up Jenkins so that the team could move towards CI for their build processes.
-It can be tricky when getting started with CI/CD because with something like Jenkins, there are so many options to work with, but not necessarily a singular path to go down.
+My first experience with Jenkins was at the finance company back in 2016, before I joined CloudBees.
+My boss asked me to set up Jenkins so that the team could move towards CI for their build processes.
+It can be tricky when getting started with CI/CD because with something like Jenkins, there are so many options to work with, but not necessarily a singular path to follow.
 Then, when I was hired by CloudBees, my work was dedicated to Jenkins and I've been working on it ever since.
  
 == Why choose Jenkins over other projects?
 
 While at the finance company, I was basically told to implement Jenkins and Maven so it was more of a directive and less of a choice in that regard.
-Since joining CloudBees, I do think Jenkins has places where it shines but can be overwhelming with how many options it has.
+Since joining CloudBees, I think Jenkins has places where it shines but can be overwhelming with how many options it has.
 However, I think that if you need the flexibility, if you need the power Jenkins can provide, it certainly offers you all of that.
-I think the open-source aspect of it, certainly is interesting in this day and age, compared to most CI/CD platforms  that are not really open source, particularly not the ones that are in widespread, real-world usage.
+I think the open-source aspect of it, certainly is interesting in this day and age, compared to most CI/CD platforms that are not really open source, particularly not the ones that are in widespread, real-world usage.
 I think as a code base it's interesting since there are not very many CI/CD projects of this age.
 Certainly, there are a lot of unusual things in Jenkins due to this age and the time period it was created, but there's still a lot you can learn from and find out about.
 
@@ -43,7 +43,7 @@ Certainly, there are a lot of unusual things in Jenkins due to this age and the 
 Although I work on Jenkins a lot, my usage of it is pretty light.
 I'm rarely configuring Jenkins for "proper" usage.
 I basically use it at the most basic developer level of looking at build logs.
-My usage is focused on debugging problems with Jenkins, which is a very unusual use case compared to most people.
+My usage is focused on debugging problems with Jenkins and that is a very unusual use case compared to most people.
 But for me, I'm totally happy to work on an open-source project because Jenkins has a huge user base.
 I find it very validating to be able to make changes and fix things that affect tons of people.
 
@@ -51,14 +51,14 @@ There's not a lot of things you can work on where you have that kind of widespre
 So, if I fix a bug in pipeline, I know that this is going to potentially help hundreds of thousands of people.
 I find that's one of the things most satisfying about working on Jenkins.
 It feels like you really can make a difference for people.
-I know if we've actually fixed an issue for tons  and tons and tons of people, that's going to make Jenkins better overall.
+I know if we've actually fixed an issue for tons and tons and tons of people, that's going to make Jenkins better overall.
 It's nice to be able to make changes that have a real impact, to actually work on stuff where it feels like we're doing something that actually helps people and improves the situation.
 
 == Is there an aspect of Jenkins that you're particularly interested in?
 
 One of the parts I am interested in is definitely the Pipeline engine.
-It's very complicated since there are important features for some users but not everyone. 
-For instance, one of the core goals for Pipeline is to keep it always resumable.
+It's very complicated since there are important features for some users, but not everyone. 
+For instance, one of the core goals for Pipeline is to allow builds to resume from where they left off after a restart of Jenkins.
 For each person who finds value in this, there are a lot of other people who don't even worry about this.
 Regardless of the value for any given user, a lot of work has gone into Pipelines to make that possible.
 
@@ -100,12 +100,11 @@ Before you make any changes you may want to ask:
 * Are there any patterns or similarities?
 
 I think one of the biggest things working on Jenkins has shown me is the value of your version control history.
-Being able to see what somebody twelve years back was doing allows you to look back and find out whether something was intentional and if there is a commit message attached to it.
-If there is a message, it might further explain; "I am changing this because of this reason and if you do this, it will break" or clarify; "This is in the middle of some other huge commit and it's totally unrelated."
-I think for open-source contributors, using your git version control, seeing what you can find, and reading code are valuable skills. 
+Being able to see the details of a change made twelve years ago can help you understand whether something was intentional or not, and can provide much-needed context when working on code that is new to you.
+I think for open-source contributors, using your Git version control, seeing what you can find, and reading code are valuable skills. 
 Even if you look at things in Jenkins and think "Maybe I wouldn't do it architecturally this way today", there's still a lot you can learn about why Jenkins did it that way.
 
 You can also learn about mistakes that you wouldn't want to make yourself.  
-It's not so often that you get to look at the open-source code of a big project like Jenkins.
+It's not very often that you get to look at the open-source code of a big project like Jenkins.
 Being able to view the code gives you the ability to look at these really big projects that you probably couldn't have made yourself if you were just getting started.
-However, you can see what people who have come many years before have done and learned and then use that to jump-start your learning and development.
+However, you can see what people who have come before you have done and learned and then use that to jump-start your learning and development.
