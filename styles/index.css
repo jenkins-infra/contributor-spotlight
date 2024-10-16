@@ -11,3 +11,14 @@ body {
         'Segoe UI Emoji', 'Segoe UI Symbol';
     font-size: 16px;
 }
+
+@media screen and (prefers-color-scheme: dark) {
+    #contributor-grid * {
+        color: #fff;
+    }
+
+    body {
+        background-color: #333;
+        color: #fff;
+    }
+}
