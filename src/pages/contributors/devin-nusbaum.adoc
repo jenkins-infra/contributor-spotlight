@@ -1,0 +1,110 @@
+= Devin Nusbaum
+:page-name: Devin Nusbaum
+:page-linkedin:
+:page-twitter: 
+:page-github: dwnusbaum
+:page-email:
+:page-image: avatar/devin-nusbaum.jpeg
+:page-pronouns: He/Him/His
+:page-location: Raleigh, North Carolina, USA
+:page-firstcommit: 2017
+:page-datepublished: 2024-10-22
+:page-featured: true
+:page-intro: Devin is a software engineer based in Raleigh, North Carolina. After graduating from Chapel Hill, Devin spent time at a finance company where he first encountered Jenkins. In 2017, after relocating to Raleigh and joining CloudBees, he contributed to the Jenkins project over the last seven years, starting with smaller bug fixes and eventually moving on to working on Jenkins core. He's especially connected to the Pipeline functionality, dedicating time to refining and enhancing the experience. When he's not deep in Jenkins core, Devin has taken up woodworking and making things with his hands. The results of his work include intricate cutting boards that reflect the time and effort needed to create such lovely pieces.
+
+== What is your background prior to contributing to Jenkins?
+
+I went to school at Chapel Hill in North Carolina and after graduating, my first job was at a finance company.
+During my time there, we were working on electronic trading and I was on their platform for about a year.
+The company was using ANT and everything had to be done manually.
+Creating and running the builds was fully manual, so if you wanted to publish something, you had to do it yourself.
+While I was there, they wanted to switch over to CI to try and ease the workflow people were stuck in.
+They asked me to set up Jenkins and move everything over from ANT to Maven. 
+At the time, I thought Maven was nice and easy to use but wasn't as familiar with Jenkins.
+
+== How long have you been using Jenkins?
+
+My first experience with Jenkins was at the finance company back in 2016, before I joined CloudBees.
+My boss asked me to set up Jenkins so that the team could move towards CI for their build processes.
+It can be tricky when getting started with CI/CD because with something like Jenkins, there are so many options to work with, but not necessarily a singular path to follow.
+Then, when I was hired by CloudBees, my work was dedicated to Jenkins and I've been working on it ever since.
+ 
+== Why choose Jenkins over other projects?
+
+While at the finance company, I was basically told to implement Jenkins and Maven so it was more of a directive and less of a choice in that regard.
+Since joining CloudBees, I think Jenkins has places where it shines but can be overwhelming with how many options it has.
+However, I think that if you need the flexibility, if you need the power Jenkins can provide, it certainly offers you all of that.
+I think the open-source aspect of it, certainly is interesting in this day and age, compared to most CI/CD platforms that are not really open source, particularly not the ones that are in widespread, real-world usage.
+I think as a code base it's interesting since there are not very many CI/CD projects of this age.
+Certainly, there are a lot of unusual things in Jenkins due to this age and the time period it was created, but there's still a lot you can learn from and find out about.
+
+== What problems has Jenkins solved for you?
+
+Although I work on Jenkins a lot, my usage of it is pretty light.
+I rarely configure Jenkins for "proper" usage.
+I basically use it at the most basic developer level of looking at build logs.
+My usage is focused on debugging problems with Jenkins and that is a very unusual use case compared to most people.
+But for me, I'm totally happy to work on an open-source project because Jenkins has a huge user base.
+I find it very validating to be able to make changes and fix things that affect tons of people.
+
+There's not a lot of things you can work on where you have that kind of widespread impact.
+So, if I fix a bug in pipeline, I know that this is going to potentially help hundreds of thousands of people.
+I find that's one of the things most satisfying about working on Jenkins.
+It feels like you really can make a difference for people.
+I know if we've actually fixed an issue for tons and tons and tons of people, that's going to make Jenkins better overall.
+It's nice to be able to make changes that have a real impact, to actually work on stuff where it feels like we're doing something that actually helps people and improves the situation.
+
+== Is there an aspect of Jenkins that you're particularly interested in?
+
+One of the parts I am interested in is definitely the Pipeline engine.
+It's very complicated since there are important features for some users, but not everyone. 
+For instance, one of the core goals for Pipeline is to allow builds to resume from where they left off after a restart of Jenkins.
+For each person who finds value in this, there are a lot of other people who don't even worry about this.
+Regardless of the value for any given user, a lot of work has gone into Pipelines to make that possible.
+
+The pipeline engine, in general, is certainly very interesting to work on.
+The level of things you have to consider when you make changes is very high because any minor change has the potential to break something.
+You can fix things for a lot of people, but you can also break things for a lot of people.
+We consider changes to Pipeline and other parts of Jenkins very carefully and try our best to avoid issues.
+For things that I personally think are interesting, I would say the pipeline engine and the sandboxing engine, even though I wasn't there for their initial design.
+
+== What sort of contributions have felt the most successful or impactful?
+
+With the nature of what I do, it's a lot of very targeted fixes.
+There are certainly a lot of fixes with Pipeline issues that I think are great changes that allowed us to fix things for a lot of people.
+For example, people over the years report builds hanging for lots of reasons.
+This year alone, we probably found three novel ways that builds could be hanging.
+Over the culmination of many years and many fixes like this, I think we've made a lot of improvements for this kind of issue.
+For me, not only is that satisfying, but it also improves the robustness of Jenkins overall.
+
+There are a couple of very particular security fixes I chose to fix in a certain way.
+Years later, we found other cases where if we hadn't fixed it that specific way, we would have received a new security issue that would need to be fixed again. 
+However, because we decided on a more generic resolution, it ended up solving issues we weren't even aware of at the time.
+There are also a couple of fixes I've done over the years related to deserialization robustness.
+Basically, if your configuration XML file is slightly messed up, can we still make things mostly work?
+We've implemented a couple of fixes to improve this kind of situation and that's nice because there's been cases where somebody makes a minor mistake in a plugin that totally breaks other people's instances in really unusual ways.
+Fixing these kinds of issues is nice because you can create one change so that people who accidentally make other mistakes don't cause such big problems.
+It's like you're limiting the blast radius of other issues.
+
+== Advice for new developers and new members of the open-source community
+
+If you want to contribute, I think one of the best things you can do is just read the code.
+Understand what it's doing, try and figure out the problems, and try to predict what will happen.
+Test your changes to validate your predictions.
+Especially in these very old open-source projects, the history of the code base is one of your most valuable tools when you're trying to understand and make a change.
+Before you make any changes you may want to ask:
+
+* Is this safe?
+* Can I fix this bug this way?
+* How have other people tried to fix this kind of issue before?
+* Are there any patterns or similarities?
+
+I think one of the biggest things working on Jenkins has shown me is the value of your version control history.
+Being able to see the details of a change made twelve years ago can help you understand whether something was intentional or not, and can provide much-needed context when working on code that is new to you.
+I think for open-source contributors, using your Git version control, seeing what you can find, and reading code are valuable skills. 
+Even if you look at things in Jenkins and think "Maybe I wouldn't do it architecturally this way today", there's still a lot you can learn about why Jenkins did it that way.
+
+You can also learn about mistakes that you wouldn't want to make yourself.  
+It's not very often that you get to look at the open-source code of a big project like Jenkins.
+Being able to view the code gives you the ability to look at these really big projects that you probably couldn't have made yourself if you were just getting started.
+However, you can see what people who have come before you have done and learned and then use that to jump-start your learning and development.
