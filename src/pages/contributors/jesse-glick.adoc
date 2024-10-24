@@ -1,0 +1,107 @@
+= Jesse Glick
+:page-name: Jesse Glick
+:page-linkedin:
+:page-twitter: 
+:page-github: jglick
+:page-email:
+:page-image: avatar/jesse-glick.jpeg
+:page-pronouns:
+:page-location: Raleigh, North Carolina, USA
+:page-firstcommit: 2009
+:page-datepublished: 2024-11-05
+:page-featured: true
+:page-intro: 
+
+== What is your background prior to contributing to Jenkins?
+
+I worked at Sun Microsystems for quite a long time, working on multiple projects including NetBeans ID.
+We had some CI processes, such as Cruise Control, as part of that.
+While there, I heard about Jenkins (then Hudson) in its infancy.
+I knew of Kohsuke and his work on Hudson and thought it might be something we could start using.
+At the time, we had been using CVS for version control, which Hudson had incorporated to some degree.
+
+We started using Hudson enough that we transitioned from CVS to Mercurial SCM, which I also wound up working on in Hudson.
+It was just enough to get the features we needed for our usage patterns and we didn't pay more attention to it beyond that.
+I had also done some work on the Tool system where you can have tool installations and automatic downloads.
+That was mostly driven by Andrew Bayer, another long-time Jenkins contributor.
+After the Jenkins fork was created, Kohsuke contacted me and asked if I wanted to come join him at the company where he was working on Jenkins.
+This was in 2012 when I joined CloudBees, and I have been focused on Jenkins ever since.
+
+== How long have you been using Jenkins?
+
+I've been using Jenkins since the late 2000's, back when it was still under the Hudson name.
+When I joined CloudBees, that's when I started to work on Jenkins in earnest.
+
+== What have you worked on in Jenkins?
+
+I've spent the most time on Pipeline, working on it since the initial prototypes and testing, all the way through the first official supported version to today.
+Koshuke and I worked directly together on core Pipeline functionality, including an intense collaboration spanning several months to make what we would now call basic functions of Scripted Pipeline.
+This includes Groovy syntax and steps like `node`, an earlier version of `stage`, and `input`.
+Until that point, there had been a long-standing request to make jobs friendlier to define as code.
+One of our goals was to allow people to express more complicated behaviors than what they could achieve by chaining freestyle jobs together.
+Part of this process was making it more simplified and straightforward for users to input and map the process.
+
+At the time, it was challenging for users to ensure their job was configured properly without having to constantly backtrack.
+We wanted something that looked more like a program, that a user could copy and paste and have it look legible.
+Instead of having a bunch of freestyle projects at the base of all this, we wanted to be able to do the entire thing all in one script.
+The other challenge was if the process was running for hours, you couldn't turn the controller off.
+Much of the work was arranging it so the program would keep running over controller restarts, which became the biggest technical hurdle.
+Eventually, I worked with Steven Connolly to create Multibranch Pipeline and Pipeline as code.
+This helped ensure our ultimate goal of keeping all these things within the same "package".
+
+Most recently, I've been working on the high availability system, and while it is a CloudBees proprietary feature, it has critical pieces that are rooted in open source such as the Pipeline continuing to run after controller restarts.
+Even now, there are challenges in keeping things running, working around limitations with the architecture, and dealing with isolation between the components.
+A lot of time is spent on these challenges, along with making sure tests keep running and making sure it's possible to do routine updates. 
+
+== Why choose Jenkins over other projects?
+
+There weren't a lot of options at the time, with Cruise Control being the only other alternative.
+It worked and was very extensible.
+Jenkins either did what we needed it to or we could add plugins that would perform the necessary functions.
+After becoming familiar with the system, extending Jenkins further was fairly straightforward.
+For instance, we wanted to generate a historical diff for quick reference that anyone could use.
+This wasn't possible inherently with Jenkins, but we were able to create a plugin that completed this particular task.
+Jenkins' versatility has only expanded since then, proving to be one of its greatest strengths.
+
+== What problems have you solved in Jenkins?
+
+I'm always looking for opportunities to simplify some parts of the architecture where possible.
+One project I worked on was the re-design of the Jenkins CLI.
+At the time, it was very troublesome from a security perspective and we would have to issue emergency advisories for something like the controller sending back something malicious.
+The project goal was to rip out all of the problematic functionality and turn it into a dump client.
+It could send a command and get back a stream of text, and the protocol was simplified so that it couldn't do anything more than these basic functions.
+However, this also meant tracking down every plugin that might interact with the CLI in this way and either updating code as needed or deprecating the function so that this would not persist.
+
+I also did some work on plugable storage changes, mainly the Artifact Manager on S3 plugin, to help externalize the storage of artifacts and statuses.
+The plugin ecosystem also forces you to work in particular ways such as keeping track of what plugins might be affected by a change or determining how a plugin might interact with various functions or other plugins. 
+It also pushes us to track down plugin maintainers for assistance with changes or updates, to ensure things are not broken by Jenkins core updates.
+
+== Is there an aspect of Jenkins that you're particularly interested in?
+
+A lot of my work has been done on Pipeline so I am partial to that.
+There have been several requests or bug reports from users that have also driven the work we do within Pipeline and Jenkins as a whole.
+These requests also help drive architectural changes, despite the challenges they can present.
+Such requests also help find and deal with technical debt.
+
+== What contributions have felt the most successful or impactful?
+
+The changes and advancements in Pipeline, including Multibranch Pipeline and Scripted Pipeline.
+
+// Left mostly blank for Jesse to provide additional information/response
+
+== Advice for new developers and new members of the open-source community
+
+Don't expect that something you do is automatically going to be accepted or even considered.
+Know the project and the people involved in the project so that you can build rapport.
+Maintainers are more inclined to spend time and mental energy when they are aware of what you are trying to do and what your contribution might involve.
+Pull requests can present a good idea from a quick read of the description, but that does not account for what work might be necessary to implement the work suggested.
+The work needed to understand its implications and even review it can sometimes take half a day depending on the complexity and reach of the pull request.
+There is nothing wrong with this, it's just the reality of taking responsibility for the work.
+
+The most valuable thing to include in many cases is a short, clear test for a problem or potential change.
+This provides maintainers with an accessible example of something that may need fixing or updating.
+Providing a clear example of the issue at hand also makes it easier for a maintainer to accept that it would be useful or at the very least agree that this change would be a good thing.
+In addition to a visual representation, try to keep your description and steps to reproduce as focused as possible.
+Unnecessary details that distract from the main focus of a pull request reduce the clarity that may be needed for faster adaptation.
+This also helps when the proposed work may be a bit outside of the maintainers' expertise.
+There is a lot of work that gets submitted to Jenkins, but if there is a gap in knowledge between the submitter and maintainer, it may take additional time for someone to pick up and review the pull request.
