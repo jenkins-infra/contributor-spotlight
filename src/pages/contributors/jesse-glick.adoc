@@ -10,7 +10,7 @@
 :page-firstcommit: 2009
 :page-datepublished: 2024-11-05
 :page-featured: true
-:page-intro: 
+:page-intro: Jesse Glick is a software engineer, currently residing in Raleigh, North Carolina and has been involved with the Jenkins project for over a decade. Prior to contributing to Jenkins, Jesse worked as an engineer at Sun Microsystems. After incorporating Jenkins to their work, albeit in a small way, there wasn't much more to do with the project. However, that all changed when Kohsuke reached out to Jesse to find out if he would be interested in working on Jenkins full time. Since joining CloudBees in 2012, Jesse has been an integral part of Pipeline development and incorporating many functions that are now fundamental to current Pipeline operation. Jesse is constantly working on improving the Pipeline experience and shares his insights on how to improve not only the Jenkins project, but the open-source workflow as a whole.
 
 == What is your background prior to contributing to Jenkins?
 
