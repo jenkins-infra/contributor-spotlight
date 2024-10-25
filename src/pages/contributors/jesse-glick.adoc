@@ -10,7 +10,7 @@
 :page-firstcommit: 2009
 :page-datepublished: 2024-11-05
 :page-featured: true
-:page-intro: Jesse Glick is a software engineer, currently residing in Raleigh, North Carolina and has been involved with the Jenkins project for over a decade. Prior to contributing to Jenkins, Jesse worked as an engineer at Sun Microsystems. After incorporating Jenkins to their work, albeit in a small way, there wasn't much more to do with the project. However, that all changed when Kohsuke reached out to Jesse to find out if he would be interested in working on Jenkins full time. Since joining CloudBees in 2012, Jesse has been an integral part of Pipeline development and incorporating many functions that are now fundamental to current Pipeline operation. Jesse is constantly working on improving the Pipeline experience and shares his insights on how to improve not only the Jenkins project, but the open-source workflow as a whole.
+:page-intro: Jesse Glick is a software engineer, currently residing in Raleigh, North Carolina and has been involved with the Jenkins project for over a decade. Prior to contributing to Jenkins, Jesse worked as an engineer at Sun Microsystems. After incorporating Jenkins to his work at Sun, albeit in a small way, there wasn't much more to do with the project. However, that all changed when Kohsuke reached out to Jesse to find out if he would be interested in working on Jenkins full time. Since joining CloudBees in 2012, Jesse has been an integral part of Pipeline development, and incorporating many functions that are now fundamental to current Pipeline operation. Jesse works constantly working on improving the Pipeline experience, and shares his insights on how to improve not only the Jenkins project, but the open-source workflow as a whole.
 
 == What is your background prior to contributing to Jenkins?
 
@@ -22,7 +22,7 @@ At the time, we had been using CVS for version control, which Hudson had incorpo
 
 We started using Hudson enough that we transitioned from CVS to Mercurial SCM, which I also wound up working on in Hudson.
 It was just enough to get the features we needed for our usage patterns and we didn't pay more attention to it beyond that.
-I had also done some work on the Tool system where you can have tool installations and automatic downloads.
+I had also done some work on the tool system where you can have tool installations and automatic downloads.
 That was mostly driven by Andrew Bayer, another long-time Jenkins contributor.
 After the Jenkins fork was created, Kohsuke contacted me and asked if I wanted to come join him at the company where he was working on Jenkins.
 This was in 2012 when I joined CloudBees, and I have been focused on Jenkins ever since.
@@ -73,7 +73,7 @@ It could send a command and get back a stream of text, and the protocol was simp
 However, this also meant tracking down every plugin that might interact with the CLI in this way and either updating code as needed or deprecating the function so that this would not persist.
 
 I also did some work on plugable storage changes, mainly the Artifact Manager on S3 plugin, to help externalize the storage of artifacts and statuses.
-The plugin ecosystem also forces you to work in particular ways such as keeping track of what plugins might be affected by a change or determining how a plugin might interact with various functions or other plugins. 
+The plugin ecosystem also forces you to work in particular ways, such as keeping track of what plugins might be affected by a change, or determining how a plugin might interact with various functions or other plugins. 
 It also pushes us to track down plugin maintainers for assistance with changes or updates, to ensure things are not broken by Jenkins core updates.
 
 == Is there an aspect of Jenkins that you're particularly interested in?
