@@ -10,17 +10,17 @@
 :page-firstcommit: 2009
 :page-datepublished: 2024-11-05
 :page-featured: true
-:page-intro: Jesse Glick is a software engineer, currently residing in Raleigh, North Carolina, and has been involved with the Jenkins project for over a decade. Prior to contributing to Jenkins, Jesse worked as an engineer at Sun Microsystems. After incorporating Jenkins into his work at Sun, albeit in a small way, there wasn't much more to do with the project. However, that all changed when Kohsuke reached out to Jesse to find out if he would be interested in working on Jenkins full-time. Since joining CloudBees in 2012, Jesse has been an integral part of Pipeline development, and incorporating many functions that are now fundamental to current Pipeline operation. Jesse works constantly on improving the Pipeline experience, and shares his insights on how to improve not only the Jenkins project but the open-source workflow as a whole.
+:page-intro: Jesse Glick is a software engineer, currently residing near Raleigh, North Carolina, and has been involved with the Jenkins project for over a decade. Prior to contributing to Jenkins, Jesse worked as an engineer at Sun Microsystems. After incorporating Jenkins into his work at Sun, albeit in a small way, there wasn't much more to do with the project. However, that all changed when Kohsuke reached out to Jesse to find out if he would be interested in working on Jenkins full-time. Since joining CloudBees in 2012, Jesse has been an integral part of Pipeline development, and incorporating many functions that are now fundamental to current Pipeline operation. Jesse works constantly on improving the Pipeline experience, and shares his insights on how to improve not only the Jenkins project but the open-source workflow as a whole.
 
 == What is your background prior to contributing to Jenkins?
 
-I worked at Sun Microsystems for quite a long time, working on multiple projects including NetBeans ID.
+I worked at Sun Microsystems for quite a long time, working on the NetBeans IDE.
 We had some CI processes, such as Cruise Control, as part of that.
 While there, I heard about Jenkins (then Hudson) in its infancy.
 I knew of Kohsuke and his work on Hudson and thought it might be something we could start using.
 At the time, we had been using CVS for version control, which Hudson had incorporated to some degree.
 
-We started using Hudson enough that we transitioned from CVS to Mercurial SCM, which I also wound up working on in Hudson.
+We migrated from CVS to Mercurial SCM, which I also wound up working on in Hudson.
 It was just enough to get the features we needed for our usage patterns and we didn't pay more attention to it beyond that.
 I had also done some work on the tool system where you can have tool installations and automatic downloads.
 That was mostly driven by Andrew Bayer, another long-time Jenkins contributor.
@@ -68,11 +68,11 @@ Jenkins' versatility has only expanded since then, proving to be one of its grea
 I'm always looking for opportunities to simplify some parts of the architecture where possible.
 One project I worked on was the re-design of the Jenkins CLI.
 At the time, it was very troublesome from a security perspective and we would have to issue emergency advisories for something like the controller sending back something malicious.
-The project goal was to rip out all of the problematic functionality and turn it into a dump client.
+The project goal was to rip out all of the problematic functionality and turn it into a dumb client.
 It could send a command and get back a stream of text, and the protocol was simplified so that it couldn't do anything more than these basic functions.
 However, this also meant tracking down every plugin that might interact with the CLI in this way and either updating code as needed or deprecating the function so that this would not persist.
 
-I also did some work on plugable storage changes, mainly the link:https://plugins.jenkins.io/artifact-manager-s3/[Artifact Manager on S3] plugin, to help externalize the storage of artifacts and statuses.
+I also did some work on pluggable storage changes, mainly the link:https://plugins.jenkins.io/artifact-manager-s3/[Artifact Manager on S3] plugin, to help externalize the storage of artifacts and stashes.
 The plugin ecosystem also forces you to work in particular ways, such as keeping track of what plugins might be affected by a change, or determining how a plugin might interact with various functions or other plugins. 
 It also pushes us to track down plugin maintainers for assistance with changes or updates, to ensure things are not broken by Jenkins core updates.
 
@@ -85,9 +85,19 @@ Such requests also help find and deal with technical debt.
 
 == What contributions have felt the most successful or impactful?
 
-The changes and advancements in Pipeline, including Multibranch Pipeline and Scripted Pipeline.
+I was eager to file one of the first substantive link:https://github.com/jenkinsci/jep/tree/master/jep[JEPs]: JEP-200.
+The goal of this JEP was to greatly reduce the surface area of Jenkins threatened by deserialization “gadgets”.
+The work planned was in the same spirit as the Jenkins CLI simplification, which predated the JEP system.
+Another notable feature was JEP-222, allowing WebSocket to be used to connect agents to the controller.
+This was inspired by the trickiness of setting up “level 4” network proxies, a common hurdle for CloudBees CI customers, especially in Kubernetes.
+JEP-227 was a very tedious, yet long overdue, project to update to the (then) current Spring Security release across several major versions.
+Preventing almost all user-visible regressions required a lot of refactoring in Jenkins core and a lot of plugin updates.
+It is great to see that the Jenkins project has gotten much more proactive in updating dependencies since those days.
 
-// Left mostly blank for Jesse to provide additional information/response
+At the infrastructure level, JEP-305 made it possible to prototype changes spanning multiple plugins, without sacrificing CI coverage, despite the lack of a “monorepo” for Jenkins development.
+More recently, JEP-229 built on that system to make it possible to publish plugin releases automatically, without requiring maintainers to keep Artifactory credentials on their laptop.
+This had been a longstanding source of frustrating mistakes and a security risk.
+Both changes were inspired especially by work on Pipeline-related plugins, which form a loose coalition without a fixed boundary: I wanted it to be as simple as possible to develop, test, and publish changes rapidly.
 
 == Advice for new developers and new members of the open-source community
 
