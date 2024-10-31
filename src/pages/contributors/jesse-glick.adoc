@@ -14,7 +14,7 @@
 
 == What is your background prior to contributing to Jenkins?
 
-I worked at Sun Microsystems for quite a long time, working on the NetBeans IDE.
+I worked at Sun Microsystems for quite a long time on the NetBeans IDE.
 We had some CI processes, such as Cruise Control, as part of that.
 While there, I heard about Jenkins (then Hudson) in its infancy.
 I knew of Kohsuke and his work on Hudson and thought it might be something we could start using.
@@ -95,7 +95,7 @@ Preventing almost all user-visible regressions required a lot of refactoring in 
 It is great to see that the Jenkins project has gotten much more proactive in updating dependencies since those days.
 
 At the infrastructure level, JEP-305 made it possible to prototype changes spanning multiple plugins, without sacrificing CI coverage, despite the lack of a “monorepo” for Jenkins development.
-More recently, JEP-229 built on that system to make it possible to publish plugin releases automatically, without requiring maintainers to keep Artifactory credentials on their laptop.
+More recently, JEP-229 built on that system to make it possible to publish plugin releases automatically, without requiring maintainers to keep Artifactory credentials on their laptops.
 This had been a longstanding source of frustrating mistakes and a security risk.
 Both changes were inspired especially by work on Pipeline-related plugins, which form a loose coalition without a fixed boundary: I wanted it to be as simple as possible to develop, test, and publish changes rapidly.
 
