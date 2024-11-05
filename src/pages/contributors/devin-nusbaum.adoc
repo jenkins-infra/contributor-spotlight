@@ -9,7 +9,7 @@
 :page-location: Raleigh, North Carolina, USA
 :page-firstcommit: 2017
 :page-datepublished: 2024-10-22
-:page-featured: true
+:page-featured: false
 :page-intro: Devin is a software engineer based in Raleigh, North Carolina. After graduating from Chapel Hill, Devin spent time at a finance company where he first encountered Jenkins. In 2017, after relocating to Raleigh and joining CloudBees, he contributed to the Jenkins project over the last seven years, starting with smaller bug fixes and eventually moving on to working on Jenkins core. He's especially connected to the Pipeline functionality, dedicating time to refining and enhancing the experience. When he's not deep in Jenkins core, Devin has taken up woodworking and making things with his hands. The results of his work include intricate cutting boards that reflect the time and effort needed to create such lovely pieces.
 
 == What is your background prior to contributing to Jenkins?
