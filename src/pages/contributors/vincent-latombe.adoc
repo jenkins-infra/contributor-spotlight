@@ -10,34 +10,36 @@
 :page-firstcommit: 2011
 :page-datepublished: 2024-11-19
 :page-featured: true
-:page-intro: Vincent Latombe is a software engineer and long-standing Jenkins contributor who has worked on many areas since his first introduction. From plugins, to Jenkins core, to test parallelization, Vincent has been part of several improvements and new features over the last decade. He has held an interest in computers and technology since childhood, fostered by his parents encouragement. They like to say that Vincent broke his first keyboard at 18 months old, but Vincent maintains that he's never broken a keyboard in his life. His interest in programming languages started with some Commodore practice, but there was a lack of use cases to apply what he was learning. Vincent graduated from school and found his footing through roles in engineering and developer relations, where he eventually got connected with other Jenkins contributors and even Kohsuke Kawaguchi himself. Vincent has worn many hats when it comes to Jenkins and continues to find new ways to contribute to and enhance the project. When he's not working on HA, Vincent likes to balance his tech work with getting outside and being active in different ways. He's played badminton for half his life and enjoys biking around with his two children. He's also been passing on his love of computers to his children, hoping to foster the same sense of creativity that he still possesses.
+:page-intro: Vincent Latombe is a software engineer and long-standing Jenkins contributor who has worked on many areas since his first introduction. From plugins, to Jenkins core, to test parallelization, Vincent has been part of several improvements and new features over the last decade. He has held an interest in computers and technology since childhood, fostered by his parents encouragement. They like to say that Vincent broke his first keyboard at 18 months old, but Vincent maintains that he's never broken a keyboard in his life. His interest in programming languages started with some Commodore practice, but there was a lack of use cases to apply what he was learning.
+
+Vincent graduated from school and found his footing through roles in engineering and developer relations, where he eventually got connected with other Jenkins contributors and even Kohsuke Kawaguchi himself. Vincent has worn many hats when it comes to Jenkins and continues to find new ways to contribute to and enhance the project. When he's not working on HA, Vincent likes to balance his tech work with getting outside and being active in different ways. He's played badminton for half his life and enjoys biking around with his two children. He's also been passing on his love of computers to his children, hoping to foster the same sense of creativity that he still possesses.
 
 == What is your background prior to contributing to Jenkins?
 
-I graduated high school in 2001 and after that, in France, we have this system where if you want to go to an engineering school, you must first attend a preparatory school.
-After completing preparatory school, basically everyone who wants to get into the top engineering school is in a pool and the students that get the best grades are selected, followed by written and oral examinations.
-Most engineers in France will follow that path.
+I graduated high school in 2001 and then, as is customary in France, attended preparatory school in order to go to engineering school.
+Only the students from the preparatory school with the best grades are selected to take the written and oral examinations for engineering school.
 Alternatively, some people decide to attend university, work towards being within the top of their class, and enter the engineering school that way.
 Unfortunately, I missed the top spots so I had to go for a third year.
-After finally achieving the marks needed, I went to an engineering school in Grenoble.
-I went there for software engineering and did my final year in Sweden, spending eight months there.
-Then I went back to do my internship for the final masters degree.
+After finally achieving the marks I needed, I went to an engineering school in Grenoble and studied software engineering.
+For my final year, I studied in Sweden for eight months, then returned and completed an internship for my masters degree.
 After getting my degree, I was hired by Amadeus and worked for them for eight years.
 Initially, I worked on the product, but I quickly switched to the backend and tooling.
-This was around 2009 or 2010 and was during the early stages of CI implementation.
 
-At the time, they had some Cruise Control instances deployed and then we heard about a product called Hudson that was open source.
+In 2009 or 2010, during the early stages of CI implementation, the company had some Cruise Control instances deployed.
+Then we heard about a product called Hudson that was open source. 
 It had a nice web interface where you could edit your projects using the UI directly.
-Cruise control was driven from XML files as well, but every time you wanted to edit anything, you needed to restart the instance and it was nowhere as flexible.
-When we started with Hudson, I started by picking one server, deploying a project with a branch, configuring limited availability, and seeing what we can do with it quickly.
+Cruise control was driven from XML files as well, but every time you wanted to edit anything, you needed to restart the instance.
+It was nowhere as flexible as Hudson.
+When we started with Hudson, I started by picking one server, deploying a project with a branch, configuring limited availability, and seeing what we could do with it quickly.
 The SCM we were using at the time was Clear Case from IBM, which was designed to work within an IBM environment.
 However, there was a Clear Case plugin maintained by Andrew Bayer.
-When I started using it, I began discovering some problems with my environment.
+When I started using Hudson, I began discovering some problems with my environment.
 
-I started to contribute fixes and then after a while, we grew through a deployment.
-We started with building just the main branch, then we started considering more projects, finally leading up to building a development branch and it grew organically over the years and that's how I got involved with the Jenkins project.
-Eventually, Andrew changed companies and left Clear Case. 
-That meant the Clear Case plugin was no longer being maintained, so I adopted it and started fixing it for my use case and to improve it in general.
+I started to contribute fixes, and then after a while, we grew through a deployment.
+We started with building just the main branch, then we started considering more projects, finally leading up to building a development branch.
+My development with Jenkins grew organically over the years and that's how I got involved with the Jenkins project.
+Eventually, Andrew changed companies and left Clear Case, which meant that the Clear Case plugin was no longer being maintained.
+I adopted it and started fixing it for my use case and to improve it in general.
 I also started to contribute some bug fixes to Jenkins core whenever it was relevant to my use cases.
 I got some PRs reviewed by Kohsuke directly, even though we ended up rewriting half of what I was contributing.
 This was because I didn't know how to write things properly, at least in this ecosystem, and that's how I became accustomed to some of the idioms and ways of working in Jenkins.
@@ -56,12 +58,13 @@ It was a pretty big instance with lots of builds and around 600 people using it.
 Around 2012 or 2013 I started attending some Jenkins community events and went to FOSDEM.
 That's when I met Kohsuke for the first time and other Jenkins contributors as well.
 We were in the same situation; contributing to Jenkins from our separate companies.
-Later on, when CloudBees did some fundraising, they started to look into some of the community members and Kohsuke contacted me to offer a position at CloudBees, which I accepted.
+Later on, when CloudBees did some fundraising, they started to hire some of the community members.
+Kohsuke offered me a position at CloudBees, which I accepted.
 
 == How long have you been using Jenkins?
 
 I started using Jenkins in the late 2000's when it was still under the Hudson name.
-I eventually started contributing to Jenkins core around 2010/2011, along with submitting fixes to the Clear Case plugin.
+I eventually started contributing to Jenkins core around 2010 or 2011, along with submitting fixes to the Clear Case plugin.
 Now, I've been working on Jenkins for the last ten years and have seen it grow in many ways since my initial usage.
  
 == Why choose Jenkins over other projects?
@@ -70,16 +73,17 @@ As far as Jenkins is concerned, I've always been impressed by how versatile it i
 Before using Jenkins, every time we wanted to change some configuration, we needed to apply a restart.
 The restart would cancel the builds and everything was much more complicated than it needed to be.
 With Jenkins, you could set up new jobs and adjust configuration for each one.
-You didn't need to restart, just apply your changes and you're good.
+You didn't need to restart in order to apply your changes.
 Jenkins removed a lot of the headaches we would deal with when it came to configuring and running builds.
 
 == What problems has Jenkins solved for you?
 
 In my previous job before CloudBees, we were using either Maven jobs or freestyle jobs.
-We started to consider building a project with different branches where a job that takes the branch as a parameter.
-This isn't ideal because the different builds you get are unrelated to each other, so the best structure was to create one job per branch.
-However, it was kind of a mess to handle because you had no way to capture what was common between the different jobs.
-We didn't have pipeline obviously.
+We started to consider building a project with different branches, where a job uses the branch as a parameter.
+This isn't ideal, because the different builds you get are unrelated to each other.
+So the best structure was to create one job per branch.
+However, it messy and complicated because there was no way to capture what was common between the different jobs.
+Obviously, at the time we did not have Pipeline.
 Therefore, we chose to build an automation using a template that would copy it over, customize the branch name, and then repeat that for the dozens of projects that were following the same lifecycle but managed as different projects.
 All of these projects needed to be managed and we needed to have a way to determine whether a component actually changed, otherwise a build that comes from the main branch would be reused.
 Every time we had a big project, it became very costly if we didn't do it in a smart way.
@@ -94,41 +98,40 @@ It was basically a prototype, where we were trying to generalize how to provisio
 
 To focus on my current Jenkins efforts, I've been working on HA support.
 The goal is making a Jenkins installation able to span over multiple machines and horizontally scale.
-That involved a lot of work because Jenkins, at the time it was designed, had a lot of design principles that were counter to scaling that way.
+This has involved a lot of work, because Jenkins historically had a lot of design principles that were counter to scaling that way.
 I made a lot of patches against Jenkins core in that context, in most cases to make sure any existing implementations would still work.
-It doesn't change that functionality, but opens it in such a way so that we could replace some bits and make them HA friendly in a corporate context.
+It doesn't change that functionality, but opens it in such a way so that we could replace some bits and make them HA-friendly in a corporate context.
 Some of the roadblocks have been pretty interesting over the years, and I try to improve on them so they are no longer blockers.
 
-For instance, the parallel test executor plugin that Kohsuke wrote initially, is very convenient when you're looking to parallelize the execution of tests.
-At the time, it was very Java focused.
-So you run a build with Maven, produce test results, use the JUnit plugin to collect this results, and get a nice report in the Jenkins UI.
+For instance, the parallel test executor plugin that Kohsuke initially wrote is very convenient when you're looking to parallelize the execution of tests.
+At the time, it was very Java-focused.
+So you run a build with Maven, produce test results, use the JUnit plugin to collect the results, and get a nice report in the Jenkins UI.
 It gets the information from the JUnit plugin about each individual test, such as how much time it took, and then it computes the bucket automatically in the form of `include/exclude` that you can provide back to Maven.
 If you can easily expand your pool of machines running builds, then you can easily shrink down your build and test times to something that's much faster.
-Today, we combine that ability with some features from Maven directly that allows for multi-core machines to parallelize tests.
-You can basically take a build that would normally take eight hours and shrink it down to less than an hour or even more depending on how your project is set up.
+Today, we combine that ability with some features from Maven directly that allow for multi-core machines to parallelize tests.
+You can shrink a build that would normally take eight hours and shrink it down to less than an hour or even, more depending on how your project is set up.
 It's pretty impressive and it has gone better over time.
 
 One of the latest things we've added was to take test cases.
 Within the test class, you may have multiple test cases and these test cases can take time.
 The split is then being done based on each case, instead of just collecting everything by class.
 The plugin remains very powerful because it's fully dynamic.
-If you add new tests, it will take them into account and it will adjust the composition of each bucket accordingly.
-You don't have any configuration change to make.
+If you add new tests, it will take them into account and it will adjust the composition of each bucket accordingly, without requiring any configuration updates.
 
 == What sort of contributions have felt the most successful or impactful?
 
 As part of my work on the CI modern product, I took over as maintainer for the Kubernetes plugin.
-I think this plugin is really key if you're running a Jenkins or CloudBees CI instance in the cloud, it's key to achieve scale on the agent side.
-It's very versatile as well because while there are lots of CI solutions in the market, they will have a particular way of serving things.
+I think this plugin is really key if you're running a Jenkins or CloudBees CI instance in the cloud, to achieve scale on the agent side.
+It's very versatile as well.
+While there are lots of CI solutions on the market, they each have a particular way of serving things.
 These ways may work for some people, but in other cases, it's not flexible enough.
-There is always this kind of potential gap where you need more flexibility.
-I think Jenkins provides exactly that.
+There is always a potential gap where you need more flexibility, and I think Jenkins provides exactly that.
 
 == Advice for new developers and new members of the open-source community
 
 Contributing to a new project can include a steep learning curve because it has a lot of functionalities.
 It has an ecosystem of plugins and offers limitless extensibility.
 You need to understand what your abstract needs are before you do something.
-If you want to contribute something good, you need to either reach out to the community for guidance or accept making mistakes.
-I think it's okay to make mistakes, I did a lot when getting started.
-The big thing is you need to have the time and attitude to come back to your mistakes and make them better over time.
+If you want to contribute something good to Jenkins, you need to either reach out to the community for guidance or accept making mistakes.
+I think it's okay to make mistakes -- I did a lot when getting started.
+Most importantly, you must have the time and attitude to come back to your mistakes and make them better over time.
