@@ -20,7 +20,7 @@ I graduated high school in 2001, followed by preparatory school in Paris.
 After receiving the marks needed, I went to Ensimag, an engineering school in Grenoble, where I studied telecommunications and software engineering.
 For my final year, I studied in Sweden for eight months, then returned and completed an internship for my masters degree.
 After getting my degree, I was hired by Amadeus and worked for them for eight years.
-Initially, I worked in a UI team that was embracing the beginning of JS frameworks (Yahoo UI), but after 2 years I switched to a transversal team dealing with tooling and builds.
+Initially, I worked in a UI team that was embracing the beginning of JS frameworks (Yahoo UI), but after two years, I switched to a transversal team that dealt with tooling and builds.
 I was very fond of tooling and figuring out ways to make people more productive.
 
 In 2010, during the early stages of CI implementation, the company had some Cruise Control instances deployed.
@@ -35,10 +35,10 @@ When I started using Hudson, I began discovering some problems with my environme
 
 I started to contribute fixes, and then after a while, we grew through a deployment.
 We started with building just the main branch of one project, then multiple projects, then all projects.
-This was a game changer, especially in an environment where integration phases were a real challenge and people delivering features as quick as they could.
+This was a game changer, especially in an environment where integration phases were a real challenge and people delivering features as quickly as they could.
 These would result in conflicts that were taking days, if not weeks to resolve, but getting a point of reference and tracking stabilization efforts were key.
-Getting high performance hardware was also a challenge back then, since developers would take hours just to compile projects locally.
-CPUs were 2 cores, magnetic disks, with no efficient way to parallelize.
+Getting high-performance hardware was also a challenge back then since developers would take hours just to compile projects locally.
+CPUs were two cores and magnetic disks, with no efficient way to parallelize.
 My development with Jenkins grew organically over the years and that's how I got involved with the Jenkins project.
 Eventually, Andrew changed companies and stopped maintaining ClearCase (to start using Git), leaving the ClearCase plugin up for adoption.
 I adopted it and started fixing it for my use case and to improve it in general.
@@ -102,7 +102,7 @@ Since we were running on AWS (which was still charging by the hour), and Docker 
 
 To focus on my current Jenkins efforts, I've been working on HA support.
 The goal is making a Jenkins installation able to span over multiple machines and horizontally scale.
-This has involved a lot of work, because Jenkins historically had a lot of design principles that were counter to scaling that way; a heavy reliance on a file system, holding most of the state in memory.
+This has involved a lot of work because Jenkins historically had a lot of design principles that were counter to scaling that way; a heavy reliance on a file system, holding most of the state in memory.
 We made a lot of patches against Jenkins core in that context.
 In most cases, this involved creating new extension points, to allow users to swap the default implementation for another one that can work in a HA-context.
 
