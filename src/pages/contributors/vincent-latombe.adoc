@@ -26,8 +26,6 @@ I was very fond of tooling and figuring out ways to make people more productive.
 In 2010, during the early stages of CI implementation, the company had some Cruise Control instances deployed.
 Then we heard about a product called Hudson that was open source. 
 It had a nice web interface where you could edit your projects using the UI directly.
-Cruise control was driven from XML files as well, but every time you wanted to edit anything, you needed to restart the instance.
-It was nowhere as flexible as Hudson.
 When we started with Hudson, I started by picking one server, deploying a project with a branch and seeing what we could do with it quickly.
 The SCM we were using at the time was ClearCase from IBM, which was designed to work within an IBM environment.
 At the time, Hudson had a ClearCase plugin maintained by Andrew Bayer.
