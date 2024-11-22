@@ -14,27 +14,27 @@
 
 == What is your background prior to contributing to Jenkins?
 
-After receiving my masters in electrical and electronic engineering from Manchester University, I moved to Sweden and started life as a research engineer at a university.
-I was working with location aware applications and mass distribution of media on the internet.
-This was all before mobile phones had built in GPS systems.
+After receiving my master's in electrical and electronic engineering from Manchester University, I moved to Sweden and started life as a research engineer at a university.
+I was working with location-aware applications and mass distribution of media on the internet.
+This was all before mobile phones had built-in GPS systems.
 After some time there, I moved back to the UK, down to Hampshire, and I was working on the "head end" (backend) for a company catering to satellite and cable TV operators.
 Within broadcasting, they call it "head end" and it's everything that drives automation of the broadcast.
 This included EPGs, scheduling, and encryption of data and devices as well.
-So I was working on management of life cycles, encryption for devices, and other various necessities.
+So I was working on the management of life cycles, encryption for devices, and other various necessities.
 I was there for 10 or so years, and we were acquired by Cisco part way through my tenure.
 That's also where I got my first exposure to Hudson.
-I think it was a number of months after Kohsuke originally sent the email or announced updating Hudson to open source and that it was available.
+I think it was a number of months after Kohsuke originally sent the email or announced that Hudson was being updated to open source and that it was available.
 
 I was working with another person on a project that we had to get out the door as quickly as possible.
 It was just the two of us and I'm not a morning person, so I would work late while my colleague, who was a morning person, would work earlier.
 We were using Subversion because that was our only option back in the day.
-However, we would forget to check in some files, so we'd add new files, make loads of changes, do the check-in and go home.
+However, we would forget to check in some files, so we'd add new files, make loads of changes, do the check-in, and go home.
 Obviously, when you miss some files, like when I would come to try and do some work, it would pick up the changes and merge things, but it ends up broken because it's missing items.
 After dealing with this for long enough, I was looking for something to prevent this from happening and wanted to incorporate some CI so we could get feedback.
-This way, when either of us check in some files, we can know in five minutes before leaving and no one is waiting for an update at the end of the day.
+This way, when either of us checks in some files, we can know five minutes before leaving and no one is waiting for an update at the end of the day.
 
 So, I spent a while looking around and there were various options out there.
-We settled on Cruise Control, which I then spent the better part of a week trying to set it up, just to check out and build this project, but it just would not work whatsoever.
+We settled on Cruise Control, which I then spent the better part of a week trying to set up, just to check out and build this project, but it just would not work whatsoever.
 I don't know if it's because we were running it on Windows Server or if something else was causing the issue, but everything I was doing was wrong.
 I had followed the documentation and it just didn't work.
 I was just getting incredibly discouraged and then, after getting frustrated for the last time, I decided there's got to be a better option.
@@ -43,7 +43,7 @@ After configuring it, I was up and running in 10 minutes and it was amazing.
 While working on projects at this company, there was no budget for something like this.
 
 However, I was the lab manager for all the manual testing and we had racks of servers that were no longer powerful enough to do encryption.
-Since they were laying around, essentially being spare parts, I cobbled together pieces from various old servers to give it more memory and then shoved it back in the rack.
+Since they were lying around, essentially being spare parts, I cobbled together pieces from various old servers to give them more memory and then shoved them back in the rack.
 There was no budget for it and no IT for it, but it was in the rack, ready to go.
 It was brilliant and we loved it, with other people eventually catching on.
 They saw what we were doing and they wanted that ability too.
@@ -54,12 +54,12 @@ Since we had source repositories in different places, we had Jenkins (Hudson) in
 == How long have you been using Jenkins?
 
 So, if you take when Hudson was first made available and add six months onto it, that would probably be about the timeline.
-After leaving my previous employer, I moved over to CloudBees and I've been working for ClubBees for the last nine and a half, almost 10 years.
+After leaving my previous employer, I moved over to CloudBees and I've been working for CloudBees for the last nine and a half, almost 10 years.
 
 == What have you worked on in Jenkins?
 
 In regards to my initial usage, there were some bugs that kick-started my contributions to the project.
-I was asking for help in the mailing lists and getting answers from Kohsuke, and I started answering questions from other users.
+I was asking for help on the mailing lists and getting answers from Kohsuke, and I started answering questions from other users.
 That eventually grew to the point that we wanted to stop doing releases from developer desktops, which we were still doing.
 While we weren't _technically_ doing them from developer desktops, we were doing releases from servers, but you would log into the server and do it from a server, which is just as bad.
 That led to my first plugin, which was the link:https://plugins.jenkins.io/m2release/[M2 Release (Maven Release)] plugin.
@@ -84,16 +84,16 @@ However, it's not as easy to run and you need to do your own checks.
 
 While I was working for NDS, the satellite cable company, as we were scaling up and out, we wanted to be able to allow users to create their own projects.
 However, we wanted them to essentially be rubber stamp templates.
-So it's like this: you're always going to use a Maven project, so the only thing that is different is where your source control is located and what email should be notified when something goes wrong.
+So it's like this: you're always going to use a Maven project, so the only different things are where your source control is located and what email should be notified when something goes wrong.
 That was around the time that Kohsuke had just started his company InfraDNA.
 
-I believe the first time that I worked with Kohsuke, was the Nectar VMware autoscaling plugin which allowed us to have a pool of resources in VMware that were just virtual machines and just resetting to snapshots and assign them into builds.
-So we could say, for this build I need a virtual machine; here you go, here's an IP address, and we were good to go.
-I was amazed at the quickness in which he knocked out that plugin.
+I believe the first time that I worked with Kohsuke, was on the Nectar VMware autoscaling plugin which allowed us to have a pool of resources in VMware that were just virtual machines and just resetting to snapshots and assigning them into builds.
+So we could say, for this build, I need a virtual machine; here you go, here's an IP address, and we were good to go.
+I was amazed at the quickness with which he knocked out that plugin.
 While in Jerusalem, we mentioned something during a meeting and he came in the next day and said here you go, try this.
 It was almost out of nowhere and the collaboration with Kohsuke was amazing.
 
-Additionally, at the time it had a cutting edge UI and the test result reports were great.
+Additionally, at the time it had a cutting-edge UI and the test result reports were great.
 If you compared it to other stuff, it was a little table of pass/fail or a mess.
 Hudson allowed you to have a summary, drill into things, and show you the full stack trace and full logs right at the bottom of the builds, as opposed to having all the information in a massive sprawling page of mess.
 
@@ -103,7 +103,7 @@ The most recent thing is being able to support FIPS 140 for any federal people t
 Up until a year ago, you couldn't really start Jenkins in a FIPS compliant way because the initial use password that it generates would be generated in something that was not an approved encryption standard.
 
 Another one of the things I did recently, which if you end up having to support Jenkins, is all of the plugin class loaders are now named.
-If something does go wrong and you get a stack trace, rather than having just the class, you have plugin name and class so you can immediately see which plugin is having an issue.
+If something does go wrong and you get a stack trace, rather than having just the class, you have the plugin name and class so you can immediately see which plugin is having an issue.
 Because it's not always obvious, it can be, but if it's not this spells out which class is from the given plugin.
 So, a little thing for me has made a big difference.
 When I see a stack trace, I can immediately just read it as opposed to having to infer something and then check.
