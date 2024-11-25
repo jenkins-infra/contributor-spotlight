@@ -10,26 +10,25 @@
 :page-firstcommit: 2009
 :page-datepublished: 2024-12-10
 :page-featured: true
-:page-intro: James Nord is a software engineer based out of the UK that has been part of the Jenkins community since Kohsuke first announced its move to open source. While he may have started out with more straight-forward usage of the platform, he eventually started writing plugins to solve problems and fill the gaps that he found. Attributing his success with Jenkins to the ecosystem and extensibility it offers, James eventually found himself collaborating directly with the project. Documenting bugs and starting his contributions in the early days of mailing lists was just the start of a much longer journey. From being one of Kohsuke's first customers to joining CloudBees as an employee, James has helped push Jenkins further along and been a driving force for necessary innovation, such as supporting FIPS 140 and making Jenkins more secure for government work. Throughout his involvement with Jenkins, James has enjoyed spreading his focus to different areas of the project, making sure to keep his work interesting and varied.
+:page-intro: James Nord is a software engineer based out of the UK that has been part of the Jenkins community since Kohsuke Kawaguchi first announced the move to open source. James started out with more basic usage of the Jenkins platform, but he soon started writing plugins to solve problems and fill any gaps that he found. Attributing his success with Jenkins to the ecosystem and extensibility it offers, James eventually collaborated directly with the project. Documenting bugs and starting his contributions in the early days of mailing lists was just the start of a much longer journey. He was one of Kohsuke's first customers, and then joined CloudBees as an employee. Since then, James has helped push Jenkins further along and been a driving force for necessary innovation, such as supporting FIPS 140 and making Jenkins more secure for government work. Throughout his involvement with Jenkins, James has enjoyed spreading his focus to different areas of the project, making sure to keep his work interesting and varied.
 
 == What is your background prior to contributing to Jenkins?
 
 After receiving my master's in electrical and electronic engineering from Manchester University, I moved to Sweden and started life as a research engineer at a university.
 I was working with location-aware applications and mass distribution of media on the internet.
 This was all before mobile phones had built-in GPS systems.
-After some time there, I moved back to the UK, down to Hampshire, and I was working on the "head end" (backend) for a company catering to satellite and cable TV operators.
+After some time in Sweden, I moved to Hampshire in the UK to work on the "head end" (backend) for a company catering to satellite and cable TV operators.
 Within broadcasting, they call it "head end" and it's everything that drives automation of the broadcast.
 This included EPGs, scheduling, and encryption of data and devices as well.
 So I was working on the management of life cycles, encryption for devices, and other various necessities.
-I was there for 10 or so years, and we were acquired by Cisco part way through my tenure.
-That's also where I got my first exposure to Hudson.
+The company was acquired by Cisco partway through my ten-year tenure there, which is when I got my first exposure to Hudson.
 I think it was a number of months after Kohsuke originally sent the email or announced that Hudson was being updated to open source and that it was available.
 
 I was working with another person on a project that we had to get out the door as quickly as possible.
 It was just the two of us and I'm not a morning person, so I would work late while my colleague, who was a morning person, would work earlier.
 We were using Subversion because that was our only option back in the day.
 However, we would forget to check in some files, so we'd add new files, make loads of changes, do the check-in, and go home.
-Obviously, when you miss some files, like when I would come to try and do some work, it would pick up the changes and merge things, but it ends up broken because it's missing items.
+Obviously, the codebase ends up broken because merging missed files.
 After dealing with this for long enough, I was looking for something to prevent this from happening and wanted to incorporate some CI so we could get feedback.
 This way, when either of us checks in some files, we can know five minutes before leaving and no one is waiting for an update at the end of the day.
 
@@ -47,9 +46,8 @@ Since they were lying around, essentially being spare parts, I cobbled together 
 There was no budget for it and no IT for it, but it was in the rack, ready to go.
 It was brilliant and we loved it, with other people eventually catching on.
 They saw what we were doing and they wanted that ability too.
-So, along with my regular job of developing code and maintaining the lab, I basically took on owning CI that eventually snowballed and spread out across the division.
-We were a global company at the time, so it eventually became a question of "How do we make this a bit more global?"
-Since we had source repositories in different places, we had Jenkins (Hudson) in three different environments; two in the UK and one in Israel so it would always be close to the source code.
+Eventually, along with my regular job of developing code and maintaining the lab, I took on ownership of CI that eventually snowballed and spread out across the division.
+We were a global company with source repositories in different locations, so we wound up with Jenkins (Hudson) in three different environments: Two in the UK and one in Israel, so it would always be close to the source code.
 
 == How long have you been using Jenkins?
 
@@ -100,9 +98,9 @@ Hudson allowed you to have a summary, drill into things, and show you the full s
 == What problems have you solved in Jenkins?
 
 The most recent thing is being able to support FIPS 140 for any federal people that want to use Jenkins and do it themselves.
-Up until a year ago, you couldn't really start Jenkins in a FIPS compliant way because the initial use password that it generates would be generated in something that was not an approved encryption standard.
+Up until a year ago, you couldn't really start Jenkins in a FIPS-compliant way because the initial use password that it generates would be generated using a nonstandard encryption method.
 
-Another one of the things I did recently, which if you end up having to support Jenkins, is all of the plugin class loaders are now named.
+Recently, I made sure that all of the plugin class loaders are named.
 If something does go wrong and you get a stack trace, rather than having just the class, you have the plugin name and class so you can immediately see which plugin is having an issue.
 Because it's not always obvious, it can be, but if it's not this spells out which class is from the given plugin.
 So, a little thing for me has made a big difference.
@@ -110,8 +108,8 @@ When I see a stack trace, I can immediately just read it as opposed to having to
 
 == Is there an aspect of Jenkins that you're particularly interested in?
 
-Early on in our usage, it was the extensibility and the ease of writing plugins, extending Jenkins itself to make it do new things that it couldn't necessarily do on its own.
-Rather than doing a lot of one thing, I've been doing bits of various things as needed.
+Early on in our usage, I was very interested in the extensibility and the ease of writing plugins, extending Jenkins itself to make it do new things that it couldn't necessarily do on its own.
+More recently, I've been doing bits of various things as needed.
 It's good in that it allows you to keep a bigger picture as well, so I don't end up siloed on any one thing.
 
 == What contributions have felt the most successful or impactful?
@@ -119,16 +117,15 @@ It's good in that it allows you to keep a bigger picture as well, so I don't end
 I think with Jenkins, it has evolution.
 Gentle evolution all the time that adds to it and makes Jenkins better.
 Then, every once in a while, you get this burst of updates that makes things so much better.
-The first bigger evolution of things was Pipeline, followed by Multibranch Pipeline and check support.
+The first burst of updates was Pipeline, followed by Multibranch Pipeline and then check support.
 In a strange way, they're all plugins.
 It's not Jenkins has done this on its own, it's more that the Jenkins ecosystem has fostered this.
-People are always doing small improvements and those small improvements add up.
+People are always doing small improvements, and those small improvements add up.
 
 Lots of little things for different people, depending on what their focus is.
-So there's been lots of little tweaks to the UI, which is great when you end up using it and you're interacting with the UI.
-When you're maintaining Jenkins, keeping the backend updated is important, so there's been a lot of work from people recently.
-Work such as updating Jakarta EE, removing a lot of old legacy things, and upgrading to Spring Security and Spring Framework 6.
-These are important things that move Jenkins forward for developers, because as you move things forward for the developers, it means you can do things more easily for users.
+So there's been many tweaks to the UI, and there's been a lot of work from people recently for keeping the backend updated.
+Work such as updating Jakarta EE, removing legacy things, and upgrading to Spring Security and Spring Framework 6.
+These updates move Jenkins forward for developers, and it means you can do things more easily for users.
 
 == Advice for new developers and new members of the open-source community
 
@@ -137,14 +134,13 @@ There's a wealth of knowledge that all the developers have and we lurk in variou
 However, not all of us lurk in all of the same places.
 If you're not sure, just ask, people are always there for help.
 If you find there isn't an existing answer, but manage to come up with one, don't be afraid to help by updating documentation for the next person.
-We do have a lot of documentation, but there's always room for improvement across the board.
-Whether that is plugin documentation such as user manuals or how to do something in plugins, to how to develop, and how to get started.
-I think the actual getting started is probably quite good now, but then you have all the API documentation, where you may have challenges figuring out exactly which API you need to use to accomplish your goal.
+We do have a lot of documentation, but there's always room for improvement across the board, whether that is the user manuals, plugin instructions, how to develop, or how to get started.
+I think 'Getting started' is quite good now, but in the API documentation you may have challenges figuring out exactly which API you need to use to accomplish your goal.
 
 Our code can always use help as well.
 If you're contributing to open source, try and make sure your code is documented using something like Javadoc.
 That way, when you file a pull request, people aren't concerned that you've got no documentation attached.
-Especially if you've introduced a new API or something along those lines, where documentation is crucial to understanding how to use it.
+For example, if you've introduced a new API, where documentation is crucial to understanding how to use it.
 This is a fairly standard engineering code practice.
 Check and ask before spending time writing code, there might be a very good reason that something is not done or not supported.
-For instance, if you write a load of code for a plugin, the plugin maintainer might not want this, indicating this should be in a separate plugin or you should have an extension point so you can extend.
+For example, your idea maybe should be coded in a separate plugin, or you should have an extension point so you can extend.
