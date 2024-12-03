@@ -27,7 +27,7 @@ I think it was a number of months after Kohsuke originally sent the email or ann
 I was working with another person on a project that we had to get out the door as quickly as possible.
 It was just the two of us and I'm not a morning person, so I would work late while my colleague, who was a morning person, would work earlier.
 We were using Subversion because that was our only option back in the day.
-However, we would forget to check in some files, so we'd add new files, make loads of changes, do the check-in, and go home.
+However, we would forget to check in some files, so we'd add new files, make loads of changes, perform a local build, do the check-in, and go home.
 Obviously, the codebase ends up broken because merging missed files.
 After dealing with this for long enough, I was looking for something to prevent this from happening and wanted to incorporate some CI so we could get feedback.
 This way, when either of us checks in some files, we can know five minutes before leaving and no one is waiting for an update at the end of the day.
@@ -39,7 +39,7 @@ I had followed the documentation and it just didn't work.
 I was just getting incredibly discouraged and then, after getting frustrated for the last time, I decided there's got to be a better option.
 That was when I came across Hudson and I figured it couldn't be any worse.
 After configuring it, I was up and running in 10 minutes and it was amazing.
-While working on projects at this company, there was no budget for something like this.
+While working on projects at this company, there was initially no budget for something like this.
 
 However, I was the lab manager for all the manual testing and we had racks of servers that were no longer powerful enough to do encryption.
 Since they were lying around, essentially being spare parts, I cobbled together pieces from various old servers to give them more memory and then shoved them back in the rack.
@@ -63,19 +63,19 @@ While we weren't _technically_ doing them from developer desktops, we were doing
 That led to my first plugin, which was the link:https://plugins.jenkins.io/m2release/[M2 Release (Maven Release)] plugin.
 I wrote that so we could do our releases from Hudson, and then it evolved from there.
 Later on, there were some instances where we started using Cucumber for automated tests.
-Since there was no good way to show Cucumber test results in Jenkins, I wrote the link:https://plugins.jenkins.io/cucumber-reports/[Cucumber reports] plugin.
+Since there was no good way to show Cucumber test results in Jenkins, I wrote the link:https://plugins.jenkins.io/cucumber-testresult-plugin/[Cucumber JSON test reporting] plugin. plugin.
 From there, my usage was mostly running and maintaining Hudson.
 I filed loads of bugs, while also fixing an odd bug here and there.
 
 During my time at CloudBees, I have focused on Enterprise Jenkins or CloudBees CI and all of its various parts.
-10 years ago, when I started to work for CloudBees, I was working on the proprietary side of CloudBees core.
+10 years ago, when I started to work for CloudBees, I was working on the proprietary side of CloudBees' offering.
 So I was working on a lot of plugins for CloudBees and sometimes having to fix bugs in open source.
 I've also attempted to maintain the acceptance test harness.
 
-Most recently, I've been driving the FIPS effort for our proprietary products, which means we have had to have FIPS hooks inside Jenkins.
+Most recently, I've been driving the link:https://csrc.nist.gov/pubs/fips/140-2/upd2/final[FIPS 140] effort for our proprietary products, which means we have had to have FIPS 140 hooks inside Jenkins.
 We've been working with the team and managing that to get enough into open source so that we can build on it.
-There's a JEP and various plugins that we have contributed towards the FIPS effort.
-CloudBees CI has now gone GA with support for FIPS 140, so the base work for that is obviously in the open source.
+There's a link:https://github.com/jenkinsci/jep/tree/master/jep/237[JEP] and various plugins that we have contributed towards the FIPS 140 effort.
+CloudBees CI has now gone link:https://docs.cloudbees.com/docs/cloudbees-ci/latest/fips-install-guide/fips-landing-page[GA with support] for FIPS 140, so the base work for that is obviously in the open source.
 However, it's not as easy to run and you need to do your own checks.
 
 == Why choose Jenkins over other projects?
@@ -87,18 +87,18 @@ That was around the time that Kohsuke had just started his company InfraDNA.
 
 I believe the first time that I worked with Kohsuke, was on the Nectar VMware autoscaling plugin which allowed us to have a pool of resources in VMware that were just virtual machines and just resetting to snapshots and assigning them into builds.
 So we could say, for this build, I need a virtual machine; here you go, here's an IP address, and we were good to go.
-I was amazed at the quickness with which he knocked out that plugin.
+I was amazed at the quickness with which he created that plugin.
 While in Jerusalem, we mentioned something during a meeting and he came in the next day and said here you go, try this.
 It was almost out of nowhere and the collaboration with Kohsuke was amazing.
 
 Additionally, at the time it had a cutting-edge UI and the test result reports were great.
-If you compared it to other stuff, it was a little table of pass/fail or a mess.
+If you compared it to other stuff, they had a little table of pass/fail or a mess.
 Hudson allowed you to have a summary, drill into things, and show you the full stack trace and full logs right at the bottom of the builds, as opposed to having all the information in a massive sprawling page of mess.
 
 == What problems have you solved in Jenkins?
 
 The most recent thing is being able to support FIPS 140 for any federal people that want to use Jenkins and do it themselves.
-Up until a year ago, you couldn't really start Jenkins in a FIPS-compliant way because the initial use password that it generates would be generated using a nonstandard encryption method.
+Up until a year ago, you couldn't really start Jenkins in a FIPS 140-compliant way because the initial use password that it generates would be generated using a nonstandard encryption method, as well as other various issues.
 
 Recently, I made sure that all of the plugin class loaders are named.
 If something does go wrong and you get a stack trace, rather than having just the class, you have the plugin name and class so you can immediately see which plugin is having an issue.
