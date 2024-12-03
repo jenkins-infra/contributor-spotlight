@@ -109,7 +109,7 @@ It is very convenient when you're looking to parallelize the execution of tests.
 Imagine you run a build with Maven, produce test results, use the JUnit plugin to collect the results, and get a nice report in the Jenkins UI.
 This plugin gets the information from the JUnit plugin about each individual test, such as how much time it took, and then it computes the bucket automatically in the form of `include/exclude` that you can provide back to Maven.
 If you can easily expand your pool of machines running builds, then you can easily shrink down your build and test times to something that's much faster.
-Today, we parallelize tests at the Maven level (using `-T...` for modules and [surefire options](https://maven.apache.org/surefire/maven-surefire-plugin/examples/fork-options-and-parallel-execution.html)), as well as over multiple machines using this plugin.
+Today, we parallelize tests at the Maven level (using `-T...` for modules and link:https://maven.apache.org/surefire/maven-surefire-plugin/examples/fork-options-and-parallel-execution.html[surefire options]), as well as over multiple machines using this plugin.
 You can shrink a build that would normally take eight hours and shrink it down to less than an hour or even, more depending on how your project is set up.
 It's pretty impressive and it has gone better over time.
 
