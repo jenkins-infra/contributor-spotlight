@@ -9,7 +9,7 @@
 :page-location: Villefranche sur Saone, France
 :page-firstcommit: 2011
 :page-datepublished: 2024-11-19
-:page-featured: true
+:page-featured: false
 :page-intro: Vincent Latombe is a software engineer and long-standing Jenkins contributor who has worked on many areas since his first introduction. From plugins, to Jenkins core, to test parallelization, Vincent has been part of several improvements and new features over the last decade. He has held an interest in computers and technology since childhood, fostered by his parents encouragement. They like to say that Vincent broke his first keyboard at 18 months old, but Vincent maintains that he's never broken a keyboard in his life. His interest in programming languages started with some Commodore practice, but there was a lack of use cases to apply what he was learning.
 
 Vincent graduated from school and found his footing through roles in engineering and developer relations, where he eventually got connected with other Jenkins contributors and even Kohsuke Kawaguchi himself. Vincent has worn many hats when it comes to Jenkins and continues to find new ways to contribute to and enhance the project. When he's not working on HA, Vincent likes to balance his tech work with getting outside and being active in different ways. He's played badminton for half his life and enjoys biking around with his two children. He's also been passing on his love of computers to his children, hoping to foster the same sense of creativity that he still possesses.
