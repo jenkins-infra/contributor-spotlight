@@ -17,14 +17,13 @@
 After receiving my master's in electrical and electronic engineering from Manchester University, I moved to Sweden and started life as a research engineer at a university.
 I was working with location-aware applications and mass distribution of media on the internet.
 This was all before mobile phones had built-in GPS systems.
-After some time in Sweden, I moved to Hampshire in the UK to work on the "head end" (backend) for a company catering to satellite and cable TV operators.
+After some time in Sweden, I moved to Hampshire in the UK to work on the "head end" (backend) for a company catering to satellite and cable TV operators, which was acquired by Cisco partway through my ten-year tenure there.
 Within broadcasting, they call it "head end" and it's everything that drives automation of the broadcast.
 This included EPGs, scheduling, and encryption of data and devices as well.
 So I was working on the management of life cycles, encryption for devices, and other various necessities.
-The company was acquired by Cisco partway through my ten-year tenure there, which is when I got my first exposure to Hudson.
-I think it was a number of months after Kohsuke originally sent the email or announced that Hudson was being updated to open source and that it was available.
+I got my first exposure to Hudson at this company, and I think it was a number of months after Kohsuke originally sent the email or announced that Hudson was being updated to open source and that it was available.
 
-I was working with another person on a project that we had to get out the door as quickly as possible.
+I was working with another person on a project that we had to deliver as quickly as possible.
 It was just the two of us and I'm not a morning person, so I would work late while my colleague, who was a morning person, would work earlier.
 We were using Subversion because that was our only option back in the day.
 However, we would forget to check in some files, so we'd add new files, make loads of changes, perform a local build, do the check-in, and go home.
