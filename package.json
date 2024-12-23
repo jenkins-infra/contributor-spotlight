@@ -21,7 +21,7 @@
     "dependencies": {
         "@emotion/react": "^11.11.1",
         "@emotion/styled": "^11.11.0",
-        "@eslint/eslintrc": "^3.1.0",
+        "@eslint/eslintrc": "^3.2.0",
         "@eslint/js": "^9.17.0",
         "@mui/icons-material": "^6.0.0",
         "@mui/material": "^6.0.0",
