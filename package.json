@@ -76,7 +76,7 @@
             "path-to-regexp": "^8.2.0"
         },
         "cookie": "^1.0.2",
-        "nanoid": "^3.3.4",
+        "nanoid": "^5.0.0",
         "gatsby-plugin-offline": {
             "workbox-build": "^7.3.0"
         },
