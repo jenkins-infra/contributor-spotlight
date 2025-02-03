@@ -9,7 +9,7 @@
 :page-location: Hampshire, United Kingdom
 :page-firstcommit: 2009
 :page-datepublished: 2024-12-10
-:page-featured: true
+:page-featured: false
 :page-intro: James Nord is a software engineer based out of the UK that has been part of the Jenkins community since Kohsuke Kawaguchi first announced the move to open source. James started out with more basic usage of the Jenkins platform, but he soon started writing plugins to solve problems and fill any gaps that he found. Attributing his success with Jenkins to the ecosystem and extensibility it offers, James eventually collaborated directly with the project. Documenting bugs and starting his contributions in the early days of mailing lists was just the start of a much longer journey. He was one of Kohsuke's first customers, and then joined CloudBees as an employee. Since then, James has helped push Jenkins further along and been a driving force for necessary innovation, such as supporting FIPS 140 and making Jenkins more secure for government work. Throughout his involvement with Jenkins, James has enjoyed spreading his focus to different areas of the project, making sure to keep his work interesting and varied.
 
 == What is your background prior to contributing to Jenkins?
