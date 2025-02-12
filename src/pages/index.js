@@ -483,9 +483,9 @@ const IndexPage = (props) => {
                                 ? 'repos'
                                 : 'repo'}{' '}
                             in{' '}
-                            {dayjs(thankYou[1]?.replace(/['"]+/g, '')).format(
-                                'MMMM YYYY'
-                            )}
+                            {dayjs(
+                                thankYou[1]?.replace(/['"]+/g, '').trim()
+                            ).format('MMMM YYYY')}
                             !
                         </Box>
                     </Stack>

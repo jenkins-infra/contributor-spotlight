@@ -1,7 +1,7 @@
 = Alexander Brandes
 :page-name: Alexander Brandes
 :page-linkedin: alexander-brandes
-:page-twitter: NotMyFault_OG
+:page-twitter: 
 :page-github: NotMyFault
 :page-email: 
 :page-image: avatar/alexander-brandes.jpeg
