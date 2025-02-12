@@ -1,0 +1,192 @@
+= Kohsuke Kawaguchi
+:page-name: Kohsuke Kawaguchi
+:page-linkedin:
+:page-twitter:
+:page-github: kohsuke
+:page-email:
+:page-image: avatar/kohsuke-kawaguchi.png
+:page-pronouns: He/Him/His
+:page-location: San Jose, California, United States
+:page-firstcommit: 2004
+:page-datepublished: 2025-02-10
+:page-featured: true
+:page-intro: Originally from Tokyo, Japan, and now residing in San Jose, California, Kohsuke Kawaguchi is the creator of Jenkins. After getting his first taste for technology thanks to his mother, Kohsuke soon turned this interest into a profession. Despite starting in high school, he followed through on this passion in college and eventually landed a job that brought him to Silicon Valley. This journey became even more high-stakes when he decided to get married and move to the United States, all in one sweeping change. Born from a time when Kohsuke would often be the only person at night still working, Jenkins started out as just another project. Over the years, Kohsuke has seen numerous changes to the project, the community, the technological world that we exist in, and the possibilities that Jenkins is capable of.
+
+== What is your background prior to creating Jenkins?
+
+My interest in programming started during junior high school.
+My mother was the techie at home, always getting into new gadgets, and she eventually bought a laptop.
+It was just lying around, so I started using it.
+That's when my programming became pretty serious pretty quickly and I started selling software in high school.
+In Tokyo where I grew up, studying to get into college is pretty intense.
+Once I got into college, I needed to come up with something fun at the end of that dark tunnel to keep myself motivated.
+
+For me, that was selling software, since it seemed pretty easy and all I needed was myself and the computer.
+I rounded up a few friends and worked towards making the operation bigger.
+That eventually became a "company", which might be a bit of an overstatement.
+In reality, it was a social circle that could maybe make some money.
+It was quite fun and I think someone at Sun Microsystems heard about this activity, which eventually led to them offering me a job that I couldn't refuse.
+
+This was back when the world of tech was divided between the Microsoft "empire", and the small bunch of rebels like Sun and IBM, otherwise known as the Java team.
+When I started working for Sun, I surprised some people because my tooling of choice was all on the Microsoft side.
+I was using Microsoft IDE to program in Java.
+I really fell in love with Java, and even to this day it's my ecosystem of choice.
+At some point it kind of stopped being about the tech and more about the people who are in that ecosystem.
+
+I decided that this sounded like a great opportunity to work in Silicon Valley, in the heart of technology, and I was young enough to be reckless and brave.
+Despite not even knowing where I would stay, I just decided to hop on an airplane and move to the US.
+Additionally, if that's not reckless enough, I realized I either had to break up with my girlfriend or take her to the US with me.
+I said okay I'm going to marry her.
+So I took on relocation, job change, marriage --basically all the major life events you can think of -- all at the same time.
+That was a pretty significant moment for me.
+
+I landed at Sun Microsystems in Santa Clara, California, and the one thing I noticed was that employees were heading back home from the office pretty early in the evening.
+By 6:00 or 7:00 p.m., the office was deserted.
+According to my work culture, that was a pretty shocking.
+I didn't have any friends in California yet, but I was young and had all this time to myself, and so I was very professionally productive.
+I was writing projects left and right, and eventually, one of them became Jenkins.
+
+I had fun projects going at work, but I did notice I seemed to be "the man who is always breaking the build".
+Sometimes I would make a change and commit some files, and then I would get a phone call saying "Hey, I think you broke the build, because I updated my workspace and it doesn't compile. Can you check?"
+Sure enough, my work would be half-baked.
+I decided that I would write a program that would catch problems before my colleagues did, and that's the beginning of the CI system.
+Once I built this system, it turned out everybody was doing the same thing.
+In fact, the whole world was doing the same thing, which is why this became so useful, even though I had a few other motivations.
+I consider that the origin of Jenkins.
+
+== What pushed you to create Jenkins initially and what issues was Jenkins created to solve?
+
+It started during the time I was probably most prolific professionally.
+At one point I was talking to a chef that runs a Japanese restaurant here, and he told me a story about when he walks into a grocery store, all the ingredients talk to him.
+He sees this frozen chicken and he sees these peas on the shelf, and he thinks, "Why don't I combine these two things, and maybe it just might work into a wonderful dish?"
+So he tries that and tests his dish, thinking, "It's okay, but would it taste even better if I make this twist and that twist?"
+
+As it turns out, I have a similar curiosity and attitude towards tech, so I see other peoples' projects, and I get ideas.
+I think, "What if I write this code in a different way?"
+I had one idea in which I wanted to build a really extensible system, where different people can build different parts, but we can all bring pieces of the system together.
+The combined result would then look and behave like one solid piece.
+It's actually surprisingly hard to achieve that.
+During this time there were IDEs such as Eclipse and NetBeans that were built like that, and they had massive success.
+I also had some experience contributing to open source.
+
+I have to say it was frustrating at times because existing communities were not always open to change.
+It felt like me as a new guy going into a kitchen that was making soup, and saying "No, we should add carrots in this soup because it's going to taste better."
+The first reactions from all the existing chefs were "It's going to mess things up, and what if the carrots don't work with the peas, etc."
+They would be rightly worried about it because it might change the outcome.
+So naturally because everybody cares about the outcome, it drives these conversations.
+
+However, I wasn't interested in trying to convince others.
+I just wanted to do what I wanted to do.
+Part of the fascination about seeing the success of Eclipse as a super extensible system is that its technical architecture allowed us to bypass consensus-building problems.
+Suddenly, everybody could do whatever they wanted to do, and still bring together the output in whatever way they want to achieve their optimal IDE.
+I wanted to do the same thing with a web app, but it's a different tech environment.
+The translation requires massive technical investment, and I felt that to be a very fun project to work on.
+So that was another motivation.
+In some sense, the output almost didn't matter, so long as I could put it together in that way.
+It just so happened that I had this "breaking builds all the time" problem.
+
+== What sort of challenges did you experience when creating Jenkins?
+
+Early on, I took on the role of a "yes man".
+This allowed me to say yes to suggestions, and then even if it's the craziest idea in the world, I don't have to take on full accountability.
+People are actually a lot more happy when I can say yes.
+In some sense, you really see problems only in hindsight.
+When I started working on this project in 2004, I had maybe a two- or three-year time period when I was basically the only person working on this and the only users were in my own team.
+Nobody noticed or knew that this existed in the world because it was just another tree growing in a forest.
+
+In retrospect, that was lovely because I can see my users up close and I knew their faces.
+I went to lunch with them and they had this and that ideas about how to improve this thing, so I was scratching my own itch.
+Later, I realized that most projects like this die because they gain zero traction.
+If you produce something and then you don't put it out into the world and nobody cares, that's kind of demotivating.
+The fact that I didn't feel that and was able to keep going for two or three years, that was really wonderful.
+
+The Oracle fiasco is obviously a very painful time period.
+I think it's just more a series of clumsy actions on the part of one person on their side, and they ended up coming across as reinforcing the perceptions that Oracle already had.
+I learned quickly just how important developer relations are, and so people on our side were great and capitalized on that aspect of what we were trying to do.
+I also learned the importance of knowing how to tell a compelling story, and then using that to rally people.
+I think that is an important part of leadership.
+I didn't have that appreciation back then.
+
+As was often the case with engineers, I was placing more value on objectivity and correctness, so I'd be more muted with my comments, which fell short of rallying people.
+So that was an interesting discovery for me.
+In some sense, the reason it got kind of messy was because it became personal to this one person at Oracle.
+When that happens (people being people, even the senior people), the rationality goes out of the window.
+There were enough other adults in the room, so I wish that they were able to make things work without blowing things up in such a spectacular manner.
+This kind of taught me about human behavior: you need to be able to resonate and be personable.
+
+One day, I was at maybe the fourth or fifth Jenkins user conference, and it was close to the end of the day, so I was at the booth setting things back in order.
+People tend to walk up, as they always do, and ask me a few technical questions.
+They also usually say "thanks for creating this software" or "I love it", but these two developers came by, and one said "By the way, my boss told me to say hello to you."
+The boss that they were referring to was this one guy that was originally at Oracle who had since then left.
+These two engineers had no idea about the drama or what that person did at the time, so they went to their boss saying they needed to go to the Jenkins conference and their boss said "Sure go ahead, just pay respect to the man."
+That, to me, created a wonderful closure, and I still remember that sunset at the Santa Clara conference.
+
+== What have been the biggest challenges with Jenkins since its creation?
+
+I think about my role as the CTO of CloudBees, because in a growing organization with a fuzzy title like CTO, what you do kind of changes all the time.
+Initially I was a little uncomfortable with that but eventually learned to love it.
+I felt maybe it was the same story as being a leader of the Jenkins project.
+As the project gets bigger, there are things we need to be doing that sometimes only I can do or things that aren't getting done so I have to move those along.
+As the community grows, and the organization grows, it requires a shift in the leadership side to adjust to these changes.
+
+On the technology side, the kind of environment that people use and live in are shifting.
+I think this was happening at the same point in our Jenkins history, during which the cloud adoption rate is going up and that changes the way people deploy and run software.
+So we've been beefing up the system to kind of cater more to that.
+It might be things like supporting both an elastic cloud and build agents together.
+I think the contributors did good job making Jenkins work in those environments, but I think one of the challenges was there's incredible diversity in how this industry develops software.
+We still wanted to support the old way of things and so we didn't remove them, which kind of makes it bit of a department store of everything.
+However, if new people or a new user shows up and they want to do it the way the modern software development does, I think it probably made it a little bit more difficult.
+
+Another shift is we wanted to start to fill the need of creating a deeper, but well-guided path to help new users get off to a good start.
+If you frame the problem like that, then suddenly a lack of coherent documentation feels like a huge gap.
+I think that is another key shift that happens.
+Those are probably the few notable ones that I can think of.
+
+== How did the early Jenkins community help shape the project?
+
+Part of my modus operandi was being the yes man.
+I had this technical setup in which I could do it, so I was encouraging just about anybody who showed up to do more, and with encouragement, they did do more.
+The project expanded, and then we were at the right place at the right time: the whole world was trying to do this kind of software automation.
+We had some influential early contributors, such as Tyler Croy.
+He was probably the first one in the community who spent any effort spreading the word, trying to tell the world what we were doing.
+Back then, I had zero appreciation for these things, but now that I saw that in action, I started to understand the value it brings to the table and I think that that was kind of key in the early days.
+
+Then the whole Hudson/Oracle thing happened, followed by CloudBees coming into being, and that changed the whole game completely.
+We used to think "Hey we have this software, it works great, go do whatever you like" and figured that was enough.
+It turns out that that's not all you need.
+Users need to know that people with expertise are able to support them when something does go wrong.
+This was key to the enterprise deployment solution of scale, and CloudBees was able to provide that support.
+That really contributed positively to the adoption of the whole Jenkins platform.
+
+This also meant making money in the process.
+Some of that revenue returned to the Jenkins community in the form of people who have other skill sets, such as marketing people, designers, and others who fill in the gaps of projects in valuable ways. 
+Open-source projects are all just basically bunch of engineers that don't necessarily see these shortcomings, so that was a game changer.
+
+== What are you proud of when it comes to the community efforts of Jenkins?
+
+In terms of what the community has produced, the engineers in the community have produced this really fundamental new cloud architecture that I'm very proud of.
+Additionally, I think we manage to recognize and appreciate the people who bring other skill sets like documentation, marketing, and designing to the table.
+I think in the project there's a time period when we created a structure to encourage people with these sort of skills to thrive and that's still going strong.
+I love that and it's something to be very proud of.
+
+I would also add that there's all these local communities of users who cropped up.
+Just having a software is not enough, you need to have people around you to kind of show you the way and interact with, which makes a huge difference.
+One of the fun aspects of Jenkins is it's got this butler logo that's infinitely customizable.
+On our website we collect all these link:https://www.jenkins.io/artwork/[localized "Jenkins the butler" logos] from every region of the world and that just shows how global our community is.
+I can land in any airport and I can say "Hey I came here, is there anybody who wants to meet up?" and I can usually find some people to connect with, which I love.
+
+== What does the future of Jenkins look like to you?
+
+The exciting part for me is that I have no idea where the project is going.
+The important people, the contributors, are driving it without me doing anything.
+It's great, it's truly amazing.
+From the sidelines, what got me super excited was from CloudBees.
+They pulled off this high availability horizontal scaling.
+Technically, I know how that basically translates into sort of a pretty fundamental shift to how you develop software.
+The fact that these smart engineers have achieved this now enables Jenkins to run like modern cloud software.
+
+In some sense, I know it's probably not all the way there yet, and if you look up close there's always some messiness around, which is a part of the fun.
+Even still, I was in awe.
+I probably still need to hug these guys and share my amazement with them.
+That is a very technical shift, and I'd imagine it's enabling different parts of Jenkins to be able to adopt more cloud architecture, like storing artifacts in external systems, as opposed to the file system.
+I mean, I get so excited about stuff like that.
