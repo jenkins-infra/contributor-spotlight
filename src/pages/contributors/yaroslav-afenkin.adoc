@@ -24,7 +24,7 @@ They were using a suite was called Guidewire.
 However, I was lucky enough that there was no Guidewire project for me.
 
 As a result of this, I landed on a project with a very heavy Java stack, Java Spring, and Angular in the front end.
-That really helped a lot and I feel like I won a lottery there because that's how I developed my most of my Java and Javascript skills.
+That really helped a lot and I feel like I won a lottery there because that's how I developed most of my Java and Javascript skills.
 I ended up working there for three years while I finished university and stayed in Poland.
 Then Covid happened and for various reasons, I eventually moved back to Ukraine.
 This meant that I had to leave my job, but I found a new job and ended up in CloudBees.
@@ -59,7 +59,7 @@ I was never a big fan of enterprise businesses like insurance or banking, it's a
 I'm more a fan of heavier technical things like Jenkins and other more developer-focused work.
 So, it was easy for me to get excited when I heard they're hiring for a Jenkins project.
 
-== what problems have you worked on in Jenkins
+== What problems have you worked on in Jenkins
 
 The CSP work was fairly narrow as it was focused on enhancing the Jenkins CSP.
 There are several archetypes of issues and I was familiar with how you approach a certain problem or how you solve it because we had some initiatives when I was originally working in the Jenkins security team.
