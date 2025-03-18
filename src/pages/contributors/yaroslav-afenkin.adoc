@@ -1,0 +1,96 @@
+= Yaroslav Afenkin
+:page-name: Yaroslav Afenkin
+:page-linkedin: yaroslavafenkin
+:page-twitter:
+:page-github: yaroslavafenkin
+:page-email:
+:page-image: avatar/yaroslav-afenkin.jpg
+:page-pronouns: He/Him/His
+:page-location: Odesa, Ukraine
+:page-firstcommit: 2018
+:page-datepublished: 2025-03-25
+:page-featured: true
+:page-intro: Yaroslav Afenkin is a software engineer based out of Odesa, Ukraine and has been involved with the Jenkins project in multiple instances throughout his career. Whether it was during his first job as a junior engineer, his time working on the Jenkins security team, or his return to contribute to the Jenkins Content Security Policy (CSP) project, Yaroslav has always been intrigued with the abilities of Jenkins. While not necessarily a Jenkins user, his work on securing Jenkins and fixing vulnerabilities has helped the entire community. Thankfully, Yaroslav makes sure to balance his work life with his personal life by finding time to relax and enjoy his free time when he's not deep in the code.
+
+== What is your background prior to contributing to Jenkins?
+
+I went to school in Ukraine and it was heavy on English, so I had about five to seven hours of English a day.
+By the time I finished school, I got to a pretty decent level, which helps a lot in the industry that I'm working in.
+I then entered university in Ukraine, but after studying here for two years, it wasn't as good as I had hoped.
+I decided to move to Warsaw, Poland and continued my studies there.
+With one year left to study, I found a job working as a junior software engineer.
+Initially, I was hired to work on some insurance stuff.
+They were using a suite was called Guidewire.
+However, I was lucky enough that there was no Guidewire project for me.
+
+As a result of this, I landed on a project with a very heavy Java stack, Java Spring, and Angular in the front end.
+That really helped a lot and I feel like I won a lottery there because that's how I developed my most of my Java and Javascript skills.
+I ended up working there for three years while I finished university and stayed in Poland.
+Then Covid happened and for various reasons, I eventually moved back to Ukraine.
+This meant that I had to leave my job, but I found a new job and ended up in CloudBees.
+Initially there was this little project where we were cleaning up some security technical debt with some other folks.
+As my project was coming to an end, we were asked where we wanted to go and I had a preference for security.
+This is how I ended up in the Jenkins security team in CloudBees and that's how I gained most of my Jenkins skills that I have right now.
+This also helped a lot when working on the recent link:https://www.jenkins.io/blog/2024/10/04/content-security-policy-grant/[CSP project in Jenkins].
+
+== How long have you been working on Jenkins?
+
+It's probably worth mentioning that I used Jenkins in my first job.
+That was my initial exposure to Jenkins, despite not using it too heavily.
+We basically had CI/CD and no code review stack, so we were using Garrett and Jenkins.
+I was just a basic user checking build logs and performing more basic actions.
+But there were some micro projects where I had to do performance tests for a software that we were using.
+I used Jenkins for it, despite not being sure it was optimal for my purposes, but that's one notable thing I can think of. 
+
+Other than that, I wasn't necessarily a heavy user of Jenkins.
+Most of my work has been done on Jenkins instead of through Jenkins.
+It's not like I need Jenkins during my daily life outside of the job.
+I'm trying to keep the balance between spending time in front of a PC doing work stuff and my spare time.
+So, I'm just trying to relax a bit in my spare time and keep work at work.
+
+== Was there any other aspects of Jenkins that interested you when you got started with it or that you found a little bit more useful?
+
+There was one guy who is also a member of the community, Damien Strapanik.
+He sat right behind me and he was our de-facto admin since he was doing most of the admin tasks.
+I was interested, but I wasn't necessarily "allowed" to enter that area because I had other things to work on.
+It was still attractive to me, but I didn't get to work on Jenkins while I was working at my original company.
+However, when I was changing jobs I had an opportunity to interview with someone and heard the word Jenkins which instantly got me invested and wanting to participate in the interview.
+I was never a big fan of enterprise businesses like insurance or banking, it's always been a little boring for me.
+I'm more a fan of heavier technical things like Jenkins and other more developer-focused work.
+So, it was easy for me to get excited when I heard they're hiring for a Jenkins project.
+
+== what problems have you worked on in Jenkins
+
+The CSP work was fairly narrow as it was focused on enhancing the Jenkins CSP.
+There are several archetypes of issues and I was familiar with how you approach a certain problem or how you solve it because we had some initiatives when I was originally working in the Jenkins security team.
+We were working on CSP stuff in Jenkins core, so we weren't touching plugins, but most of the issues that I have faced during the CSP project I was already familiar with how to approach them.
+When it comes to the Jenkins security team, the work that I was doing was part of the overall responsibilities of the team such as code review, fixing vulnerabilities in Jenkins core, and security advisories just to name a few.
+
+In regards to the challenges of the CSP project, it was not due to Jenkins or CSP, but JavaScript being Javascript.
+There were some subtle, but very technical JavaScript caveats that needed to be addressed.
+Those problems were partially due to users not willing to leverage what Jenkins already has.
+For instance, it has the Jelly engine for views and people were trying to add JavaScript frameworks, such as React or Angular to that.
+The custom implementations contributed to some issues in their own way because those implementations were not fitting into the archetypes of issues that we were already familiar with and knew how to solve.
+So we had to figure out the framework first and see if there is a mechanism that allows you to enforce CSP.
+Then we had to try using it and depending on how old the technology was, the mechanism could exist or not exist.
+From there, you had to cook up something different to come up with a solution.
+
+==  Is there any part of Jenkins that you've taken a special liking to or found especially interesting?
+
+I think extensibility is the real power of Jenkins.
+If something doesn't exist, you can either look at the plugin ecosystem or in the worst case, you can just write it yourself.
+It's great because you can basically use Jenkins for whatever task you can come up with.
+Taking it one step further, if you want to automate the task you can most likely do it in Jenkins if you spend enough time.
+For instance, performance tests are not a very regular use case as far as I'm concerned, as most people use it to build software or publish, but in my first job we implemented performance tests.
+This is an example of a quirky way to use Jenkins.
+
+While fixing CSP issues, at the same time we would fix vulnerabilities that are out there.
+Security vulnerabilities like Severance or XSS, which have high impact on CVSS scores, so those are the kind of vulnerabilities that need to be addressed.
+While on the Jenkins security team, fixing core security vulnerabilities was of course part of the typical work.
+
+== Any advice for new developers or new members looking to get into the open source community or the Jenkins project in particular?
+
+Read a lot of code and try to really understand what the code is doing.
+If you want to add some functionality or change an existing functionality, just read a lot.
+Really try to understand how it may impact extensibility.
+This understanding is crucial when contributing to a project because there is lots of history behind the code.
