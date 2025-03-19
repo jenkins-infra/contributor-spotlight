@@ -7,14 +7,14 @@
 :page-image: avatar/yaroslav-afenkin.jpg
 :page-pronouns: He/Him/His
 :page-location: Odesa, Ukraine
-:page-firstcommit: 2018
+:page-firstcommit: 2021
 :page-datepublished: 2025-03-25
 :page-featured: true
 :page-intro: Yaroslav Afenkin is a software engineer based in Odesa, Ukraine, and has been involved with the Jenkins project on multiple occasions throughout his career. Whether it was during his first job as a junior engineer, his time working on the Jenkins security team, or his return to contribute to the Jenkins Content Security Policy (CSP) project, Yaroslav has always been intrigued with the abilities of Jenkins. While not necessarily a Jenkins user, his work on securing Jenkins and fixing vulnerabilities has helped the entire community. Thankfully, Yaroslav makes sure to balance his work life with his personal life by finding time to relax and enjoy his free time when he's not deep in the code.
 
 == What is your background prior to contributing to Jenkins?
 
-I went to school in Ukraine and it was heavy on English, so I had up to to seven hours of English a week.
+I went to school in Ukraine and it was heavy on English, so I had up to seven hours of English a week.
 By the time I finished school, I got to a pretty decent level, which helps a lot in the industry that I'm working in.
 I then entered university in Ukraine to study Computer Science, but after studying here for two years, it wasn't as good as I had hoped.
 I decided to move to Warsaw, Poland and continued my studies there.
@@ -23,23 +23,23 @@ Initially, I was hired to work on some insurance stuff.
 They were using software called Guidewire.
 However, I was lucky enough that there was no Guidewire project for me.
 
-As a result, I landed on a project with a heavy Java stack, using Java Spring and Angular on the front end.
-That really helped a lot and I feel like I won a lottery there because that's how I developed most of my Java and Javascript skills.
+As a result, I landed on a project with a heavy Java stack, using Java 8, Spring, Hibernate on the back end, and AngularJS and Angular on the front end.
+That really helped a lot and I feel like I won a lottery there because that's how I developed most of my Java and JavaScript skills.
 I worked there for three years while I finished university, staying in Poland.
 Then Covid happened and for personal reasons, I eventually moved back to Ukraine.
 I had to leave my job since they did not offer remote work, but I found a new one at CloudBees.
 Initially there was this little project where we were cleaning up some security technical debt with some other folks.
 As my project was coming to an end, we were asked where we wanted to go, and I had a preference for security.
 This is how I ended up in the Jenkins security team at CloudBees, and that's how I gained most of the Jenkins skills that I have right now.
-This also helped a lot when working on the recent link:https://www.jenkins.io/blog/2024/10/04/content-security-policy-grant/[CSP project in Jenkins].
+This also helped a lot when working on the recent link:https://www.jenkins.io/blog/2025/01/16/jenkins-csp-project-update/[CSP project in Jenkins].
 
 == How long have you been working on Jenkins?
 
 It's probably worth mentioning that I used Jenkins in my first job.
 That was my initial exposure to Jenkins, despite not using it too heavily.
-We basically had CI/CD and no code review stack, so we were using Garrett and Jenkins.
+We basically had CI and no code review stack, so we were using Gerrit for code review and Jenkins for builds.
 I was just a basic user checking build logs and performing more basic actions.
-But there were some micro projects where I had to do performance tests for software that we were using.
+But there were some micro projects where I had to do performance tests for software that we were building.
 I used Jenkins for it, despite not being sure it was optimal for my purposes, but that's one notable thing I can think of. 
 
 Other than that, I wasn't necessarily a heavy user of Jenkins.
