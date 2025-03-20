@@ -37,7 +37,7 @@ This also helped a lot when working on the recent link:https://www.jenkins.io/bl
 
 It's probably worth mentioning that I used Jenkins in my first job.
 That was my initial exposure to Jenkins, despite not using it too heavily.
-We basically had CI and no code review stack, so we were using Gerrit for code review and Jenkins for builds.
+We only had CI at the time, as we were using Gerrit for code review and Jenkins for builds.
 I was just a basic user checking build logs and performing more basic actions.
 But there were some micro projects where I had to do performance tests for software that we were building.
 I used Jenkins for it, despite not being sure it was optimal for my purposes, but that's one notable thing I can think of. 
