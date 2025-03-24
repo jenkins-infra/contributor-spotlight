@@ -8,7 +8,7 @@
 :page-pronouns: He/Him/His
 :page-location: Odesa, Ukraine
 :page-firstcommit: 2021
-:page-datepublished: 2025-03-25
+:page-datepublished: 2025-03-24
 :page-featured: true
 :page-intro: Yaroslav Afenkin is a software engineer based in Odesa, Ukraine, and has been involved with the Jenkins project on multiple occasions throughout his career. Whether it was during his first job as a junior engineer, his time working on the Jenkins security team, or his return to contribute to the Jenkins Content Security Policy (CSP) project, Yaroslav has always been intrigued with the abilities of Jenkins. While not necessarily a Jenkins user, his work on securing Jenkins and fixing vulnerabilities has helped the entire community. Thankfully, Yaroslav makes sure to balance his work life with his personal life by finding time to relax and enjoy his free time when he's not deep in the code.
 
