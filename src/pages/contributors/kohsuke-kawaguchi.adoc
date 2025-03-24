@@ -9,7 +9,7 @@
 :page-location: San Jose, California, United States
 :page-firstcommit: 2004
 :page-datepublished: 2025-02-10
-:page-featured: true
+:page-featured: false
 :page-intro: Originally from Tokyo, Japan, and now residing in San Jose, California, Kohsuke Kawaguchi is the creator of Jenkins. After getting his first taste for technology thanks to his mother, Kohsuke soon turned this interest into a profession. Despite starting in high school, he followed through on this passion in college and eventually landed a job that brought him to Silicon Valley. This journey became even more high-stakes when he decided to get married and move to the United States, all in one sweeping change. Born from a time when Kohsuke would often be the only person at night still working, Jenkins started out as just another project. Over the years, Kohsuke has seen numerous changes to the project, the community, the technological world that we exist in, and the possibilities that Jenkins is capable of.
 
 == What is your background prior to creating Jenkins?
