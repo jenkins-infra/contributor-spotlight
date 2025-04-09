@@ -24,17 +24,51 @@ const IndexPage = (props) => {
                     style={{ textDecoration: 'none', color: '#000000' }}
                     key={idx}
                 >
-                    <Box padding={isDesktop ? 5 : 2} key={idx}>
+                    <Box
+                        padding={isDesktop ? 5 : 2}
+                        key={idx}
+                        style={{
+                            padding: '2px',
+                            justifyContent: 'space-between', // optional: helps distribute content
+                            margin: '1px',
+                            borderRadius: '12px',
+                            width: '100%',
+                            maxWidth: '260px',
+                            height: '320px',
+                            display: 'flex',
+                            flexDirection: 'column',
+                            flex: 1,
+                            alignItems: 'center',
+                            boxShadow: '0 2px 8px rgba(0,0,0,0.1)',
+                            background: '#1B1B1B',
+                            transition:
+                                'transform 0.3s ease, box-shadow 0.3s ease', //smooth transition
+                            cursor: 'pointer',
+                            border: '2px solid #303030', // matching subtle border
+                        }}
+                        onMouseEnter={(e) => {
+                            e.currentTarget.style.transform =
+                                'translateY(-6px)';
+                            e.currentTarget.style.boxShadow =
+                                '0 4px 16px rgba(0,0,0,0.2)';
+                        }}
+                        onMouseLeave={(e) => {
+                            e.currentTarget.style.transform = 'translateY(0)';
+                            e.currentTarget.style.boxShadow =
+                                '0 2px 8px rgba(0,0,0,0.1)';
+                        }}
+                    >
                         <Box
                             display='flex'
                             justifyContent='center'
                             alignItems='center'
+                            paddingTop={2}
                         >
                             <img
                                 src={contributor.node.pageAttributes.image}
                                 alt='Contributor avatar'
-                                width={250}
-                                height={250}
+                                width={150}
+                                height={150}
                                 style={{
                                     objectFit: 'cover',
                                     borderRadius: '50%',
@@ -50,7 +84,7 @@ const IndexPage = (props) => {
                             <Typography variant='h6' textAlign='center'>
                                 {contributor.node.pageAttributes.name}
                             </Typography>
-                            <Typography variant='body2' textAlign='center'>
+                            <Typography variant='p' textAlign='center'>
                                 {contributor.node.pageAttributes.pronouns}
                             </Typography>
                             <Typography variant='body1' textAlign='center'>
@@ -328,11 +362,11 @@ const IndexPage = (props) => {
                                             </Typography>
                                         </Box>
 
-                                        <Box marginTop={1} marginBottom={1}>
+                                        <Box marginTop={0} marginBottom={1}>
                                             <Typography
                                                 sx={{
                                                     display: '-webkit-box',
-                                                    maxWidth: '450px',
+                                                    maxWidth: '300px',
                                                     WebkitLineClamp: 5,
                                                     WebkitBoxOrient: 'vertical',
                                                     overflow: 'hidden',
@@ -355,13 +389,15 @@ const IndexPage = (props) => {
                     display='grid'
                     gridTemplateColumns={
                         isDesktop
-                            ? 'repeat(3, 1fr)'
+                            ? 'repeat(4, 1fr)'
                             : isMobile
                               ? 'repeat(1, 1fr)'
                               : 'repeat(2, 1fr)'
                     }
                     paddingTop={5}
                     paddingBottom={5}
+                    gap={2}
+                    alignItems='stretch'
                 >
                     {contributorCards}
                 </Box>
