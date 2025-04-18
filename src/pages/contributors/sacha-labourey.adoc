@@ -15,7 +15,7 @@
 == What is your background prior to contributing to Jenkins?
 
 I studied engineering in Switzerland.
-During this time, I started my consulting company during my studies to pay for my studies.
+During this time, I started my consulting company to help pay for my studies while completing my education.
 After finishing my studies, I was in a transition phase where I tried to figure out what I wanted to do and where I wanted to go next.
 I knew I wanted to be an entrepreneur but I didn't quite understand what it involved.
 I was missing a user guide on how to get started, so that was not necessarily the happiest time for me.
@@ -48,7 +48,7 @@ In the following years, that's when you started seeing companies craft keywords 
 
 In the early phase of CloudBees, before it was CloudBees, I was talking with advisors from time to time, and one of them who was very important to me was Bob Bickel.
 Bob was an advisor at JBoss and eventually joined CloudBees on the board for a decade and worked as a close advisor.
-He's the one who said our past strategy is good, but we really need a stepping stone to go from where developers are today to this new model.
+He's the one who said that while our past strategy is good, we really need a stepping stone to transition from where developers are today to this new model.
 We needed something in between, otherwise he feared that the step would be too high.
 He's the one who advised us to check out Hudson because he had done some consulting for some other companies in the years prior and had come to appreciate Hudson and its power.
 
@@ -57,11 +57,11 @@ I reached out to Kohsuke very early on and it took a bit to get there, but event
 We had an appreciation for the power of this project very early on, at a time when "DevOps" was barely part of the lexicon.
 Patrick Debois originally coined the term in 2007 and just a few years later, we were having discussions around whether we should use "DevOps" in our marketing.
 Throughout 2011 and 2012, our goal in these discussions was to figure out if using "DevOps" in our marketing would resonate with anyone because the term was not widely used during this time.
-This illustrates how far the market was from any notion that there was a need for the simplification and streamlining of this process.
+This illustrates just how far removed the market was from recognizing the need to simplify and streamline this process.
 While it seems obvious today, and you would chuckle if somebody didn't have such a process in place, back then it was really seen as next-generation stuff.
 
 Back then, I think most organizations still did not have this sort of process in place at all.
-They might have had a process on paper and they would use subversion and contribute code, but beyond that it was really low tech and you would still have a handover to QA teams that would do a bunch of things.
+They might have had a process on paper and they would use subversion and contribute code, but beyond that it was really low-tech and you would still have a handover to QA teams that would do a bunch of things.
 Then, you would hand over to production teams who would do their own thing.
 Everybody would do their own little automation in their corner, but there was no grand unification of what it meant to capture the DNA of your organization.
 The idea of "How do we develop software in our company?" was not commonly considered at this time.
@@ -75,20 +75,20 @@ This is why in 2014, we repositioned the company to be the enterprise Jenkins co
 It's because that's really what companies wanted.
 
 At that point, we were already using Jenkins in everything we were doing.
-We had Jenkins as a service and we were already selling an enterprise Jenkins version which was mostly consisted of a few plugins.
-However, our attitude was "We're a pass company, and by the way, we also do some Jenkins stuff."
-Because as a company, we were wired to prove the world day in and day out, that pass was the way to go.
-It took us a while to realize that at the time, the lack of standardization and cloud adoption was making it hard to go as fast as we wanted to and grow as a company.
+We offered Jenkins as a service and were already selling an enterprise version of Jenkins, which mostly consisted of a few plugins.
+However, our attitude was, "We're a PaaS company, and by the way, we also handle some Jenkins-related work."
+Because as a company, we were wired to prove the world day in and day out, that PaaS was the way to go.
+It took us a while to realize that, at the time, the lack of standardization and cloud adoption was hindering our ability to move as quickly as we wanted and to grow as a company.
 
-Despite that, the complimentary Jenkins based business was growing very nicely and even our own sales teams were asking us if there was any way to do more of that.
+Despite that, the complimentary Jenkins-based business was growing very nicely and even our own sales teams were asking us if there was any way to do more of that.
 It almost looked like they preferred to do the Jenkins stuff over the core stuff that they were supposed to do.
 So at some point, you need to open your eyes and make a decision.
 
 == What are some of the challenges that you've faced supporting Jenkins over the years and What have you learned from these challenges?
 
 My involvement with Jenkins has been mostly non-technical.
-I've tried implementing a few plugins and I've created a few spreadsheets that are still being used to unify some information in real time, but my involvement has been mostly non-technical.
-This started with the big drama we had in 2010/2011, where we had to give birth to Jenkins from Hudson and all of the associated drama that came from it.
+I've implemented a few plugins and created spreadsheets that continue to be used for unifying information in real-time, but my involvement has been mostly non-technical.
+This began with the significant drama we experienced in 2010/2011, when we had to give birth to Jenkins from Hudson, along with all the associated challenges.
 I mention this because I think this is a very important part of the identity of Jenkins and doing the right things for the project.
 I would say this is a big part of my participation in Jenkins.
 When it comes to supporting Jenkins, I think what's interesting is this notion that a lot of the very successful open-source projects are not just projects, they are entire ecosystems.
@@ -132,7 +132,7 @@ Making it a non-event to migrate from one release to the other is a core expecta
 
 With hindsight you could say joining the Linux Foundation and Continuous Delivery Foundation (CDF) sooner would have been better.
 However, if you look at the maturity of DevOps, or the lack thereof in 2011, going to the Linux Foundation (or any foundation for that matter) and talking about Jenkins would have been confusing at best.
-I think the option that was taken and driven by the team was a lot more low tech in some sense.
+I think the option that was taken and driven by the team was a lot more low-tech in some sense.
 It was more of a legal vehicle to the Open Source Initiative (OSI), but I think it was good enough for what we were trying to achieve and it made it possible to put the accent on doing, rather than talking about it.
 
 Sometimes, the energy you put around something doesn't get spent within that thing, so I think at that time the energy within the product was really needed.
@@ -151,7 +151,7 @@ It's hard to say to some degree, because Kohsuke probably never thought we would
 It's exciting though, I mean how many projects can you name with such adoption and community after 20 years?
 It's incredible.
 Obviously the usage in software has evolved massively between 2005 and today.
-Now, we're talking about cloud, about containers, about SAS, we're talking about so many different things, and yet Jenkins was able to surf the wave at every point in time.
+Now, we're talking about cloud, about containers, about SaaS, we're talking about so many different things, and yet Jenkins was able to surf the wave at every point in time.
 Right now, the wave is AI and if people are curious enough, I think they'll discover that the relationship between AI and Jenkins can be extremely symbiotic.
 There is so much to discover in AI, that I think it would be wrong to be too static in how you wire things.
 I actually think the Jenkins architecture and ecosystem are a perfect host to combine those concepts together.
