@@ -7,7 +7,7 @@
 :page-image: avatar/sacha-labourey.jpg
 :page-pronouns: He/Him/His
 :page-location: Neuchâtel, Switzerland
-:page-firstcommit: 
+:page-firstcommit: 2010
 :page-datepublished: 2025-04-22
 :page-featured: true
 :page-intro: Sacha Labourey started his engineering journey in university, along with starting a consulting company to help pay for his studies. After completing his degree, Sacha joined the JBoss team and started his journey with Open Source. Eventually, he was able to leverage his experience, knowledge of Open Source, familiarity with Jenkins, and connections to start CloudBees. As one of the founders of CloudBees, Sacha has always had Open Source at the heart of the platform, providing both the CloudBees platform and continued support to Jenkins over the years. Even though he has taken a step back from day-to-day operations of CloudBees, his insights and expertise help guide the forward motion that is Open Source. When he's not guiding CloudBees' move towards the next big innovation, Sacha has made it a point to balance his technical work with other interests and hobbies. He's a self proclaimed geek that enjoys crafting or building anything he can come up with. From software to clocks, Sacha has spread his work as wide as possible, while still giving a full effort to everything he sets out to do. Discovery and innovation are at the core of anything he does, thriving in the disruption that change brings. He's embraced photography, rebuilt an old Commodore 64, played piano over the years, and most recently has taken up crocheting. With each endeavour comes a different perspective on how things work or could work depending on what you do with it.
