@@ -1,0 +1,185 @@
+= Sacha Labourey
+:page-name: Sacha Labourey
+:page-linkedin: sachalabourey
+:page-twitter:
+:page-github: 
+:page-email:
+:page-image: avatar/sacha-labourey.jpg
+:page-pronouns: He/Him/His
+:page-location: Neuchâtel, Switzerland
+:page-firstcommit: 
+:page-datepublished: 2025-04-22
+:page-featured: true
+:page-intro: Sacha Labourey started his engineering journey in university, along with starting a consulting company to help pay for his studies. After completing his degree, Sacha joined the JBoss team and started his journey with Open Source. Eventually, he was able to leverage his experience, knowledge of Open Source, familiarity with Jenkins, and connections to start CloudBees. As one of the founders of CloudBees, Sacha has always had Open Source at the heart of the platform, providing both the CloudBees platform and continued support to Jenkins over the years. Even though he has taken a step back from day-to-day operations of CloudBees, his insights and expertise help guide the forward motion that is Open Source. When he's not guiding CloudBees' move towards the next big innovation, Sacha has made it a point to balance his technical work with other interests and hobbies. He's a self proclaimed geek that enjoys crafting or building anything he can come up with. From software to clocks, Sacha has spread his work as wide as possible, while still giving a full effort to everything he sets out to do. Discovery and innovation are at the core of anything he does, thriving in the disruption that change brings. He's embraced photography, rebuilt an old Commodore 64, played piano over the years, and most recently has taken up crocheting. With each endeavour comes a different perspective on how things work or could work depending on what you do with it.
+
+== What is your background prior to contributing to Jenkins?
+
+I studied engineering in Switzerland.
+During this time, I started my consulting company during my studies to pay for my studies.
+After finishing my studies, I was in a transition phase where I tried to figure out what I wanted to do and where I wanted to go next.
+I knew I wanted to be an entrepreneur but I didn't quite understand what it involved.
+I was missing a user guide on how to get started, so that was not necessarily the happiest time for me.
+
+Eventually, I joined the JBoss open-source team back in 2000/2001.
+JBoss had originally started as a company called Telkel that went bust.
+When this happened, the founder of JBoss, Marc Fleury, was in a similar transition situation.
+He had recently moved with his wife and baby and was starting to give JBoss training to make some money.
+He was traveling to multiple cities because while the project had traction, there was no way to make enough money.
+I wasn't exactly flush with money, but I ended up spending the last few francs that I had in my pocket to attend that training.
+
+This ended up being a sort of "love at first sight" between Marc and I, and that's when I got a lot more involved as a contributor.
+This was a great starting point, and I implemented the first version of clustering for JBoss.
+After getting more acclimated to JBoss, I helped structure a European region.
+Eventually, I joined the board and became CTO, overseeing all of product engineering.
+The company was acquired by Red Hat in 2006, where I stayed for about three to four years as a co-GM for the middleware division.
+
+After that, I left and created CloudBees with Francois Dechery, Laurence Poussot, Michael Neil, Ryan Campbell, and later Kohsuke Kawaguchi, Harpreet Singh, and others.
+This ended up being a pretty smooth transition between the JBoss story and the Jenkins story from an open-source standpoint.
+I was definitely very much at ease with the open-source concept, communities, ideas such as "What does it mean to be fair?", and all of the learnings that take time to gather.
+I think these days there is a lot of "industrialization" of those concepts that took place and we're in a different era now, where most companies would be considered to be open-core companies that would own the trademark and own the project.
+Thanks to my experiences, I think I was able to see what life was like before that transition happened and I think it gave me a pretty good 3D-view of that landscape.
+
+== How did you become aware of/involved with Jenkins initially and what motivated you to support Jenkins?
+
+So initially, the idea behind CloudBees was not Jenkins, but providing a platform as a service.
+It was a logical thread from JBoss because we had simplified the life of developers to make it possible for them to craft things without having to pay for crazy licenses.
+Unfortunately, there was still the last mile of going to production that was a problem, and so we thought the cloud was a way to solve that and provide an end-to-end frictionless environment.
+In the following years, that's when you started seeing companies craft keywords like "no ops" to send that message that essentially there was a desire to simplify the process.
+
+In the early phase of CloudBees, before it was CloudBees, I was talking with advisors from time to time, and one of them who was very important to me was Bob Bickel.
+Bob was an advisor at JBoss and eventually joined CloudBees on the board for a decade and worked as a close advisor.
+He's the one who said our past strategy is good, but we really need a stepping stone to go from where developers are today to this new model.
+We needed something in between, otherwise he feared that the step would be too high.
+He's the one who advised us to check out Hudson because he had done some consulting for some other companies in the years prior and had come to appreciate Hudson and its power.
+
+So, we re-imagined what our path could be with Hudson and it was a lot more interesting because it meant we could cover a much broader end-to-end process.
+I reached out to Kohsuke very early on and it took a bit to get there, but eventually it happened.
+We had an appreciation for the power of this project very early on, at a time when "DevOps" was barely part of the lexicon.
+Patrick Debois originally coined the term in 2007 and just a few years later, we were having discussions around whether we should use "DevOps" in our marketing.
+Throughout 2011 and 2012, our goal in these discussions was to figure out if using "DevOps" in our marketing would resonate with anyone because the term was not widely used during this time.
+This illustrates how far the market was from any notion that there was a need for the simplification and streamlining of this process.
+While it seems obvious today, and you would chuckle if somebody didn't have such a process in place, back then it was really seen as next-generation stuff.
+
+Back then, I think most organizations still did not have this sort of process in place at all.
+They might have had a process on paper and they would use subversion and contribute code, but beyond that it was really low tech and you would still have a handover to QA teams that would do a bunch of things.
+Then, you would hand over to production teams who would do their own thing.
+Everybody would do their own little automation in their corner, but there was no grand unification of what it meant to capture the DNA of your organization.
+The idea of "How do we develop software in our company?" was not commonly considered at this time.
+
+What's funny is that when you look at the first few years of CloudBees, we ended up with a great platform, which is kind of what we're rebuilding now a decade later.
+But the feedback at that time, because the ideas of the cloud and DevOps were very fresh, was "We love it but can you change the destination?"
+"Can I not use a pass?"
+"Can I do it on premise?"
+So the feedback indicated that users loved the idea of DevOps, especially the release automation process, but they desired the flexibility to make it work in their environment or change things to fit their specific needs.
+This is why in 2014, we repositioned the company to be the enterprise Jenkins company.
+It's because that's really what companies wanted.
+
+At that point, we were already using Jenkins in everything we were doing.
+We had Jenkins as a service and we were already selling an enterprise Jenkins version which was mostly consisted of a few plugins.
+However, our attitude was "We're a pass company, and by the way, we also do some Jenkins stuff."
+Because as a company, we were wired to prove the world day in and day out, that pass was the way to go.
+It took us a while to realize that at the time, the lack of standardization and cloud adoption was making it hard to go as fast as we wanted to and grow as a company.
+
+Despite that, the complimentary Jenkins based business was growing very nicely and even our own sales teams were asking us if there was any way to do more of that.
+It almost looked like they preferred to do the Jenkins stuff over the core stuff that they were supposed to do.
+So at some point, you need to open your eyes and make a decision.
+
+== What are some of the challenges that you've faced supporting Jenkins over the years and What have you learned from these challenges?
+
+My involvement with Jenkins has been mostly non-technical.
+I've tried implementing a few plugins and I've created a few spreadsheets that are still being used to unify some information in real time, but my involvement has been mostly non-technical.
+This started with the big drama we had in 2010/2011, where we had to give birth to Jenkins from Hudson and all of the associated drama that came from it.
+I mention this because I think this is a very important part of the identity of Jenkins and doing the right things for the project.
+I would say this is a big part of my participation in Jenkins.
+When it comes to supporting Jenkins, I think what's interesting is this notion that a lot of the very successful open-source projects are not just projects, they are entire ecosystems.
+
+I think all of the successful open-source projects come with an ecosystem and that's very true of Jenkins, with all of those plugins for example that are around.
+I'm always seeing the same problems and opportunities with those projects, which is where to put the cursor between fast evolution versus the compatibility and stability of that ecosystem.
+We've breached that from time to time, for instance when we released Jenkins 2.0 and some longstanding API were found to be incompatible, and that's almost part of the DNA of a project.
+Again, the idea of where to put that cursor between stability and evolution comes into play.
+
+We've see it with Drupal, for example, which is a very radical project.
+Every time they have a major release they say, "We're going to stop all of this and all of that will become incompatible.
+So step up, fix it, or it will die."
+But nobody's right or wrong, I think it's just a very different DNA of the project.
+My bias tends towards always going fast, so I'm more of the opinion you'd better break things and go fast, then work on compatibility.
+At times I've tried to influence and convey that message, but I'm just one of many and ultimately it's up to the project to decide how they want to do things.
+That's challenging because one of the traits of the Jenkins project is to preserve backward compatibility.
+
+You have to essentially decide how you want to be frustrated because if there was a perfect answer, we would pick that one, but that's not the case.
+So you have to decide what pain points you want to face.
+Is it people complaining that their plugins don't work anymore?
+That the new release broke their environment or that migration from release to release is harder?
+Or, do you want to face people asking you why it can't be done more efficiently?
+Why don't we support those types of behavior?
+So you get to define what your challenges are.
+
+== What are you proud of when it comes to your contributions and support of Jenkins?
+
+I think the thing I was especially involved with was the transition from Hudson to Jenkins.
+It created a lot of anxiety in the community, in addition to a lot of anger.
+Navigating those waters was something that was not deterministic.
+We knew what problems we were facing, but we didn't know whether the solutions we were taking were the right ones or whether they would yield the right behaviors.
+So there was a lot of risk, a lot of anxiety, and I'm very proud to have been part of that small team of people who really spent a lot of energy making it happen.
+
+As for CloudBees, I think what I really appreciate is all of the work we've done in terms of helping the project.
+From a business standpoint, meaning not necessarily on the project itself, if you look at the security patches and all of the work that the security team is doing, sometimes day in and day out to fix those issues, by and large a lot of them are on CloudBees' payroll.
+The documentation has also received a lot of support and work from CloudBees.
+We've contributed a lot to the project from a business standpoint and I think providing a stable distribution of Jenkins has been amazing to the market.
+Making it a non-event to migrate from one release to the other is a core expectation for many enterprises.
+
+== Is there anything from the transition to Jenkins that you wish would have been done differently?
+
+With hindsight you could say joining the Linux Foundation and Continuous Delivery Foundation (CDF) sooner would have been better.
+However, if you look at the maturity of DevOps, or the lack thereof in 2011, going to the Linux Foundation (or any foundation for that matter) and talking about Jenkins would have been confusing at best.
+I think the option that was taken and driven by the team was a lot more low tech in some sense.
+It was more of a legal vehicle to the Open Source Initiative (OSI), but I think it was good enough for what we were trying to achieve and it made it possible to put the accent on doing, rather than talking about it.
+
+Sometimes, the energy you put around something doesn't get spent within that thing, so I think at that time the energy within the product was really needed.
+We were lucky to have Kohsuke as a guardian of that project because at the end of the day, it all boils down to people.
+Obviously, many people have been amazing stewards and contributors over the years.
+Above everything else, the fact that you had this super humble and smart guy at the top of the project, who wanted only the best for the project, gave people faith in him and the fact that he would not try to screw them over.
+This was extremely important as it became a light at the end of the tunnel.
+
+I think it was very clear to anybody, including myself, that if CloudBees had tried to do the wrong things throughout the transition, we could have tried but it would have been without Kohsuke.
+I don't think we would have done the wrong thing regardless, because of my own open-source roots, but the idea that this person is willing to do the right thing, even if it personally costs them to make it right.
+Looking back, I think that meant a lot to the community when we were getting started.
+
+== What does Jenkins and Open Source look like in the next 5 to 10 years for you?
+
+It's hard to say to some degree, because Kohsuke probably never thought we would be talking about his project 20 years later.
+It's exciting though, I mean how many projects can you name with such adoption and community after 20 years?
+It's incredible.
+Obviously the usage in software has evolved massively between 2005 and today.
+Now, we're talking about cloud, about containers, about SAS, we're talking about so many different things, and yet Jenkins was able to surf the wave at every point in time.
+Right now, the wave is AI and if people are curious enough, I think they'll discover that the relationship between AI and Jenkins can be extremely symbiotic.
+There is so much to discover in AI, that I think it would be wrong to be too static in how you wire things.
+I actually think the Jenkins architecture and ecosystem are a perfect host to combine those concepts together.
+I see no reason why Jenkins would not still be going strong in 5 to 10 years, since there is still a lot to be done.
+
+== Do you view supporting open-source as part of a company's corporate social responsibility and what advice would you give other C-suite executives on the importance of supporting Open Source?
+
+I think it's like a cake where you have multiple layers.
+The first one for me that's the most important is just Open Source is Open Source, meaning you have a set of freedoms in Open Source that have been formalized by the OSI and that's it.
+If you want to just say one thing it would be this, no more no less.
+I'm repeating this because I think for a lot of people, that was lost in translation.
+We've seen open-core models and we've seen companies moving to fake open-source licenses.
+We've seen a lot of different moves, and that almost made people be way too pragmatic about it.
+The notion that "If everything was equal it's kind of like Open Source" is incorrect.
+Either it is Open Source or it's not.
+
+You can find dozens and dozens of open-source licenses, so it's not very restrictive, but you have a number of things that it enables that are absolutely critical and I always go back to this.
+Sometimes I hear people say "It's not really Open Source if you do this or that" and I just want to say, as long as you respect the OSI mandate of what is Open Source, in my book it's good.
+Maybe you don't like the way a project is managed.
+That's absolutely fair but if you want to do something differently, fork it.
+That's the freedom you have, so I think it all boils down to this.
+That's really the first layer for me.
+
+Obviously, there is a lot more that should be done by organizations, but I want to stress that this first layer is very important.
+Beyond that, companies don't need to necessarily support Open Source with cash or with other resources.
+I think there are multiple ways to provide support.
+What I typically advise companies is more generic advice which is to take care of the ecosystem in which you evolve.
+If you have an ecosystem, treat that ecosystem well because if you don't, you're going to suffer as part of that ecosystem.
+Especially today, where most companies have Open Source at the core of their ecosystem.
+They should do the right thing for Open Source, in whatever shape or form it may take, and they should think about how it could affect their company down the line.
+We've seen what happens when there are malicious actors, such as the massive social hacking that took place on the XZ component within the Linux ecosystem.
