@@ -136,7 +136,7 @@ I think the option that was taken and driven by the team was a lot more low-tech
 It was more of a legal vehicle to the Open Source Initiative (OSI), but I think it was good enough for what we were trying to achieve and it made it possible to put the accent on doing, rather than talking about it.
 
 Sometimes, the energy you put around something doesn't get spent within that thing, so I think at that time the energy within the product was really needed.
-We were lucky to have Kohsuke as a guardian of that project because at the end of the day, it all boils down to people.
+We were lucky to have Kohsuke as a guardian of that project, because at the end of the day, it all boils down to people.
 Obviously, many people have been amazing stewards and contributors over the years.
 Above everything else, the fact that you had this super humble and smart guy at the top of the project, who wanted only the best for the project, gave people faith in him and the fact that he would not try to screw them over.
 This was extremely important as it became a light at the end of the tunnel.
@@ -145,7 +145,7 @@ I think it was very clear to anybody, including myself, that if CloudBees had tr
 I don't think we would have done the wrong thing regardless, because of my own open-source roots, but the idea that this person is willing to do the right thing, even if it personally costs them to make it right.
 Looking back, I think that meant a lot to the community when we were getting started.
 
-== What does Jenkins and Open Source look like in the next 5 to 10 years for you?
+== What does Jenkins and open source look like in the next 5 to 10 years for you?
 
 It's hard to say to some degree, because Kohsuke probably never thought we would be talking about his project 20 years later.
 It's exciting though, I mean how many projects can you name with such adoption and community after 20 years?
@@ -157,29 +157,29 @@ There is so much to discover in AI, that I think it would be wrong to be too sta
 I actually think the Jenkins architecture and ecosystem are a perfect host to combine those concepts together.
 I see no reason why Jenkins would not still be going strong in 5 to 10 years, since there is still a lot to be done.
 
-== Do you view supporting open-source as part of a company's corporate social responsibility and what advice would you give other C-suite executives on the importance of supporting Open Source?
+== Do you view supporting open source as part of a company's corporate social responsibility? What advice would you give to other C-suite executives on the importance of supporting open source?
 
 I think it's like a cake where you have multiple layers.
-The first one for me that's the most important is just Open Source is Open Source, meaning you have a set of freedoms in Open Source that have been formalized by the OSI and that's it.
+The first one for me that's the most important is just open source is open source, meaning you have a set of freedoms in open source that have been formalized by the OSI and that's it.
 If you want to just say one thing it would be this, no more no less.
 I'm repeating this because I think for a lot of people, that was lost in translation.
 We've seen open-core models and we've seen companies moving to fake open-source licenses.
 We've seen a lot of different moves, and that almost made people be way too pragmatic about it.
-The notion that "If everything was equal it's kind of like Open Source" is incorrect.
-Either it is Open Source or it's not.
+The notion that "If everything was equal it's kind of like open source" is incorrect.
+Either it is open source or it's not.
 
-You can find dozens and dozens of open-source licenses, so it's not very restrictive, but you have a number of things that it enables that are absolutely critical and I always go back to this.
-Sometimes I hear people say "It's not really Open Source if you do this or that" and I just want to say, as long as you respect the OSI mandate of what is Open Source, in my book it's good.
+You can find dozens and dozens of open-source licenses, so it's not very restrictive, but you have a number of things it enables that are absolutely critical. I always go back to this.
+Sometimes I hear people say "It's not really open source if you do this or that" and I just want to say, as long as you respect the OSI mandate of what is open source, in my book it's good.
 Maybe you don't like the way a project is managed.
 That's absolutely fair but if you want to do something differently, fork it.
 That's the freedom you have, so I think it all boils down to this.
 That's really the first layer for me.
 
 Obviously, there is a lot more that should be done by organizations, but I want to stress that this first layer is very important.
-Beyond that, companies don't need to necessarily support Open Source with cash or with other resources.
+Beyond that, companies don't need to necessarily support open source with cash or with other resources.
 I think there are multiple ways to provide support.
-What I typically advise companies is more generic advice which is to take care of the ecosystem in which you evolve.
+What I typically advise companies is more generic advice, which is to take care of the ecosystem in which you evolve.
 If you have an ecosystem, treat that ecosystem well because if you don't, you're going to suffer as a part of that ecosystem.
-Especially today, where most companies have Open Source at the core of their ecosystem.
-They should do the right thing for Open Source, in whatever shape or form it may take, and they should think about how it could affect their company down the line.
+Especially today, most companies have open source at the core of their ecosystem.
+They should do the right thing for open source, in whatever shape or form it may take, and they should think about how it could affect their company down the line.
 We've seen what happens when there are malicious actors, such as the massive social hacking that took place on the XZ component within the Linux ecosystem.
