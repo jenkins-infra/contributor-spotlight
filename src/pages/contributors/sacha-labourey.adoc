@@ -31,7 +31,7 @@ This ended up being a sort of "love at first sight" between Marc and I, and that
 This was a great starting point, and I implemented the first version of clustering for JBoss.
 After getting more acclimated to JBoss, I helped structure a European region.
 Eventually, I joined the board and became CTO, overseeing all of product engineering.
-The company was acquired by Red Hat in 2006, where I stayed for about three to four years as a co-GM for the middleware division.
+The company was acquired by Red Hat in 2006, where I stayed for about three to four years as a general manager for the middleware division.
 
 After that, I left and created CloudBees with Francois Dechery, Laurence Poussot, Michael Neil, Ryan Campbell, and later Kohsuke Kawaguchi, Harpreet Singh, and others.
 This ended up being a pretty smooth transition between the JBoss story and the Jenkins story from an open-source standpoint.
