@@ -179,7 +179,7 @@ Obviously, there is a lot more that should be done by organizations, but I want 
 Beyond that, companies don't need to necessarily support Open Source with cash or with other resources.
 I think there are multiple ways to provide support.
 What I typically advise companies is more generic advice which is to take care of the ecosystem in which you evolve.
-If you have an ecosystem, treat that ecosystem well because if you don't, you're going to suffer as part of that ecosystem.
+If you have an ecosystem, treat that ecosystem well because if you don't, you're going to suffer as a part of that ecosystem.
 Especially today, where most companies have Open Source at the core of their ecosystem.
 They should do the right thing for Open Source, in whatever shape or form it may take, and they should think about how it could affect their company down the line.
 We've seen what happens when there are malicious actors, such as the massive social hacking that took place on the XZ component within the Linux ecosystem.
