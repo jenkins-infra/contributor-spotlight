@@ -22,7 +22,7 @@ I was missing a user guide on how to get started, so that was not necessarily th
 
 Eventually, I joined the JBoss open-source team back in 2000/2001.
 JBoss had originally started as a company called Telkel that went bust.
-When this happened, the founder of JBoss, Marc Fleury, was in a similar transition situation.
+When this happened, the founder of JBoss, link:https://www.linkedin.com/in/dr-marc-fleury-phd/[Marc Fleury], was in a similar transition situation.
 He had recently moved with his wife and baby and was starting to give JBoss training to make some money.
 He was traveling to multiple cities because while the project had traction, there was no way to make enough money.
 I wasn't exactly flush with money, but I ended up spending the last few francs that I had in my pocket to attend that training.
@@ -33,7 +33,7 @@ After getting more acclimated to JBoss, I helped structure a European region.
 Eventually, I joined the board and became CTO, overseeing all of product engineering.
 The company was acquired by Red Hat in 2006, where I stayed for about three to four years as a general manager for the middleware division.
 
-After that, I left and created CloudBees with Francois Dechery, Laurence Poussot, Michael Neil, Ryan Campbell, and later Kohsuke Kawaguchi, Harpreet Singh, and others.
+After that, I left and created CloudBees with link:https://www.linkedin.com/in/francoisdechery/[Francois Dechery], link:https://www.linkedin.com/in/laurence-poussot-aa75061/[Laurence Poussot], link:https://www.linkedin.com/in/michaelneale/[Michael Neale], link:https://www.linkedin.com/in/ryan-campbell-atx/[Ryan Campbell], and later link:https://www.linkedin.com/in/kohsukekawaguchi/[Kohsuke Kawaguchi], link:https://www.linkedin.com/in/singhharpreet/[Harpreet Singh], and others.
 This ended up being a pretty smooth transition between the JBoss story and the Jenkins story from an open-source standpoint.
 I was definitely very much at ease with the open-source concept, communities, ideas such as "What does it mean to be fair?", and all of the learnings that take time to gather.
 I think these days there is a lot of "industrialization" of those concepts that took place and we're in a different era now, where most companies would be considered to be open-core companies that would own the trademark and own the project.
@@ -46,7 +46,7 @@ It was a logical thread from JBoss because we had simplified the life of develop
 Unfortunately, there was still the last mile of going to production that was a problem, and so we thought the cloud was a way to solve that and provide an end-to-end frictionless environment.
 In the following years, that's when you started seeing companies craft keywords like "no ops" to send that message that essentially there was a desire to simplify the process.
 
-In the early phase of CloudBees, before it was CloudBees, I was talking with advisors from time to time, and one of them who was very important to me was Bob Bickel.
+In the early phase of CloudBees, before it was CloudBees, I was talking with advisors from time to time, and one of them who was very important to me was link:https://www.linkedin.com/in/bobbickel/[Bob Bickel].
 Bob was an advisor at JBoss and eventually joined CloudBees on the board for a decade and worked as a close advisor.
 He's the one who said that while our past strategy is good, we really need a stepping stone to transition from where developers are today to this new model.
 We needed something in between, otherwise he feared that the step would be too high.
