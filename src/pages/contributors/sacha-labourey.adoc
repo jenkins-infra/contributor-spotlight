@@ -33,7 +33,7 @@ After getting more acclimated to JBoss, I helped structure a European region.
 Eventually, I joined the board and became CTO, overseeing all of product engineering.
 The company was acquired by Red Hat in 2006, where I stayed for about three to four years as a general manager for the middleware division.
 
-After that, I left and created CloudBees with link:https://www.linkedin.com/in/francoisdechery/[Francois Dechery], link:https://www.linkedin.com/in/laurence-poussot-aa75061/[Laurence Poussot], link:https://www.linkedin.com/in/michaelneale/[Michael Neale], link:https://www.linkedin.com/in/ryan-campbell-atx/[Ryan Campbell], and later link:https://www.linkedin.com/in/kohsukekawaguchi/[Kohsuke Kawaguchi], link:https://www.linkedin.com/in/singhharpreet/[Harpreet Singh], and others.
+After that, I left and created CloudBees with link:https://www.linkedin.com/in/francoisdechery/[François Deéchery], link:https://www.linkedin.com/in/laurence-poussot-aa75061/[Laurence Poussot], link:https://www.linkedin.com/in/michaelneale/[Michael Neale], link:https://www.linkedin.com/in/ryan-campbell-atx/[Ryan Campbell], link:https://www.linkedin.com/in/vivekpandey/[Vivek Pandey], and later link:https://www.linkedin.com/in/kohsukekawaguchi/[Kohsuke Kawaguchi], link:https://www.linkedin.com/in/singhharpreet/[Harpreet Singh], and others.
 This ended up being a pretty smooth transition between the JBoss story and the Jenkins story from an open-source standpoint.
 I was definitely very much at ease with the open-source concept, communities, ideas such as "What does it mean to be fair?", and all of the learnings that take time to gather.
 I think these days there is a lot of "industrialization" of those concepts that took place and we're in a different era now, where most companies would be considered to be open-core companies that would own the trademark and own the project.
@@ -98,7 +98,7 @@ I'm always seeing the same problems and opportunities with those projects, which
 We've breached that from time to time, for instance when we released Jenkins 2.0 and some longstanding API were found to be incompatible, and that's almost part of the DNA of a project.
 Again, the idea of where to put that cursor between stability and evolution comes into play.
 
-We've see it with Drupal, for example, which is a very radical project.
+We've see it with Drupal, for example, which is a very radical project from that standpoint.
 Every time they have a major release they say, "We're going to stop all of this and all of that will become incompatible.
 So step up, fix it, or it will die."
 But nobody's right or wrong, I think it's just a very different DNA of the project.
