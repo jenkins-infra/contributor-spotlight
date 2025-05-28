@@ -21,7 +21,7 @@ So that's how I got involved in the open-source world and what eventually led to
 My early work was as an engineer working on various infrastructure and platform tooling for web and tech startups in the early ".com" days, and later on in the current stage of companies.
 Had I not been super active in the LUG community, learning and experimenting with Linux and open source, I wouldn't have worked at any of the first jobs that I was hired for.
 What I learned in my computer science courses at university was super useful, but the practical skills that I picked up from my engagement with the open-source community is what got me the jobs, not Java 101 at UCSB.
-Both the people that I met in the community and the skills that I got to develop through my experience in these communities helped me stand out and land these opportunities.
+Both the people that I met in the community, and the skills that I got to develop through my experience in these communities, helped me stand out and land these opportunities.
 That work in open source is really what kicked off my career as a professional engineer.
 
 It's also what allowed me to transition into developer marketing and product management later on, and explore more business-focused roles in the company.
