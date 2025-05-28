@@ -18,23 +18,23 @@ Eventually, I started becoming active in the Linux user group community back whe
 I think we probably had five or six Linux user groups (LUG) around the LA area that were meeting on a weekly or bi-weekly basis at that point, just because of how hard it was to get things going at the time.
 So that's how I got involved in the open-source world and what eventually led to link:https://www.socallinuxexpo.org/scale/22x/about-scale[SCaLE] and some of the other open-source events that I've been involved in organizing over the last 20 years.
 
-My early work was as an engineer working on various infrastructure and platform tooling for web and tech startups in the early ".com" days and later on in the current stage of companies.
+My early work was as an engineer working on various infrastructure and platform tooling for web and tech startups in the early ".com" days, and later on in the current stage of companies.
 Had I not been super active in the LUG community, learning and experimenting with Linux and open source, I wouldn't have worked at any of the first jobs that I was hired for.
 What I learned in my computer science courses at university was super useful, but the practical skills that I picked up from my engagement with the open-source community is what got me the jobs, not Java 101 at UCSB.
-Both the people that I met in the community, and the skills that I got to develop through my experience in these communities, helped me stand out and land these opportunities.
+Both the people that I met in the community and the skills that I got to develop through my experience in these communities helped me stand out and land these opportunities.
 That work in open source is really what kicked off my career as a professional engineer.
 
 It's also what allowed me to transition into developer marketing and product management later on, and explore more business-focused roles in the company.
-Their sentiment was always along the line of, "Ilan, you've been working with the community in some way for so many years -- what do you think?"
+Their sentiment was always along the lines of, "Ilan, you've been working with the community in some way for so many years -- what do you think?"
 Eventually, that sentiment would help me transition into my next role.
-These days I've been working on SCaLE, and we just had our 22nd year.
+These days, I've been working on SCaLE, and we just had our 22nd year.
 I've also shifted from working as an engineer to working with early-stage startups on product and open-source strategy, helping them figure out how to get from idea to success.
 
 == How were you first made aware of Jenkins?
 
-About 15 or 16 years ago, I was made aware of Hudson and we were exploring how we could use it at the company I was working for during that time.
+About 15 or 16 years ago, I was made aware of Hudson, and we were exploring how we could use it at the company I was working for at that time.
 I was working at Edmunds, which is a car pricing site that helps you learn how to not overpay for your car purchase.
-This also meant providing guidance on what cars met your needs, but really the secret sauce of what we did was we knew how much cars should cost, giving people the knowledge and tools to negotiate with dealers.
+This also meant providing guidance on what cars met your needs, but really, the secret sauce of what we did was we knew how much cars should cost, giving people the knowledge and tools to negotiate with dealers.
 Like a lot of companies back then, we didn't have a great CI strategy.
 
 There were commercial tools out there that existed for doing CI or at least for doing build and release, but it wasn't by any means the default of how companies operated and developed software.
@@ -47,10 +47,10 @@ I think it enabled an early generation of CI adopters to really pick up and chan
 
 I don't think I need to sell the Jenkins audience on why CI is a valuable engineering best practice, but I think Jenkins made CI accessible to a lot of organizations in the same way that open source became my entry point to infrastructure and understanding of systems engineering.
 I think Jenkins became the gateway for many organizations to adopt a better testing and continuous development process.
-I know there's many other CI platforms that exist, but I think if Jenkins had not picked up and driven that need, this whole market of CI/CD companies that exist today would be very different than what it's become.
+I know many other CI platforms exist, but I think if Jenkins had not picked up and driven that need, this whole market of CI/CD companies that exist today would be very different than what it's become.
 
-I guess it's possible somebody else would have accomplished it, but I think because it was so accessible, everybody started doing it and once everybody started doing it, it became expected that you have CI.
-Now, everybody wants to figure out ways to turn that into businesses or they want to scratch a slightly different itch than what Jenkins started, and so there's been this explosion of CI solutions out there in the world.
+I guess it's possible somebody else would have accomplished it, but I think because it was so accessible, everybody started doing it, and once everybody started doing it, it became expected that you have CI.
+Now, everybody wants to figure out ways to turn that into businesses, or they want to scratch a slightly different itch than what Jenkins started, and so there's been this explosion of CI solutions out there in the world.
 
 Jenkins really opened people's eyes up to what CI could do and how to get access to it, and so I think without Jenkins there as a foundational member of the community, we'd be in a very different spot.
 I think you see the influence of Jenkins in everything.
@@ -64,11 +64,11 @@ We're a nonprofit organization run by a group of volunteers.
 There's probably somewhere between 150 and 200 people that are involved in making SCaLE happen every year in some aspect, whether they're involved all year negotiating hotel contracts, to volunteering to help attendees check in and get exhibitors like Jenkins set up.
 The two main missions of SCaLE are education and helping foster cross-pollination of ideas between open-source communities.
 
-On the education side, many of us got started in the same way that I did, which is through the open-source community enabling careers for us.
-We want to pass that on to the next generation, by helping people develop those same skill sets.
-In regards to the cross-pollination piece, I think a lot of the open-source community has grown very wide and sprawling, and there are different sides of the world that never talk to each other.
-There are open-source developers that contribute to Java that are likely never talking to the open-source developers that are working on the kernel for example, but there's things that they could learn from each other.
-So what we've tried to do is bring in a lot of different folks with different ideas, and we do that in a couple different ways.
+On the education side, many of us got started in the same way that I did, which is through the open-source community, enabling careers for us.
+We want to pass that on to the next generation by helping people develop those same skill sets.
+In regard to the cross-pollination piece, I think a lot of the open-source community has grown very wide and sprawling, and there are different sides of the world that never talk to each other.
+There are open-source developers who contribute to Java that are likely never talking to the open-source developers who are working on the kernel, for example, but there are things that they could learn from each other.
+So what we've tried to do is bring in a lot of different folks with different ideas, and we do that in a couple of different ways.
 
 One way is we donate booths to open-source and nonprofit projects on our expo floor.
 Often, they've got amazing demos or cool tech that folks haven't heard of yet or that hasn't been commercialized yet.
@@ -80,28 +80,28 @@ The other way we foster the idea of cross-pollination is hosting a bunch of co-l
 When we first got started working with Jenkins, I don't think a lot of people knew what Jenkins or CI was, since this was the infancy of the DevOps movement.
 I think our first interaction with Jenkins was probably Kohsuke showing up and giving a bunch of talks about link:https://www.socallinuxexpo.org/scale11x/presentations/introducing-continuous-integration-jenkins.html[why CI matters and why you should adopt Jenkins].
 Now, I think we've been working together for probably 10 or 12 years out of the 15 that Jenkins has been around.
-For us, it was really exciting to have a project, that was becoming a foundational component of how we worked every day, come out and we wanted our community to learn about these concepts of CI, CD, and testing so that they could apply it within their own work.
+For us, it was really exciting to have a project that was becoming a foundational component of how we worked every day, come out, and we wanted our community to learn about these concepts of CI, CD, and testing so that they could apply them within their own work.
 I would say the booth has been a more recent development, but there have been link:https://www.socallinuxexpo.org/scale/14x/presentations/continuous-delivery-infrastructure-jenkins[numerous workshops and trainings] for our community as well, and it's all about that education and passing it forward.
 
 That's why we do it in general and why we brought Jenkins in specifically.
-It's a much different world today and I don't think anybody's showing up at SCaLE saying I don't know what Jenkins is or I don't know what CI is.
-However, there's always new and exciting things happening in the Jenkins community that we want to learn from, and we hope your developers, when they come out to link:https://www.socallinuxexpo.org/scale/19x/presentations/workshop-managing-jenkins-scale-cloudbees-ci[show what Jenkins is doing], are learning from others around us as well.
+It's a much different world today, and I don't think anybody's showing up at SCaLE saying I don't know what Jenkins is or I don't know what CI is.
+However, there are always new and exciting things happening in the Jenkins community that we want to learn from, and we hope your developers, when they come out to link:https://www.socallinuxexpo.org/scale/19x/presentations/workshop-managing-jenkins-scale-cloudbees-ci[show what Jenkins is doing], are learning from others around us as well.
 
 == What are some of the biggest changes you've seen with Jenkins since the first appearance at SCaLE 10 and to now?
 
-Over the last 12 years, there's been a lot of changes within Jenkins and with the CI community in general, and I think the move to a Pipeline as Code approach, whether in Jenkins or elsewhere, has been a welcomed change for me.
-It enables a lot of the same best practices we wanted to have around how we built our software to how we define our pipelines.
+Over the last 12 years, there have been a lot of changes within Jenkins and with the CI community in general, and I think the move to a Pipeline as Code approach, whether in Jenkins or elsewhere, has been a welcome change for me.
+It enables a lot of the same best practices we wanted to have around how we built our software, to how we define our pipelines.
 So it's a natural progression, but it's one that took a while.
-I think if we say we've been working together for 12 to 15 years now, probably for more than half that we didn't have Pipeline as Code and so it was a breath of fresh air when it came. 
-Thinking back when we first started working together, containers weren't a thing, Kubernetes wasn't a thing, cloud was in its infancy, and DevOps was in its infancy.
+I think if we say we've been working together for 12 to 15 years now, probably for more than half that we didn't have Pipeline as Code, and so it was a breath of fresh air when it came. 
+Thinking back, when we first started working together, containers weren't a thing, Kubernetes wasn't a thing, cloud was in its infancy, and DevOps was in its infancy.
 
 Really what's changed is that CI is now the default: people don't build software without it.
 What you do with those artifacts has changed, maybe you're not pushing a JAR or a WAR up somewhere anymore.
 These days you're maybe pushing a container image, and these are all things that Jenkins, as the Swiss Army knife of CI, has been very good at adapting to and it's so exciting to see how that continues to evolve.
 
 We saw similar evolutions in other open-source software throughout the twenty-odd years of SCaLE.
-Back in 2002 when we were just getting started, when we would call up companies or organizations about joining us at SCaLE and they'd ask "What's an open source?"
-Now, it's very rare to encounter an organization that's not using any open source or not using open-source software by default.
+Back in 2002, when we were just getting started, when we would call up companies or organizations about joining us at SCaLE, and they'd ask: "What's open-source?"
+Now, it's very rare to encounter an organization that's not using any open-source software or is not using open-source software by default.
 We saw a similar trend with containers, like when Jérôme Petazzoni showed up at SCaLE the first time to give a Docker workshop.
 I don't think most of the audience had ever heard of Docker, let alone used it.
 Now, I can't imagine a software project launching or starting that isn't using some form of containerization or orchestration, since that's become the default.
@@ -112,13 +112,13 @@ So that's been one of the fun parts of being part of SCaLE for over two decades 
 I think it's hammered in for me that while the word "source" is in the term open source, there's a lot more that open-source communities need than just code.
 There's a lot of chopping wood and carrying water that happens outside of the code development, to make sure code development can happen.
 It could be providing developer infrastructure, leading onboarding experiences for new developers and users, creating and maintaining documentation, or whatever other form it might take.
-Similarly, in the case of SCaLE there's lots of code that we write.
-For example, our registration system is open source and the software used to power our network is 100% open source.
+Similarly, in the case of SCaLE, there is a lot of code that we write.
+For example, our registration system is open source, and the software used to power our network is 100% open-source.
 We got to work with the link:https://sfconservancy.org/[Software Freedom Conservancy] this year to make sure that even the hardware that powers the network is open as well.
 
 We're using their OpenWrt Ones this year, which is their open hardware project that runs open-source software, that we then use to enable open-source developers to get online at SCaLE.
 So we do a lot of code in that sense, but there's also the person that has to run a network cable from the first floor to the second floor so that the workshop can be online, or the team that does our AV setup, or the greeter that stands at the door to welcome attendees when they show up for the first time.
-All of these are important, just like there's lots of roles in an open-source project that are important, even if they don't involve code.
+All of these are important, just like there are lots of roles in an open-source project that are important, even if they don't involve code.
 All of these things fit together to make a community successful, and I think SCaLE sort of reinforced that.
 
 The other thing that's been fun to see in SCaLE over the last twenty-odd years has been kids that were showing up to SCaLE 15 years ago, and now running into them in their careers outside in the tech world.
@@ -144,14 +144,14 @@ So it's not _just_ an altruistic event, it works for everyone all the way around
 
 == What advice would you give to those in leadership roles in regards to why it's important to support open source? What kind of ways can people support open source, whether it's a project specifically or the community at large?
 
-So I think there are two reasons for folks in leadership roles to support open source.
+So I think there are two reasons for folks in leadership roles to support open-source.
 One would be that your company is probably built on open source in some way.
-Unfortunately, you might not know all the different open-source pieces that are involved in that, but your bill of materials and your supply chain is full of open source.
+Unfortunately, you might not know all the different open-source pieces that are involved in that, but your bill of materials and your supply chain are full of open-source.
 If you don't support it, you're chopping down wood in that forest without necessarily planting the next generation of growth that'll happen there.
 When that security vulnerability shows up and you're questioning why someone didn't fix it, it is because the people or company who would have fixed it were not supported.
 
-Beyond that, it's a great education opportunity for the developers in your organizations.
-There's so much they can learn from the open-source world in terms of development best practices, new techniques, new software, or other things that they could be using to power whatever your next projects are.
+Beyond that, it's a great educational opportunity for the developers in your organization.
+There's so much they can learn from the open-source world in terms of development best practices, new techniques, new software, or other things that they could be using to power whatever their next projects are.
 Recruiting is always one of the hardest parts we have as engineering leaders, and if open source is a gateway that helps the next generation learn about these concepts and skills that you need to hire for, continuing to contribute to open source and support open source is a way in which you can, once again using that gardening metaphor, create a bunch of seedlings for the next harvest.
 
 You can support open source in any number of ways, such as letting some of the folks on your team contribute to a project that you're using.
