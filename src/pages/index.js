@@ -287,21 +287,28 @@ const IndexPage = (props) => {
                                                         .pageAttributes.location
                                                 }
                                             </Typography>
-                                            <Typography
-                                                variant='h5'
-                                                textAlign={
-                                                    isDesktop
-                                                        ? 'left'
-                                                        : 'center'
-                                                }
-                                            >
-                                                First Commit:{' '}
-                                                {
-                                                    contributor.node
-                                                        .pageAttributes
-                                                        .firstcommit
-                                                }
-                                            </Typography>
+                                            {contributor.node.pageAttributes
+                                                .firstcommit &&
+                                                contributor.node.pageAttributes
+                                                    .firstcommit !== 'null' &&
+                                                contributor.node.pageAttributes
+                                                    .firstcommit !== '' && (
+                                                    <Typography
+                                                        variant='h5'
+                                                        textAlign={
+                                                            isDesktop
+                                                                ? 'left'
+                                                                : 'center'
+                                                        }
+                                                    >
+                                                        First Commit:{' '}
+                                                        {
+                                                            contributor.node
+                                                                .pageAttributes
+                                                                .firstcommit
+                                                        }
+                                                    </Typography>
+                                                )}
                                         </Box>
 
                                         <Box
