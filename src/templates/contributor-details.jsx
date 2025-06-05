@@ -128,11 +128,11 @@ function ContributorDetails(props) {
                             {props.data.asciidoc.pageAttributes.location ??
                                 'World'}
                         </Typography>
-                        <Typography variant='h6' textAlign='center'>
-                            {'First Commit: ' +
-                                props.data.asciidoc.pageAttributes
-                                    .firstcommit ?? 'Unknown'}
-                        </Typography>
+                        {props.data.asciidoc.pageAttributes.firstcommit && props.data.asciidoc.pageAttributes.firstcommit !== 'null' && props.data.asciidoc.pageAttributes.firstcommit !== '' && (
+                            <Typography variant='h6' textAlign='center'>
+                                {'First Commit: ' + props.data.asciidoc.pageAttributes.firstcommit}
+                            </Typography>
+                        )}
                     </Box>
                     <Box sx={{ paddingBottom: 1.5 }}>
                         <Typography variant='h6' textAlign='center'>
