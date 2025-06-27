@@ -10,7 +10,7 @@
 :page-firstcommit: 2017
 :page-datepublished: 2025-06-30
 :page-featured: true
-:page-intro: Meg McRoberts is a technical content developer who loves the process of transferring technical details from the minds of the people who develop the software to the minds of the people who use the software. She enjoys writing and structuring documentation and identifying new pieces that are required. She thinks a lot about the maintenance process and how to automate at least some of it. Meg is committed to the open-source concept and documentation-as-code disciplines and sees these as keys to the future of technology and society. When she is not working on documentation, she enjoys studying history, sharing good conversations with interesting people over delicious food, and hanging out with her Lhasa Apso dog and two house rabbits.
+:page-intro: Meg McRoberts is a technical content developer who loves the process of transferring technical details from the minds of the people who develop the software to the minds of the people who use the software. She enjoys writing and structuring documentation, and identifying new pieces that are required. She thinks a lot about the maintenance process and how to automate at least some of it. Meg is committed to the open-source concept and documentation-as-code disciplines, and sees these as keys to the future of technology and society. When she is not working on documentation, she enjoys studying history, sharing good conversations with interesting people over delicious food, and hanging out with her Lhasa Apso dog and two house rabbits.
 
 == What is your background prior to contributing to Jenkins?
 
@@ -19,7 +19,7 @@ While studying Jewish communal structures in medieval Europe at the University o
 This was an early machine learning endeavor, training the computer to analyze PAP smears.
 My job was to spend evenings in the computer lab, running backups, mounting disks and tapes, and changing the printer paper so the data scientists could work from home. 
 We had no written procedures, so I started writing up instructions for the tasks I was performing.
-Our senior engineer pulled me aside and said that I was pretty good at that and recommended I explore technical writing and I was hooked.
+Our senior engineer pulled me aside and said that I was pretty good at that, and recommended I explore technical writing, and I was hooked.
 
 I eventually landed at Bell Laboratories when they were attempting to make viable computer systems that ran the UNIX operating system.
 While working on standard system guides, I discovered the joy of writing about highly technical topics for a very technical audience.
@@ -27,7 +27,7 @@ So, I led an effort to document the kernel interfaces and practices required to 
 Later, I left Bell Labs to document a POSIX-compliant, real-time UNIX system at MODCOMP.
 After that, I joined SCO where I mostly developed content for the device driver development kit.
 
-Once SCO faded, I spent several years at Trend Micro, researching and developing curriculums to train our support staff about the inner workings of their security software.
+Once SCO faded, I spent several years at Trend Micro, researching and developing curriculum to train our support staff about the inner workings of their security software.
 I then moved on to other companies, documenting developer tools, platforms, and machine learning technologies.
 During those years, I became hooked on open source and the evolving documentation-as-code discipline. I was convinced that these philosophies are foundational to where the industry and the world at large need to go.
 From my historical studies, I admire the power of communities and know that innovation thrives when information flows freely.
@@ -48,7 +48,7 @@ The webinar was a success and then we used that information to enhance the secur
 
 == What kept you involved with the Jenkins project after your first usage/contribution?
 
-The Jenkins community is a paradigm of what an open-source community should be!
+The Jenkins community is a paradigm of what an open source community should be!
 It is an assembly of extraordinarily bright people who frequently discuss activities that grow and strengthen the community, in addition to improving the software and documentation.
 Even when the pressure is on and the hours are long it is always fun!
 When I first started with Jenkins, CloudBees staff was responsible for about 80% of the Jenkins contributions, and yet they rigorously ensured that decisions about Jenkins were discussed and implemented with the entire open-source community rather than just inside CloudBees.
