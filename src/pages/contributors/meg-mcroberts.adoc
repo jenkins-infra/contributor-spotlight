@@ -16,7 +16,7 @@
 
 I started life as a historian with some disdain for technology.
 While studying Jewish communal structures in medieval Europe at the University of Chicago, I took a student job in a computer lab.
-This was an early machine learning endeavor, training the computer to analyze PAP smears.
+This was an early machine learning endeavor, training the computer to analyze Pap smears.
 My job was to spend evenings in the computer lab, running backups, mounting disks and tapes, and changing the printer paper so the data scientists could work from home. 
 We had no written procedures, so I started writing up instructions for the tasks I was performing.
 Our senior engineer pulled me aside and said that I was pretty good at that, and recommended I explore technical writing, and I was hooked.
