@@ -8,7 +8,7 @@
 :page-pronouns: He/Him/His
 :page-location: Los Angeles, California, USA
 :page-datepublished: 2025-05-30
-:page-featured: true
+:page-featured: false
 :page-intro: Ilan Rabinovitch has worked in tech, holding roles in multiple areas such as engineering, product management, and developer marketing, as well as being part of the open-source community for nearly 30 years. Ilan found a community through his interactions with Linux user groups and leveraged his new passion to help create the Southern California Linux Expo (SCaLE). As a founder of SCaLE, Ilan believes in supporting the many open-source communities that exist and in helping foster new ones that may be created out of someone's idea. SCaLE just had its 22nd annual conference this past March, once again showcasing just how wide the open-source community has spread and what opportunities exist within. With a strong belief in education, SCaLE not only expands the knowledge of the communities that participate, but also inspires those encountering open source for the first time. Ilan believes that supporting open source is tantamount to its success and wants others to see what supporting open source can do for the community and the world that is built around it. In addition to SCaLE, Ilan and others have helped create numerous co-located events and spaces for open-source communities to assemble and grow, such as PlanetNix, SCaLE Youth, and DevOpsDay LA.
 
 == What is your background prior to supporting Jenkins?
