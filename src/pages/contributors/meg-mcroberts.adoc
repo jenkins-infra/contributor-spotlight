@@ -6,7 +6,7 @@
 :page-email:
 :page-image: avatar/meg-mcroberts.jpg
 :page-pronouns: She/Her/Hers
-:page-location: Los Angeles, California, USA
+:page-location: Scotts Valley, California, USA
 :page-firstcommit: 2017
 :page-datepublished: 2025-06-30
 :page-featured: true
