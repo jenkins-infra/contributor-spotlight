@@ -137,7 +137,7 @@ const IndexPage = (props) => {
                     continuous integration and delivery
                 </Typography>
                 <Box sx={{ paddingTop: 8 }}>
-                    <img src='jenkins.png' alt='Jenkins logo' />
+                    <img src='/jenkins.png' alt='Jenkins logo' />
                 </Box>
             </Box>
             <Box
@@ -160,203 +160,222 @@ const IndexPage = (props) => {
                         <strong>Contributor Spotlight</strong>
                     </Typography>
                 </Box>
-                {contributors.map((contributor, idx) => {
-                    if (contributor.node.pageAttributes.featured === 'true') {
-                        return (
-                            <Link
-                                to={contributor.node.fields.slug}
-                                style={{
-                                    textDecoration: 'none',
-                                    color: '#000000',
-                                }}
-                                key={idx}
-                            >
-                                <Stack
-                                    id='featured-contributor'
-                                    direction={isDesktop ? 'row' : 'column'}
-                                    minWidth={
-                                        isDesktop ? 1100 : isTablet ? 520 : 328
-                                    }
-                                    height='auto'
-                                    padding={isMobile ? 2 : 5}
-                                    sx={{
-                                        borderRadius: 5,
-                                        backgroundImage:
-                                            'linear-gradient(180deg, #FFFFFF, #DAD1C6);',
+                {contributors
+                    .sort((a, b) =>
+                        a.node.pageAttributes.name.localeCompare(
+                            b.node.pageAttributes.name
+                        )
+                    )
+                    .map((contributor, idx) => {
+                        if (
+                            contributor.node.pageAttributes.featured === 'true'
+                        ) {
+                            return (
+                                <Link
+                                    to={contributor.node.fields.slug}
+                                    style={{
+                                        textDecoration: 'none',
+                                        color: '#000000',
                                     }}
-                                    justifyContent='flex-start'
-                                    alignItems='center'
-                                    useFlexGap
-                                    gap={2}
+                                    key={idx}
                                 >
                                     <Stack
-                                        id='featured-contributor-avatar'
-                                        direction='column'
-                                        justifyContent='center'
+                                        id='featured-contributor'
+                                        direction={isDesktop ? 'row' : 'column'}
+                                        minWidth={
+                                            isDesktop
+                                                ? 1100
+                                                : isTablet
+                                                  ? 520
+                                                  : 328
+                                        }
+                                        height='auto'
+                                        padding={isMobile ? 2 : 5}
+                                        sx={{
+                                            borderRadius: 5,
+                                            backgroundImage:
+                                                'linear-gradient(180deg, #FFFFFF, #DAD1C6);',
+                                        }}
+                                        justifyContent='flex-start'
                                         alignItems='center'
-                                        paddingTop={isMobile ? 0 : 5}
-                                        paddingBottom={isMobile ? 0 : 5}
-                                        paddingLeft={2}
-                                        paddingRight={2}
+                                        useFlexGap
+                                        gap={2}
                                     >
-                                        <img
-                                            src={
-                                                contributor.node.pageAttributes
-                                                    .image
-                                            }
-                                            alt='Featured contributor avatar'
-                                            width={
-                                                isDesktop
-                                                    ? 350
-                                                    : isTablet
-                                                      ? 300
-                                                      : 250
-                                            }
-                                            height={
-                                                isDesktop
-                                                    ? 350
-                                                    : isTablet
-                                                      ? 300
-                                                      : 250
-                                            }
-                                            style={{
-                                                objectFit: 'cover',
-                                                borderRadius: '50%',
-                                            }}
-                                        />
-                                    </Stack>
-                                    <Stack
-                                        id='featured-contributor-info'
-                                        direction='column'
-                                        justifyContent='center'
-                                        alignItems='flex-start'
-                                        padding={isMobile ? 3 : 5}
-                                    >
-                                        <Box
-                                            marginTop={1}
-                                            marginBottom={1}
-                                            display='flex'
-                                            flexDirection='column'
-                                            width='100%'
+                                        <Stack
+                                            id='featured-contributor-avatar'
+                                            direction='column'
+                                            justifyContent='center'
+                                            alignItems='center'
+                                            paddingTop={isMobile ? 0 : 5}
+                                            paddingBottom={isMobile ? 0 : 5}
+                                            paddingLeft={2}
+                                            paddingRight={2}
                                         >
-                                            <Typography
-                                                variant='h4'
-                                                textAlign={
-                                                    isDesktop
-                                                        ? 'left'
-                                                        : 'center'
-                                                }
-                                            >
-                                                {
+                                            <img
+                                                src={
                                                     contributor.node
-                                                        .pageAttributes.name
+                                                        .pageAttributes.image
                                                 }
-                                            </Typography>
-                                            <Typography
-                                                variant='h5'
-                                                textAlign={
+                                                alt='Featured contributor avatar'
+                                                width={
                                                     isDesktop
-                                                        ? 'left'
-                                                        : 'center'
+                                                        ? 350
+                                                        : isTablet
+                                                          ? 300
+                                                          : 250
                                                 }
+                                                height={
+                                                    isDesktop
+                                                        ? 350
+                                                        : isTablet
+                                                          ? 300
+                                                          : 250
+                                                }
+                                                style={{
+                                                    objectFit: 'cover',
+                                                    borderRadius: '50%',
+                                                }}
+                                            />
+                                        </Stack>
+                                        <Stack
+                                            id='featured-contributor-info'
+                                            direction='column'
+                                            justifyContent='center'
+                                            alignItems='flex-start'
+                                            padding={isMobile ? 3 : 5}
+                                        >
+                                            <Box
+                                                marginTop={1}
+                                                marginBottom={1}
+                                                display='flex'
+                                                flexDirection='column'
+                                                width='100%'
                                             >
-                                                {
-                                                    contributor.node
-                                                        .pageAttributes.pronouns
-                                                }
-                                            </Typography>
-                                        </Box>
+                                                <Typography
+                                                    variant='h4'
+                                                    textAlign={
+                                                        isDesktop
+                                                            ? 'left'
+                                                            : 'center'
+                                                    }
+                                                >
+                                                    {
+                                                        contributor.node
+                                                            .pageAttributes.name
+                                                    }
+                                                </Typography>
+                                                <Typography
+                                                    variant='h5'
+                                                    textAlign={
+                                                        isDesktop
+                                                            ? 'left'
+                                                            : 'center'
+                                                    }
+                                                >
+                                                    {
+                                                        contributor.node
+                                                            .pageAttributes
+                                                            .pronouns
+                                                    }
+                                                </Typography>
+                                            </Box>
 
-                                        <Box
-                                            marginTop={1}
-                                            marginBottom={1}
-                                            display='flex'
-                                            flexDirection='column'
-                                            width='100%'
-                                        >
-                                            <Typography
-                                                variant='h5'
-                                                textAlign={
-                                                    isDesktop
-                                                        ? 'left'
-                                                        : 'center'
-                                                }
+                                            <Box
+                                                marginTop={1}
+                                                marginBottom={1}
+                                                display='flex'
+                                                flexDirection='column'
+                                                width='100%'
                                             >
-                                                {
-                                                    contributor.node
-                                                        .pageAttributes.location
-                                                }
-                                            </Typography>
-                                            {contributor.node.pageAttributes
-                                                .firstcommit &&
-                                                contributor.node.pageAttributes
-                                                    .firstcommit !== 'null' &&
-                                                contributor.node.pageAttributes
-                                                    .firstcommit !== '' && (
-                                                    <Typography
-                                                        variant='h5'
-                                                        textAlign={
-                                                            isDesktop
-                                                                ? 'left'
-                                                                : 'center'
-                                                        }
-                                                    >
-                                                        First Commit:{' '}
-                                                        {
-                                                            contributor.node
-                                                                .pageAttributes
-                                                                .firstcommit
-                                                        }
-                                                    </Typography>
-                                                )}
-                                        </Box>
-
-                                        <Box
-                                            marginTop={1}
-                                            marginBottom={1}
-                                            display='flex'
-                                            flexDirection='column'
-                                            width='100%'
-                                        >
-                                            <Typography
-                                                variant='h5'
-                                                textAlign={
-                                                    isDesktop
-                                                        ? 'left'
-                                                        : 'center'
-                                                }
-                                            >
-                                                Date Published: <br />
-                                                {
+                                                <Typography
+                                                    variant='h5'
+                                                    textAlign={
+                                                        isDesktop
+                                                            ? 'left'
+                                                            : 'center'
+                                                    }
+                                                >
+                                                    {
+                                                        contributor.node
+                                                            .pageAttributes
+                                                            .location
+                                                    }
+                                                </Typography>
+                                                {contributor.node.pageAttributes
+                                                    .firstcommit &&
                                                     contributor.node
                                                         .pageAttributes
-                                                        .datepublished
-                                                }
-                                            </Typography>
-                                        </Box>
-
-                                        <Box marginTop={1} marginBottom={1}>
-                                            <Typography
-                                                sx={{
-                                                    display: '-webkit-box',
-                                                    maxWidth: '450px',
-                                                    WebkitLineClamp: 5,
-                                                    WebkitBoxOrient: 'vertical',
-                                                    overflow: 'hidden',
-                                                }}
-                                            >
-                                                {
+                                                        .firstcommit !==
+                                                        'null' &&
                                                     contributor.node
-                                                        .pageAttributes.intro
-                                                }
-                                            </Typography>
-                                        </Box>
+                                                        .pageAttributes
+                                                        .firstcommit !== '' && (
+                                                        <Typography
+                                                            variant='h5'
+                                                            textAlign={
+                                                                isDesktop
+                                                                    ? 'left'
+                                                                    : 'center'
+                                                            }
+                                                        >
+                                                            First Commit:{' '}
+                                                            {
+                                                                contributor.node
+                                                                    .pageAttributes
+                                                                    .firstcommit
+                                                            }
+                                                        </Typography>
+                                                    )}
+                                            </Box>
+
+                                            <Box
+                                                marginTop={1}
+                                                marginBottom={1}
+                                                display='flex'
+                                                flexDirection='column'
+                                                width='100%'
+                                            >
+                                                <Typography
+                                                    variant='h5'
+                                                    textAlign={
+                                                        isDesktop
+                                                            ? 'left'
+                                                            : 'center'
+                                                    }
+                                                >
+                                                    Date Published: <br />
+                                                    {
+                                                        contributor.node
+                                                            .pageAttributes
+                                                            .datepublished
+                                                    }
+                                                </Typography>
+                                            </Box>
+
+                                            <Box marginTop={1} marginBottom={1}>
+                                                <Typography
+                                                    sx={{
+                                                        display: '-webkit-box',
+                                                        maxWidth: '450px',
+                                                        WebkitLineClamp: 5,
+                                                        WebkitBoxOrient:
+                                                            'vertical',
+                                                        overflow: 'hidden',
+                                                    }}
+                                                >
+                                                    {
+                                                        contributor.node
+                                                            .pageAttributes
+                                                            .intro
+                                                    }
+                                                </Typography>
+                                            </Box>
+                                        </Stack>
                                     </Stack>
-                                </Stack>
-                            </Link>
-                        );
-                    }
-                })}
+                                </Link>
+                            );
+                        }
+                    })}
                 <Box
                     id='contributor-grid'
                     display='grid'
@@ -506,7 +525,7 @@ export default IndexPage;
 
 export const pageQuery = graphql`
     query {
-        allAsciidoc(limit: 30) {
+        allAsciidoc(limit: 1000) {
             edges {
                 node {
                     id
