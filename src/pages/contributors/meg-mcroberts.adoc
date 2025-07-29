@@ -9,7 +9,7 @@
 :page-location: Scotts Valley, California, USA
 :page-firstcommit: 2017
 :page-datepublished: 2025-06-30
-:page-featured: true
+:page-featured: false
 :page-intro: Meg McRoberts is a technical content developer who loves the process of transferring technical details from the minds of the people who develop the software to the minds of the people who use the software. She enjoys writing and structuring documentation, and identifying new pieces that are required. She thinks a lot about the maintenance process and how to automate at least some of it. Meg is committed to the open-source concept and documentation-as-code disciplines, and sees these as keys to the future of technology and society. When she is not working on documentation, she enjoys studying history, sharing good conversations with interesting people over delicious food, and hanging out with her Lhasa Apso dog and two house rabbits.
 
 == What is your background prior to contributing to Jenkins?
