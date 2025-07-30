@@ -24,7 +24,7 @@ I have been using Jenkins for over 18 months at this point.
 
 == What made you choose Jenkins over other projects?
 
-It's open source and has an awesome community.
+It's open-source and has an awesome community.
 It's my first experience with an open-source project where the contributors and maintainers are highly skilled and extremely selfless in providing optimal solutions and support.
 
 == What problems has Jenkins solved for you?
