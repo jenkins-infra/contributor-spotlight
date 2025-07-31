@@ -1,0 +1,46 @@
+= Jay Francis
+:page-name: Jay Francis
+:page-linkedin: jaideep-francis-76a5a51b3
+:page-twitter:
+:page-github: jayfranco999
+:page-email:
+:page-image: avatar/jay-francis.jpeg
+:page-pronouns: He/Him/His
+:page-location: Bangalore, India
+:page-firstcommit: 2024
+:page-datepublished: 2025-07-31
+:page-featured: true
+:page-intro: Jay Francis is a Site Reliability Engineer for Jenkins, based in India. Prior to contributing to the Jenkins project, Jay spent time in his early career as a chef and later transitioned to a site reliability engineer role. His experience as a chef taught him a lot about how good creativity comes hand in hand with repetition of the same or similar tasks. He's carried that mindset with him no matter what kind of work he's doing. Changing fields to being an SRE wasn't as difficult as it might sound, since he was an engineering graduate ready to jump at impulsive career paths. Cooking has given him invaluable lessons that help him every day and will always remain part of who Jay is. At the start, it was tough to accept the life of a software engineer (compared to a chef's), but he was able to embrace building solutions to improve infrastructure by augmenting his knowledge with repetitive code practice. He found that this was just as challenging and creative in a different way.
+
+== What is your background prior to contributing to Jenkins?
+
+I went to school and graduated with my engineering degree, ready to enter the tech world.
+However, I started my career as a chef, which provided many skills and lessons that have helped shape my outlook and methods when it comes to life and work.
+Before joining the Jenkins project, I made the jump from being a chef to a role as a Site Reliability Engineer at Hewlett Packard Enterprise.
+
+== How long have you been using Jenkins?
+
+I have been using Jenkins for over 18 months at this point.
+
+== What made you choose Jenkins over other projects?
+
+It's open-source and has an awesome community.
+It's my first experience with an open-source project where the contributors and maintainers are highly skilled and extremely selfless in providing optimal solutions and support.
+
+== What problems has Jenkins solved for you?
+
+Automating dependencies and running `updatecli` pipelines greatly impacted migration efforts positively for public controllers like link:https://ci.jenkins.io/[ci.jenkins.io].
+
+== Is there an aspect of Jenkins that you're particularly passionate about?
+
+The pipeline graph overview somehow sparks a little joy in me every time the job is a success.
+
+== What sort of contributions have felt most successful/impactful?
+
+Using shared pipeline library scripts to reduce the GitHub API rate limit (by 50%) has been a great win for Jenkins.
+I've also found dependency management for private and public controllers to be quite useful in my time with the project thus far.
+
+== Advice for new developers and new members of the open-source community?
+
+Since open-source software is a buffet of many many different issues and tech stacks, I would recommend picking one and diving deep in providing an effective and sustainable solution after mature understanding of the task at hand.
+This is definitely going to make your contributions worthwhile and stand out to other contributors.
