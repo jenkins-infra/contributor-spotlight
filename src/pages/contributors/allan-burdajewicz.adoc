@@ -8,7 +8,7 @@
 :page-pronouns: 
 :page-location: Queesland, Australia
 :page-firstcommit: 2013
-:page-datepublished: 2025-08-29
+:page-datepublished: 2025-08-28
 :page-featured: true
 :page-intro: Allan Burdajewicz was originally born in the French countryside and is currently a Software/Systems Engineer located in Queensland, Australia. While he did a lot of development early on in his career, he became curious about areas outside of development. This led to quickly taking part in other aspects of the software development lifecycle (SDLC). Nowadays, he enjoys being involved in the whole lifecycle, mainly in a containerized environment, from tools development, to CI/CD, to deployment automation, and monitoring. When he's not deep in the development cycle, Allan enjoys nature, beaches, and warm, sunny places. This brought him all the way to Queensland, where he is often camping, hiking, and enjoying time off-grid.
 
