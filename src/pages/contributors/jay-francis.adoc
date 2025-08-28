@@ -9,7 +9,7 @@
 :page-location: Bangalore, India
 :page-firstcommit: 2024
 :page-datepublished: 2025-07-31
-:page-featured: true
+:page-featured: false
 :page-intro: Jay Francis is a Site Reliability Engineer for Jenkins, based in India. Prior to contributing to the Jenkins project, Jay spent time in his early career as a chef and later transitioned to a site reliability engineer role. His experience as a chef taught him a lot about how good creativity comes hand in hand with repetition of the same or similar tasks. He's carried that mindset with him no matter what kind of work he's doing. Changing fields to being an SRE wasn't as difficult as it might sound, since he was an engineering graduate ready to jump at impulsive career paths. Cooking has given him invaluable lessons that help him every day and will always remain part of who Jay is. At the start, it was tough to accept the life of a software engineer (compared to a chef's), but he was able to embrace building solutions to improve infrastructure by augmenting his knowledge with repetitive code practice. He found that this was just as challenging and creative in a different way.
 
 == What is your background prior to contributing to Jenkins?

@@ -1,0 +1,75 @@
+= Allan Burdajewicz
+:page-name: Allan Burdajewicz
+:page-linkedin: allan-burdajewicz-0122452b
+:page-twitter:
+:page-github: Dohbedoh
+:page-email:
+:page-image: avatar/allan-burdajewicz.png
+:page-pronouns: 
+:page-location: Queesland, Australia
+:page-firstcommit: 2013
+:page-datepublished: 2025-08-28
+:page-featured: true
+:page-intro: Allan Burdajewicz was originally born in the French countryside and is currently a Software/Systems Engineer located in Queensland, Australia. While he did a lot of development early on in his career, he became curious about areas outside of development. This led to quickly taking part in other aspects of the software development lifecycle (SDLC). Nowadays, he enjoys being involved in the whole lifecycle, mainly in a containerized environment, from tools development, to CI/CD, to deployment automation, and monitoring. When he's not deep in the development cycle, Allan enjoys nature, beaches, and warm, sunny places. This brought him all the way to Queensland, where he is often camping, hiking, and enjoying time off-grid.
+
+Allan also enjoys spending time with his family, answering the millions of questions his kids ask, sharing his interests with them, and loves watching them grow. To relax, Allan mainly reads and watches various science content about how things work, how things are made, and new technologies, regardless of the industry. He also loves music and concerts, but you will not hear him sing. Only his wife and kids have this privilege, but you can be sure that there is music in his head 100% of the time. Allan also likes various sports, mainly team sports such as soccer, rugby, and volley. He's been playing soccer for many years, but nowadays he mainly just runs or plays a bit of those sports with the kids.
+
+== What is your background prior to contributing to Jenkins?
+
+In my first job just out of university, I was working on a large project, which was in its early development stage, with the typical tech stacks (Git/Java/Spring/Oracle).
+The original architect had already prepared the tooling and we were using Jenkins for CI and _almost_ CD.
+However, we were also automating other things with Jenkins.
+We had offices in different cities and each office had a TV with a Jenkins Dashboard in full-screen to monitor our critical jobs.
+I did a lot of coding in that project, learned about good practices and optimization, and above all I acquired a lot of knowledge about many tools and rapidly grew beyond the "coding space" to understand more about what's going on around it.
+Additionally, I also started to help manage tools, deployments, and integrations.
+
+== How long have you been using Jenkins?
+
+I have been using Jenkins since 2012.
+I was doing a lot of Java/Spring development when I originally encountered Jenkins, and it was our main CI and general automation tool.
+
+== What made you choose Jenkins over other projects?
+
+In the early days, I was a junior engineer so I did not make the initial choice, I had just discovered the tool.
+However, it was clear to me that there were not a lot of other options that could match what Jenkins offered.
+
+== What problems has Jenkins solved for you?
+
+Back in the day, Jenkins could build in a reproducible environment, rather than our local machine, and also brought us confidence in a branch's stability.
+Developers had different operating systems and machines, and some tests that required significant time and resources.
+This meant that developers were not always able to run them locally.
+The Jenkins server was crucial to guarantee that proposed changes were stable.
+Nowadays, Jenkins is a highly scalable and cost-effective CI/CD server, especially when managing ephemeral agents.
+Most of the CI/CD we manage is templatized, readable, and the complexity level is low.
+
+== Is there an aspect of Jenkins that you're particularly interested in?
+
+I am quite involved in troubleshooting various Jenkins issues and environments.
+A particular aspect of Jenkins that I am keen to troubleshoot is scalability.
+I enjoy the challenge of reproducing and diagnosing issues that occur only at scale, such as with large queues, large agent fleets, and concurrent builds.
+Getting to the root of these problems is incredibly satisfying.
+
+== What sort of contributions have felt most successful/impactful?
+
+When we moved to Jetty 10, I fixed the idle timeout for websocket agent connections that was not identified for weeks.
+It is a good example of a critical problem that is not simple to find the root cause for, but for which the fix is quite simple once you get it.
+I also helped fix the restart mechanism of the TCP Agent listener.
+It was broken for a while and started to become a popular problem around the time we moved to JDK 11.
+Another one might be the Kubernetes plugin, which can run steps in agent pod containers using the Kubernetes Exec API.
+However, that API is not really reliable and transient issues can happen.
+This was known for a while and at some point I just helped by implementing a retry mechanism around it.
+
+I maintain the link:https://plugins.jenkins.io/support-core/[Support Core plugin] and added the ability to download support packages for node, items, and builds.
+This helped administrators quite a lot, allowing them to gather information from the UI, rather than connecting to the servers.
+I also maintain the link:https://plugins.jenkins.io/mina-sshd-api-common/[Mina SSHD API plugin], which I created to move forward with the deprecation of other libraries, such as Trilead SSH.
+Aside from this, I help fix issues here and there when I identify them.
+In many cases, I spent enough time troubleshooting an issue that the fix becomes the easy part.
+
+== Advice for new developers and new members of the open-source community?
+
+The Jenkins project is quite large, but choosing one area to focus on can help with digesting the history and purpose.
+Alternatively, you can start with small bug fixes.
+These are most typically found in plugins and can be a feature that you are more familiar with.
+Importantly, don't be afraid to open a pull request, as contributions are very welcome.
+You may be asked to change something, rework something, or create a test.
+That's OK; that's being part of the community of an open source project, and you might just like it eventually.
