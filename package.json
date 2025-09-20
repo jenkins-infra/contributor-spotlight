@@ -58,7 +58,7 @@
         "eslint": "^8.57.1",
         "eslint-config-google": "^0.14.0",
         "eslint-config-prettier": "^10.0.0",
-        "eslint-plugin-jsdoc": "^59.0.0",
+        "eslint-plugin-jsdoc": "^60.0.0",
         "eslint-plugin-prettier": "^5.2.1",
         "eslint-plugin-react": "^7.37.2",
         "husky": "^9.1.7",
