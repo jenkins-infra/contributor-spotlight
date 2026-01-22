@@ -19,6 +19,7 @@ function ContributorDetails(props) {
     const title =
         props.data.asciidoc.pageAttributes.name +
         ' - Jenkins Contributor Spotlight';
+    console.log(title);
 
     return (
         <>
