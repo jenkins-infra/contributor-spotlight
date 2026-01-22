@@ -7,8 +7,8 @@ import { Helmet } from 'react-helmet';
 import dayjs from 'dayjs';
 import axios from 'axios';
 import Papa from 'papaparse';
-import ContributorsList from '../Components/ContributorsList';
-import FeaturedContributor from '../Components/FeaturedContributor';
+import ContributorsList from '../Components/ContributorsList.jsx';
+import FeaturedContributor from '../Components/FeaturedContributor.jsx';
 const IndexPage = (props) => {
     const theme = useTheme();
     const isDesktop = useMediaQuery(theme.breakpoints.up('lg'));
