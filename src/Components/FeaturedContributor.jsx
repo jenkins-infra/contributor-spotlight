@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { MapPin, Calendar, Code, Zap } from 'lucide-react';
-import './featuredcontributor.css';
+import './featured-contributor.css';
 import { Link } from 'gatsby';
 
 const FeaturedContributor = ({ contributor }) => {
