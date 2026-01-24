@@ -25,7 +25,7 @@ const IndexPage = (props) => {
     const contributorCards = contributors.map((contributor, idx) => {
         if (contributor.node.pageAttributes.featured === 'false') {
             return (
-                <>
+                <main key={idx}>
                     <Link
                         to={contributor.node.fields.slug}
                         style={{ textDecoration: 'none', color: '#000000' }}
@@ -66,7 +66,7 @@ const IndexPage = (props) => {
                             </Box>
                         </Box>
                     </Link>
-                </>
+                </main>
             );
         }
     });
