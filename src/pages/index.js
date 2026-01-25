@@ -20,7 +20,6 @@ const IndexPage = (props) => {
     };
 
     const { data } = props;
-    console.log(data);
     const contributors = data.allAsciidoc.edges;
     const contributorCards = contributors.map((contributor, idx) => {
         if (contributor.node.pageAttributes.featured === 'false') {
