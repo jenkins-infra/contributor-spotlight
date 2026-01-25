@@ -11,6 +11,7 @@ const FeaturedContributor = ({ contributor }) => {
     const { name, image, location, datepublished, intro } =
         pageAttributes || {};
     const { slug } = contributor.node.fields;
+    console.log(contributor);
     return (
         <motion.div
             className='featured-contributor-section'
@@ -52,10 +53,6 @@ const FeaturedContributor = ({ contributor }) => {
                     >
                         <MapPin size={16} />
                         {location}
-                        <span>
-                            <Code size={12} style={{ marginRight: '4px' }} />
-                            31 Published code
-                        </span>
                         <span>
                             <Zap size={12} style={{ marginRight: '4px' }} />
                             {datepublished}
