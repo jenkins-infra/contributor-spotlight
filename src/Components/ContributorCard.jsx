@@ -6,13 +6,12 @@ import {
     Github,
     Linkedin,
     Twitter,
-    ExternalLink,
     CircleUser,
 } from 'lucide-react';
 
 const ContributorCard = ({ contributor }) => {
-    const { pageAttributes } = contributor.node;
-    const { slug } = contributor.node.fields;
+    const { pageAttributes } = contributor?.node;
+    const { slug } = contributor?.node?.fields;
 
     const {
         name,

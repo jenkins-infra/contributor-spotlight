@@ -12,63 +12,9 @@ import FeaturedContributor from '../Components/FeaturedContributor.jsx';
 const IndexPage = (props) => {
     const theme = useTheme();
     const isDesktop = useMediaQuery(theme.breakpoints.up('lg'));
-    const isTablet = useMediaQuery(theme.breakpoints.between('lg', 'sm'));
     const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
-
-    const handleAnimationComplete = () => {
-        // Animation complete callback
-    };
-
     const { data } = props;
     const contributors = data.allAsciidoc.edges;
-    const contributorCards = contributors.map((contributor, idx) => {
-        if (contributor.node.pageAttributes.featured === 'false') {
-            return (
-                <main key={idx}>
-                    <Link
-                        to={contributor.node.fields.slug}
-                        style={{ textDecoration: 'none', color: '#000000' }}
-                        key={idx}
-                    >
-                        <Box padding={isDesktop ? 5 : 2} key={idx}>
-                            <Box
-                                display='flex'
-                                justifyContent='center'
-                                alignItems='center'
-                            >
-                                <img
-                                    src={contributor.node.pageAttributes.image}
-                                    alt='Contributor avatar'
-                                    width={250}
-                                    height={250}
-                                    style={{
-                                        objectFit: 'cover',
-                                        borderRadius: '50%',
-                                    }}
-                                />
-                            </Box>
-                            <Box
-                                padding={3}
-                                display='flex'
-                                flexDirection='column'
-                                alignItems='center'
-                            >
-                                <Typography variant='h6' textAlign='center'>
-                                    {contributor.node.pageAttributes.name}
-                                </Typography>
-                                <Typography variant='body2' textAlign='center'>
-                                    {contributor.node.pageAttributes.pronouns}
-                                </Typography>
-                                <Typography variant='body1' textAlign='center'>
-                                    {contributor.node.pageAttributes.location}
-                                </Typography>
-                            </Box>
-                        </Box>
-                    </Link>
-                </main>
-            );
-        }
-    });
 
     const [thankYou, setThankYou] = React.useState([]);
 
@@ -102,7 +48,7 @@ const IndexPage = (props) => {
         <>
             <Helmet>
                 <meta charSet='utf-8' />
-                <title>Jenkins Contributor hello Spotlight</title>
+                <title>Jenkins Contributor Spotlight</title>
                 <meta
                     name='title'
                     property='og:title'

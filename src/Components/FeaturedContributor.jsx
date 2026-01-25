@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { MapPin, Calendar, Code, Zap } from 'lucide-react';
+import { MapPin, Zap } from 'lucide-react';
 import './featured-contributor.css';
 import { Link } from 'gatsby';
 
@@ -10,21 +10,22 @@ const FeaturedContributor = ({ contributor }) => {
     const pageAttributes = contributor?.node?.pageAttributes;
     const { name, image, location, datepublished, intro } =
         pageAttributes || {};
-    const { slug } = contributor.node.fields;
-    console.log(contributor);
+    const { slug } = contributor?.node?.fields;
     return (
         <motion.div
             className='featured-contributor-section'
             style={{ color: 'white' }}
         >
-            <Link
-                to={slug}
-                className='featured-contributor-card'
+            <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
                 style={{ cursor: 'pointer' }}
             >
+                <Link
+                    to={slug}
+                    className='featured-contributor-card'
+                >
                 <motion.div
                     className='featured-image'
                     initial={{ scale: 0.9, opacity: 0 }}
@@ -78,6 +79,7 @@ const FeaturedContributor = ({ contributor }) => {
                     </motion.div>
                 </div>
             </Link>
+            </motion.div>
         </motion.div>
     );
 };
