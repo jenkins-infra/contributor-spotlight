@@ -23,7 +23,6 @@
         "@emotion/styled": "^11.11.0",
         "@eslint/eslintrc": "^3.2.0",
         "@eslint/js": "^9.17.0",
-        "@gsap/react": "^2.1.2",
         "@mui/icons-material": "^7.0.0",
         "@mui/material": "^7.0.0",
         "asciidoctor.js": "^1.5.9",
