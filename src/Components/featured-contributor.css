@@ -41,10 +41,6 @@
 }
 
 .featured-role {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 1.5rem;
     font-size: 1rem;
     color: #b0b0b0;
     margin-bottom: 1.5rem;
@@ -89,8 +85,10 @@
     }
 
     .featured-role {
+        display: flex;
+        align-items: center;
         justify-content: center;
-        gap: 1rem;
+        gap: 0.2rem;
     }
 
     .featured-name {
