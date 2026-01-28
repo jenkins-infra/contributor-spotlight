@@ -30,7 +30,7 @@
     transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.1);
     position: relative;
     overflow: hidden;
-    min-height: 340px; /* Increased for extra content */
+    min-height: 340px;
 }
 
 .contributor-card::before {
@@ -180,7 +180,6 @@
     border-color: rgba(255, 255, 255, 0.2);
 }
 
-/* Tooltip for social links */
 .social-tooltip {
     position: absolute;
     bottom: 100%;
@@ -212,7 +211,6 @@
     opacity: 1;
 }
 
-/* View Profile styling */
 .view-profile-link {
     margin-top: 0.5rem;
     display: flex;
@@ -251,8 +249,6 @@
     background-clip: text;
 }
 
-/* LIGHT MODE ONLY */
-
 .contributors-container.light {
     background: #ffffff;
 }
@@ -265,7 +261,6 @@
         0 0 0 1px rgba(0, 0, 0, 0.1);
 }
 
-/* Card */
 .contributors-container.light .contributor-card {
     background: #f4f6f8;
     color: #000000;
@@ -274,19 +269,16 @@
     backdrop-filter: none;
 }
 
-/* Remove dark fancy effects */
 .contributors-container.light .contributor-card::before {
     display: none;
 }
 
-/* Headings */
 .contributors-container.light .contributor-card h3 {
     color: #0f172a;
     background: none;
     -webkit-text-fill-color: initial;
 }
 
-/* Paragraphs & meta */
 .contributors-container.light .contributor-card p,
 .contributors-container.light .contributor-location,
 .contributors-container.light .contributor-meta {
@@ -294,17 +286,14 @@
     opacity: 1;
 }
 
-/* Meta pill */
 .contributors-container.light .contributor-meta {
     background: #e9edf2;
 }
 
-/* Image border */
 .contributors-container.light .contributor-card img {
     border-color: #cbd5e1;
 }
 
-/* Social icons */
 .contributors-container.light .social-link {
     background: #e9edf2;
     border: 1px solid #d1d5db;
@@ -316,12 +305,10 @@
     border-color: #2563eb;
 }
 
-/* Tooltip stays readable */
 .contributors-container.light .social-tooltip {
     background: #111827;
 }
 
-/* Responsive Design */
 @media (max-width: 1200px) {
     .contributors-grid {
         grid-template-columns: repeat(2, 1fr);

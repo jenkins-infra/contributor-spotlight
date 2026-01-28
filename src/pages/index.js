@@ -16,16 +16,35 @@ const IndexPage = (props) => {
     const { data } = props;
     const contributors = data.allAsciidoc.edges;
     const [thankYou, setThankYou] = React.useState([]);
-    const [darkmode, setDarkmode] = React.useState(false);
+    const [darkmode, setDarkmode] = React.useState(true);
 
     React.useEffect(() => {
         if (typeof window !== 'undefined') {
-            const isDark =
+            const mediaquery =
                 window.matchMedia &&
-                window.matchMedia('(prefers-color-scheme: dark)').matches;
-            setDarkmode(isDark);
+                window.matchMedia('(prefers-color-scheme: dark)');
+            setDarkmode(mediaquery.matches);
+            const handler = (event) => {
+                setDarkmode(event.matches);
+            };
+            mediaquery.addEventListener('change', handler);
+            return () => {
+                mediaquery.removeEventListener('change', handler);
+            };
         }
     }, []);
+
+    React.useEffect(() => {
+        if (typeof window !== 'undefined') {
+            document.body.classList.remove('dark', 'light');
+            document.body.classList.add(darkmode ? 'dark' : 'light');
+        }
+        return () => {
+            if (typeof window !== 'undefined') {
+                document.body.classList.remove('dark', 'light');
+            }
+        };
+    }, [darkmode]);
 
     useEffect(() => {
         axios
@@ -114,8 +133,7 @@ const IndexPage = (props) => {
                     textAlign: 'center',
                     fontSize: '35px',
                     fontWeight: 'bolder',
-                    background: darkmode ? '#333333' : '#ffffff',
-                    color: darkmode ? 'white' : 'black',
+                    background: 'transparent',
                     padding: '20px',
                 }}
             >
