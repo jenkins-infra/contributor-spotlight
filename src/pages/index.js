@@ -15,10 +15,17 @@ const IndexPage = (props) => {
     const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
     const { data } = props;
     const contributors = data.allAsciidoc.edges;
-    const darkmode =
-        window.matchMedia &&
-        window.matchMedia('(prefers-color-scheme: dark)').matches;
     const [thankYou, setThankYou] = React.useState([]);
+    const [darkmode, setDarkmode] = React.useState(false);
+
+    React.useEffect(() => {
+        if (typeof window !== 'undefined') {
+            const isDark =
+                window.matchMedia &&
+                window.matchMedia('(prefers-color-scheme: dark)').matches;
+            setDarkmode(isDark);
+        }
+    }, []);
 
     useEffect(() => {
         axios
