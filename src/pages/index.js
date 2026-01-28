@@ -9,14 +9,14 @@ import axios from 'axios';
 import Papa from 'papaparse';
 import ContributorsList from '../Components/ContributorsList.jsx';
 import FeaturedContributor from '../Components/FeaturedContributor.jsx';
-import Search from '../Components/Search.jsx';
+import { Moon, Sun } from 'lucide-react';
 const IndexPage = (props) => {
     const theme = useTheme();
     const isDesktop = useMediaQuery(theme.breakpoints.up('lg'));
     const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
     const { data } = props;
     const contributors = data.allAsciidoc.edges;
-
+    const [darkmode, setDarkmode] = React.useState(true);
     const [thankYou, setThankYou] = React.useState([]);
 
     useEffect(() => {
@@ -45,6 +45,9 @@ const IndexPage = (props) => {
     const featuredContributor = contributors.find(
         (contributor) => contributor.node.pageAttributes.featured === 'true'
     );
+    const handledarkmode = () => {
+        setDarkmode((prev) => !prev);
+    };
     return (
         <>
             <Helmet>
@@ -86,6 +89,31 @@ const IndexPage = (props) => {
                     backgroundPosition: 'center',
                 }}
             >
+                <div
+                    style={{
+                        position: 'absolute',
+                        top: 90,
+                        right: 10,
+                        width: 44,
+                        height: 44,
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        borderRadius: '50%',
+                        cursor: 'pointer',
+                        backgroundColor: darkmode ? '#333333' : '#ffffff',
+                        color: darkmode ? '#ffffff' : '#000000',
+                        boxShadow: darkmode
+                            ? '0 4px 12px rgba(0, 0, 0, 0.5)'
+                            : '0 4px 12px rgba(0, 0, 0, 0.15)',
+
+                        zIndex: 10,
+                    }}
+                    onClick={handledarkmode}
+                >
+                    {darkmode ? <Sun size={18} /> : <Moon size={18} />}
+                </div>
+
                 <Typography
                     variant={isMobile ? 'h5' : 'h4'}
                     textAlign='center'
@@ -105,21 +133,27 @@ const IndexPage = (props) => {
                 style={{
                     textAlign: 'center',
                     fontSize: '35px',
-                    margin: '30px',
                     fontWeight: 'bolder',
+                    background: darkmode ? '#333333' : '#ffffff',
+                    color: darkmode ? 'white' : 'black',
+                    padding: '20px',
                 }}
             >
                 Contributor Spotlight
             </div>
-            <Search />
-            <FeaturedContributor contributor={featuredContributor} />
-            <ContributorsList contributors={contributors} />
+            <FeaturedContributor
+                contributor={featuredContributor}
+                darkmode={darkmode}
+            />
+            <ContributorsList contributors={contributors} darkmode={darkmode} />
             <Box
                 sx={{
                     padding: theme.spacing(5, 0),
                     display: 'flex',
                     justifyContent: 'center',
                     alignItems: 'center',
+                    backgroundColor: darkmode ? '#333333' : '#ffffff',
+                    color: darkmode ? 'white' : 'black',
                 }}
             >
                 <Box
@@ -132,6 +166,9 @@ const IndexPage = (props) => {
                         display: 'flex',
                         justifyContent: 'center',
                         alignItems: 'center',
+                        border: darkmode
+                            ? '1px solid white'
+                            : '1px solid black',
                     }}
                 >
                     <Stack

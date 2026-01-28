@@ -2,9 +2,11 @@ import React from 'react';
 import ContributorCard from './ContributorCard';
 import './contributors.css';
 
-const ContributorsList = ({ contributors }) => {
+const ContributorsList = ({ contributors, darkmode }) => {
     return (
-        <div className='contributors-container'>
+        <div
+            className={`contributors-container ${darkmode ? 'dark' : 'light'}`}
+        >
             <div className='contributors-grid'>
                 {contributors.map((contributor) =>
                     contributor?.node?.pageAttributes?.featured ===

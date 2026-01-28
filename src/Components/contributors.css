@@ -1,12 +1,12 @@
 .contributors-container {
-    max-width: 1400px;
+    max-width: 'screen-width';
     margin: 0 auto;
-    padding: 2rem 1.5rem;
+    padding: 3rem 15rem 3rem 15rem;
 }
 
 .contributors-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(420px, 1fr));
     gap: 2rem;
     justify-content: center;
 }
@@ -249,6 +249,70 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+}
+
+/* LIGHT MODE ONLY */
+
+.contributors-container.light {
+    background: #ffffff;
+}
+
+/* Card */
+.contributors-container.light .contributor-card {
+    background: #f4f6f8;
+    color: #000000;
+
+    border: 1px solid #000000;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+
+    backdrop-filter: none; /* remove glass effect */
+}
+
+/* Remove dark fancy effects */
+.contributors-container.light .contributor-card::before {
+    display: none;
+}
+
+/* Headings */
+.contributors-container.light .contributor-card h3 {
+    color: #0f172a;
+    background: none;
+    -webkit-text-fill-color: initial;
+}
+
+/* Paragraphs & meta */
+.contributors-container.light .contributor-card p,
+.contributors-container.light .contributor-location,
+.contributors-container.light .contributor-meta {
+    color: #1f2933;
+    opacity: 1;
+}
+
+/* Meta pill */
+.contributors-container.light .contributor-meta {
+    background: #e9edf2;
+}
+
+/* Image border */
+.contributors-container.light .contributor-card img {
+    border-color: #cbd5e1;
+}
+
+/* Social icons */
+.contributors-container.light .social-link {
+    background: #e9edf2;
+    border: 1px solid #d1d5db;
+    color: #111827;
+}
+
+.contributors-container.light .social-link:hover {
+    background: #dbeafe;
+    border-color: #2563eb;
+}
+
+/* Tooltip stays readable */
+.contributors-container.light .social-tooltip {
+    background: #111827;
 }
 
 /* Responsive Design */

@@ -4,18 +4,18 @@ import { Calendar, GitCommitHorizontal, MapPin } from 'lucide-react';
 import './featured-contributor.css';
 import { Link } from 'gatsby';
 
-const FeaturedContributor = ({ contributor }) => {
+const FeaturedContributor = ({ contributor, darkmode }) => {
     if (!contributor) return null;
 
     const pageAttributes = contributor?.node?.pageAttributes;
     const { name, image, location, datepublished, intro, firstcommit } =
         pageAttributes || {};
     const { slug } = contributor?.node?.fields;
-    console.log(pageAttributes);
     return (
         <motion.div
-            className='featured-contributor-section'
-            style={{ color: 'white' }}
+            className={`featured-contributor-section ${
+                darkmode ? 'dark' : 'light'
+            }`}
         >
             <motion.div
                 initial={{ opacity: 0, y: 20 }}
@@ -75,10 +75,7 @@ const FeaturedContributor = ({ contributor }) => {
                                 transition: { type: 'spring', stiffness: 300 },
                             }}
                         >
-                            <p
-                                className='featured-intro'
-                                style={{ color: 'white' }}
-                            >
+                            <p className='featured-intro'>
                                 <strong>{name}</strong> {intro}
                             </p>
                         </motion.div>
