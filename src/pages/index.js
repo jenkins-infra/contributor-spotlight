@@ -9,6 +9,7 @@ import axios from 'axios';
 import Papa from 'papaparse';
 import ContributorsList from '../Components/ContributorsList.jsx';
 import FeaturedContributor from '../Components/FeaturedContributor.jsx';
+import Search from '../Components/Search.jsx';
 const IndexPage = (props) => {
     const theme = useTheme();
     const isDesktop = useMediaQuery(theme.breakpoints.up('lg'));
@@ -99,6 +100,7 @@ const IndexPage = (props) => {
                     <img src='/jenkins.png' alt='Jenkins logo' />
                 </Box>
             </Box>
+
             <div
                 style={{
                     textAlign: 'center',
@@ -109,6 +111,7 @@ const IndexPage = (props) => {
             >
                 Contributor Spotlight
             </div>
+            <Search />
             <FeaturedContributor contributor={featuredContributor} />
             <ContributorsList contributors={contributors} />
             <Box
