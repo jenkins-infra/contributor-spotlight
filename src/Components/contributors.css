@@ -1,14 +1,14 @@
 .contributors-container {
-    max-width: 'screen-width';
+    width: 100%;
+    max-width: 1200px;
     margin: 0 auto;
-    padding: 3rem 15rem 3rem 15rem;
+    padding: 3rem 1.5rem;
 }
 
 .contributors-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(420px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
-    justify-content: center;
 }
 
 .contributor-card {
@@ -318,8 +318,7 @@
 /* Responsive Design */
 @media (max-width: 1200px) {
     .contributors-grid {
-        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-        gap: 1.75rem;
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
@@ -329,8 +328,7 @@
     }
 
     .contributors-grid {
-        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-        gap: 1.5rem;
+        grid-template-columns: 1fr;
     }
 
     .contributor-card {
