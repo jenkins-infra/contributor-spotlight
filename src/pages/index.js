@@ -127,6 +127,7 @@ const IndexPage = (props) => {
             >
                 Contributor Spotlight
             </div>
+            <Search />
             <FeaturedContributor
                 contributor={featuredContributor}
                 darkmode={darkmode}
