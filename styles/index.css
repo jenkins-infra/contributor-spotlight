@@ -13,7 +13,7 @@ body {
     font-size: 16px;
 }
 
-/* @media screen and (prefers-color-scheme: dark) {
+@media screen and (prefers-color-scheme: dark) {
     #contributor-grid * {
         color: #fff;
     }
@@ -22,16 +22,4 @@ body {
         background-color: #333;
         color: #fff;
     }
-} */
-
-body.light {
-    background-color: #ffffff;
-    color: #000000;
-}
-body.dark {
-    background-color: #333333;
-    color: #ffffff;
-}
-body.dark #contributor-grid * {
-    color: #fff;
 }

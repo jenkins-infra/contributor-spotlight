@@ -16,9 +16,12 @@ const IndexPage = (props) => {
     const { data } = props;
     const contributors = data.allAsciidoc.edges;
     const [thankYou, setThankYou] = React.useState([]);
-    const [darkmode, setDarkmode] = React.useState(true);
+    const [darkmode, setDarkmode] = React.useState(
+        window.matchMedia &&
+            window.matchMedia('(prefers-color-scheme: dark)').matches
+    );
 
-    React.useEffect(() => {
+    useEffect(() => {
         if (typeof window !== 'undefined') {
             const mediaquery =
                 window.matchMedia &&
@@ -33,18 +36,6 @@ const IndexPage = (props) => {
             };
         }
     }, []);
-
-    React.useEffect(() => {
-        if (typeof window !== 'undefined') {
-            document.body.classList.remove('dark', 'light');
-            document.body.classList.add(darkmode ? 'dark' : 'light');
-        }
-        return () => {
-            if (typeof window !== 'undefined') {
-                document.body.classList.remove('dark', 'light');
-            }
-        };
-    }, [darkmode]);
 
     useEffect(() => {
         axios
