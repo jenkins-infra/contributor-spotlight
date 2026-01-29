@@ -1,0 +1,89 @@
+import React from 'react';
+import { motion } from 'framer-motion';
+import { Calendar, GitCommitHorizontal, MapPin } from 'lucide-react';
+import './featured-contributor.css';
+import { Link } from 'gatsby';
+
+const FeaturedContributor = ({ contributor, darkmode }) => {
+    if (!contributor) return null;
+
+    const pageAttributes = contributor?.node?.pageAttributes;
+    const { name, image, location, datepublished, intro, firstcommit } =
+        pageAttributes || {};
+    const { slug } = contributor?.node?.fields;
+    return (
+        <motion.div
+            className={`featured-contributor-section ${
+                darkmode ? 'dark' : 'light'
+            }`}
+        >
+            <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+                style={{ cursor: 'pointer' }}
+            >
+                <Link to={slug} className='featured-contributor-card'>
+                    <motion.div
+                        className='featured-image'
+                        initial={{ scale: 0.9, opacity: 0 }}
+                        animate={{ scale: 1, opacity: 1 }}
+                        transition={{ delay: 0.2, duration: 0.4 }}
+                        whileHover={{ scale: 1.02 }}
+                    >
+                        <img src={image} alt={name} />
+                    </motion.div>
+
+                    <div className='featured-content'>
+                        <motion.h2
+                            className='featured-name'
+                            initial={{ opacity: 0, x: -20 }}
+                            animate={{ opacity: 1, x: 0 }}
+                            transition={{ delay: 0.3 }}
+                        >
+                            {name}
+                        </motion.h2>
+
+                        <motion.div
+                            className='featured-role'
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
+                            transition={{ delay: 0.4 }}
+                        >
+                            <span className='meta-item'>
+                                <MapPin size={16} />
+                                <strong>Location:</strong> {location}
+                            </span>
+
+                            <span className='meta-item'>
+                                <Calendar size={12} />
+                                <strong>Date Published:</strong> {datepublished}
+                            </span>
+                            <span className='meta-item'>
+                                <GitCommitHorizontal size={12} />
+                                <strong>First Commit:</strong> {firstcommit}
+                            </span>
+                        </motion.div>
+
+                        <motion.div
+                            className='featured-highlight'
+                            initial={{ opacity: 0, y: 10 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ delay: 0.5 }}
+                            whileHover={{
+                                x: 5,
+                                transition: { type: 'spring', stiffness: 300 },
+                            }}
+                        >
+                            <p className='featured-intro'>
+                                <strong>{name}</strong> {intro}
+                            </p>
+                        </motion.div>
+                    </div>
+                </Link>
+            </motion.div>
+        </motion.div>
+    );
+};
+
+export default FeaturedContributor;
