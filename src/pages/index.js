@@ -16,10 +16,7 @@ const IndexPage = (props) => {
     const { data } = props;
     const contributors = data.allAsciidoc.edges;
     const [thankYou, setThankYou] = React.useState([]);
-    const [darkmode, setDarkmode] = React.useState(
-        window.matchMedia &&
-            window.matchMedia('(prefers-color-scheme: dark)').matches
-    );
+    const [darkmode, setDarkmode] = React.useState(null);
 
     useEffect(() => {
         if (typeof window !== 'undefined') {
