@@ -7,8 +7,9 @@ import { Helmet } from 'react-helmet';
 import dayjs from 'dayjs';
 import axios from 'axios';
 import Papa from 'papaparse';
-import ContributorsList from '../Components/ContributorsList.jsx';
-import FeaturedContributor from '../Components/FeaturedContributor.jsx';
+import ContributorsList from '../Components/Contributor/ContributorsList.jsx';
+import FeaturedContributor from '../Components/Featured-contributor/FeaturedContributor.jsx';
+import Search from '../Components/Search/Search.jsx';
 const IndexPage = (props) => {
     const theme = useTheme();
     const isDesktop = useMediaQuery(theme.breakpoints.up('lg'));
@@ -127,7 +128,7 @@ const IndexPage = (props) => {
             >
                 Contributor Spotlight
             </div>
-            <Search />
+            <Search contributors={contributors} darkmode={darkmode} />
             <FeaturedContributor
                 contributor={featuredContributor}
                 darkmode={darkmode}
