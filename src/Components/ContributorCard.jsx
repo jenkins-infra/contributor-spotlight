@@ -5,9 +5,9 @@ import {
     Calendar,
     Github,
     Linkedin,
-    Twitter,
     CircleUser,
 } from 'lucide-react';
+import XIcon from './XIcon';
 
 const ContributorCard = ({ contributor }) => {
     const { pageAttributes } = contributor?.node;
@@ -173,7 +173,7 @@ const ContributorCard = ({ contributor }) => {
 
                             {twitter && (
                                 <motion.a
-                                    href={`https://twitter.com/${twitter}`}
+                                    href={`https://x.com/${twitter}`}
                                     target='_blank'
                                     rel='noreferrer'
                                     onClick={(e) => e.stopPropagation()}
@@ -183,9 +183,9 @@ const ContributorCard = ({ contributor }) => {
                                     whileTap={{ scale: 0.9 }}
                                     className='social-link'
                                 >
-                                    <Twitter size={18} />
+                                    <XIcon size={18} />
                                     <span className='social-tooltip'>
-                                        Twitter
+                                        X (formerly Twitter)
                                     </span>
                                 </motion.a>
                             )}

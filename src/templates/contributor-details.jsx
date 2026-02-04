@@ -3,7 +3,7 @@ import { graphql, Link } from 'gatsby';
 import { Box, Stack, Typography, useTheme } from '@mui/material';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
-import TwitterIcon from '@mui/icons-material/Twitter';
+import XIcon from '@mui/icons-material/X';
 import AlternateEmailIcon from '@mui/icons-material/AlternateEmail';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import '../styles/contributor-details.css';
@@ -86,8 +86,8 @@ function ContributorDetails(props) {
                         isDesktop
                             ? '32px 160px'
                             : isTablet
-                              ? '24px 64px'
-                              : '16px 32px'
+                                ? '24px 64px'
+                                : '16px 32px'
                     }
                 >
                     <Link style={{ textDecoration: `none` }} to='/'>
@@ -130,9 +130,9 @@ function ContributorDetails(props) {
                         </Typography>
                         {props.data.asciidoc.pageAttributes.firstcommit &&
                             props.data.asciidoc.pageAttributes.firstcommit !==
-                                'null' &&
+                            'null' &&
                             props.data.asciidoc.pageAttributes.firstcommit !==
-                                '' && (
+                            '' && (
                                 <Typography variant='h6' textAlign='center'>
                                     {'First Commit: ' +
                                         props.data.asciidoc.pageAttributes
@@ -163,9 +163,9 @@ function ContributorDetails(props) {
                         )}
                         {props.data.asciidoc.pageAttributes.twitter !== '' && (
                             <Link
-                                to={`https://twitter.com/${props.data.asciidoc.pageAttributes.twitter}`}
+                                to={`https://x.com/${props.data.asciidoc.pageAttributes.twitter}`}
                             >
-                                <TwitterIcon />
+                                <XIcon />
                             </Link>
                         )}
                         {props.data.asciidoc.pageAttributes.github !== '' && (
