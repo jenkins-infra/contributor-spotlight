@@ -9,7 +9,6 @@
     ],
     "scripts": {
         "develop": "gatsby develop",
-        "start": "gatsby develop",
         "build": "gatsby build",
         "serve": "gatsby serve",
         "info": "gatsby info",
@@ -21,8 +20,6 @@
     "dependencies": {
         "@emotion/react": "^11.11.1",
         "@emotion/styled": "^11.11.0",
-        "@eslint/eslintrc": "^3.2.0",
-        "@eslint/js": "^9.17.0",
         "@mui/icons-material": "^7.0.0",
         "@mui/material": "^7.0.0",
         "asciidoctor.js": "^1.5.9",
@@ -42,7 +39,6 @@
         "gatsby-source-filesystem": "^5.14.0",
         "gatsby-transformer-asciidoc": "^4.13.1",
         "gatsby-transformer-sharp": "^5.13.1",
-        "globals": "^17.0.0",
         "loader-utils": "^3.2.1",
         "lodash": "^4.17.21",
         "lucide-react": "^0.562.0",
@@ -57,12 +53,15 @@
     },
     "license": "MIT",
     "devDependencies": {
+        "@eslint/eslintrc": "^3.2.0",
+        "@eslint/js": "^9.17.0",
         "eslint": "^8.57.1",
         "eslint-config-google": "^0.14.0",
         "eslint-config-prettier": "^10.0.0",
         "eslint-plugin-jsdoc": "^62.0.0",
         "eslint-plugin-prettier": "^5.2.1",
         "eslint-plugin-react": "^7.37.2",
+        "globals": "^17.0.0",
         "husky": "^9.1.7",
         "lint-staged": "^16.0.0",
         "prettier": "^3.4.2"
