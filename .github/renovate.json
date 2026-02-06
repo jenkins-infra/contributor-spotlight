@@ -1,5 +1,23 @@
 {
-    "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-    "extends": ["config:recommended"],
-    "ignoreDeps": ["node"]
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": ["config:recommended"],
+  "ignoreDeps": ["node"],
+
+  "vulnerabilityAlerts": {
+    "enabled": true
+  },
+
+  "packageRules": [
+    {
+      "description": "Raise PRs for vulnerabilities using non-breaking updates only",
+      "matchVulnerabilities": true,
+      "matchUpdateTypes": ["patch", "minor"]
+    },
+    {
+      "description": "Do not raise PRs for vulnerability fixes that require major updates",
+      "matchVulnerabilities": true,
+      "matchUpdateTypes": ["major"],
+      "enabled": false
+    }
+  ]
 }
