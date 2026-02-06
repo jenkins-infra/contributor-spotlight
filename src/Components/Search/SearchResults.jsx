@@ -1,5 +1,5 @@
 import React from 'react';
-import './Search-result.css';
+import './search-result.css';
 import { Link } from 'gatsby';
 import { Github, Linkedin } from 'lucide-react';
 import { motion } from 'framer-motion';

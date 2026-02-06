@@ -1,9 +1,9 @@
-import React, { useEffect, useMemo, useRef, useState } from 'react';
+import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { motion } from 'framer-motion';
 import { Search as SearchIcon } from 'lucide-react';
 import './Search.css';
 import Fuse from 'fuse.js';
-import SearchResults from './Search-results.jsx';
+import SearchResults from './SearchResults.jsx';
 function Search({ contributors, darkmode }) {
     const [searchQuery, setSearchQuery] = useState('');
     const [isFocused, setIsFocused] = useState(false);
@@ -29,17 +29,18 @@ function Search({ contributors, darkmode }) {
             selectedTags.length > 0 ? selectedTags : ['name', 'location'];
         return new Fuse(contributorsArray, {
             keys,
-            threshold: 0.3,
+            threshold: 0.6,
             includeScore: true,
             ignoreLocation: true,
+            findAllMatches: true,
         });
     }, [contributorsArray, selectedTags]);
 
-    const toggletag = (tag) => {
+    const toggletag = useCallback((tag) => {
         setSelectedTags((prev) =>
             prev.includes(tag) ? prev.filter((t) => t !== tag) : [...prev, tag]
         );
-    };
+    }, [selectedTags]);
     useEffect(() => {
         if (!searchQuery.trim()) {
             setResults([]);
