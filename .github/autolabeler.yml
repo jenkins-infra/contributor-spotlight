@@ -1,0 +1,3 @@
+documentation: ["README.adoc"]
+dependencies: ["package.json", "package-lock.json"]
+chore: [".github/**", "Jenkinsfile"]
