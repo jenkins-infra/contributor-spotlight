@@ -39,6 +39,7 @@
         "gatsby-source-filesystem": "^5.14.0",
         "gatsby-transformer-asciidoc": "^4.13.1",
         "gatsby-transformer-sharp": "^5.13.1",
+        "isomorphic-dompurify": "^2.36.0",
         "loader-utils": "^3.2.1",
         "lodash": "^4.17.21",
         "lucide-react": "^0.562.0",
