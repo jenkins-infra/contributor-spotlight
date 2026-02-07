@@ -47,10 +47,7 @@ function SearchResults({ results, darkmode }) {
     return (
         <div className='results-container'>
             {sortedResults.map(({ item, score }) => {
-                if (!item) {
-                    console.log(item);
-                    return null;
-                }
+                if (!item) return null;
                 return (
                     <Link to={item?.slug} key={item?.id}>
                         <div className='result-card'>

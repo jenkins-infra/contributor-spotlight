@@ -1,7 +1,7 @@
 import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { motion } from 'framer-motion';
 import { Search as SearchIcon } from 'lucide-react';
-import './Search.css';
+import './search.css';
 import Fuse from 'fuse.js';
 import SearchResults from './SearchResults.jsx';
 function Search({ contributors, darkmode }) {
