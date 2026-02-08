@@ -69,16 +69,31 @@ function ContributorDetails(props) {
                     }}
                 >
                     <Box sx={{ paddingTop: isMobile ? 5 : 8 }}>
-                        <img
-                            src={
-                                '../../../' +
-                                props.data.asciidoc.pageAttributes.image
-                            }
-                            alt='Contributor avatar'
-                            width={isDesktop ? 350 : isTablet ? 300 : 250}
-                            height={isDesktop ? 350 : isTablet ? 300 : 250}
-                            style={{ objectFit: 'cover', borderRadius: '50%' }}
-                        />
+                        <picture style={{ display: 'block' }}>
+                            <source
+                                srcSet={
+                                    '../../../generated/avatar/' +
+                                    props.data.asciidoc.pageAttributes.image
+                                        .split('/')
+                                        .pop()
+                                        .replace(/\.(jpg|jpeg|png)$/i, '.webp')
+                                }
+                                type='image/webp'
+                            />
+                            <img
+                                src={
+                                    '../../../' +
+                                    props.data.asciidoc.pageAttributes.image
+                                }
+                                alt='Contributor avatar'
+                                width={isDesktop ? 350 : isTablet ? 300 : 250}
+                                height={isDesktop ? 350 : isTablet ? 300 : 250}
+                                style={{
+                                    objectFit: 'cover',
+                                    borderRadius: '50%',
+                                }}
+                            />
+                        </picture>
                     </Box>
                 </Box>
                 <Box
@@ -86,8 +101,8 @@ function ContributorDetails(props) {
                         isDesktop
                             ? '32px 160px'
                             : isTablet
-                                ? '24px 64px'
-                                : '16px 32px'
+                              ? '24px 64px'
+                              : '16px 32px'
                     }
                 >
                     <Link style={{ textDecoration: `none` }} to='/'>
@@ -130,9 +145,9 @@ function ContributorDetails(props) {
                         </Typography>
                         {props.data.asciidoc.pageAttributes.firstcommit &&
                             props.data.asciidoc.pageAttributes.firstcommit !==
-                            'null' &&
+                                'null' &&
                             props.data.asciidoc.pageAttributes.firstcommit !==
-                            '' && (
+                                '' && (
                                 <Typography variant='h6' textAlign='center'>
                                     {'First Commit: ' +
                                         props.data.asciidoc.pageAttributes
