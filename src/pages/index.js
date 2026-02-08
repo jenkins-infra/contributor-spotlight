@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import '../../styles/index.css';
 import { Box, Stack, Typography, useTheme } from '@mui/material';
-import { graphql, Link } from 'gatsby';
+import { graphql } from 'gatsby';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import { Helmet } from 'react-helmet';
 import dayjs from 'dayjs';
@@ -172,7 +172,7 @@ const IndexPage = (props) => {
                         >
                             <img
                                 src={thankYou[6]?.replace(/['"]+/g, '')}
-                                alt='Random contributor image'
+                                alt='Random contributor'
                                 width={isDesktop ? 100 : isMobile ? 36 : 90}
                                 height={
                                     isDesktop ? 100 : isMobile ? '100%' : 90
