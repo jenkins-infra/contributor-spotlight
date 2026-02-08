@@ -10,6 +10,7 @@ import '../styles/contributor-details.css';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import { Helmet } from 'react-helmet';
 import dayjs from 'dayjs';
+import DOMPurify from 'isomorphic-dompurify';
 
 function ContributorDetails(props) {
     const theme = useTheme();
@@ -190,7 +191,7 @@ function ContributorDetails(props) {
                     </Box>
                     <Box
                         dangerouslySetInnerHTML={{
-                            __html: props.data.asciidoc.html,
+                            __html: DOMPurify.sanitize(props.data.asciidoc.html),
                         }}
                     />
                 </Box>
