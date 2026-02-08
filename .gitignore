@@ -9,3 +9,4 @@ public
 src/.DS_Store
 .eslintcache
 .nvmrc
+static/generated/avatar/

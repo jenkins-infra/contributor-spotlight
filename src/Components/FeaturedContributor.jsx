@@ -31,7 +31,22 @@ const FeaturedContributor = ({ contributor, darkmode }) => {
                         transition={{ delay: 0.2, duration: 0.4 }}
                         whileHover={{ scale: 1.02 }}
                     >
-                        <img src={image} alt={name} />
+                        <picture style={{ display: 'block' }}>
+                            <source
+                                srcSet={`/generated/avatar/${image
+                                    ?.split('/')
+                                    .pop()
+                                    .replace(/\.(jpe?g|png)$/i, '.webp')}`}
+                                type='image/webp'
+                            />
+                            {/* fallback */}
+                            <img
+                                src={image}
+                                alt={name}
+                                width={180}
+                                height={180}
+                            />
+                        </picture>
                     </motion.div>
 
                     <div className='featured-content'>

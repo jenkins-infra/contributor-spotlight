@@ -9,7 +9,9 @@
     ],
     "scripts": {
         "develop": "gatsby develop",
+        "prebuild": "node scripts/optimize-avatars.js",
         "build": "gatsby build",
+        "predevelop": "node scripts/optimize-avatars.js",
         "serve": "gatsby serve",
         "info": "gatsby info",
         "clean": "gatsby clean",
@@ -47,6 +49,7 @@
         "react-dom": "^18.2.0",
         "react-helmet": "^6.1.0",
         "react-typography": "^0.16.23",
+        "sharp": "^0.34.5",
         "slash": "^5.1.0",
         "typography": "^0.16.24",
         "typography-breakpoint-constants": "^0.16.19"

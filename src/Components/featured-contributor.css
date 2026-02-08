@@ -21,6 +21,10 @@
     flex-shrink: 0;
 }
 
+.featured-image picture {
+    display: block;
+}
+
 .featured-image img {
     width: 180px;
     height: 180px;

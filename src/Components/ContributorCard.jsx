@@ -1,12 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'gatsby';
-import {
-    Calendar,
-    Github,
-    Linkedin,
-    CircleUser,
-} from 'lucide-react';
+import { Calendar, Github, Linkedin, CircleUser } from 'lucide-react';
 import XIcon from './XIcon';
 
 const ContributorCard = ({ contributor }) => {
@@ -63,18 +58,32 @@ const ContributorCard = ({ contributor }) => {
         >
             <div className='contributor-card'>
                 <div className='contributor-image-wrapper'>
-                    <motion.img
-                        src={image}
-                        alt={name}
-                        loading='lazy'
-                        initial={{ scale: 0.8, opacity: 0 }}
-                        animate={{ scale: 1, opacity: 1 }}
-                        transition={{
-                            delay: 0.1,
-                            type: 'spring',
-                            stiffness: 100,
-                        }}
-                    />
+                    <picture style={{ display: 'block' }}>
+                        <source
+                            srcSet={`/generated/avatar/${image
+                                .split('/')
+                                .pop()
+                                .replace(/\.(jpe?g|png)$/i, '.webp')}`}
+                            type='image/webp'
+                            sizes='200px'
+                        />
+                        {/* fallback */}
+                        <motion.img
+                            src={image}
+                            alt={name}
+                            width={200}
+                            height={200}
+                            loading='lazy'
+                            decoding='async'
+                            initial={{ scale: 0.8, opacity: 0 }}
+                            animate={{ scale: 1, opacity: 1 }}
+                            transition={{
+                                delay: 0.1,
+                                type: 'spring',
+                                stiffness: 100,
+                            }}
+                        />
+                    </picture>
                 </div>
 
                 <motion.h3

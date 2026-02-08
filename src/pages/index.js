@@ -70,7 +70,7 @@ const IndexPage = (props) => {
                     property='og:title'
                     content='Jenkins Contributor Spotlight'
                 />
-                <meta property='og:image' content='../../../opengraph.png' />
+                <meta property='og:image' content='../../../opengraph.webp' />
                 <meta property='og:image:width' content='520' />
                 <meta property='og:image:height' content='270' />
                 <meta
@@ -95,7 +95,7 @@ const IndexPage = (props) => {
                 padding={isMobile ? 5 : 10}
                 sx={{
                     backgroundImage:
-                        'url("marek-szturc-2s3fI3M1lO0-unsplash.jpg")',
+                        'url("marek-szturc-2s3fI3M1lO0-unsplash.webp")',
                     backgroundRepeat: 'no-repeat',
                     backgroundSize: 'cover',
                     backgroundPosition: 'center',
@@ -112,7 +112,12 @@ const IndexPage = (props) => {
                     continuous integration and delivery
                 </Typography>
                 <Box sx={{ paddingTop: 8 }}>
-                    <img src='/jenkins.png' alt='Jenkins logo' />
+                    <img
+                        src='/jenkins.webp'
+                        alt='Jenkins logo'
+                        width={226}
+                        height={312}
+                    />
                 </Box>
             </Box>
 
@@ -174,9 +179,7 @@ const IndexPage = (props) => {
                                 src={thankYou[6]?.replace(/['"]+/g, '')}
                                 alt='Random contributor image'
                                 width={isDesktop ? 100 : isMobile ? 36 : 90}
-                                height={
-                                    isDesktop ? 100 : isMobile ? '100%' : 90
-                                }
+                                height={isDesktop ? 100 : isMobile ? 36 : 90}
                                 style={{
                                     marginTop: 'auto',
                                     marginBottom: 'auto',
