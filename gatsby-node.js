@@ -88,7 +88,7 @@ exports.onCreateNode = async ({ node, actions, getNode, loadNodeContent }) => {
 
     if (node.pageAttributes?.datepublished) {
         createNodeField({
-            name: `publishedDate`,
+            name: `publicationDate`,
             node,
             value: new Date(node.pageAttributes.datepublished).toISOString(),
         });
