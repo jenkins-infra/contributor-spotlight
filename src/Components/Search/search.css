@@ -1,12 +1,5 @@
 .search-container-wrapper {
     padding: 20px;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.search-wrapper {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -131,15 +124,15 @@
 }
 
 .light .search-input-container {
-    background: rgba(255, 255, 255, 0.9);
-    border: 1px solid #d0d0d0;
+    background: #f4f6f8;
+    border: 1px solid #000000;
 }
 .light .search-input {
     color: #000;
 }
 
 .light .search-input::placeholder {
-    color: #666;
+    color: #000000;
 }
 
 .light .search-icon {

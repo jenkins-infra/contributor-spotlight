@@ -1,4 +1,10 @@
-import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react';
+import React, {
+    useCallback,
+    useEffect,
+    useMemo,
+    useRef,
+    useState,
+} from 'react';
 import { motion } from 'framer-motion';
 import { Search as SearchIcon } from 'lucide-react';
 import './search.css';
@@ -36,11 +42,16 @@ function Search({ contributors, darkmode }) {
         });
     }, [contributorsArray, selectedTags]);
 
-    const toggletag = useCallback((tag) => {
-        setSelectedTags((prev) =>
-            prev.includes(tag) ? prev.filter((t) => t !== tag) : [...prev, tag]
-        );
-    }, [selectedTags]);
+    const toggletag = useCallback(
+        (tag) => {
+            setSelectedTags((prev) =>
+                prev.includes(tag)
+                    ? prev.filter((t) => t !== tag)
+                    : [...prev, tag]
+            );
+        },
+        [selectedTags]
+    );
     useEffect(() => {
         if (!searchQuery.trim()) {
             setResults([]);
@@ -64,48 +75,45 @@ function Search({ contributors, darkmode }) {
     }, []);
     return (
         <div className={`search ${darkmode ? 'dark' : 'light'}`}>
-            <motion.div
-                className='search-container-wrapper'
-                initial={{ opacity: 0, y: -20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.4 }}
-            >
+            <motion.div className='search-container-wrapper'>
+                <div className='tags-container'>
+                    {TAGS.map((tag) => (
+                        <button
+                            key={tag}
+                            className={`tag ${selectedTags.includes(tag) ? 'active' : ''}`}
+                            onClick={() => toggletag(tag)}
+                            type='button'
+                        >
+                            {tag}
+                        </button>
+                    ))}
+                </div>
                 <motion.div
-                    className='search-wrapper'
+                    className={`search-input-container ${isFocused ? 'focused' : ''}`}
                     whileHover={{ scale: 1.02 }}
-                    transition={{ type: 'spring', stiffness: 400, damping: 25 }}
+                    transition={{
+                        type: 'tween',
+                        duration: 0.15,
+                        ease: 'easeOut',
+                    }}
                 >
-                    <div className='tags-container'>
-                        {TAGS.map((tag) => (
-                            <button
-                                key={tag}
-                                className={`tag ${selectedTags.includes(tag) ? 'active' : ''}`}
-                                onClick={() => toggletag(tag)}
-                                type='button'
-                            >
-                                {tag}
-                            </button>
-                        ))}
-                    </div>
-                    <div
-                        className={`search-input-container ${isFocused ? 'focused' : ''}`}
-                    >
-                        <SearchIcon size={20} className='search-icon' />
-                        <input
-                            ref={searchInputRef}
-                            type='text'
-                            value={searchQuery}
-                            onChange={(e) => setSearchQuery(e.target.value)}
-                            onFocus={() => setIsFocused(true)}
-                            onBlur={() => setIsFocused(false)}
-                            placeholder='[Ctrl + k] Search contributors...'
-                            className='search-input'
-                        />
-                    </div>
+                    <SearchIcon size={20} className='search-icon' />
+                    <input
+                        ref={searchInputRef}
+                        type='text'
+                        value={searchQuery}
+                        onChange={(e) => setSearchQuery(e.target.value)}
+                        onFocus={() => setIsFocused(true)}
+                        onBlur={() => setIsFocused(false)}
+                        placeholder='[Ctrl + k] Search contributors...'
+                        className='search-input'
+                    />
+                </motion.div>
+                <div>
                     {searchQuery && (
                         <SearchResults results={results} darkmode={darkmode} />
                     )}
-                </motion.div>
+                </div>
             </motion.div>
         </div>
     );
