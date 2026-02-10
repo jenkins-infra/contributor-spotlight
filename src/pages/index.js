@@ -270,7 +270,7 @@ export default IndexPage;
 
 export const pageQuery = graphql`
     query {
-        allAsciidoc(limit: 1000) {
+        allAsciidoc(limit: 1000, sort: { fields: { publicationDate: DESC } }) {
             edges {
                 node {
                     id
