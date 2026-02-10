@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import '../../styles/index.css';
 import { Box, Stack, Typography, useTheme } from '@mui/material';
 import { graphql } from 'gatsby';
@@ -57,9 +57,20 @@ const IndexPage = (props) => {
 
         return () => clearInterval(interval);
     }, []);
+
+    const [mounted, setMounted] = useState(false);
+
+    useEffect(() => {
+        setMounted(true);
+    }, []);
+
     const featuredContributor = contributors.find(
         (contributor) => contributor.node.pageAttributes.featured === 'true'
     );
+    if (!mounted) {
+        return null;
+    }
+
     return (
         <>
             <Helmet>
