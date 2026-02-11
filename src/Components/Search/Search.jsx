@@ -1,10 +1,4 @@
-import React, {
-    useCallback,
-    useEffect,
-    useMemo,
-    useRef,
-    useState,
-} from 'react';
+import React, { useEffect, useMemo, useRef, useState } from 'react';
 import { motion } from 'framer-motion';
 import { Search as SearchIcon } from 'lucide-react';
 import './search.css';
@@ -13,8 +7,6 @@ import SearchResults from './SearchResults.jsx';
 function Search({ contributors, darkmode }) {
     const [searchQuery, setSearchQuery] = useState('');
     const [isFocused, setIsFocused] = useState(false);
-    const [selectedTags, setSelectedTags] = useState(['name', 'location']);
-    const TAGS = ['github', 'linkedin', 'twitter', 'firstcommit'];
     const [results, setResults] = useState([]);
     const searchInputRef = useRef(null);
     const contributorsArray = useMemo(() => {
@@ -31,8 +23,7 @@ function Search({ contributors, darkmode }) {
         }));
     }, [contributors]);
     const idx = useMemo(() => {
-        const keys =
-            selectedTags.length > 0 ? selectedTags : ['name', 'location'];
+        const keys = ['name', 'location'];
         return new Fuse(contributorsArray, {
             keys,
             threshold: 0.6,
@@ -40,18 +31,8 @@ function Search({ contributors, darkmode }) {
             ignoreLocation: true,
             findAllMatches: true,
         });
-    }, [contributorsArray, selectedTags]);
+    }, [contributorsArray]);
 
-    const toggletag = useCallback(
-        (tag) => {
-            setSelectedTags((prev) =>
-                prev.includes(tag)
-                    ? prev.filter((t) => t !== tag)
-                    : [...prev, tag]
-            );
-        },
-        [selectedTags]
-    );
     useEffect(() => {
         if (!searchQuery.trim()) {
             setResults([]);
@@ -76,18 +57,6 @@ function Search({ contributors, darkmode }) {
     return (
         <div className={`search ${darkmode ? 'dark' : 'light'}`}>
             <motion.div className='search-container-wrapper'>
-                <div className='tags-container'>
-                    {TAGS.map((tag) => (
-                        <button
-                            key={tag}
-                            className={`tag ${selectedTags.includes(tag) ? 'active' : ''}`}
-                            onClick={() => toggletag(tag)}
-                            type='button'
-                        >
-                            {tag}
-                        </button>
-                    ))}
-                </div>
                 <motion.div
                     className={`search-input-container ${isFocused ? 'focused' : ''}`}
                     whileHover={{ scale: 1.02 }}
