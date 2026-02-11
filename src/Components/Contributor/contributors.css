@@ -1,13 +1,13 @@
 .contributors-container {
     width: 100%;
-    max-width: 1200px;
     margin: 0 auto;
-    padding: 3rem 1.5rem;
+    padding: 3rem 2rem;
 }
 
 .contributors-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(320px, 380px));
+    justify-content: center;
     gap: 2rem;
 }
 
@@ -309,19 +309,9 @@
     background: #111827;
 }
 
-@media (max-width: 1200px) {
-    .contributors-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
 @media (max-width: 768px) {
     .contributors-container {
         padding: 1.5rem 1rem;
-    }
-
-    .contributors-grid {
-        grid-template-columns: 1fr;
     }
 
     .contributor-card {
@@ -336,12 +326,6 @@
 }
 
 @media (max-width: 480px) {
-    .contributors-grid {
-        grid-template-columns: 1fr;
-        max-width: 320px;
-        margin: 0 auto;
-    }
-
     .contributor-card {
         padding: 1.5rem;
     }
