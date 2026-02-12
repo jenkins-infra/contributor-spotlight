@@ -38,8 +38,8 @@ function Search({ contributors, darkmode }) {
             setResults([]);
             return;
         }
-        const results = idx.search(searchQuery);
-        setResults(results);
+        const searched_results = idx.search(searchQuery);
+        setResults(searched_results);
     }, [searchQuery, idx]);
 
     useEffect(() => {
