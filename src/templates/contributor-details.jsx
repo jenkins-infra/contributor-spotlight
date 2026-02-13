@@ -19,6 +19,7 @@ function ContributorDetails(props) {
     const title =
         props.data.asciidoc.pageAttributes.name +
         ' - Jenkins Contributor Spotlight';
+    const { previous, next } = props.pageContext;
 
     return (
         <>
@@ -193,6 +194,119 @@ function ContributorDetails(props) {
                             __html: props.data.asciidoc.html,
                         }}
                     />
+                    <Box
+                        sx={{
+                            mt: 10,
+                            pt: 4,
+                            borderTop: "1px solid #e0e0e0",
+                            display: "flex",
+                            flexDirection: {
+                                xs: "column",
+                                sm: "row",
+                            },
+                            justifyContent: "space-between",
+                            alignItems: {
+                                xs: "stretch",
+                                sm: "center",
+                            },
+                            gap: 2,
+                        }}
+                    >
+                        {previous ? (
+                            <Link
+                                to={previous.slug}
+                                style={{ textDecoration: "none", color: "inherit" }}
+                            >
+                                <Stack direction="row" alignItems="center" spacing={1}>
+                                    <ArrowBackIcon fontSize="small" />
+
+                                    <img
+                                        src={`../../../${previous.image}`}
+                                        alt={previous.title}
+                                        width={44}
+                                        height={44}
+                                        style={{
+                                            borderRadius: "50%",
+                                            objectFit: "cover",
+                                        }}
+                                    />
+
+                                    <Box>
+                                        <Typography variant="caption" color="text.secondary">
+                                            Previous Profile
+                                        </Typography>
+                                        <Typography
+                                            fontWeight={600}
+                                            sx={{
+                                                maxWidth: 180,
+                                                whiteSpace: "nowrap",
+                                                overflow: "hidden",
+                                                textOverflow: "ellipsis",
+                                            }}
+                                        >
+                                            {previous.title}
+                                        </Typography>
+                                    </Box>
+                                </Stack>
+                            </Link>
+                        ) : (
+                            <div />
+                        )}
+
+                        {next ? (
+                            <Box
+                                sx={{
+                                    alignSelf: {
+                                        xs: "flex-end",
+                                        sm: "auto",
+                                    },
+                                }}
+                            >
+                                <Link
+                                    to={next.slug}
+                                    style={{ textDecoration: "none", color: "inherit" }}
+                                >
+                                    <Stack direction="row" alignItems="center" spacing={1}>
+                                        <Box textAlign="right">
+                                            <Typography variant="caption" color="text.secondary">
+                                                Next Profile
+                                            </Typography>
+                                            <Typography
+                                                fontWeight={600}
+                                                sx={{
+                                                    maxWidth: 180,
+                                                    whiteSpace: "nowrap",
+                                                    overflow: "hidden",
+                                                    textOverflow: "ellipsis",
+                                                }}
+                                            >
+                                                {next.title}
+                                            </Typography>
+                                        </Box>
+
+                                        <img
+                                            src={`../../../${next.image}`}
+                                            alt={next.title}
+                                            width={44}
+                                            height={44}
+                                            style={{
+                                                borderRadius: "50%",
+                                                objectFit: "cover",
+                                            }}
+                                        />
+
+                                        <ArrowBackIcon
+                                            fontSize="small"
+                                            sx={{ transform: "rotate(180deg)" }}
+                                        />
+                                    </Stack>
+                                </Link>
+                            </Box>
+
+                        ) : (
+                            <div />
+                        )}
+                    </Box>
                 </Box>
             </Box>
         </>
