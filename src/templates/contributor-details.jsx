@@ -86,8 +86,8 @@ function ContributorDetails(props) {
                         isDesktop
                             ? '32px 160px'
                             : isTablet
-                                ? '24px 64px'
-                                : '16px 32px'
+                              ? '24px 64px'
+                              : '16px 32px'
                     }
                 >
                     <Link style={{ textDecoration: `none` }} to='/'>
@@ -130,9 +130,9 @@ function ContributorDetails(props) {
                         </Typography>
                         {props.data.asciidoc.pageAttributes.firstcommit &&
                             props.data.asciidoc.pageAttributes.firstcommit !==
-                            'null' &&
+                                'null' &&
                             props.data.asciidoc.pageAttributes.firstcommit !==
-                            '' && (
+                                '' && (
                                 <Typography variant='h6' textAlign='center'>
                                     {'First Commit: ' +
                                         props.data.asciidoc.pageAttributes
