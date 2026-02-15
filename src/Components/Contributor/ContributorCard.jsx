@@ -7,7 +7,7 @@ import {
     Linkedin,
     CircleUser,
 } from 'lucide-react';
-import XIcon from './XIcon';
+import XIcon from '../XIcon';
 
 const ContributorCard = ({ contributor }) => {
     const { pageAttributes } = contributor?.node;
