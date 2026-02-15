@@ -1,7 +1,7 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import '../../styles/index.css';
 import { Box, Stack, Typography, useTheme } from '@mui/material';
-import { graphql, Link } from 'gatsby';
+import { graphql } from 'gatsby';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import { Helmet } from 'react-helmet';
 import dayjs from 'dayjs';
@@ -57,9 +57,20 @@ const IndexPage = (props) => {
 
         return () => clearInterval(interval);
     }, []);
+
+    const [mounted, setMounted] = useState(false);
+
+    useEffect(() => {
+        setMounted(true);
+    }, []);
+
     const featuredContributor = contributors.find(
         (contributor) => contributor.node.pageAttributes.featured === 'true'
     );
+    if (!mounted) {
+        return null;
+    }
+
     return (
         <>
             <Helmet>
@@ -172,7 +183,7 @@ const IndexPage = (props) => {
                         >
                             <img
                                 src={thankYou[6]?.replace(/['"]+/g, '')}
-                                alt='Random contributor image'
+                                alt='Random contributor'
                                 width={isDesktop ? 100 : isMobile ? 36 : 90}
                                 height={
                                     isDesktop ? 100 : isMobile ? '100%' : 90
@@ -270,7 +281,7 @@ export default IndexPage;
 
 export const pageQuery = graphql`
     query {
-        allAsciidoc(limit: 1000) {
+        allAsciidoc(limit: 1000, sort: { fields: { publicationDate: DESC } }) {
             edges {
                 node {
                     id

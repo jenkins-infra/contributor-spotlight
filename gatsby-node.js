@@ -85,4 +85,12 @@ exports.onCreateNode = async ({ node, actions, getNode, loadNodeContent }) => {
             value,
         });
     }
+
+    if (node.pageAttributes?.datepublished) {
+        createNodeField({
+            name: `publicationDate`,
+            node,
+            value: new Date(node.pageAttributes.datepublished).toISOString(),
+        });
+    }
 };
