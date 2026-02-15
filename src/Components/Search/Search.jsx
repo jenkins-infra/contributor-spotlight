@@ -26,10 +26,10 @@ function Search({ contributors, darkmode }) {
         const keys = ['name', 'location'];
         return new Fuse(contributorsArray, {
             keys,
-            threshold: 0.3,
+            threshold: 0,
             includeScore: true,
             ignoreLocation: true,
-            findAllMatches: true,
+            useExtendedSearch: true,
         });
     }, [contributorsArray]);
 
