@@ -27,6 +27,7 @@
         "dayjs": "^1.11.10",
         "framer-motion": "^12.29.0",
         "gatsby": "^5.16.1",
+        "fuse.js": "^7.1.0",
         "gatsby-core-utils": "^4.14.0",
         "gatsby-omni-font-loader": "^2.0.2",
         "gatsby-plugin-image": "^3.14.0",
