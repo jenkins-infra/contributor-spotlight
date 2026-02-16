@@ -9,6 +9,11 @@ import ContributorsList from '../Components/ContributorsList.jsx';
 import FeaturedContributor from '../Components/FeaturedContributor.jsx';
 import CommunityStats from '../Components/CommunityStats.jsx';
 
+import axios from 'axios';
+import Papa from 'papaparse';
+import ContributorsList from '../Components/Contributor/ContributorsList.jsx';
+import FeaturedContributor from '../Components/Featured-contributor/FeaturedContributor.jsx';
+import Search from '../Components/Search/Search.jsx';
 const IndexPage = (props) => {
     const theme = useTheme();
     const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
@@ -112,6 +117,7 @@ const IndexPage = (props) => {
             >
                 Contributor Spotlight
             </div>
+            <Search contributors={contributors} darkmode={darkmode} />
             <FeaturedContributor
                 contributor={featuredContributor}
                 darkmode={darkmode}

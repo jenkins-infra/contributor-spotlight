@@ -1,13 +1,8 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'gatsby';
-import {
-    Calendar,
-    Github,
-    Linkedin,
-    CircleUser,
-} from 'lucide-react';
-import XIcon from './XIcon';
+import { Calendar, Github, Linkedin, CircleUser } from 'lucide-react';
+import XIcon from '../XIcon';
 
 const ContributorCard = ({ contributor }) => {
     const { pageAttributes } = contributor?.node;
