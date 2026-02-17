@@ -26,17 +26,17 @@
         "axios": "^1.7.2",
         "dayjs": "^1.11.10",
         "framer-motion": "^12.29.0",
+        "gatsby": "^5.16.1",
         "fuse.js": "^7.1.0",
-        "gatsby": "^5.14.1",
         "gatsby-core-utils": "^4.14.0",
         "gatsby-omni-font-loader": "^2.0.2",
         "gatsby-plugin-image": "^3.14.0",
         "gatsby-plugin-manifest": "^5.14.0",
         "gatsby-plugin-offline": "^6.14.0",
+        "gatsby-plugin-postcss": "^6.16.0",
         "gatsby-plugin-react-helmet": "^6.14.0",
         "gatsby-plugin-sharp": "^5.14.0",
         "gatsby-plugin-sitemap": "^6.14.0",
-        "gatsby-plugin-typography": "^5.14.0",
         "gatsby-source-filesystem": "^5.14.0",
         "gatsby-transformer-asciidoc": "^4.13.1",
         "gatsby-transformer-sharp": "^5.13.1",
@@ -44,13 +44,10 @@
         "lodash": "^4.17.21",
         "lucide-react": "^0.562.0",
         "papaparse": "^5.4.1",
-        "react": "^18.2.0",
-        "react-dom": "^18.2.0",
+        "react": "19.2.4",
+        "react-dom": "19.2.4",
         "react-helmet": "^6.1.0",
-        "react-typography": "^0.16.23",
-        "slash": "^5.1.0",
-        "typography": "^0.16.24",
-        "typography-breakpoint-constants": "^0.16.19"
+        "slash": "^5.1.0"
     },
     "license": "MIT",
     "devDependencies": {
@@ -72,6 +69,9 @@
         "*.{js,jsx,css,md}": "prettier --write"
     },
     "overrides": {
+        "react-server-dom-webpack": {
+            "react": "$react"
+        },
         "webpack-dev-middleware": "^7.4.2",
         "cookie": "^1.0.2",
         "path-to-regexp": "~0.1.7",
