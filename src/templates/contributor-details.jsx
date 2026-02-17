@@ -18,7 +18,7 @@ function ContributorDetails(props) {
     const title =
         props.data.asciidoc.pageAttributes.name +
         ' - Jenkins Contributor Spotlight';
-const socialLinkVariants = {
+    const socialLinkVariants = {
         hidden: { opacity: 0, scale: 0.8 },
         visible: (i) => ({
             opacity: 1,
