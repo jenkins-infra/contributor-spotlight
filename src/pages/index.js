@@ -5,7 +5,7 @@ import { graphql } from 'gatsby';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import { Helmet } from 'react-helmet';
 import dayjs from 'dayjs';
-import CommunityStats from '../Components/CommunityStats.jsx';
+import ThankYouNote from '../Components/ThankYouNote.jsx';
 import ContributorsList from '../Components/Contributor/ContributorsList.jsx';
 import FeaturedContributor from '../Components/Featured-contributor/FeaturedContributor.jsx';
 import Search from '../Components/Search/Search.jsx';
@@ -119,7 +119,7 @@ const IndexPage = (props) => {
                 darkmode={darkmode}
             />
             <ContributorsList contributors={contributors} darkmode={darkmode} />
-            <CommunityStats darkmode={darkmode} />
+            <ThankYouNote darkmode={darkmode} />
         </>
     );
 };
