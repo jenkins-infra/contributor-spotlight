@@ -16,7 +16,10 @@ exports.createPages = ({ graphql, actions }) => {
     // from the fetched data that you can run queries against.
     return graphql(`
         {
-            allAsciidoc(limit: 1000) {
+            allAsciidoc(
+                limit: 1000
+                sort: { fields: { publicationDate: DESC } }
+            ) {
                 edges {
                     node {
                         id
@@ -55,7 +58,15 @@ exports.createPages = ({ graphql, actions }) => {
         const articleTemplate = path.resolve(
             `./src/templates/contributor-details.jsx`
         );
-        _.each(result.data.allAsciidoc.edges, (edge) => {
+        const contributors = result.data.allAsciidoc.edges;
+
+        contributors.forEach((edge, index) => {
+            const previous = index === 0 ? null : contributors[index - 1].node;
+
+            const next =
+                index === contributors.length - 1
+                    ? null
+                    : contributors[index + 1].node;
             // Gatsby uses Redux to manage its internal state.
             // Plugins and sites can use functions like "createPage"
             // to interact with Gatsby.
@@ -68,6 +79,21 @@ exports.createPages = ({ graphql, actions }) => {
                 component: slash(articleTemplate),
                 context: {
                     id: edge.node.id,
+                    previous: previous
+                        ? {
+                              slug: previous.fields.slug,
+                              title: previous.document.title,
+                              image: previous.pageAttributes.image,
+                          }
+                        : null,
+
+                    next: next
+                        ? {
+                              slug: next.fields.slug,
+                              title: next.document.title,
+                              image: next.pageAttributes.image,
+                          }
+                        : null,
                 },
             });
         });
