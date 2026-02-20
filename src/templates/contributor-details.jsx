@@ -19,9 +19,28 @@ function ContributorDetails(props) {
         props.data.asciidoc.pageAttributes.name +
         ' - Jenkins Contributor Spotlight';
     const { previous, next } = props.pageContext;
+    const [darkmode, setDarkmode] = React.useState(null);
+
+    useEffect(() => {
+        if (typeof window !== 'undefined') {
+            const mediaquery =
+                window.matchMedia &&
+                window.matchMedia('(prefers-color-scheme: dark)');
+            setDarkmode(mediaquery.matches);
+            const handler = (event) => {
+                setDarkmode(event.matches);
+            };
+            mediaquery.addEventListener('change', handler);
+            return () => {
+                mediaquery.removeEventListener('change', handler);
+            };
+        }
+    }, []);
 
     // State for sanitized HTML
-    const [sanitizedHTML, setSanitizedHTML] = useState(props.data.asciidoc.html);
+    const [sanitizedHTML, setSanitizedHTML] = useState(
+        props.data.asciidoc.html
+    );
 
     // Sanitize HTML on client side only
     useEffect(() => {
@@ -266,16 +285,16 @@ function ContributorDetails(props) {
                         sx={{
                             mt: 10,
                             pt: 4,
-                            borderTop: "1px solid #e0e0e0",
-                            display: "flex",
+                            borderTop: '1px solid #e0e0e0',
+                            display: 'flex',
                             flexDirection: {
-                                xs: "column",
-                                sm: "row",
+                                xs: 'column',
+                                sm: 'row',
                             },
-                            justifyContent: "space-between",
+                            justifyContent: 'space-between',
                             alignItems: {
-                                xs: "stretch",
-                                sm: "center",
+                                xs: 'stretch',
+                                sm: 'center',
                             },
                             gap: 2,
                         }}
@@ -283,10 +302,17 @@ function ContributorDetails(props) {
                         {previous ? (
                             <Link
                                 to={previous.slug}
-                                style={{ textDecoration: "none", color: "inherit" }}
+                                style={{
+                                    textDecoration: 'none',
+                                    color: 'inherit',
+                                }}
                             >
-                                <Stack direction="row" alignItems="center" spacing={1}>
-                                    <ArrowBackIcon fontSize="small" />
+                                <Stack
+                                    direction='row'
+                                    alignItems='center'
+                                    spacing={1}
+                                >
+                                    <ArrowBackIcon fontSize='small' />
 
                                     <img
                                         src={`../../../${previous.image}`}
@@ -294,22 +320,29 @@ function ContributorDetails(props) {
                                         width={44}
                                         height={44}
                                         style={{
-                                            borderRadius: "50%",
-                                            objectFit: "cover",
+                                            borderRadius: '50%',
+                                            objectFit: 'cover',
                                         }}
                                     />
 
                                     <Box>
-                                        <Typography variant="caption" color="text.secondary">
+                                        <Typography
+                                            variant='caption'
+                                            sx={{
+                                                color: darkmode
+                                                    ? '#bbbbbb'
+                                                    : 'text.secondary',
+                                            }}
+                                        >
                                             Previous Profile
                                         </Typography>
                                         <Typography
                                             fontWeight={600}
                                             sx={{
                                                 maxWidth: 180,
-                                                whiteSpace: "nowrap",
-                                                overflow: "hidden",
-                                                textOverflow: "ellipsis",
+                                                whiteSpace: 'nowrap',
+                                                overflow: 'hidden',
+                                                textOverflow: 'ellipsis',
                                             }}
                                         >
                                             {previous.title}
@@ -325,27 +358,41 @@ function ContributorDetails(props) {
                             <Box
                                 sx={{
                                     alignSelf: {
-                                        xs: "flex-end",
-                                        sm: "auto",
+                                        xs: 'flex-end',
+                                        sm: 'auto',
                                     },
                                 }}
                             >
                                 <Link
                                     to={next.slug}
-                                    style={{ textDecoration: "none", color: "inherit" }}
+                                    style={{
+                                        textDecoration: 'none',
+                                        color: 'inherit',
+                                    }}
                                 >
-                                    <Stack direction="row" alignItems="center" spacing={1}>
-                                        <Box textAlign="right">
-                                            <Typography variant="caption" color="text.secondary">
+                                    <Stack
+                                        direction='row'
+                                        alignItems='center'
+                                        spacing={1}
+                                    >
+                                        <Box textAlign='right'>
+                                            <Typography
+                                                variant='caption'
+                                                sx={{
+                                                    color: darkmode
+                                                        ? '#bbbbbb'
+                                                        : 'text.secondary',
+                                                }}
+                                            >
                                                 Next Profile
                                             </Typography>
                                             <Typography
                                                 fontWeight={600}
                                                 sx={{
                                                     maxWidth: 180,
-                                                    whiteSpace: "nowrap",
-                                                    overflow: "hidden",
-                                                    textOverflow: "ellipsis",
+                                                    whiteSpace: 'nowrap',
+                                                    overflow: 'hidden',
+                                                    textOverflow: 'ellipsis',
                                                 }}
                                             >
                                                 {next.title}
@@ -358,19 +405,18 @@ function ContributorDetails(props) {
                                             width={44}
                                             height={44}
                                             style={{
-                                                borderRadius: "50%",
-                                                objectFit: "cover",
+                                                borderRadius: '50%',
+                                                objectFit: 'cover',
                                             }}
                                         />
 
                                         <ArrowBackIcon
-                                            fontSize="small"
-                                            sx={{ transform: "rotate(180deg)" }}
+                                            fontSize='small'
+                                            sx={{ transform: 'rotate(180deg)' }}
                                         />
                                     </Stack>
                                 </Link>
                             </Box>
-
                         ) : (
                             <div />
                         )}
