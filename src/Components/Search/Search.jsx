@@ -9,6 +9,16 @@ function Search({ contributors, darkmode }) {
     const [isFocused, setIsFocused] = useState(false);
     const [results, setResults] = useState([]);
     const searchInputRef = useRef(null);
+    const searchPlaceholder = useMemo(() => {
+        if (typeof navigator === 'undefined')
+            return '[Ctrl + K] Search contributors...';
+        const ua = navigator.userAgent || '';
+        if (/Android|iPhone|iPad|iPod/i.test(ua))
+            return 'Search contributors...';
+        if (/Mac/i.test(navigator.platform || ''))
+            return '[⌘ + K] Search contributors...';
+        return '[Ctrl + K] Search contributors...';
+    }, []);
     const contributorsArray = useMemo(() => {
         return Object.values(contributors).map((c) => ({
             id: c?.node?.id,
@@ -74,7 +84,7 @@ function Search({ contributors, darkmode }) {
                         onChange={(e) => setSearchQuery(e.target.value)}
                         onFocus={() => setIsFocused(true)}
                         onBlur={() => setIsFocused(false)}
-                        placeholder='[Ctrl + k] Search contributors...'
+                        placeholder={searchPlaceholder}
                         className='search-input'
                     />
                 </motion.div>
