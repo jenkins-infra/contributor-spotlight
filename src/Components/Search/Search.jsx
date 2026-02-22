@@ -9,6 +9,13 @@ function Search({ contributors, darkmode }) {
     const [isFocused, setIsFocused] = useState(false);
     const [results, setResults] = useState([]);
     const searchInputRef = useRef(null);
+    const platform = navigator.platform.toUpperCase();
+    const useCmdKey =
+        platform.indexOf('MAC') >= 0 ||
+        platform === 'IPHONE' ||
+        platform === 'IPAD';
+
+    const shortcutHint = useCmdKey ? '⌘ + K' : 'Ctrl + K';
     const contributorsArray = useMemo(() => {
         return Object.values(contributors).map((c) => ({
             id: c?.node?.id,
@@ -74,7 +81,7 @@ function Search({ contributors, darkmode }) {
                         onChange={(e) => setSearchQuery(e.target.value)}
                         onFocus={() => setIsFocused(true)}
                         onBlur={() => setIsFocused(false)}
-                        placeholder='[Ctrl + k] Search contributors...'
+                        placeholder={`[${shortcutHint}] Search contributors...`}
                         className='search-input'
                     />
                 </motion.div>
