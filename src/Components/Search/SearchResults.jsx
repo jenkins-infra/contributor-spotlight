@@ -49,83 +49,94 @@ function SearchResults({ results, darkmode }) {
             {sortedResults.map(({ item, score }) => {
                 if (!item) return null;
                 return (
-                    <Link to={item?.slug} key={item?.id}>
-                        <div className='result-card'>
+                    <div className='result-card' role="region" aria-label={`Contributor card for ${item?.name}`}> 
+                        <Link
+                            to={item?.slug}
+                            key={item?.id}
+                            role="button"
+                            tabIndex={0}
+                            aria-label={`View details for contributor ${item?.name}`}
+                            onKeyDown={e => {
+                                if (e.key === 'Enter' || e.key === ' ') {
+                                    e.preventDefault();
+                                    e.target.click();
+                                }
+                            }}
+                        >
                             <img
                                 src={item?.image}
-                                alt={item?.name}
+                                alt={item?.name ? `${item?.name}'s profile photo` : 'Contributor profile photo'}
                                 className='result-avatar'
+                                aria-label={item?.name ? `${item?.name}'s profile photo` : 'Contributor profile photo'}
                             />
-                            <div className='result-content'>
-                                <div className='result-header'>
-                                    <h3 className='result-name'>
-                                        {item?.name}
-                                    </h3>
-                                </div>
-
-                                <p className='result-location'>
-                                    {item?.location}
-                                </p>
-
-                                <div className='result-links'>
-                                    {item?.github && (
-                                        <motion.a
-                                            href={`https://github.com/${item.github}`}
-                                            target='_blank'
-                                            rel='noreferrer'
-                                            onClick={(e) => e.stopPropagation()}
-                                            variants={socialLinkVariants}
-                                            custom={0}
-                                            whileHover='hover'
-                                            whileTap={{ scale: 0.9 }}
-                                            className='social-link'
-                                        >
-                                            <Github size={18} />
-                                            <span className='social-tooltip'>
-                                                GitHub
-                                            </span>
-                                        </motion.a>
-                                    )}
-                                    {item?.linkedin && (
-                                        <motion.a
-                                            href={`https://linkedin.com/in/${item?.linkedin}`}
-                                            target='_blank'
-                                            rel='noreferrer'
-                                            onClick={(e) => e.stopPropagation()}
-                                            variants={socialLinkVariants}
-                                            custom={1}
-                                            whileHover='hover'
-                                            whileTap={{ scale: 0.9 }}
-                                            className='social-link'
-                                        >
-                                            <Linkedin size={18} />
-                                            <span className='social-tooltip'>
-                                                LinkedIn
-                                            </span>
-                                        </motion.a>
-                                    )}
-                                    {item?.twitter && (
-                                        <motion.a
-                                            href={`https://twitter.com/${item.twitter}`}
-                                            target='_blank'
-                                            rel='noreferrer'
-                                            onClick={(e) => e.stopPropagation()}
-                                            variants={socialLinkVariants}
-                                            custom={2}
-                                            whileHover='hover'
-                                            whileTap={{ scale: 0.9 }}
-                                            className='social-link'
-                                        >
-                                            <XIcon size={18} />
-                                            <span className='social-tooltip'>
-                                                X (formerly Twitter)
-                                            </span>
-                                        </motion.a>
-                                    )}
-                                </div>
+                            <div className='result-header'>
+                                <h3 className='result-name'>
+                                    {item?.name}
+                                </h3>
+                            </div>
+                        </Link>
+                        <div className='result-content'>
+                            <p className='result-location'>
+                                {item?.location}
+                            </p>
+                            <div className='result-links'>
+                                {item?.github && (
+                                    <motion.a
+                                        href={`https://github.com/${item.github}`}
+                                        target='_blank'
+                                        rel='noreferrer'
+                                        variants={socialLinkVariants}
+                                        custom={0}
+                                        whileHover='hover'
+                                        whileTap={{ scale: 0.9 }}
+                                        className='social-link'
+                                        aria-label={`Open GitHub profile for ${item?.name}`}
+                                    >
+                                        <Github size={18} />
+                                        <span className='social-tooltip'>
+                                            GitHub
+                                        </span>
+                                    </motion.a>
+                                )}
+                                {item?.linkedin && (
+                                    <motion.a
+                                        href={`https://linkedin.com/in/${item?.linkedin}`}
+                                        target='_blank'
+                                        rel='noreferrer'
+                                        variants={socialLinkVariants}
+                                        custom={1}
+                                        whileHover='hover'
+                                        whileTap={{ scale: 0.9 }}
+                                        className='social-link'
+                                        aria-label={`Open LinkedIn profile for ${item?.name}`}
+                                    >
+                                        <Linkedin size={18} />
+                                        <span className='social-tooltip'>
+                                            LinkedIn
+                                        </span>
+                                    </motion.a>
+                                )}
+                                {item?.twitter && (
+                                    <motion.a
+                                        href={`https://twitter.com/${item.twitter}`}
+                                        target='_blank'
+                                        rel='noreferrer'
+                                        variants={socialLinkVariants}
+                                        custom={2}
+                                        whileHover='hover'
+                                        whileTap={{ scale: 0.9 }}
+                                        className='social-link'
+                                        aria-label={`Open X (formerly Twitter) profile for ${item?.name}`}
+                                    >
+                                        <XIcon size={18} />
+                                        <span className='social-tooltip'>
+                                            X (formerly Twitter)
+                                        </span>
+                                    </motion.a>
+                                )}
                             </div>
                         </div>
-                    </Link>
+                    </div>
                 );
             })}
         </div>

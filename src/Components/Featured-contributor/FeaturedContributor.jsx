@@ -23,7 +23,19 @@ const FeaturedContributor = ({ contributor, darkmode }) => {
                 transition={{ duration: 0.5 }}
                 style={{ cursor: 'pointer' }}
             >
-                <Link to={slug} className='featured-contributor-card'>
+                <Link
+                    to={slug}
+                    className='featured-contributor-card'
+                    role="button"
+                    tabIndex={0}
+                    aria-label={`View details for featured contributor ${name}`}
+                    onKeyDown={e => {
+                        if (e.key === 'Enter' || e.key === ' ') {
+                            e.preventDefault();
+                            e.target.click();
+                        }
+                    }}
+                >
                     <motion.div
                         className='featured-image'
                         initial={{ scale: 0.9, opacity: 0 }}
@@ -31,7 +43,11 @@ const FeaturedContributor = ({ contributor, darkmode }) => {
                         transition={{ delay: 0.2, duration: 0.4 }}
                         whileHover={{ scale: 1.02 }}
                     >
-                        <img src={image} alt={name} />
+                        <img
+                            src={image}
+                            alt={name ? `${name}'s profile photo` : 'Featured contributor profile photo'}
+                            aria-label={name ? `${name}'s profile photo` : 'Featured contributor profile photo'}
+                        />
                     </motion.div>
 
                     <div className='featured-content'>

@@ -48,19 +48,28 @@ const ContributorCard = ({ contributor }) => {
     };
 
     return (
-        <Link
-            to={slug}
-            style={{
-                textDecoration: 'none',
-                color: 'inherit',
-                display: 'block',
-            }}
-        >
-            <div className='contributor-card'>
+        <div className='contributor-card' role="region" aria-label={`Contributor card for ${name}`}> 
+            <Link
+                to={slug}
+                style={{
+                    textDecoration: 'none',
+                    color: 'inherit',
+                    display: 'block',
+                }}
+                role="button"
+                tabIndex={0}
+                aria-label={`View details for contributor ${name}`}
+                onKeyDown={e => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                        e.preventDefault();
+                        e.target.click();
+                    }
+                }}
+            >
                 <div className='contributor-image-wrapper'>
                     <motion.img
                         src={image}
-                        alt={name}
+                        alt={name ? `${name}'s profile photo` : 'Contributor profile photo'}
                         loading='lazy'
                         initial={{ scale: 0.8, opacity: 0 }}
                         animate={{ scale: 1, opacity: 1 }}
@@ -69,6 +78,7 @@ const ContributorCard = ({ contributor }) => {
                             type: 'spring',
                             stiffness: 100,
                         }}
+                        aria-label={name ? `${name}'s profile photo` : 'Contributor profile photo'}
                     />
                 </div>
 
@@ -79,118 +89,118 @@ const ContributorCard = ({ contributor }) => {
                 >
                     {name}
                 </motion.h3>
+            </Link>
 
-                <motion.p
-                    className='contributor-location'
-                    initial={{ opacity: 0, y: 10 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 0.2 }}
-                >
-                    {location}
-                </motion.p>
+            <motion.p
+                className='contributor-location'
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.2 }}
+            >
+                {location}
+            </motion.p>
 
-                <div
-                    style={{
-                        display: 'flex',
-                        justifyContent: 'center',
-                        alignItems: 'center',
-                        gap: '20px',
-                    }}
-                >
-                    {datepublished && (
-                        <motion.div
-                            className='contributor-meta'
-                            variants={dateVariants}
-                            initial='hidden'
-                            animate='visible'
-                        >
-                            <Calendar size={14} />
-                            <span>{datepublished}</span>
-                        </motion.div>
-                    )}
-                    {pronouns && (
-                        <motion.div
-                            className='contributor-meta'
-                            variants={dateVariants}
-                            initial='hidden'
-                            animate='visible'
-                        >
-                            <CircleUser size={14} />
-                            <span>{pronouns}</span>
-                        </motion.div>
-                    )}
-                </div>
-
-                <motion.div
-                    className='contributor-links'
-                    initial='hidden'
-                    animate='visible'
-                >
-                    {github || linkedin || twitter ? (
-                        <>
-                            {github && (
-                                <motion.a
-                                    href={`https://github.com/${github}`}
-                                    target='_blank'
-                                    rel='noreferrer'
-                                    onClick={(e) => e.stopPropagation()}
-                                    variants={socialLinkVariants}
-                                    custom={0}
-                                    whileHover='hover'
-                                    whileTap={{ scale: 0.9 }}
-                                    className='social-link'
-                                >
-                                    <Github size={18} />
-                                    <span className='social-tooltip'>
-                                        GitHub
-                                    </span>
-                                </motion.a>
-                            )}
-
-                            {linkedin && (
-                                <motion.a
-                                    href={`https://linkedin.com/in/${linkedin}`}
-                                    target='_blank'
-                                    rel='noreferrer'
-                                    onClick={(e) => e.stopPropagation()}
-                                    variants={socialLinkVariants}
-                                    custom={1}
-                                    whileHover='hover'
-                                    whileTap={{ scale: 0.9 }}
-                                    className='social-link'
-                                >
-                                    <Linkedin size={18} />
-                                    <span className='social-tooltip'>
-                                        LinkedIn
-                                    </span>
-                                </motion.a>
-                            )}
-
-                            {twitter && (
-                                <motion.a
-                                    href={`https://x.com/${twitter}`}
-                                    target='_blank'
-                                    rel='noreferrer'
-                                    onClick={(e) => e.stopPropagation()}
-                                    variants={socialLinkVariants}
-                                    custom={2}
-                                    whileHover='hover'
-                                    whileTap={{ scale: 0.9 }}
-                                    className='social-link'
-                                >
-                                    <XIcon size={18} />
-                                    <span className='social-tooltip'>
-                                        X (formerly Twitter)
-                                    </span>
-                                </motion.a>
-                            )}
-                        </>
-                    ) : (
-                        <span className='no-social-data'>No social links</span>
-                    )}
-                </motion.div>
+            <div
+                style={{
+                    display: 'flex',
+                    justifyContent: 'center',
+                    alignItems: 'center',
+                    gap: '20px',
+                }}
+            >
+                {datepublished && (
+                    <motion.div
+                        className='contributor-meta'
+                        variants={dateVariants}
+                        initial='hidden'
+                        animate='visible'
+                    >
+                        <Calendar size={14} />
+                        <span>{datepublished}</span>
+                    </motion.div>
+                )}
+                {pronouns && (
+                    <motion.div
+                        className='contributor-meta'
+                        variants={dateVariants}
+                        initial='hidden'
+                        animate='visible'
+                    >
+                        <CircleUser size={14} />
+                        <span>{pronouns}</span>
+                    </motion.div>
+                )}
             </div>
-        </Link>
+
+            <motion.div
+                className='contributor-links'
+                initial='hidden'
+                animate='visible'
+            >
+                {github || linkedin || twitter ? (
+                    <>
+                        {github && (
+                            <motion.a
+                                href={`https://github.com/${github}`}
+                                target='_blank'
+                                rel='noreferrer'
+                                variants={socialLinkVariants}
+                                custom={0}
+                                whileHover='hover'
+                                whileTap={{ scale: 0.9 }}
+                                className='social-link'
+                                aria-label={`Open GitHub profile for ${name}`}
+                            >
+                                <Github size={18} />
+                                <span className='social-tooltip'>
+                                    GitHub
+                                </span>
+                            </motion.a>
+                        )}
+
+                        {linkedin && (
+                            <motion.a
+                                href={`https://linkedin.com/in/${linkedin}`}
+                                target='_blank'
+                                rel='noreferrer'
+                                variants={socialLinkVariants}
+                                custom={1}
+                                whileHover='hover'
+                                whileTap={{ scale: 0.9 }}
+                                className='social-link'
+                                aria-label={`Open LinkedIn profile for ${name}`}
+                            >
+                                <Linkedin size={18} />
+                                <span className='social-tooltip'>
+                                    LinkedIn
+                                </span>
+                            </motion.a>
+                        )}
+
+                        {twitter && (
+                            <motion.a
+                                href={`https://x.com/${twitter}`}
+                                target='_blank'
+                                rel='noreferrer'
+                                variants={socialLinkVariants}
+                                custom={2}
+                                whileHover='hover'
+                                whileTap={{ scale: 0.9 }}
+                                className='social-link'
+                                aria-label={`Open X (formerly Twitter) profile for ${name}`}
+                            >
+                                <XIcon size={18} />
+                                <span className='social-tooltip'>
+                                    X (formerly Twitter)
+                                </span>
+                            </motion.a>
+                        )}
+                    </>
+                ) : (
+                    <span className='no-social-data'>No social links</span>
+                )}
+            </motion.div>
+        </div>
     );
 };
 
