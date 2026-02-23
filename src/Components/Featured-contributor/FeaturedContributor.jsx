@@ -10,7 +10,7 @@ const FeaturedContributor = ({ contributor, darkmode }) => {
     const pageAttributes = contributor?.node?.pageAttributes;
     const { name, image, location, datepublished, intro, firstcommit } =
         pageAttributes || {};
-    const { slug } = contributor?.node?.fields;
+    const slug = contributor?.node?.fields?.slug;
     return (
         <motion.div
             className={`featured-contributor-section ${
@@ -26,10 +26,10 @@ const FeaturedContributor = ({ contributor, darkmode }) => {
                 <Link
                     to={slug}
                     className='featured-contributor-card'
-                    role="button"
+                    role='button'
                     tabIndex={0}
                     aria-label={`View details for featured contributor ${name}`}
-                    onKeyDown={e => {
+                    onKeyDown={(e) => {
                         if (e.key === 'Enter' || e.key === ' ') {
                             e.preventDefault();
                             e.target.click();
@@ -45,8 +45,16 @@ const FeaturedContributor = ({ contributor, darkmode }) => {
                     >
                         <img
                             src={image}
-                            alt={name ? `${name}'s profile photo` : 'Featured contributor profile photo'}
-                            aria-label={name ? `${name}'s profile photo` : 'Featured contributor profile photo'}
+                            alt={
+                                name
+                                    ? `${name}'s profile photo`
+                                    : 'Featured contributor profile photo'
+                            }
+                            aria-label={
+                                name
+                                    ? `${name}'s profile photo`
+                                    : 'Featured contributor profile photo'
+                            }
                         />
                     </motion.div>
 

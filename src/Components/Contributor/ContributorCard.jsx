@@ -5,8 +5,8 @@ import { Calendar, Github, Linkedin, CircleUser } from 'lucide-react';
 import XIcon from '../XIcon';
 
 const ContributorCard = ({ contributor }) => {
-    const { pageAttributes } = contributor?.node;
-    const { slug } = contributor?.node?.fields;
+    const pageAttributes = contributor?.node?.pageAttributes ?? {};
+    const slug = contributor?.node?.fields?.slug;
 
     const {
         name,
@@ -48,7 +48,11 @@ const ContributorCard = ({ contributor }) => {
     };
 
     return (
-        <div className='contributor-card' role="region" aria-label={`Contributor card for ${name}`}> 
+        <div
+            className='contributor-card'
+            role='region'
+            aria-label={`Contributor card for ${name}`}
+        >
             <Link
                 to={slug}
                 style={{
@@ -56,10 +60,10 @@ const ContributorCard = ({ contributor }) => {
                     color: 'inherit',
                     display: 'block',
                 }}
-                role="button"
+                role='button'
                 tabIndex={0}
                 aria-label={`View details for contributor ${name}`}
-                onKeyDown={e => {
+                onKeyDown={(e) => {
                     if (e.key === 'Enter' || e.key === ' ') {
                         e.preventDefault();
                         e.target.click();
@@ -69,7 +73,11 @@ const ContributorCard = ({ contributor }) => {
                 <div className='contributor-image-wrapper'>
                     <motion.img
                         src={image}
-                        alt={name ? `${name}'s profile photo` : 'Contributor profile photo'}
+                        alt={
+                            name
+                                ? `${name}'s profile photo`
+                                : 'Contributor profile photo'
+                        }
                         loading='lazy'
                         initial={{ scale: 0.8, opacity: 0 }}
                         animate={{ scale: 1, opacity: 1 }}
@@ -78,7 +86,11 @@ const ContributorCard = ({ contributor }) => {
                             type: 'spring',
                             stiffness: 100,
                         }}
-                        aria-label={name ? `${name}'s profile photo` : 'Contributor profile photo'}
+                        aria-label={
+                            name
+                                ? `${name}'s profile photo`
+                                : 'Contributor profile photo'
+                        }
                     />
                 </div>
 
@@ -152,9 +164,7 @@ const ContributorCard = ({ contributor }) => {
                                 aria-label={`Open GitHub profile for ${name}`}
                             >
                                 <Github size={18} />
-                                <span className='social-tooltip'>
-                                    GitHub
-                                </span>
+                                <span className='social-tooltip'>GitHub</span>
                             </motion.a>
                         )}
 
@@ -171,9 +181,7 @@ const ContributorCard = ({ contributor }) => {
                                 aria-label={`Open LinkedIn profile for ${name}`}
                             >
                                 <Linkedin size={18} />
-                                <span className='social-tooltip'>
-                                    LinkedIn
-                                </span>
+                                <span className='social-tooltip'>LinkedIn</span>
                             </motion.a>
                         )}
 
