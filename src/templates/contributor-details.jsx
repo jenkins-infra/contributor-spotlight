@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { graphql, Link } from 'gatsby';
 import { Box, Stack, Typography, useTheme } from '@mui/material';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
@@ -18,6 +18,20 @@ function ContributorDetails(props) {
     const title =
         props.data.asciidoc.pageAttributes.name +
         ' - Jenkins Contributor Spotlight';
+
+    // State for sanitized HTML
+    const [sanitizedHTML, setSanitizedHTML] = useState(props.data.asciidoc.html);
+
+    // Sanitize HTML on client side only
+    useEffect(() => {
+        if (typeof window !== 'undefined') {
+            import('dompurify').then((module) => {
+                const DOMPurify = module.default;
+                setSanitizedHTML(DOMPurify.sanitize(props.data.asciidoc.html));
+            });
+        }
+    }, [props.data.asciidoc.html]);
+
     const socialLinkVariants = {
         hidden: { opacity: 0, scale: 0.8 },
         visible: (i) => ({
@@ -244,7 +258,7 @@ function ContributorDetails(props) {
                     </Box>
                     <Box
                         dangerouslySetInnerHTML={{
-                            __html: props.data.asciidoc.html,
+                            __html: sanitizedHTML,
                         }}
                     />
                 </Box>
