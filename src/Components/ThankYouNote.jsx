@@ -5,7 +5,7 @@ import axios from 'axios';
 import Papa from 'papaparse';
 import dayjs from 'dayjs';
 
-const CommunityStats = ({ darkmode }) => {
+const ThankYouNote = ({ darkmode }) => {
     const theme = useTheme();
     const isDesktop = useMediaQuery(theme.breakpoints.up('lg'));
     const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
@@ -163,4 +163,4 @@ const CommunityStats = ({ darkmode }) => {
         </Box>
     );
 };
-export default CommunityStats;
+export default ThankYouNote;
