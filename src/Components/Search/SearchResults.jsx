@@ -106,7 +106,7 @@ function SearchResults({ results, darkmode }) {
                                     )}
                                     {item?.twitter && (
                                         <motion.a
-                                            href={`https://twitter.com/${item.twitter}`}
+                                            href={`https://x.com/${item.twitter}`}
                                             target='_blank'
                                             rel='noreferrer'
                                             onClick={(e) => e.stopPropagation()}
