@@ -1,13 +1,26 @@
 import React from 'react';
-import { motion } from 'framer-motion';
-import { Link } from 'gatsby';
-import { Calendar, Github, Linkedin, CircleUser } from 'lucide-react';
-import XIcon from '../XIcon';
+import {
+    Card,
+    CardActionArea,
+    CardContent,
+    CardMedia,
+    Typography,
+    Box,
+    IconButton,
+    Stack,
+} from '@mui/material';
+import {
+    GitHub,
+    LinkedIn,
+    Twitter,
+    CalendarMonth,
+    Person,
+} from '@mui/icons-material';
+import { Link as GatsbyLink } from 'gatsby';
 
 const ContributorCard = ({ contributor }) => {
     const pageAttributes = contributor?.node?.pageAttributes ?? {};
     const slug = contributor?.node?.fields?.slug;
-
     const {
         name,
         image,
@@ -19,196 +32,91 @@ const ContributorCard = ({ contributor }) => {
         pronouns,
     } = pageAttributes;
 
-    const socialLinkVariants = {
-        hidden: { opacity: 0, scale: 0.8 },
-        visible: (i) => ({
-            opacity: 1,
-            scale: 1,
-            transition: {
-                delay: i * 0.1,
-                type: 'spring',
-                stiffness: 200,
-                damping: 15,
-            },
-        }),
-        hover: {
-            scale: 1.2,
-            rotate: 5,
-            transition: { type: 'spring', stiffness: 400 },
-        },
-    };
-
-    const dateVariants = {
-        hidden: { opacity: 0, x: -20 },
-        visible: {
-            opacity: 1,
-            x: 0,
-            transition: { delay: 0.2 },
-        },
-    };
-
     return (
-        <div
-            className='contributor-card'
-            role='region'
+        <Card
+            component='article'
+            sx={{ maxWidth: 345, m: 2 }}
+            role='article'
             aria-label={`Contributor card for ${name}`}
         >
-            <Link
+            <CardActionArea
+                component={GatsbyLink}
                 to={slug}
-                style={{
-                    textDecoration: 'none',
-                    color: 'inherit',
-                    display: 'block',
-                }}
-                role='button'
-                tabIndex={0}
                 aria-label={`View details for contributor ${name}`}
-                onKeyDown={(e) => {
-                    if (e.key === 'Enter' || e.key === ' ') {
-                        e.preventDefault();
-                        e.target.click();
+            >
+                <CardMedia
+                    component='img'
+                    height='180'
+                    image={image}
+                    alt={
+                        name
+                            ? `${name}'s profile photo`
+                            : 'Contributor profile photo'
                     }
-                }}
-            >
-                <div className='contributor-image-wrapper'>
-                    <motion.img
-                        src={image}
-                        alt={
-                            name
-                                ? `${name}'s profile photo`
-                                : 'Contributor profile photo'
-                        }
-                        loading='lazy'
-                        initial={{ scale: 0.8, opacity: 0 }}
-                        animate={{ scale: 1, opacity: 1 }}
-                        transition={{
-                            delay: 0.1,
-                            type: 'spring',
-                            stiffness: 100,
-                        }}
-                        aria-label={
-                            name
-                                ? `${name}'s profile photo`
-                                : 'Contributor profile photo'
-                        }
-                    />
-                </div>
-
-                <motion.h3
-                    initial={{ opacity: 0, y: 10 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 0.15 }}
-                >
-                    {name}
-                </motion.h3>
-            </Link>
-
-            <motion.p
-                className='contributor-location'
-                initial={{ opacity: 0, y: 10 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.2 }}
-            >
-                {location}
-            </motion.p>
-
-            <div
-                style={{
-                    display: 'flex',
-                    justifyContent: 'center',
-                    alignItems: 'center',
-                    gap: '20px',
-                }}
-            >
-                {datepublished && (
-                    <motion.div
-                        className='contributor-meta'
-                        variants={dateVariants}
-                        initial='hidden'
-                        animate='visible'
+                />
+                <CardContent>
+                    <Typography gutterBottom variant='h6' component='div'>
+                        {name}
+                    </Typography>
+                    <Typography variant='body2' color='text.secondary'>
+                        {location}
+                    </Typography>
+                    <Stack direction='row' spacing={2} mt={1}>
+                        {datepublished && (
+                            <Box display='flex' alignItems='center'>
+                                <CalendarMonth sx={{ fontSize: 16, mr: 0.5 }} />
+                                <Typography variant='caption'>
+                                    {datepublished}
+                                </Typography>
+                            </Box>
+                        )}
+                        {pronouns && (
+                            <Box display='flex' alignItems='center'>
+                                <Person sx={{ fontSize: 16, mr: 0.5 }} />
+                                <Typography variant='caption'>
+                                    {pronouns}
+                                </Typography>
+                            </Box>
+                        )}
+                    </Stack>
+                </CardContent>
+            </CardActionArea>
+            <Box sx={{ display: 'flex', justifyContent: 'center', pb: 1 }}>
+                {github && (
+                    <IconButton
+                        component='a'
+                        href={`https://github.com/${github}`}
+                        target='_blank'
+                        rel='noopener'
+                        aria-label={`Open GitHub profile for ${name}`}
                     >
-                        <Calendar size={14} />
-                        <span>{datepublished}</span>
-                    </motion.div>
+                        <GitHub />
+                    </IconButton>
                 )}
-                {pronouns && (
-                    <motion.div
-                        className='contributor-meta'
-                        variants={dateVariants}
-                        initial='hidden'
-                        animate='visible'
+                {linkedin && (
+                    <IconButton
+                        component='a'
+                        href={`https://linkedin.com/in/${linkedin}`}
+                        target='_blank'
+                        rel='noopener'
+                        aria-label={`Open LinkedIn profile for ${name}`}
                     >
-                        <CircleUser size={14} />
-                        <span>{pronouns}</span>
-                    </motion.div>
+                        <LinkedIn />
+                    </IconButton>
                 )}
-            </div>
-
-            <motion.div
-                className='contributor-links'
-                initial='hidden'
-                animate='visible'
-            >
-                {github || linkedin || twitter ? (
-                    <>
-                        {github && (
-                            <motion.a
-                                href={`https://github.com/${github}`}
-                                target='_blank'
-                                rel='noreferrer'
-                                variants={socialLinkVariants}
-                                custom={0}
-                                whileHover='hover'
-                                whileTap={{ scale: 0.9 }}
-                                className='social-link'
-                                aria-label={`Open GitHub profile for ${name}`}
-                            >
-                                <Github size={18} />
-                                <span className='social-tooltip'>GitHub</span>
-                            </motion.a>
-                        )}
-
-                        {linkedin && (
-                            <motion.a
-                                href={`https://linkedin.com/in/${linkedin}`}
-                                target='_blank'
-                                rel='noreferrer'
-                                variants={socialLinkVariants}
-                                custom={1}
-                                whileHover='hover'
-                                whileTap={{ scale: 0.9 }}
-                                className='social-link'
-                                aria-label={`Open LinkedIn profile for ${name}`}
-                            >
-                                <Linkedin size={18} />
-                                <span className='social-tooltip'>LinkedIn</span>
-                            </motion.a>
-                        )}
-
-                        {twitter && (
-                            <motion.a
-                                href={`https://x.com/${twitter}`}
-                                target='_blank'
-                                rel='noreferrer'
-                                variants={socialLinkVariants}
-                                custom={2}
-                                whileHover='hover'
-                                whileTap={{ scale: 0.9 }}
-                                className='social-link'
-                                aria-label={`Open X (formerly Twitter) profile for ${name}`}
-                            >
-                                <XIcon size={18} />
-                                <span className='social-tooltip'>
-                                    X (formerly Twitter)
-                                </span>
-                            </motion.a>
-                        )}
-                    </>
-                ) : (
-                    <span className='no-social-data'>No social links</span>
+                {twitter && (
+                    <IconButton
+                        component='a'
+                        href={`https://twitter.com/${twitter}`}
+                        target='_blank'
+                        rel='noopener'
+                        aria-label={`Open Twitter profile for ${name}`}
+                    >
+                        <Twitter />
+                    </IconButton>
                 )}
-            </motion.div>
-        </div>
+            </Box>
+        </Card>
     );
 };
 
