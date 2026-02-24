@@ -83,6 +83,9 @@ function Search({ contributors, darkmode }) {
                         onBlur={() => setIsFocused(false)}
                         placeholder={`[${shortcutHint}] Search contributors...`}
                         className='search-input'
+                        aria-label='Search contributors'
+                        role='searchbox'
+                        tabIndex={0}
                     />
                 </motion.div>
                 <div>

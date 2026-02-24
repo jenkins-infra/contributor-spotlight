@@ -20,7 +20,9 @@ function ContributorDetails(props) {
         ' - Jenkins Contributor Spotlight';
 
     // State for sanitized HTML
-    const [sanitizedHTML, setSanitizedHTML] = useState(props.data.asciidoc.html);
+    const [sanitizedHTML, setSanitizedHTML] = useState(
+        props.data.asciidoc.html
+    );
 
     // Sanitize HTML on client side only
     useEffect(() => {
