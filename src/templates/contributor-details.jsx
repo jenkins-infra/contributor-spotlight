@@ -9,6 +9,7 @@ import dayjs from 'dayjs';
 import { Github, Linkedin, Mail } from 'lucide-react';
 import XIcon from '../Components/XIcon.jsx';
 import { motion } from 'framer-motion';
+import placeholderImage from '../images/jenkins.png';
 import './contributor-details.css';
 function ContributorDetails(props) {
     const theme = useTheme();
@@ -20,7 +21,9 @@ function ContributorDetails(props) {
         ' - Jenkins Contributor Spotlight';
 
     // State for sanitized HTML
-    const [sanitizedHTML, setSanitizedHTML] = useState(props.data.asciidoc.html);
+    const [sanitizedHTML, setSanitizedHTML] = useState(
+        props.data.asciidoc.html
+    );
 
     // Sanitize HTML on client side only
     useEffect(() => {
@@ -101,13 +104,19 @@ function ContributorDetails(props) {
                     <Box sx={{ paddingTop: isMobile ? 5 : 8 }}>
                         <img
                             src={
-                                '../../../' +
                                 props.data.asciidoc.pageAttributes.image
+                                    ? '../../../' +
+                                      props.data.asciidoc.pageAttributes.image
+                                    : placeholderImage
                             }
                             alt='Contributor avatar'
                             width={isDesktop ? 350 : isTablet ? 300 : 250}
                             height={isDesktop ? 350 : isTablet ? 300 : 250}
                             style={{ objectFit: 'cover', borderRadius: '50%' }}
+                            onError={(e) => {
+                                e.target.onerror = null;
+                                e.target.src = placeholderImage;
+                            }}
                         />
                     </Box>
                 </Box>

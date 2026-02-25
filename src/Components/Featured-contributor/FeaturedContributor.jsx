@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { Calendar, GitCommitHorizontal, MapPin } from 'lucide-react';
 import './featured-contributor.css';
 import { Link } from 'gatsby';
+import placeholderImage from '../../images/jenkins.png';
 
 const FeaturedContributor = ({ contributor, darkmode }) => {
     if (!contributor) return null;
@@ -31,7 +32,14 @@ const FeaturedContributor = ({ contributor, darkmode }) => {
                         transition={{ delay: 0.2, duration: 0.4 }}
                         whileHover={{ scale: 1.02 }}
                     >
-                        <img src={image} alt={name} />
+                        <img
+                            src={image || placeholderImage}
+                            alt={name}
+                            onError={(e) => {
+                                e.target.onerror = null;
+                                e.target.src = placeholderImage;
+                            }}
+                        />
                     </motion.div>
 
                     <div className='featured-content'>

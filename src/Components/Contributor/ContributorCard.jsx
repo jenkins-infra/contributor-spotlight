@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { Link } from 'gatsby';
 import { Calendar, Github, Linkedin, CircleUser } from 'lucide-react';
 import XIcon from '../XIcon';
+import placeholderImage from '../../images/jenkins.png';
 
 const ContributorCard = ({ contributor }) => {
     const pageAttributes = contributor?.node?.pageAttributes ?? {};
@@ -59,9 +60,13 @@ const ContributorCard = ({ contributor }) => {
             <div className='contributor-card'>
                 <div className='contributor-image-wrapper'>
                     <motion.img
-                        src={image}
+                        src={image || placeholderImage}
                         alt={name}
                         loading='lazy'
+                        onError={(e) => {
+                            e.target.onerror = null;
+                            e.target.src = placeholderImage;
+                        }}
                         initial={{ scale: 0.8, opacity: 0 }}
                         animate={{ scale: 1, opacity: 1 }}
                         transition={{
