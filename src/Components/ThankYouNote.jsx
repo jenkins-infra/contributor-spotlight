@@ -163,4 +163,5 @@ const ThankYouNote = ({ darkmode }) => {
         </Box>
     );
 };
+
 export default ThankYouNote;
