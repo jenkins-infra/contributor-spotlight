@@ -8,7 +8,7 @@ export default [
     js.configs.recommended,
     eslintPluginPrettierRecommended,
     {
-        files: ['**/*.js'],
+        files: ['**/*.{js,jsx}'],
 
         plugins: {
             react,

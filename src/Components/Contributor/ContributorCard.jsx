@@ -1,12 +1,18 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'gatsby';
-import { Calendar, Github, Linkedin, CircleUser, GitCommitVertical } from 'lucide-react';
+import {
+    Calendar,
+    Github,
+    Linkedin,
+    CircleUser,
+    GitCommitVertical,
+} from 'lucide-react';
 import XIcon from './XIcon';
 
 const ContributorCard = ({ contributor }) => {
-    const { pageAttributes } = contributor?.node;
-    const { slug } = contributor?.node?.fields;
+    const pageAttributes = contributor?.node?.pageAttributes ?? {};
+    const slug = contributor?.node?.fields?.slug;
 
     const {
         name,
@@ -92,7 +98,7 @@ const ContributorCard = ({ contributor }) => {
                         initial='hidden'
                         animate='visible'
                     >
-                        < GitCommitVertical
+                        <GitCommitVertical
                             size={12}
                             fill='currentColor'
                             style={{ flexShrink: 0 }}

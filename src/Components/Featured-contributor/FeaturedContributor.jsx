@@ -10,7 +10,7 @@ const FeaturedContributor = ({ contributor, darkmode }) => {
     const pageAttributes = contributor?.node?.pageAttributes;
     const { name, image, location, datepublished, intro, firstcommit } =
         pageAttributes || {};
-    const { slug } = contributor?.node?.fields;
+    const slug = contributor?.node?.fields?.slug;
     return (
         <motion.div
             className={`featured-contributor-section ${
