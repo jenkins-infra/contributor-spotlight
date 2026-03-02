@@ -1,12 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'gatsby';
-import {
-    Calendar,
-    Github,
-    Linkedin,
-    CircleUser,
-} from 'lucide-react';
+import { Calendar, Github, Linkedin, CircleUser, GitCommitVertical } from 'lucide-react';
 import XIcon from './XIcon';
 
 const ContributorCard = ({ contributor }) => {
@@ -18,12 +13,12 @@ const ContributorCard = ({ contributor }) => {
         image,
         location,
         datepublished,
+        firstcommit,
         github,
         linkedin,
         twitter,
         pronouns,
     } = pageAttributes;
-
     const socialLinkVariants = {
         hidden: { opacity: 0, scale: 0.8 },
         visible: (i) => ({
@@ -40,6 +35,20 @@ const ContributorCard = ({ contributor }) => {
             scale: 1.2,
             rotate: 5,
             transition: { type: 'spring', stiffness: 400 },
+        },
+    };
+    const badgeVariants = {
+        hidden: { opacity: 0, scale: 0.6, y: -10 },
+        visible: {
+            opacity: 1,
+            scale: 1,
+            y: 0,
+            transition: {
+                delay: 0.05,
+                type: 'spring',
+                stiffness: 260,
+                damping: 18,
+            },
         },
     };
 
@@ -76,6 +85,21 @@ const ContributorCard = ({ contributor }) => {
                         }}
                     />
                 </div>
+                {firstcommit && (
+                    <motion.div
+                        className='contributor-est-badge'
+                        variants={badgeVariants}
+                        initial='hidden'
+                        animate='visible'
+                    >
+                        < GitCommitVertical
+                            size={12}
+                            fill='currentColor'
+                            style={{ flexShrink: 0 }}
+                        />
+                        Est. {firstcommit}
+                    </motion.div>
+                )}
 
                 <motion.h3
                     initial={{ opacity: 0, y: 10 }}
