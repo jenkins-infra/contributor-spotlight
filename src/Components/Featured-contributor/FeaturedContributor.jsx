@@ -2,14 +2,41 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Calendar, GitCommitHorizontal, MapPin } from 'lucide-react';
 import './featured-contributor.css';
-import { Link } from 'gatsby';
+import { Link, graphql, useStaticQuery } from 'gatsby';
+import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 
 const FeaturedContributor = ({ contributor, darkmode }) => {
+    const data = useStaticQuery(graphql`
+        query FeaturedContributorImagesQuery {
+            allFile(
+                filter: {
+                    sourceInstanceName: { eq: "images" }
+                    extension: { in: ["jpg", "jpeg", "png", "webp", "avif"] }
+                }
+            ) {
+                nodes {
+                    relativePath
+                    childImageSharp {
+                        gatsbyImageData(width: 500, placeholder: BLURRED)
+                    }
+                }
+            }
+        }
+    `);
+
     if (!contributor) return null;
 
     const pageAttributes = contributor?.node?.pageAttributes;
     const { name, image, location, datepublished, intro, firstcommit } =
         pageAttributes || {};
+    const normalizeImagePath = (value) =>
+        (value || '').replace(/^\//, '').replace(/^static\//, '');
+    const normalizedPath = normalizeImagePath(image);
+    const matchedImageNode = data.allFile.nodes.find(
+        (node) => node.relativePath === normalizedPath
+    );
+    const optimizedImageData = getImage(matchedImageNode);
+    const fallbackImageSrc = image;
     const slug = contributor?.node?.fields?.slug;
     return (
         <motion.div
@@ -31,7 +58,14 @@ const FeaturedContributor = ({ contributor, darkmode }) => {
                         transition={{ delay: 0.2, duration: 0.4 }}
                         whileHover={{ scale: 1.02 }}
                     >
-                        <img src={image} alt={name} />
+                        {optimizedImageData ? (
+                            <GatsbyImage
+                                image={optimizedImageData}
+                                alt={name}
+                            />
+                        ) : (
+                            <img src={fallbackImageSrc} alt={name} />
+                        )}
                     </motion.div>
 
                     <div className='featured-content'>

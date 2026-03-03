@@ -7,6 +7,7 @@ import { Helmet } from 'react-helmet';
 import dayjs from 'dayjs';
 import axios from 'axios';
 import Papa from 'papaparse';
+import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import ContributorsList from '../Components/Contributor/ContributorsList.jsx';
 import FeaturedContributor from '../Components/Featured-contributor/FeaturedContributor.jsx';
 import Search from '../Components/Search/Search.jsx';
@@ -15,9 +16,28 @@ const IndexPage = (props) => {
     const isDesktop = useMediaQuery(theme.breakpoints.up('lg'));
     const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
     const { data } = props;
+    const normalizeImagePath = (value) =>
+        (value || '').replace(/^\//, '').replace(/^static\//, '');
+    const imageNodes = data?.allFile?.nodes || [];
+    const getOptimizedImageData = (value) => {
+        const normalizedPath = normalizeImagePath(value);
+        if (!normalizedPath) return null;
+
+        const matchedNode = imageNodes.find(
+            (node) => node.relativePath === normalizedPath
+        );
+        return getImage(matchedNode);
+    };
+
     const contributors = data.allAsciidoc.edges;
     const [thankYou, setThankYou] = React.useState([]);
     const [darkmode, setDarkmode] = React.useState(null);
+
+    const jenkinsLogoImageData = getOptimizedImageData('/jenkins.png');
+    const randomContributorImagePath = thankYou[6]?.replace(/['"]+/g, '');
+    const randomContributorImageData = getOptimizedImageData(
+        randomContributorImagePath
+    );
 
     useEffect(() => {
         if (typeof window !== 'undefined') {
@@ -124,7 +144,14 @@ const IndexPage = (props) => {
                     continuous integration and delivery
                 </Typography>
                 <Box sx={{ paddingTop: 8 }}>
-                    <img src='/jenkins.png' alt='Jenkins logo' />
+                    {jenkinsLogoImageData ? (
+                        <GatsbyImage
+                            image={jenkinsLogoImageData}
+                            alt='Jenkins logo'
+                        />
+                    ) : (
+                        <img src='/jenkins.png' alt='Jenkins logo' />
+                    )}
                 </Box>
             </Box>
 
@@ -183,18 +210,40 @@ const IndexPage = (props) => {
                                 alignItems: 'center',
                             }}
                         >
-                            <img
-                                src={thankYou[6]?.replace(/['"]+/g, '')}
-                                alt='Random contributor'
-                                width={isDesktop ? 100 : isMobile ? 36 : 90}
-                                height={
-                                    isDesktop ? 100 : isMobile ? '100%' : 90
-                                }
-                                style={{
-                                    marginTop: 'auto',
-                                    marginBottom: 'auto',
-                                }}
-                            />
+                            {randomContributorImageData ? (
+                                <GatsbyImage
+                                    image={randomContributorImageData}
+                                    alt='Random contributor'
+                                    style={{
+                                        marginTop: 'auto',
+                                        marginBottom: 'auto',
+                                        width: isDesktop
+                                            ? 100
+                                            : isMobile
+                                              ? 36
+                                              : 90,
+                                        height: isDesktop
+                                            ? 100
+                                            : isMobile
+                                              ? '100%'
+                                              : 90,
+                                    }}
+                                    imgStyle={{ objectFit: 'cover' }}
+                                />
+                            ) : (
+                                <img
+                                    src={randomContributorImagePath}
+                                    alt='Random contributor'
+                                    width={isDesktop ? 100 : isMobile ? 36 : 90}
+                                    height={
+                                        isDesktop ? 100 : isMobile ? '100%' : 90
+                                    }
+                                    style={{
+                                        marginTop: 'auto',
+                                        marginBottom: 'auto',
+                                    }}
+                                />
+                            )}
                         </Box>
                         <Box
                             sx={{
@@ -282,7 +331,7 @@ const IndexPage = (props) => {
 export default IndexPage;
 
 export const pageQuery = graphql`
-    query {
+    query IndexPageQuery {
         allAsciidoc(limit: 1000, sort: { fields: { publicationDate: DESC } }) {
             edges {
                 node {
@@ -309,6 +358,19 @@ export const pageQuery = graphql`
                         featured
                         intro
                     }
+                }
+            }
+        }
+        allFile(
+            filter: {
+                sourceInstanceName: { eq: "images" }
+                extension: { in: ["jpg", "jpeg", "png", "webp", "avif"] }
+            }
+        ) {
+            nodes {
+                relativePath
+                childImageSharp {
+                    gatsbyImageData(width: 120, placeholder: BLURRED)
                 }
             }
         }

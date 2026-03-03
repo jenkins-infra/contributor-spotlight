@@ -68,6 +68,9 @@ exports.createPages = ({ graphql, actions }) => {
                 component: slash(articleTemplate),
                 context: {
                     id: edge.node.id,
+                    image: (edge.node.pageAttributes.image || '')
+                        .replace(/^\//, '')
+                        .replace(/^static\//, ''),
                 },
             });
         });

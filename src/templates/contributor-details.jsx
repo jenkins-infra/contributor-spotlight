@@ -10,6 +10,7 @@ import { Github, Linkedin, Mail } from 'lucide-react';
 import XIcon from '../Components/XIcon.jsx';
 import { motion } from 'framer-motion';
 import './contributor-details.css';
+import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 function ContributorDetails(props) {
     const theme = useTheme();
     const isDesktop = useMediaQuery(theme.breakpoints.up('lg'));
@@ -18,9 +19,12 @@ function ContributorDetails(props) {
     const title =
         props.data.asciidoc.pageAttributes.name +
         ' - Jenkins Contributor Spotlight';
+    const imageData = getImage(props.data.imageFile);
 
     // State for sanitized HTML
-    const [sanitizedHTML, setSanitizedHTML] = useState(props.data.asciidoc.html);
+    const [sanitizedHTML, setSanitizedHTML] = useState(
+        props.data.asciidoc.html
+    );
 
     // Sanitize HTML on client side only
     useEffect(() => {
@@ -99,16 +103,38 @@ function ContributorDetails(props) {
                     }}
                 >
                     <Box sx={{ paddingTop: isMobile ? 5 : 8 }}>
-                        <img
-                            src={
-                                '../../../' +
-                                props.data.asciidoc.pageAttributes.image
-                            }
-                            alt='Contributor avatar'
-                            width={isDesktop ? 350 : isTablet ? 300 : 250}
-                            height={isDesktop ? 350 : isTablet ? 300 : 250}
-                            style={{ objectFit: 'cover', borderRadius: '50%' }}
-                        />
+                        <Box
+                            sx={{
+                                width: isDesktop ? 350 : isTablet ? 300 : 250,
+                                height: isDesktop ? 350 : isTablet ? 300 : 250,
+                                borderRadius: '50%',
+                                overflow: 'hidden',
+                            }}
+                        >
+                            {imageData ? (
+                                <GatsbyImage
+                                    image={imageData}
+                                    alt='Contributor avatar'
+                                    style={{ width: '100%', height: '100%' }}
+                                    imgStyle={{
+                                        objectFit: 'cover',
+                                    }}
+                                />
+                            ) : (
+                                <img
+                                    src={
+                                        '../../../' +
+                                        props.data.asciidoc.pageAttributes.image
+                                    }
+                                    alt='Contributor avatar'
+                                    width='100%'
+                                    height='100%'
+                                    style={{
+                                        objectFit: 'cover',
+                                    }}
+                                />
+                            )}
+                        </Box>
                     </Box>
                 </Box>
                 <Box
@@ -270,7 +296,7 @@ function ContributorDetails(props) {
 export default ContributorDetails;
 
 export const pageQuery = graphql`
-    query ($id: String!) {
+    query ($id: String!, $image: String!) {
         asciidoc(id: { eq: $id }) {
             html
             document {
@@ -291,6 +317,16 @@ export const pageQuery = graphql`
                 image
                 featured
                 intro
+            }
+        }
+        imageFile: file(relativePath: { eq: $image }) {
+            childImageSharp {
+                gatsbyImageData(
+                    width: 350
+                    height: 350
+                    placeholder: BLURRED
+                    layout: FIXED
+                )
             }
         }
     }

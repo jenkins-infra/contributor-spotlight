@@ -1,11 +1,37 @@
 import React from 'react';
 import './search-result.css';
-import { Link } from 'gatsby';
+import { Link, graphql, useStaticQuery } from 'gatsby';
 import { Github, Linkedin } from 'lucide-react';
 import { motion } from 'framer-motion';
 import XIcon from '../XIcon.jsx';
+import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 
 function SearchResults({ results, darkmode }) {
+    const data = useStaticQuery(graphql`
+        query SearchResultsImagesQuery {
+            allFile(
+                filter: {
+                    sourceInstanceName: { eq: "images" }
+                    extension: { in: ["jpg", "jpeg", "png", "webp", "avif"] }
+                }
+            ) {
+                nodes {
+                    relativePath
+                    childImageSharp {
+                        gatsbyImageData(
+                            width: 50
+                            height: 50
+                            placeholder: BLURRED
+                        )
+                    }
+                }
+            }
+        }
+    `);
+
+    const normalizeImagePath = (value) =>
+        (value || '').replace(/^\//, '').replace(/^static\//, '');
+
     if (!results || results.length === 0) {
         return (
             <div
@@ -48,14 +74,27 @@ function SearchResults({ results, darkmode }) {
         <div className='results-container'>
             {sortedResults.map(({ item, score }) => {
                 if (!item) return null;
+                const normalizedPath = normalizeImagePath(item?.image);
+                const matchedImageNode = data.allFile.nodes.find(
+                    (node) => node.relativePath === normalizedPath
+                );
+                const optimizedImageData = getImage(matchedImageNode);
                 return (
                     <Link to={item?.slug} key={item?.id}>
                         <div className='result-card'>
-                            <img
-                                src={item?.image}
-                                alt={item?.name}
-                                className='result-avatar'
-                            />
+                            {optimizedImageData ? (
+                                <GatsbyImage
+                                    image={optimizedImageData}
+                                    alt={item?.name}
+                                    className='result-avatar'
+                                />
+                            ) : (
+                                <img
+                                    src={item?.image}
+                                    alt={item?.name}
+                                    className='result-avatar'
+                                />
+                            )}
                             <div className='result-content'>
                                 <div className='result-header'>
                                     <h3 className='result-name'>
