@@ -16,8 +16,8 @@ const IndexPage = (props) => {
     const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
     const { data } = props;
     const contributors = data.allAsciidoc.edges;
-    const [thankYou, setThankYou] = React.useState([]);
-    const [darkmode, setDarkmode] = React.useState(null);
+    const [thankYou, setThankYou] = useState([]);
+    const [darkmode, setDarkmode] = useState(null);
 
     useEffect(() => {
         if (typeof window !== 'undefined') {
