@@ -15,27 +15,11 @@ function ContributorDetails(props) {
     const isDesktop = useMediaQuery(theme.breakpoints.up('lg'));
     const isTablet = useMediaQuery(theme.breakpoints.between('lg', 'sm'));
     const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
+    const darkmode = useMediaQuery('(prefers-color-scheme: dark)');
     const title =
         props.data.asciidoc.pageAttributes.name +
         ' - Jenkins Contributor Spotlight';
     const { previous, next } = props.pageContext;
-    const [darkmode, setDarkmode] = React.useState(null);
-
-    useEffect(() => {
-        if (typeof window !== 'undefined') {
-            const mediaquery =
-                window.matchMedia &&
-                window.matchMedia('(prefers-color-scheme: dark)');
-            setDarkmode(mediaquery.matches);
-            const handler = (event) => {
-                setDarkmode(event.matches);
-            };
-            mediaquery.addEventListener('change', handler);
-            return () => {
-                mediaquery.removeEventListener('change', handler);
-            };
-        }
-    }, []);
 
     // State for sanitized HTML
     const [sanitizedHTML, setSanitizedHTML] = useState(
