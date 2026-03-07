@@ -77,7 +77,7 @@ const IndexPage = (props) => {
                 display='flex'
                 flexDirection='column'
                 alignItems='center'
-                justifyContent='flex-start'
+                justifyContent='center'
                 padding={isMobile ? 5 : 10}
                 sx={{
                     backgroundImage:
@@ -85,6 +85,7 @@ const IndexPage = (props) => {
                     backgroundRepeat: 'no-repeat',
                     backgroundSize: 'cover',
                     backgroundPosition: 'center',
+                    height: '65dvh',
                 }}
             >
                 <Typography
@@ -97,8 +98,23 @@ const IndexPage = (props) => {
                     as we showcase the top contributors shaping the future of
                     continuous integration and delivery
                 </Typography>
-                <Box sx={{ paddingTop: 8 }}>
-                    <img src='/jenkins.png' alt='Jenkins logo' />
+                <Box
+                    sx={{
+                        paddingTop: 8,
+                    }}
+                >
+                    <img
+                        style={{
+                            width: '150px',
+                            objectFit: 'cover',
+                            borderRadius: '50%',
+                            display: 'relative',
+                            justifyContent: 'center',
+                            alignItems: 'center',
+                        }}
+                        src='/jenkins.png'
+                        alt='Jenkins logo'
+                    />
                 </Box>
             </Box>
 
