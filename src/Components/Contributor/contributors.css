@@ -148,6 +148,7 @@
     padding: 0.4rem 0.8rem;
     background: rgba(255, 255, 255, 0.05);
     border-radius: 12px;
+    white-space: nowrap;
 }
 
 .contributor-links {
