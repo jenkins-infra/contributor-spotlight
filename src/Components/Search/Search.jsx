@@ -91,6 +91,9 @@ function Search({ contributors, darkmode }) {
                                 : 'Search contributors...'
                         }
                         className='search-input'
+                        aria-label='Search contributors'
+                        role='searchbox'
+                        tabIndex={0}
                     />
                 </motion.div>
                 <div>
