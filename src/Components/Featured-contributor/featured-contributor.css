@@ -166,3 +166,46 @@
         font-size: 1rem;
     }
 }
+
+@media (min-width: 1025px) {
+    .expand-button {
+        display: none;
+    }
+}
+
+@media (max-width: 1024px) {
+    .intro-content-wrapper {
+        max-height: 128px;
+        overflow-y: hidden;
+        transition: max-height 0.3s ease;
+    }
+
+    .featured-highlight.expanded .intro-content-wrapper {
+        max-height: 1500px;
+    }
+
+    .expand-button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        background: transparent;
+        border: none;
+        color: #ffd700;
+        margin-top: 8px;
+        cursor: pointer;
+        padding: 4px 0;
+    }
+
+    .featured-contributor-section.light .expand-button {
+        color: #2563eb;
+    }
+
+    .expand-button svg {
+        transition: transform 0.3s ease;
+    }
+
+    .expand-button svg.rotated {
+        transform: rotate(180deg);
+    }
+}

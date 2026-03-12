@@ -1,10 +1,17 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Calendar, GitCommitHorizontal, MapPin } from 'lucide-react';
+import {
+    Calendar,
+    GitCommitHorizontal,
+    MapPin,
+    ChevronDown,
+} from 'lucide-react';
 import './featured-contributor.css';
 import { Link } from 'gatsby';
 
 const FeaturedContributor = ({ contributor, darkmode }) => {
+    const [isExpanded, setIsExpanded] = useState(false);
+
     if (!contributor) return null;
 
     const pageAttributes = contributor?.node?.pageAttributes;
@@ -66,7 +73,7 @@ const FeaturedContributor = ({ contributor, darkmode }) => {
                         </motion.div>
 
                         <motion.div
-                            className='featured-highlight'
+                            className={`featured-highlight ${isExpanded ? 'expanded' : ''}`}
                             initial={{ opacity: 0, y: 10 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ delay: 0.5 }}
@@ -75,9 +82,24 @@ const FeaturedContributor = ({ contributor, darkmode }) => {
                                 transition: { type: 'spring', stiffness: 300 },
                             }}
                         >
-                            <p className='featured-intro'>
-                                <strong>{name}</strong> {intro}
-                            </p>
+                            <div className='intro-content-wrapper'>
+                                <p className='featured-intro'>
+                                    <strong>{name}</strong> {intro}
+                                </p>
+                            </div>
+                            <button
+                                className='expand-button'
+                                onClick={(e) => {
+                                    e.preventDefault();
+                                    e.stopPropagation();
+                                    setIsExpanded(!isExpanded);
+                                }}
+                            >
+                                <ChevronDown
+                                    size={24}
+                                    className={isExpanded ? 'rotated' : ''}
+                                />
+                            </button>
                         </motion.div>
                     </div>
                 </Link>
