@@ -10,16 +10,16 @@ import { Github, Linkedin, Mail } from 'lucide-react';
 import XIcon from '../Components/XIcon.jsx';
 import { motion } from 'framer-motion';
 import './contributor-details.css';
+import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 function ContributorDetails(props) {
     const theme = useTheme();
     const isDesktop = useMediaQuery(theme.breakpoints.up('lg'));
     const isTablet = useMediaQuery(theme.breakpoints.between('lg', 'sm'));
     const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
-    const darkmode = useMediaQuery('(prefers-color-scheme: dark)');
     const title =
         props.data.asciidoc.pageAttributes.name +
         ' - Jenkins Contributor Spotlight';
-    const { previous, next } = props.pageContext;
+    const imageData = getImage(props.data.imageFile);
 
     // State for sanitized HTML
     const [sanitizedHTML, setSanitizedHTML] = useState(
@@ -103,16 +103,38 @@ function ContributorDetails(props) {
                     }}
                 >
                     <Box sx={{ paddingTop: isMobile ? 5 : 8 }}>
-                        <img
-                            src={
-                                '../../../' +
-                                props.data.asciidoc.pageAttributes.image
-                            }
-                            alt='Contributor avatar'
-                            width={isDesktop ? 350 : isTablet ? 300 : 250}
-                            height={isDesktop ? 350 : isTablet ? 300 : 250}
-                            style={{ objectFit: 'cover', borderRadius: '50%' }}
-                        />
+                        <Box
+                            sx={{
+                                width: isDesktop ? 350 : isTablet ? 300 : 250,
+                                height: isDesktop ? 350 : isTablet ? 300 : 250,
+                                borderRadius: '50%',
+                                overflow: 'hidden',
+                            }}
+                        >
+                            {imageData ? (
+                                <GatsbyImage
+                                    image={imageData}
+                                    alt='Contributor avatar'
+                                    style={{ width: '100%', height: '100%' }}
+                                    imgStyle={{
+                                        objectFit: 'cover',
+                                    }}
+                                />
+                            ) : (
+                                <img
+                                    src={
+                                        '../../../' +
+                                        props.data.asciidoc.pageAttributes.image
+                                    }
+                                    alt='Contributor avatar'
+                                    width='100%'
+                                    height='100%'
+                                    style={{
+                                        objectFit: 'cover',
+                                    }}
+                                />
+                            )}
+                        </Box>
                     </Box>
                 </Box>
                 <Box
@@ -265,146 +287,6 @@ function ContributorDetails(props) {
                             __html: sanitizedHTML,
                         }}
                     />
-                    <Box
-                        sx={{
-                            mt: 10,
-                            pt: 4,
-                            borderTop: '1px solid #e0e0e0',
-                            display: 'flex',
-                            flexDirection: {
-                                xs: 'column',
-                                sm: 'row',
-                            },
-                            justifyContent: 'space-between',
-                            alignItems: {
-                                xs: 'stretch',
-                                sm: 'center',
-                            },
-                            gap: 2,
-                        }}
-                    >
-                        {previous ? (
-                            <Link
-                                to={previous.slug}
-                                style={{
-                                    textDecoration: 'none',
-                                    color: 'inherit',
-                                }}
-                            >
-                                <Stack
-                                    direction='row'
-                                    alignItems='center'
-                                    spacing={1}
-                                >
-                                    <ArrowBackIcon fontSize='small' />
-
-                                    <img
-                                        src={`../../../${previous.image}`}
-                                        alt={previous.title}
-                                        width={44}
-                                        height={44}
-                                        style={{
-                                            borderRadius: '50%',
-                                            objectFit: 'cover',
-                                        }}
-                                    />
-
-                                    <Box>
-                                        <Typography
-                                            variant='caption'
-                                            sx={{
-                                                color: darkmode
-                                                    ? '#bbbbbb'
-                                                    : 'text.secondary',
-                                            }}
-                                        >
-                                            Previous Profile
-                                        </Typography>
-                                        <Typography
-                                            fontWeight={600}
-                                            sx={{
-                                                maxWidth: 180,
-                                                whiteSpace: 'nowrap',
-                                                overflow: 'hidden',
-                                                textOverflow: 'ellipsis',
-                                            }}
-                                        >
-                                            {previous.title}
-                                        </Typography>
-                                    </Box>
-                                </Stack>
-                            </Link>
-                        ) : (
-                            <div />
-                        )}
-
-                        {next ? (
-                            <Box
-                                sx={{
-                                    alignSelf: {
-                                        xs: 'flex-end',
-                                        sm: 'auto',
-                                    },
-                                }}
-                            >
-                                <Link
-                                    to={next.slug}
-                                    style={{
-                                        textDecoration: 'none',
-                                        color: 'inherit',
-                                    }}
-                                >
-                                    <Stack
-                                        direction='row'
-                                        alignItems='center'
-                                        spacing={1}
-                                    >
-                                        <Box textAlign='right'>
-                                            <Typography
-                                                variant='caption'
-                                                sx={{
-                                                    color: darkmode
-                                                        ? '#bbbbbb'
-                                                        : 'text.secondary',
-                                                }}
-                                            >
-                                                Next Profile
-                                            </Typography>
-                                            <Typography
-                                                fontWeight={600}
-                                                sx={{
-                                                    maxWidth: 180,
-                                                    whiteSpace: 'nowrap',
-                                                    overflow: 'hidden',
-                                                    textOverflow: 'ellipsis',
-                                                }}
-                                            >
-                                                {next.title}
-                                            </Typography>
-                                        </Box>
-
-                                        <img
-                                            src={`../../../${next.image}`}
-                                            alt={next.title}
-                                            width={44}
-                                            height={44}
-                                            style={{
-                                                borderRadius: '50%',
-                                                objectFit: 'cover',
-                                            }}
-                                        />
-
-                                        <ArrowBackIcon
-                                            fontSize='small'
-                                            sx={{ transform: 'rotate(180deg)' }}
-                                        />
-                                    </Stack>
-                                </Link>
-                            </Box>
-                        ) : (
-                            <div />
-                        )}
-                    </Box>
                 </Box>
             </Box>
         </>
@@ -414,7 +296,7 @@ function ContributorDetails(props) {
 export default ContributorDetails;
 
 export const pageQuery = graphql`
-    query ($id: String!) {
+    query ($id: String!, $image: String!) {
         asciidoc(id: { eq: $id }) {
             html
             document {
@@ -435,6 +317,16 @@ export const pageQuery = graphql`
                 image
                 featured
                 intro
+            }
+        }
+        imageFile: file(relativePath: { eq: $image }) {
+            childImageSharp {
+                gatsbyImageData(
+                    width: 350
+                    height: 350
+                    placeholder: BLURRED
+                    layout: FIXED
+                )
             }
         }
     }
