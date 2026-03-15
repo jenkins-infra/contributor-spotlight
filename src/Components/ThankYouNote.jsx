@@ -12,16 +12,7 @@ const ThankYouNote = ({ darkmode }) => {
     const [thankYou, setThankYou] = useState([]);
 
     useEffect(() => {
-        axios
-            .get(
-                'https://raw.githubusercontent.com/jenkins-infra/jenkins-contribution-stats/main/data/honored_contributor.csv',
-                { responseType: 'text' }
-            )
-            .then((response) => {
-                setThankYou(Papa.parse(response.data)?.data[1]);
-            });
-
-        const interval = setInterval(() => {
+        const fetchHonoredContributor = () => {
             axios
                 .get(
                     'https://raw.githubusercontent.com/jenkins-infra/jenkins-contribution-stats/main/data/honored_contributor.csv',
@@ -29,8 +20,14 @@ const ThankYouNote = ({ darkmode }) => {
                 )
                 .then((response) => {
                     setThankYou(Papa.parse(response.data)?.data[1]);
+                })
+                .catch((error) => {
+                    console.error('Error fetching thank you note:', error);
                 });
-        }, 3600000);
+        };
+
+        fetchHonoredContributor();
+        const interval = setInterval(fetchHonoredContributor, 3600000);
 
         return () => clearInterval(interval);
     }, []);
@@ -123,7 +120,7 @@ const ThankYouNote = ({ darkmode }) => {
                                 .split(/\s+/)
                                 .filter(Boolean)
                                 .map((repo, idx) => (
-                                    <>
+                                    <React.Fragment key={idx}>
                                         {thankYou[8]?.split(' ').length > 2 &&
                                             idx ===
                                                 thankYou[8]?.split(' ').length -
@@ -147,7 +144,7 @@ const ThankYouNote = ({ darkmode }) => {
                                         ) : (
                                             ' '
                                         )}
-                                    </>
+                                    </React.Fragment>
                                 ))}{' '}
                         {thankYou[8]?.split(' ').length > 2
                             ? 'repos'
