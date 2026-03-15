@@ -1,12 +1,12 @@
 = Allan Burdajewicz
-:page-name: Allan Burdajewicz
+:page-name: Allan Burdajewicz 
 :page-linkedin: allan-burdajewicz-0122452b
 :page-twitter:
 :page-github: Dohbedoh
 :page-email:
 :page-image: avatar/allan-burdajewicz.png
 :page-pronouns: 
-:page-location: Queesland, Australia
+:page-location: Queensland, Australia
 :page-firstcommit: 2013
 :page-datepublished: 2025-08-28
 :page-featured: true

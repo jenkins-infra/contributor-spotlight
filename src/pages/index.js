@@ -33,6 +33,28 @@ const IndexPage = (props) => {
         }
     }, []);
 
+    useEffect(() => {
+        const fetchContributorData = async () => {
+            try {
+                const response = await axios.get(
+                    'https://raw.githubusercontent.com/jenkins-infra/jenkins-contribution-stats/main/data/honored_contributor.csv',
+                    { responseType: 'text' }
+                );
+                setThankYou(Papa.parse(response.data)?.data[1]);
+            } catch (error) {
+                console.error('Error fetching contributor data:', error);
+            }
+        };
+
+        fetchContributorData();
+
+        const interval = setInterval(() => {
+            fetchContributorData();
+        }, 3600000);
+
+        return () => clearInterval(interval);
+    }, []);
+
     const [mounted, setMounted] = useState(false);
 
     useEffect(() => {
