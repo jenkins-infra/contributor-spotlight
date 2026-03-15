@@ -13,7 +13,7 @@ import './contributor-details.css';
 function ContributorDetails(props) {
     const theme = useTheme();
     const isDesktop = useMediaQuery(theme.breakpoints.up('lg'));
-    const isTablet = useMediaQuery(theme.breakpoints.between('lg', 'sm'));
+    const isTablet = useMediaQuery(theme.breakpoints.between('sm', 'lg'));
     const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
     const darkmode = useMediaQuery('(prefers-color-scheme: dark)');
     const title =
@@ -133,7 +133,7 @@ function ContributorDetails(props) {
                     <Box sx={{ paddingBottom: 2, paddingTop: 2 }}>
                         <Typography
                             variant='h5'
-                            fontweight={500}
+                            fontWeight={500}
                             textAlign='center'
                         >
                             Contributor Spotlight
