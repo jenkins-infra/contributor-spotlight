@@ -103,7 +103,7 @@ const ContributorCard = ({ contributor }) => {
                             fill='currentColor'
                             style={{ flexShrink: 0 }}
                         />
-                        Est. {firstcommit}
+                        1st Commit in {firstcommit}
                     </motion.div>
                 )}
 
