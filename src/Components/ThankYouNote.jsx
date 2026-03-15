@@ -120,7 +120,7 @@ const ThankYouNote = ({ darkmode }) => {
                                 .split(/\s+/)
                                 .filter(Boolean)
                                 .map((repo, idx) => (
-                                    <div key={idx}>
+                                    <React.Fragment key={idx}>
                                         {thankYou[8]?.split(' ').length > 2 &&
                                             idx ===
                                                 thankYou[8]?.split(' ').length -
@@ -144,7 +144,7 @@ const ThankYouNote = ({ darkmode }) => {
                                         ) : (
                                             ' '
                                         )}
-                                    </div>
+                                    </React.Fragment>
                                 ))}{' '}
                         {thankYou[8]?.split(' ').length > 2
                             ? 'repos'
