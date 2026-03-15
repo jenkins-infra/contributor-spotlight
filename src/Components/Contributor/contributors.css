@@ -32,6 +32,26 @@
     overflow: hidden;
     min-height: 340px;
 }
+.contributor-est-badge {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 5px 11px;
+    border-radius: 999px;
+    background: linear-gradient(135deg, #0d9488 0%, #0891b2 100%);
+    box-shadow:
+        0 0 12px rgba(13, 148, 136, 0.45),
+        0 2px 6px rgba(0, 0, 0, 0.35);
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    color: #e0fdf4;
+    user-select: none;
+    z-index: 10;
+}
 
 .contributor-card::before {
     content: '';
