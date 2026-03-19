@@ -48,7 +48,15 @@ exports.createPages = ({ graphql, actions }) => {
         }
     `).then((result) => {
         if (result.errors) {
-            throw result.errors;
+            console.error('GraphQL Errors in createPages:');
+
+            result.errors.forEach((err, index) => {
+                console.error(`Error ${index + 1}:`, err.message);
+            });
+
+            throw new Error(
+                result.errors.map((err) => err.message).join(' | ')
+            );
         }
 
         // Create Asciidoc pages.
