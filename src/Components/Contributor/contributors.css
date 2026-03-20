@@ -32,6 +32,20 @@
     overflow: hidden;
     min-height: 340px;
 }
+
+.contributor-card-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.contributor-meta-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
 .contributor-est-badge {
     position: absolute;
     top: 14px;

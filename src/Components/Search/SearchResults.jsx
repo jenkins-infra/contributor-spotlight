@@ -9,17 +9,7 @@ function SearchResults({ results, darkmode }) {
     if (!results || results.length === 0) {
         return (
             <div
-                className='no-results'
-                style={{
-                    padding: '24px',
-                    background: darkmode ? '#2c2c2c' : '#f0f0f0',
-                    borderRadius: '12px',
-                    border: '1px solid #333',
-                    color: darkmode ? '#ccc' : '#333',
-                    fontSize: '15px',
-                    textAlign: 'center',
-                    margin: '16px 0',
-                }}
+                className={`no-results no-results-card ${darkmode ? 'dark' : 'light'}`}
             >
                 🔍 No contributors found
             </div>
