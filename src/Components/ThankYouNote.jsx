@@ -98,7 +98,7 @@ const ThankYouNote = ({ darkmode }) => {
                             .length === 0 && (
                             <a
                                 target='_blank'
-                                rel='noreferrer'
+                                rel='noopener noreferrer'
                                 href={thankYou[5]?.replace(/['"]+/g, '')}
                             >
                                 {thankYou[3]?.replace(/['"]+/g, '').trim()
@@ -134,7 +134,7 @@ const ThankYouNote = ({ darkmode }) => {
                                             'and '}
                                         <a
                                             target='_blank'
-                                            rel='noreferrer'
+                                            rel='noopener noreferrer'
                                             href={`https://github.com/${repo}`}
                                         >
                                             {repo?.split('/')[1]}
