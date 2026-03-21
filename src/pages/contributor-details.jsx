@@ -10,26 +10,32 @@ import DOMPurify from 'dompurify';
 import '../styles/contributor-details.css';
 
 function ContributorDetails() {
-    const params = new URLSearchParams(window.location.search);
-    const slug = params.get('slug');
-
     const theme = useTheme();
     const isDesktop = useMediaQuery(theme.breakpoints.up('lg'));
     const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
 
     const [contributor, setContributor] = useState(null);
     const [sanitizedHTML, setSanitizedHTML] = useState('');
+    const [slug, setSlug] = useState(null); // ✅ FIX
 
-    //  FETCH DATA
+    // ✅ SAFE WINDOW ACCESS
     useEffect(() => {
+        if (typeof window !== 'undefined') {
+            const params = new URLSearchParams(window.location.search);
+            setSlug(params.get('slug'));
+        }
+    }, []);
+
+    // ✅ FETCH DATA (runs only after slug is set)
+    useEffect(() => {
+        if (!slug) return;
+
         fetch('/contributors.json')
             .then((res) => res.json())
             .then((data) => {
                 const found = data.find((c) => {
-                    // new format
                     if (c.slug === slug) return true;
 
-                    // old Gatsby format (optional support)
                     if (c.node?.fields?.slug) {
                         const cleanSlug = c.node.fields.slug
                             .split('/')
@@ -47,14 +53,13 @@ function ContributorDetails() {
             .catch((err) => console.error('Fetch error:', err));
     }, [slug]);
 
-    // SANITIZE HTML
+    // ✅ SANITIZE HTML
     useEffect(() => {
         if (contributor?.html) {
             setSanitizedHTML(DOMPurify.sanitize(contributor.html));
         }
     }, [contributor]);
 
-    //  LOADING STATE
     if (!contributor) {
         return (
             <h2 style={{ color: 'white', textAlign: 'center' }}>Loading...</h2>
@@ -70,7 +75,6 @@ function ContributorDetails() {
             </Helmet>
 
             <Box display='flex' flexDirection='column'>
-                {/* HEADER */}
                 <Box
                     display='flex'
                     flexDirection='column'
@@ -95,7 +99,6 @@ function ContributorDetails() {
                     />
                 </Box>
 
-                {/* CONTENT */}
                 <Box padding={isMobile ? 2 : 6}>
                     <Link to='/' style={{ textDecoration: 'none' }}>
                         <Stack direction='row' gap={1}>
@@ -116,7 +119,6 @@ function ContributorDetails() {
                         {contributor.intro}
                     </Typography>
 
-                    {/* SOCIAL */}
                     <Box display='flex' justifyContent='center' gap={2} mt={2}>
                         {contributor.github && (
                             <motion.a
@@ -143,7 +145,6 @@ function ContributorDetails() {
                         )}
                     </Box>
 
-                    {/* HTML CONTENT */}
                     <Box
                         mt={4}
                         dangerouslySetInnerHTML={{ __html: sanitizedHTML }}
