@@ -6,9 +6,7 @@ import '../styles/contributor-details.css';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import { Helmet } from 'react-helmet';
 import dayjs from 'dayjs';
-import { Github, Linkedin, Mail } from 'lucide-react';
-import XIcon from '../Components/XIcon.jsx';
-import { motion } from 'framer-motion';
+import SocialLinks from '../Components/SocialLinks.jsx';
 import './contributor-details.css';
 function ContributorDetails(props) {
     const theme = useTheme();
@@ -36,24 +34,6 @@ function ContributorDetails(props) {
         }
     }, [props.data.asciidoc.html]);
 
-    const socialLinkVariants = {
-        hidden: { opacity: 0, scale: 0.8 },
-        visible: (i) => ({
-            opacity: 1,
-            scale: 1,
-            transition: {
-                delay: i * 0.1,
-                type: 'spring',
-                stiffness: 200,
-                damping: 15,
-            },
-        }),
-        hover: {
-            scale: 1.2,
-            rotate: 5,
-            transition: { type: 'spring', stiffness: 400 },
-        },
-    };
     return (
         <>
             <Helmet>
@@ -188,72 +168,16 @@ function ContributorDetails(props) {
                         gap={1}
                         sx={{ paddingBottom: 2 }}
                     >
-                        {props.data.asciidoc.pageAttributes.linkedin !== '' && (
-                            <motion.a
-                                href={`https://linkedin.com/in/${props.data.asciidoc.pageAttributes.linkedin}`}
-                                target='_blank'
-                                rel='noreferrer'
-                                onClick={(e) => e.stopPropagation()}
-                                variants={socialLinkVariants}
-                                custom={1}
-                                whileHover='hover'
-                                whileTap={{ scale: 0.9 }}
-                                className='social-link'
-                            >
-                                <Linkedin size={18} />
-                                <span className='social-tooltip'>LinkedIn</span>
-                            </motion.a>
-                        )}
-                        {props.data.asciidoc.pageAttributes.twitter !== '' && (
-                            <motion.a
-                                href={`https://x.com/${props.data.asciidoc.pageAttributes.twitter}`}
-                                target='_blank'
-                                rel='noreferrer'
-                                onClick={(e) => e.stopPropagation()}
-                                variants={socialLinkVariants}
-                                custom={2}
-                                whileHover='hover'
-                                whileTap={{ scale: 0.9 }}
-                                className='social-link'
-                            >
-                                <XIcon size={18} />
-                                <span className='social-tooltip'>
-                                    X (formerly Twitter)
-                                </span>
-                            </motion.a>
-                        )}
-                        {props.data.asciidoc.pageAttributes.github !== '' && (
-                            <motion.a
-                                href={`https://github.com/${props.data.asciidoc.pageAttributes.github}`}
-                                target='_blank'
-                                rel='noreferrer'
-                                onClick={(e) => e.stopPropagation()}
-                                variants={socialLinkVariants}
-                                custom={0}
-                                whileHover='hover'
-                                whileTap={{ scale: 0.9 }}
-                                className='social-link'
-                            >
-                                <Github size={18} />
-                                <span className='social-tooltip'>GitHub</span>
-                            </motion.a>
-                        )}
-                        {props.data.asciidoc.pageAttributes.email !== '' && (
-                            <motion.a
-                                href={`mailto:${props.data.asciidoc.pageAttributes.email}`}
-                                target='_blank'
-                                rel='noreferrer'
-                                onClick={(e) => e.stopPropagation()}
-                                variants={socialLinkVariants}
-                                custom={1}
-                                whileHover='hover'
-                                whileTap={{ scale: 0.9 }}
-                                className='social-link'
-                            >
-                                <Mail size={18} />
-                                <span className='social-tooltip'>Email</span>
-                            </motion.a>
-                        )}
+                        <SocialLinks
+                            linkedin={
+                                props.data.asciidoc.pageAttributes.linkedin
+                            }
+                            twitter={props.data.asciidoc.pageAttributes.twitter}
+                            github={props.data.asciidoc.pageAttributes.github}
+                            email={props.data.asciidoc.pageAttributes.email}
+                            order={['linkedin', 'twitter', 'github', 'email']}
+                            onLinkClick={(e) => e.stopPropagation()}
+                        />
                     </Box>
                     <Box sx={{ my: 2 }}>
                         <Typography>
