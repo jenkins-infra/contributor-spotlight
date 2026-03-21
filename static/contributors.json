@@ -1,0 +1,1020 @@
+[
+  {
+  "id": "bb1b933f-a1ca-5dd4-8d0d-2723ff89bd16",
+  "slug": "alex-earl",
+  "name": "Alex Earl",
+  "intro": "Alex Earl is a software engineer from Chandler, Arizona. He has been using and contributing to Jenkins for the last 15 years, during which he has provided numerous enhancements and changes.",
+  "github": "slide",
+  "twitter": "",
+  "linkedin": "",
+  "email": "",
+  "location": "Chandler, Arizona USA",
+  "pronouns": "He/Him/His",
+  "image": "avatar/alex-earl.jpg",
+  "featured": false,
+  "datePublished": "2023-12-13",
+  "content": {
+    "preamble": "When not pursuing his open-source work, Alex loves spending time with his family, working on tech puzzles, and helping others in any way that he can.",
+
+    "background": "I was doing C and Visual Basic at work, along with a little bit of embedded C development. I transitioned to C# from C/VB in the application I was supporting, and started to pick up more responsibility in the build and deployment area of my group. I started using Jenkins to do the build/deployment and moved my group in a much more agile direction, using continuous integration for our testing. This led to me looking at the Email Extension plugin and trying to understand why it wasn’t able to do what I wanted it to do. I started submitting patches and fixing issues in the plugin to help me in my work. The rest, as they say, is history!",
+
+    "jenkinsUsage": "I have been using Jenkins for the last 15 years.",
+
+    "whyJenkins": "Jenkins was, and still is, the best at what it does.",
+
+    "problemsSolved": "Jenkins has helped solve lots of problems! I had to build and deploy around 50 embedded firmware binaries, several desktop applications, and more. Jenkins has helped me streamline this and make solutions that are easy to use, easy to maintain, and powerful!",
+
+    "passion": "I like to help people resolve issues on the Community channels. Due to the global reach of Jenkins, we are able to communicate easily and help each other. Interacting with people all over the world and helping them solve issues is part of the open-source experience.",
+
+    "impactfulWork": "I have previously maintained and currently maintain plugins that are used by many people. It feels good to make an impact by working on something widely used.",
+
+    "advice": "Just find something that you like (or want to improve) and go for it. There are plenty of issues in Jira and GitHub that need attention!"
+  }
+},
+  {
+  "id": "allan-burdajewicz",
+  "slug": "allan-burdajewicz",
+  "html": "<div>...</div>",
+  "name": "Allan Burdajewicz",
+  "intro": "Allan Burdajewicz was originally born in the French countryside and is currently a Software/Systems Engineer located in Queensland, Australia. While he did a lot of development early on in his career, he became curious about areas outside of development. This led to quickly taking part in other aspects of the software development lifecycle (SDLC). Nowadays, he enjoys being involved in the whole lifecycle, mainly in a containerized environment, from tools development, to CI/CD, to deployment automation, and monitoring. When he's not deep in the development cycle, Allan enjoys nature, beaches, and warm, sunny places. This brought him all the way to Queensland, where he is often camping, hiking, and enjoying time off-grid.",
+  "github": "Dohbedoh",
+  "twitter": "",
+  "linkedin": "allan-burdajewicz-0122452b",
+  "email": "",
+  "location": "Queesland, Australia",
+  "pronouns": "",
+  "image": "avatar/allan-burdajewicz.png",
+  "featured": "true",
+  "datepublished": "2025-08-28"
+},
+{
+  "id": "b7ab9bab-08cc-5de2-949d-d2d6605c59a7",
+  "slug": "adrien-lecharpentier",
+  "name": "Adrien Lecharpentier",
+  "intro": "Adrien is a software engineer currently based in Nantes, France...",
+  "github": "alecharp",
+  "twitter": "",
+  "linkedin": "",
+  "email": "",
+  "location": "Nantes, France",
+  "pronouns": "He/Him/His",
+  "image": "avatar/adrien-lecharpentier.jpg",
+  "featured": false,
+  "datePublished": "2024-10-08",
+  "content": {
+    "background": "I received my A level in 2005, my technical certificate diploma in 2007, and my engineering diploma in 2011 while working part time at Alcatel-Lucent. I was working in the CI team that had just been created shortly before I joined. The leader of the team asked me to look at Jenkins, then Hudson, to determine if it would fit the needs of the company. My first plugin for Hudson was created in 2009 and I have been working in Jenkins ever since then. After I received my diploma, I moved to Zenika where I was in a consultant role, helping with training and specialized in CI/CD. My consultant work came down to answering the questions 'What is the need for that specific customer?' and 'What is the cost of getting there?'. In 2014, I joined CloudBees as a support engineer for three years before moving on to engineering.",
+    
+    "jenkinsUsage": "I have been using Jenkins since 2009.",
+    
+    "whyJenkins": "I didn’t choose Jenkins as much as it was a mutual decision between myself and Jenkins. The community is very responsive and allows plugin creation to match needs. My first experience involved reporting a bug and seeing it fixed the same day.",
+    
+    "problemsSolved": "Jenkins helped streamline CI processes, ensuring faster delivery, better collaboration, and maintaining team velocity. It keeps systems updated, aligned, and functioning properly.",
+    
+    "passion": "I enjoy making tools easier to use, especially improvements in UX. The modernization of Jenkins has made it more user-friendly and accessible.",
+    
+    "impactfulWork": "Worked on Java upgrades (8 → 11 → 17 → 21) and Spring Security 6 migration to keep Jenkins secure and future-ready without disrupting users.",
+    
+    "advice": "Don’t be afraid to start or ask questions. There is no small contribution. Plugins are a great entry point into open source."
+  }
+},
+{
+  "id": "06901ff2-4059-5145-bbf7-f17a60172a59",
+  "slug": "alexander-brandes",
+  "name": "Alexander Brandes",
+  "intro": "Alexander Brandes is an open-source contributor and maintainer and serves on the Jenkins governance board. He has made contributions to multiple aspects of the Jenkins project including Jenkins Core, multiple plugins, weekly and Long Term Support releases, and the community.",
+  "github": "NotMyFault",
+  "twitter": "",
+  "linkedin": "alexander-brandes",
+  "email": "",
+  "location": "Kassel, Germany",
+  "pronouns": "He/Him/His",
+  "image": "avatar/alexander-brandes.jpeg",
+  "featured": false,
+  "datePublished": "2023-11-29",
+  "content": {
+    "preamble": "When he is not pursuing open-source endeavors, Alexander is a passionate musician and has been playing the trumpet for more than 15 years, primarily playing jazz and film music. In addition to being the lead trumpet in a band, he also teaches beginners how to play an instrument.",
+
+    "background": "When I was 13, my friends and I discovered Minecraft and created our own server without much knowledge. The game is written in Java and can be extended with plugins. Even though our first plugin wasn’t great, people enjoyed it. By 2020, the server had over 5k concurrent players daily and a Discord community of around 250,000 members. Over time, I taught myself Java, containers, and networking as the project grew. Before Jenkins, I contributed to smaller open-source projects, mainly Java-based and documentation improvements.",
+
+    "jenkinsUsage": "I have been using Jenkins since 2019.",
+
+    "whyJenkins": "Jenkins has a low barrier of entry and allows contributors to start small with plugins and grow into larger contributions. I had prior experience as a user, which made contributing easier.",
+
+    "problemsSolved": "Initially, Jenkins was used only for building projects, but now it handles multiple tasks including deploying artifacts, aggregating test results, code coverage, and sending notifications. It helps automate workflows and saves time.",
+
+    "passion": "I appreciate Jenkins’ ability to evolve over time with continuous UI/UX improvements. The strong community and accessible communication channels make collaboration effective and enjoyable.",
+
+    "impactfulWork": "Ongoing UI/UX improvements in Jenkins core have significantly enhanced the user experience. Continuous improvements help keep Jenkins relevant in a fast-paced tech environment.",
+
+    "advice": "Don’t be afraid to ask for help or contribute to large projects. Start small, solve issues, and gradually build your knowledge and confidence."
+  }
+},
+{
+  "id": "d98c3b4e-d926-5ab3-ad72-3bdde8f908b2",
+  "slug": "bruno-verachten",
+  "name": "Bruno Verachten",
+  "intro": "Bruno is a 50-year-old with the heart of a university freshman, a head full of curiosity, and a clock that's always running too fast. He's a husband to one, father to two, and a man of many interests, from beekeeping to Art Nouveau to permaculture to Linux. He's spent his career in the open-source world, trying to get the industry to embrace the movement.",
+  "github": "gounthar",
+  "twitter": "Poddingue",
+  "linkedin": "poddingue",
+  "email": "",
+  "location": "Lille, Nord, France",
+  "pronouns": "He/Him/His",
+  "image": "avatar/bruno-verachten.png",
+  "featured": false,
+  "datePublished": "2024-03-20",
+  "content": {
+    "preamble": "It’s been a tough road, but he’s learned how to stay passionate, recognize when to move on, and embrace change. When the world went remote, Bruno found a new role where open source is central and built new connections despite the distance.",
+
+    "background": "My journey started with AI when it was still science fiction. I later focused on Java, coding, teaching, and speaking at conferences. In 2016, I shifted into CI/CD, DevOps, containerization, and Edge computing. My open-source journey began in 1993 installing Linux on Windows machines. Over time, I became an advocate and later a contributor. Contributions included community engagement, talks, and documentation before coding. I was active in conferences covering topics like Edge computing and ARM.",
+
+    "jenkinsUsage": "I started using Jenkins around 2013–2014, left around 2017 when moving to GitLab, and returned in 2022.",
+
+    "whyJenkins": "Jenkins stands out due to its strong, community-driven nature. Decisions are open, inclusive, and collaborative. It actively supports contributors through programs like GSoC and Hacktoberfest, making it a welcoming ecosystem.",
+
+    "problemsSolved": "Jenkins enabled building and publishing Android apps with Docker, using multiple architectures like ARM32, ARM64, and RISC-V. It allowed creation of multi-architecture clusters and flexible system customization across environments.",
+
+    "passion": "I am passionate about platform support, especially adding new CPU architectures and experimenting with new JDK versions. I enjoy contributing to Jenkins Platform SIG discussions and improving Docker images and platform compatibility.",
+
+    "impactfulWork": "Worked on projects like miniJen (multi-architecture Jenkins) and contributed to updatecli for dependency management and CVE handling. While not always visible, these improvements strengthen project reliability.",
+
+    "advice": "Observe the project ecosystem first, understand its dynamics, and see if it fits you. Start small, contribute gradually, and learn from feedback. People matter most—surround yourself with supportive communities and keep learning."
+  }
+},
+{
+  "id": "f86c4745-a5d9-519c-810f-2f633cd1b0d1",
+  "slug": "alyssa-tong",
+  "name": "Alyssa Tong",
+  "intro": "Alyssa Tong is the Jenkins events officer, chair for the Advocacy & Outreach SIG, and org admin for Google Summer of Code. Prior to this, she spent many years directing and producing the Jenkins User conference and Jenkins World. She established Jenkins Area Meetups around the world and started the Jenkins Ambassador program which are now part of the Continuous Delivery Foundation.",
+  "github": "alyssat",
+  "twitter": "",
+  "linkedin": "alyssa-tong-98b0a21",
+  "email": "",
+  "location": "San Diego, California",
+  "pronouns": "She/Her/Hers",
+  "image": "avatar/alyssa-tong.jpeg",
+  "featured": false,
+  "datePublished": "2024-08-13",
+  "content": {
+    "preamble": "Alyssa resides in San Diego, California. She is a mother of two and enjoys cooking unique dishes with her family. She is passionate about health, focusing on mental, physical, spiritual well-being, and the importance of sleep.",
+
+    "background": "Prior to contributing to Jenkins, I worked at SUN Microsystems for 13 years in roles including technical escalations, new product introduction, and product marketing.",
+
+    "jenkinsUsage": "My first open-source engagement was in 2008 with Hudson while working in product marketing at SUN Microsystems.",
+
+    "whyJenkins": "I worked with Jenkins in 2011 in events and program management. Through conferences and events, I connected with many contributors and built strong relationships within the community.",
+
+    "problemsSolved": "Jenkins brings people together. It fosters a supportive community where individuals help each other solve technical challenges, making a meaningful impact even through small contributions.",
+
+    "passion": "I am most passionate about the Jenkins community. It is vast, welcoming, and consistently appreciated by users worldwide.",
+
+    "impactfulWork": "Producing and directing Jenkins User Conferences, growing them from hundreds to thousands of attendees, has been the most rewarding experience. Despite the effort, it was incredibly fulfilling.",
+
+    "advice": "Joining open source can feel intimidating, but the Jenkins community is welcoming and supportive. Dive in, find where you can contribute, and make an impact."
+  }
+},
+{
+  "id": "25e32288-8b00-50c0-9d73-3c3cbec78716",
+  "slug": "daniel-krämer",
+  "name": "Daniel Krämer",
+  "intro": "My passion for computers began early, the day my dad brought home a big grey box. I didn't understand anything happening on the screen, but my fascination was born. From then on, I spent more and more time in front of that box, gradually learning what was happening behind the screen. I was (and probably still am) a proud nerd.",
+  "github": "strangelookingnerd",
+  "twitter": "strangelookingnerd",
+  "linkedin": "daniel-krämer",
+  "email": "",
+  "location": "Darmstadt, Germany",
+  "pronouns": "",
+  "image": "avatar/daniel-kramer.jpeg",
+  "featured": false,
+  "datePublished": "2024-08-27",
+  "content": {
+    "preamble": "Becoming a father at 19 pushed Daniel to pursue a stable career in IT. He embraced software development and learned techniques like rubber-duck debugging, which he still advocates. Alongside coding, he enjoys communicating complex ideas, spending time in nature, and has a unique passion for sloths.",
+
+    "background": "I started my professional career in software development in 2012. Initially a Java developer, I progressed into roles like architect and product owner. I focused on promoting clean code and security practices. I also spoke at JavaLand 2022. Open source became a way for me to continue coding while contributing to the community.",
+
+    "jenkinsUsage": "I have been using Jenkins since around 2016 when rebuilding CI/CD infrastructure in my previous job.",
+
+    "whyJenkins": "Jenkins is free, widely used, highly customizable, and supported by a strong community. Its plugin ecosystem allows easy adaptation to different needs.",
+
+    "problemsSolved": "Jenkins automates development workflows, saving time and resources. It helps with builds, metrics generation, and creating efficient processes.",
+
+    "passion": "I appreciate how Jenkins balances ease of use with powerful functionality, making it accessible even to non-technical users while supporting complex workflows.",
+
+    "impactfulWork": "Enabled Jenkins Security Scan across multiple plugins and created the custom-folder-icon-plugin, which is widely used and gives a strong sense of contribution.",
+
+    "advice": "Communication is as important as coding. Learn to explain your work clearly. Start open-source contributions with something you use, and begin small—even minor fixes are valuable."
+  }
+},
+{
+  "id": "3b794a4e-fa9d-544e-a442-4e31f22bb29d",
+  "slug": "darin-pope",
+  "name": "Darin Pope",
+  "intro": "Darin Pope is a developer advocate at CloudBees, residing in Charlotte, North Carolina. Since 2021, Darin has been publishing Jenkins tutorials on YouTube. His videos have helped thousands of Jenkins users from learning how to run a shell script in Jenkins to working with Docker and Jenkins.",
+  "github": "darinpope",
+  "twitter": "DarinPope",
+  "linkedin": "darin-pope",
+  "email": "",
+  "location": "Charlotte, North Carolina",
+  "pronouns": "",
+  "image": "avatar/darin-pope.jpg",
+  "featured": false,
+  "datePublished": "2024-07-30",
+  "content": {
+    "preamble": "When not creating Jenkins tutorials, Darin enjoys volunteering at his church as part of the production team.",
+
+    "background": "I worked as a software developer from 1988 to 1999, then became a consultant. Through working with clients, I learned how businesses operate. Experiencing layoffs between 2003 and 2005 led me to rethink my approach, realizing coding alone isn’t always the solution and that I needed to adapt to better serve clients.",
+
+    "jenkinsUsage": "I have been using Jenkins since 2012.",
+
+    "whyJenkins": "At the time, Jenkins was the best available tool that met the needs of our startup.",
+
+    "problemsSolved": "Jenkins enabled our startup to deliver software reliably without constant troubleshooting. Its strong community provided support and helped identify whether issues were isolated or widespread.",
+
+    "passion": "I value the stability and reliability of Jenkins. The community focuses on backward compatibility and careful maintenance, ensuring confidence in the system.",
+
+    "impactfulWork": "Creating short, practical video tutorials has been highly impactful. These videos complement documentation and help users quickly understand concepts, especially those who prefer visual learning.",
+
+    "advice": "Approach open source with humility. Focus on how you can help rather than what you know. Contribute where needed, even if it’s documentation, and be open to learning."
+  }
+},
+{
+  "id": "ebaf1749-8f5b-5cf9-bc8d-08cb63485e25",
+  "slug": "devin-nusbaum",
+  "name": "Devin Nusbaum",
+  "intro": "Devin is a software engineer based in Raleigh, North Carolina. After graduating from Chapel Hill, Devin worked at a finance company where he first encountered Jenkins. Later, at CloudBees, he contributed extensively to Jenkins, especially focusing on Pipeline functionality and core improvements.",
+  "github": "dwnusbaum",
+  "twitter": "",
+  "linkedin": "",
+  "email": "",
+  "location": "Raleigh, North Carolina, USA",
+  "pronouns": "He/Him/His",
+  "image": "avatar/devin-nusbaum.jpeg",
+  "featured": false,
+  "datePublished": "2024-10-22",
+  "content": {
+    "background": "After graduating from Chapel Hill, I started working at a finance company focused on electronic trading. Initially, builds were manual using ANT. I was tasked with setting up Jenkins and migrating builds to Maven to introduce CI into the workflow.",
+
+    "jenkinsUsage": "I first used Jenkins in 2016 at a finance company and later continued working with it at CloudBees, focusing on Jenkins development.",
+
+    "whyJenkins": "Jenkins provides flexibility and powerful capabilities through its plugin ecosystem. While it can be complex, it offers deep customization and remains one of the few mature open-source CI/CD platforms.",
+
+    "problemsSolved": "My work focuses on debugging Jenkins and fixing issues that impact a large user base. Fixing bugs in Jenkins can help hundreds of thousands of users, making the work highly impactful.",
+
+    "passion": "I am particularly interested in the Pipeline engine and sandboxing system. These components are complex and require careful changes to avoid breaking functionality while improving reliability.",
+
+    "impactfulWork": "I have worked on numerous Pipeline bug fixes, improving system robustness and preventing build hangs. I also contributed to security fixes and deserialization improvements, reducing the impact of configuration issues and enhancing system stability.",
+
+    "advice": "Read the code deeply, understand the system, and learn from version history. Ask whether changes are safe, study past fixes, and identify patterns. Version control history is a powerful tool for understanding large projects and improving your development skills."
+  }
+},
+{
+  "id": "52875df9-4562-5d7b-b181-c6675d8b7707",
+  "slug": "herve-le-meur",
+  "name": "Hervé Le Meur",
+  "intro": "Hervé Le Meur is a site reliability engineer and member of the Jenkins Infrastructure team. He began contributing through Jenkins X and later moved into Jenkins infrastructure work.",
+  "github": "lemeurherve",
+  "twitter": "",
+  "linkedin": "herve-le-meur",
+  "email": "",
+  "location": "Paris, France",
+  "pronouns": "He/Him/His",
+  "image": "avatar/herve-le-meur.png",
+  "featured": false,
+  "datePublished": "2024-04-10",
+  "content": {
+    "preamble": "Hervé comes from an analog background but discovered technology early with an Amstrad CPC 464. Outside work, he enjoys spending time with family, reading, and relaxing with shows.",
+
+    "background": "After university, I worked 10 years at a B2B marketing consultancy developing tools without CI/CD or open source. Later, at a BIM software company, I transitioned into software development and architecture. I was tasked with implementing CI/CD using Jenkins X and Kubernetes, which was challenging but taught me a lot. This led to my first open-source contributions and eventually joining CloudBees.",
+
+    "jenkinsUsage": "I initially worked with Jenkins X and had misconceptions about Jenkins. After using it, I realized it was far more efficient and capable than expected.",
+
+    "whyJenkins": "Jenkins became central to my job. I was impressed by its infrastructure, flexibility, and ability to orchestrate tools like Terraform, Puppet, Kubernetes, and Helmfile. It is unique in how it uses itself to build and distribute Jenkins.",
+
+    "growth": "Jenkins infrastructure has evolved toward infrastructure-as-code, allowing systems to be recreated easily and improving resilience. Projects like ci.jenkins.io are increasingly managed as code.",
+
+    "passion": "I enjoy refactoring Docker build processes for Jenkins controllers and agents, as well as solving contributor-side challenges like puzzles.",
+
+    "impactfulWork": "Contributions include improvements like JDK upgrades (17, 21, upcoming 22), plugin health scoring, and infrastructure enhancements. These changes help keep Jenkins modern and robust.",
+
+    "advice": "Start small and focus on one area. Don’t hesitate to contribute—open source welcomes everyone. Your pull requests don’t need to be perfect; learning comes through contribution."
+  }
+},
+{
+  "id": "95b7a4af-fca5-5515-a3b1-65131cfad467",
+  "slug": "james-nord",
+  "name": "James Nord",
+  "intro": "James Nord is a software engineer based in the UK and an early member of the Jenkins community. He began contributing soon after Jenkins (Hudson) became open source and has since worked on plugins, infrastructure, and security improvements including FIPS 140 support.",
+  "github": "jtnord",
+  "twitter": "",
+  "linkedin": "jtnord",
+  "email": "",
+  "location": "Hampshire, United Kingdom",
+  "pronouns": "",
+  "image": "avatar/james-nord.jpeg",
+  "featured": false,
+  "datePublished": "2024-12-10",
+  "content": {
+    "background": "After completing a master's in electrical and electronic engineering from Manchester University, I worked in Sweden as a research engineer on location-aware applications and media distribution. Later, I moved to the UK to work in broadcast systems for satellite and cable TV, focusing on automation, encryption, and lifecycle management. During this time, I first encountered Hudson (early Jenkins) while looking for CI solutions to improve development workflows.",
+
+    "jenkinsUsage": "I started using Jenkins shortly after Hudson was released and have continued working with it for nearly a decade at CloudBees.",
+
+    "work": "I created plugins like the M2 Release plugin and the Cucumber test reporting plugin. I have also contributed to enterprise Jenkins, acceptance test harness, and most recently led efforts for FIPS 140 compliance in Jenkins.",
+
+    "whyJenkins": "Jenkins stood out for its extensibility, strong UI, and ability to provide detailed test reports. Its plugin ecosystem and collaboration with contributors like Kohsuke made it powerful and flexible.",
+
+    "problemsSolved": "I worked on enabling FIPS 140 compliance and improving debugging by making plugin class loaders identifiable in stack traces, helping developers quickly locate issues.",
+
+    "passion": "I enjoy Jenkins’ extensibility and the ability to build plugins that enhance functionality. I also value working across different areas of the project without being siloed.",
+
+    "impactfulWork": "Contributions include plugin development, security enhancements, and improvements to Jenkins evolution such as Pipeline and Multibranch Pipeline ecosystems, along with backend modernization efforts.",
+
+    "advice": "Ask questions and learn from the community. Contribute documentation as well as code. Use version control history to understand decisions, and ensure your code is well documented. Always validate ideas before implementing them."
+  }
+},
+{
+  "id": "438fca59-26eb-5e2a-a8d5-8aaa820e5323",
+  "slug": "harsh-pratap-singh",
+  "name": "Harsh Pratap Singh",
+  "intro": "Harsh Pratap Singh is a newer contributor to Jenkins and has participated in the Jenkins Google Summer of Code project since 2023. He has a deep passion for learning, helping others, and exploring ideas across disciplines like mathematics and philosophy.",
+  "github": "harsh-ps-2003",
+  "twitter": "harsh_ps2003",
+  "linkedin": "harsh-pratap-singh-787485255",
+  "email": "",
+  "location": "India",
+  "pronouns": "He/Him/His",
+  "image": "avatar/harsh-pratap-singh.jpg",
+  "featured": false,
+  "datePublished": "2024-06-19",
+  "content": {
+    "background": "I am a teenager passionate about Computer Science, Physics, Mathematics, Philosophy, and Psychology. I enjoy helping people and solving problems.",
+
+    "jenkinsUsage": "I have been using Jenkins since early 2023.",
+
+    "whyJenkins": "I didn’t specifically choose Jenkins over others. I was drawn to where help was needed. The welcoming community encouraged me to contribute and explore open source.",
+
+    "problemsSolved": "I use Jenkins mainly for automating test builds.",
+
+    "passion": "I am particularly interested in learning about Jenkins infrastructure.",
+
+    "impactfulWork": "My Google Summer of Code work on modernizing the GitLab plugin and maintaining it has been my most impactful contribution.",
+
+    "advice": "You are welcome in open source. Contributions can be code, ideas, discussions, or documentation. Don’t hesitate to ask for help—everyone is learning."
+  }
+},
+{
+  "id": "b44d7174-1ab6-5e0c-9df6-4ef57ea626da",
+  "slug": "ilan-rabinovitch",
+  "name": "Ilan Rabinovitch",
+  "intro": "Ilan Rabinovitch has worked across engineering, product management, and developer marketing, and has been part of the open-source community for nearly 30 years. He is a founder of the Southern California Linux Expo (SCaLE) and actively supports open-source communities and education.",
+  "github": "",
+  "twitter": "",
+  "linkedin": "",
+  "email": "",
+  "location": "Los Angeles, California, USA",
+  "pronouns": "He/Him/His",
+  "image": "avatar/ilan-rabinovitch.jpg",
+  "featured": false,
+  "datePublished": "2025-05-30",
+  "content": {
+    "background": "I started as an open-source user experimenting with Linux and early technologies, later becoming active in Linux user groups in Los Angeles. This community involvement helped me build practical skills and connections that launched my career in engineering and later product and developer-focused roles.",
+
+    "jenkinsAwareness": "I first encountered Hudson (early Jenkins) around 15–16 years ago while working at Edmunds. We explored it as a CI solution to improve development workflows and it became part of my toolset.",
+
+    "influence": "Jenkins made CI accessible to organizations and played a major role in shaping modern CI/CD practices. It influenced many tools and platforms that followed, making CI a standard practice in software development.",
+
+    "support": "Through SCaLE, I supported Jenkins by promoting education, hosting workshops, and fostering collaboration between open-source communities and companies. Jenkins became an important part of the learning ecosystem at SCaLE.",
+
+    "growth": "Major changes include the adoption of Pipeline as Code, the rise of containers, Kubernetes, and cloud-native workflows. Jenkins adapted well and remains a flexible, evolving tool in the CI/CD space.",
+
+    "openSourceView": "Open source is more than code—it includes documentation, infrastructure, onboarding, and community efforts. Events like SCaLE highlight how diverse roles contribute to a successful ecosystem.",
+
+    "advice": "Leaders should support open source because their systems depend on it. Support can include contributions, funding, documentation, or sharing experiences. Investing in open source helps sustain innovation, improves skills, and builds future talent."
+  }
+},
+{
+  "id": "08d5e0af-7cbc-5f87-8355-a6f7ccd8a0b2",
+  "slug": "jan-faracik",
+  "name": "Jan Faracik",
+  "intro": "Jan Faracik is a Lead Software Engineer based in London, UK, with a strong passion for combining design and technology to improve user experiences.",
+  "github": "janfaracik",
+  "twitter": "",
+  "linkedin": "",
+  "email": "",
+  "location": "London, England, United Kingdom",
+  "pronouns": "He/Him/His",
+  "image": "avatar/jan-faracik.jpg",
+  "featured": false,
+  "datePublished": "2024-05-22",
+  "content": {
+    "background": "I explored various programming languages and frameworks during school and university, developing a strong interest in both technology and design. My first job introduced me to Jenkins for CI/CD, and later I got involved in improving its user experience.",
+
+    "jenkinsUsage": "I have been using Jenkins since 2018.",
+
+    "whyJenkins": "Jenkins is widely used, free, and well-documented. It provides a great opportunity for developers to enter open source due to its large ecosystem and supportive community.",
+
+    "problemsSolved": "I have used Jenkins to manage deployments for microservices, with features like shared libraries making workflows efficient.",
+
+    "passion": "I am passionate about improving Jenkins' user experience. Over time, the UX has significantly improved, making it more accessible and user-friendly.",
+
+    "impactfulWork": "I contributed to UX improvements such as SVG icon migration, new UI components, and standardized design systems. I also worked on modernizing the frontend by removing legacy technologies and integrating features like Pipeline Graph View.",
+
+    "advice": "Start small and gradually grow your contributions. The Jenkins community is welcoming and supportive, making it a great place to learn and contribute."
+  }
+},
+{
+  "id": "23d2273c-f0f7-5313-9c94-b962849c574b",
+  "slug": "kevin-martens",
+  "name": "Kevin Martens",
+  "intro": "Kevin Martens is a technical content developer and Documentation Officer for Jenkins. With a background in education and writing, he contributes to improving documentation and supporting the Jenkins community.",
+  "github": "kmartens27",
+  "twitter": "",
+  "linkedin": "kevinmartens27",
+  "email": "",
+  "location": "Boston, Massachusetts, USA",
+  "pronouns": "He/Him/His",
+  "image": "avatar/kevin-martens.jpeg",
+  "featured": false,
+  "datePublished": "2024-05-08",
+  "content": {
+    "preamble": "Outside of work, Kevin enjoys music, playing guitar, gaming, and exploring New England with his wife. He also shares his home with four cats.",
+
+    "background": "My early exposure to open source was through game emulation as a user. I studied communication and education and worked as a teacher before transitioning into tech roles involving support and training. Eventually, I pursued roles that leveraged my writing skills, which led me to CloudBees and the Jenkins project.",
+
+    "jenkinsUsage": "I have been contributing to Jenkins for the last two years.",
+
+    "whyJenkins": "Joining Jenkins was an opportunity through my role as a technical content developer. The welcoming and supportive community made it a great place to contribute and grow.",
+
+    "problemsSolved": "Jenkins has opened opportunities for me rather than solving direct problems. It allowed me to grow my skills and contribute as Documentation Officer within the community.",
+
+    "passion": "I am passionate about documentation and collaborating with the Jenkins community. The relationships and global connections I’ve built are especially meaningful.",
+
+    "impactfulWork": "Working on contributor spotlight content has been highly rewarding, as it highlights the people behind Jenkins. I also appreciate contributing to documentation and supporting release processes.",
+
+    "advice": "Don’t be afraid to ask for help. Take time to understand the project structure, learn gradually, and engage with the community to grow your contributions."
+  }
+},
+{
+  "id": "0b84275d-0efe-533a-8c1c-ca8410aa8dc2",
+  "slug": "jesse-glick",
+  "name": "Jesse Glick",
+  "intro": "Jesse Glick is a software engineer based in Raleigh, North Carolina, who has been a key contributor to Jenkins for over a decade, especially in the development of Pipeline and core improvements.",
+  "github": "jglick",
+  "twitter": "",
+  "linkedin": "",
+  "email": "",
+  "location": "Raleigh, North Carolina, USA",
+  "pronouns": "",
+  "image": "avatar/jesse-glick.jpeg",
+  "featured": false,
+  "datePublished": "2024-11-05",
+  "content": {
+    "background": "I worked at Sun Microsystems on the NetBeans IDE and CI tools like Cruise Control. I became aware of Hudson (early Jenkins) and contributed to features like Mercurial SCM support and tool installation systems before joining CloudBees in 2012 to focus on Jenkins full-time.",
+
+    "jenkinsUsage": "I have been using Jenkins since the late 2000s when it was still Hudson.",
+
+    "work": "I have worked extensively on Jenkins Pipeline from its early prototypes to its current state, including Scripted Pipeline features, Multibranch Pipeline, and Pipeline as Code. I also contributed to high availability systems and infrastructure improvements.",
+
+    "whyJenkins": "Jenkins was one of the few available CI tools at the time and was highly extensible. It allowed us to build plugins to meet our needs, making it a flexible and powerful solution.",
+
+    "problemsSolved": "I contributed to redesigning the Jenkins CLI for better security and worked on pluggable storage solutions like Artifact Manager on S3. I also focused on improving architecture and maintaining plugin compatibility.",
+
+    "passion": "I am particularly interested in Jenkins Pipeline and addressing architectural challenges and technical debt driven by user feedback.",
+
+    "impactfulWork": "Key contributions include JEP-200 for security improvements, JEP-222 for WebSocket agent connections, JEP-227 for dependency upgrades, and infrastructure enhancements like JEP-305 and JEP-229 for plugin development and release automation.",
+
+    "advice": "Understand the project and build rapport with maintainers. Provide clear, concise contributions with reproducible examples and tests. Focus on clarity and simplicity to make reviews easier."
+  }
+},
+{
+  "id": "c0c9d6bc-d96f-50d6-bd9c-fd8fcf249c2e",
+  "slug": "kohsuke-kawaguchi",
+  "name": "Kohsuke Kawaguchi",
+  "intro": "Kohsuke Kawaguchi is the creator of Jenkins, originally from Tokyo, Japan, and now based in San Jose, California. His journey in technology began early and evolved into building one of the most influential CI/CD tools in the world.",
+  "github": "kohsuke",
+  "twitter": "",
+  "linkedin": "",
+  "email": "",
+  "location": "San Jose, California, United States",
+  "pronouns": "He/Him/His",
+  "image": "avatar/kohsuke-kawaguchi.png",
+  "featured": false,
+  "datePublished": "2025-02-10",
+  "content": {
+    "background": "I started programming in junior high school and began selling software in high school. After joining Sun Microsystems in Silicon Valley, I worked extensively with Java and built many side projects, one of which eventually became Jenkins.",
+
+    "origin": "Jenkins originated from my need to avoid breaking builds. I created a system to automatically detect issues before they affected others, which later evolved into a CI system widely adopted across the industry.",
+
+    "motivation": "I wanted to build an extensible system where developers could create independent components that work together seamlessly. Inspired by systems like Eclipse, I aimed to create a flexible and collaborative platform.",
+
+    "challenges": "Early challenges included gaining traction and sustaining motivation when the project had few users. Later, organizational challenges like the Oracle situation highlighted the importance of community, communication, and leadership.",
+
+    "growth": "As Jenkins grew, it had to adapt to changes like cloud computing, containers, and modern CI/CD practices. Balancing legacy support with modern workflows became a key challenge.",
+
+    "community": "The Jenkins community played a crucial role in its success. Early contributors helped spread awareness, and the ecosystem expanded with support from companies like CloudBees and global user communities.",
+
+    "pride": "I am proud of the global community, the extensible architecture, and the inclusion of contributors beyond just engineers, such as designers and documentation experts.",
+
+    "future": "The future of Jenkins is driven by its contributors. Advances like high availability and cloud-native capabilities are shaping its evolution, making it adaptable to modern software development environments."
+  }
+},
+{
+  "id": "e13fb3f8-1cdc-5016-8385-ea7d607c1e7d",
+  "slug": "jay-francis",
+  "name": "Jay Francis",
+  "intro": "Jay Francis is a Site Reliability Engineer based in India. He transitioned from a career as a chef into tech, bringing creativity and discipline into his work in infrastructure and automation within the Jenkins project.",
+  "github": "jayfranco999",
+  "twitter": "",
+  "linkedin": "jaideep-francis-76a5a51b3",
+  "email": "",
+  "location": "Bangalore, India",
+  "pronouns": "He/Him/His",
+  "image": "avatar/jay-francis.jpeg",
+  "featured": false,
+  "datePublished": "2025-07-31",
+  "content": {
+    "background": "I graduated with an engineering degree but began my career as a chef. Later, I transitioned into tech as a Site Reliability Engineer at Hewlett Packard Enterprise before contributing to Jenkins.",
+
+    "jenkinsUsage": "I have been using Jenkins for over 18 months.",
+
+    "whyJenkins": "Jenkins stood out due to its open-source nature and supportive community. It was my first experience where contributors were highly skilled and collaborative.",
+
+    "problemsSolved": "Jenkins helped automate dependency updates and pipeline execution using tools like updatecli, improving migration efforts for public controllers.",
+
+    "passion": "I enjoy the pipeline graph overview, especially seeing successful job executions.",
+
+    "impactfulWork": "I reduced GitHub API rate limits by 50% using shared pipeline libraries and contributed to dependency management for both private and public Jenkins controllers.",
+
+    "advice": "Focus on one area, understand it deeply, and build sustainable solutions. Deep expertise makes your contributions more valuable and impactful."
+  }
+},
+{
+  "id": "a4917745-41e4-5336-9292-287f50f6b749",
+  "slug": "kris-stern",
+  "name": "Kris Stern",
+  "intro": "Kris Stern is a problem solver, former astrophysicist, and active Jenkins contributor who has served as a release lead and Google Summer of Code org admin and mentor.",
+  "github": "krisstern",
+  "twitter": "",
+  "linkedin": "",
+  "email": "",
+  "location": "Hong Kong SAR, China",
+  "pronouns": "They/Them/Theirs",
+  "image": "avatar/kris-stern.png",
+  "featured": false,
+  "datePublished": "2024-01-10",
+  "content": {
+    "preamble": "Kris is known for their determination, self-improvement mindset, and contributions to the Contributor Spotlight project, helping highlight the work of the Jenkins community.",
+
+    "background": "I have a background in astrophysics and transitioned into software engineering by learning Python during my PhD. I started contributing to open source during my academic journey and later became involved with Jenkins, expanding into areas like plugin maintenance and release leadership.",
+
+    "jenkinsUsage": "I have been using Jenkins for more than 2 years.",
+
+    "whyJenkins": "I chose Jenkins due to the opportunities it provides and the openness and approachability of its community.",
+
+    "problemsSolved": "Jenkins helps me detect software defects and automate testing during the development lifecycle.",
+
+    "passion": "I am passionate about the Jenkins community and its continuous evolution as a mature yet growing project.",
+
+    "impactfulWork": "My contributions to Google Summer of Code as an org admin and mentor have been the most impactful.",
+
+    "advice": "Keep learning and enjoy the process. Work on challenging problems that benefit the community. Even if contributions are not accepted, treat them as valuable learning experiences."
+  }
+},
+{
+  "id": "a046166d-78ca-5712-9630-41205bfb7ff9",
+  "slug": "markus-winter",
+  "name": "Markus Winter",
+  "intro": "Markus Winter is a software engineer at SAP SE based in Wiesloch, Germany. He has been contributing to Jenkins since 2016, focusing on core improvements and plugin development.",
+  "github": "mawinter69",
+  "twitter": "",
+  "linkedin": "",
+  "email": "",
+  "location": "Wiesloch, Germany",
+  "pronouns": "He/Him/His",
+  "image": "avatar/markus-winter.JPG",
+  "featured": false,
+  "datePublished": "2024-07-16",
+  "content": {
+    "background": "After graduating in Physics, I transitioned into computer science and began working with build systems like Make and Apache Ant. Later, I discovered Maven and Jenkins, which shaped my career.",
+
+    "jenkinsUsage": "I was first introduced to Jenkins (Hudson) in 2010, but began actively using it in 2013 when my team took over a Jenkins-based build system.",
+
+    "whyJenkins": "Jenkins was chosen due to its extensive plugin ecosystem and flexibility, allowing us to build custom plugins to meet specific requirements.",
+
+    "problemsSolved": "Jenkins enabled building a large-scale C/C++ project using 170 agents and supported thousands of developers with centralized build services across multiple platforms.",
+
+    "passion": "I enjoy working on UI/UX improvements and developing plugins that enhance Jenkins functionality beyond core features.",
+
+    "impactfulWork": "The Customizable Header plugin has been my most impactful contribution, allowing better customization and usability across multiple Jenkins instances. I also contributed UI components like dialogs to Jenkins core.",
+
+    "advice": "Experiment with your ideas and learn from failures. Practical experience teaches more than just reading documentation."
+  }
+},
+{
+  "id": "384f1e61-6a1c-5002-8030-dd59f217d5ce",
+  "slug": "olivier-lamy",
+  "name": "Olivier Lamy",
+  "intro": "Olivier Lamy is a software engineer based in Brisbane, Australia, with nearly 20 years of experience in open source. He has contributed to major Apache projects including Maven, Tomcat, and Cloudstack.",
+  "github": "olamy",
+  "twitter": "olamy",
+  "linkedin": "",
+  "email": "",
+  "location": "Brisbane, Queensland, Australia",
+  "pronouns": "",
+  "image": "avatar/olivier-lamy.jpeg",
+  "featured": false,
+  "datePublished": "2024-09-10",
+  "content": {
+    "background": "Before contributing to Jenkins, I worked on Apache Maven (Maven2/3) and helped build Apache Continuum, an early CI server for Maven projects.",
+
+    "jenkinsUsage": "I have been using Jenkins for more than 15 years.",
+
+    "whyJenkins": "There isn’t another open-source CI server that offers what Jenkins does.",
+
+    "problemsSolved": "At Apache, Jenkins (Hudson) helped manage CI for distributed contributors across time zones. I introduced Hudson and maintained the infrastructure for Apache projects.",
+
+    "passion": "I enjoy Jenkins as a whole rather than focusing on a single aspect.",
+
+    "impactfulWork": "I contributed to integrating Apache Maven 3 into Jenkins when older plugins stopped working. This ensured compatibility between two widely used projects.",
+
+    "advice": "Participating in open source helps improve both technical skills and resilience."
+  }
+},
+{
+  "id": "94ff3a60-e1ea-5c5c-9e0d-bea8a90ab900",
+  "slug": "mark-waite",
+  "name": "Mark Waite",
+  "intro": "Mark Waite is a Jenkins core maintainer, governance board member, and plugin maintainer based in Loveland, Colorado, USA. He has made significant contributions to Jenkins, particularly in Git-related plugins and documentation.",
+  "github": "MarkEWaite",
+  "twitter": "MarkEWaite",
+  "linkedin": "markwaite",
+  "email": "",
+  "location": "Loveland, Colorado, USA",
+  "pronouns": "He/Him/His",
+  "image": "avatar/mark-waite.png",
+  "featured": false,
+  "datePublished": "2024-04-29",
+  "content": {
+    "preamble": "Mark enjoys traveling with his wife to visit their children across the United States. He also enjoys cycling and spending time exploring new places.",
+
+    "background": "I graduated with a degree in Mechanical Engineering but transitioned into software through a support engineer role at Hewlett-Packard. Later, I became a programmer, then moved into release management and team leadership. My journey into CI began with Extreme Programming and building early CI systems before discovering Jenkins.",
+
+    "jenkinsUsage": "I have been using Jenkins since 2007 or 2008.",
+
+    "whyJenkins": "Jenkins was easy to configure and manage compared to other tools. Its flexibility allowed me to solve problems even when employers chose other CI systems.",
+
+    "problemsSolved": "Jenkins automates builds, runs tests, and presents results across various systems and technologies.",
+
+    "passion": "I am passionate about maintaining Git and Git client plugins, contributing to documentation, and participating in platform-related initiatives.",
+
+    "impactfulWork": "The 'Improve a plugin' tutorial and the 2+2+2 Java Support Plan have been impactful contributions, helping a wide range of users over time.",
+
+    "advice": "Don’t create self-imposed barriers. Anyone can contribute to open source. Follow your interests, experiment, and learn through doing. Even small contributions can lead to significant growth."
+  }
+},
+{
+  "id": "800c1b6b-2847-5600-8abf-314514e07b0d",
+  "slug": "meg-mcroberts",
+  "name": "Meg McRoberts",
+  "intro": "Meg McRoberts is a technical content developer passionate about documentation, open source, and knowledge sharing. She focuses on making complex technical concepts accessible and improving documentation systems.",
+  "github": "StackScribe",
+  "twitter": "",
+  "linkedin": "meg-mcroberts-96b444",
+  "email": "",
+  "location": "Scotts Valley, California, USA",
+  "pronouns": "She/Her/Hers",
+  "image": "avatar/meg-mcroberts.jpg",
+  "featured": false,
+  "datePublished": "2025-06-30",
+  "content": {
+    "background": "I started as a historian studying medieval Europe, then moved into technical writing after working in a computer lab on early machine learning systems. I later worked at Bell Labs, MODCOMP, SCO, and Trend Micro, focusing on documentation, training, and developer tools.",
+
+    "jenkinsUsage": "I joined Jenkins in 2017 when CloudBees hired me to work on training and documentation.",
+
+    "whyJenkins": "I was drawn to Jenkins by its welcoming and collaborative open-source community, which actively works together to improve both the software and its ecosystem.",
+
+    "problemsSolved": "I helped improve Jenkins documentation, created standardized training materials, and contributed to security documentation through webinars and community collaboration.",
+
+    "passion": "I am passionate about documentation, community collaboration, and the documentation-as-code philosophy.",
+
+    "impactfulWork": "Enhancing Jenkins documentation, creating training resources, and improving security documentation have been my most impactful contributions.",
+
+    "advice": "Get involved in the community, attend meetings, contribute to documentation or testing, and share feedback. Even small contributions help improve the ecosystem."
+  }
+},
+{
+  "id": "80d40cee-14d9-56d6-b5ea-079741d2c761",
+  "slug": "rajiv-singh",
+  "name": "Rajiv Singh",
+  "intro": "Rajiv Singh is a software engineer based in Bengaluru, India, working at A.P. Moller - Maersk. He focuses on backend systems, algorithms, and distributed systems, and is passionate about open source.",
+  "github": "iamrajiv",
+  "twitter": "therajiv",
+  "linkedin": "iamrajivranjansingh",
+  "email": "",
+  "location": "Bengaluru, India",
+  "pronouns": "He/Him/His",
+  "image": "avatar/rajiv-singh.png",
+  "featured": false,
+  "datePublished": "2024-07-02",
+  "content": {
+    "preamble": "Rajiv enjoys hobbies such as cycling, gardening, reading, photography, and traveling.",
+
+    "background": "I am an open-source enthusiast and have contributed to programs like Google Season of Docs, LFX Mentorship, and Google Summer of Code. I have also mentored new contributors, which led me to get involved with Jenkins.",
+
+    "jenkinsUsage": "I have used Jenkins occasionally in personal projects and production environments, but I still consider myself relatively new to it.",
+
+    "whyJenkins": "I was drawn to Jenkins because of its active and welcoming community and the opportunity to contribute both as a developer and a mentor.",
+
+    "problemsSolved": "I have used Jenkins mainly to automate tasks such as testing builds.",
+
+    "passion": "I am particularly passionate about the welcoming and approachable nature of the Jenkins community.",
+
+    "impactfulWork": "Serving as a mentor in Google Summer of Code has been my most impactful contribution.",
+
+    "advice": "Always keep learning and stay curious."
+  }
+},
+{
+  "id": "6725039d-b01d-5c78-8bdc-ae67cebfa049",
+  "slug": "sacha-labourey",
+  "name": "Sacha Labourey",
+  "intro": "Sacha Labourey is a co-founder of CloudBees and a long-time open-source advocate. With roots in the JBoss ecosystem, he has played a key role in supporting Jenkins and shaping open-source communities.",
+  "github": "",
+  "twitter": "",
+  "linkedin": "sachalabourey",
+  "email": "",
+  "location": "Neuchâtel, Switzerland",
+  "pronouns": "He/Him/His",
+  "image": "avatar/sacha-labourey.jpg",
+  "featured": false,
+  "datePublished": "2025-04-22",
+  "content": {
+    "background": "I studied engineering in Switzerland and started a consulting company during my studies. I later joined JBoss, contributed to its growth, and eventually became CTO. After Red Hat acquired JBoss, I co-founded CloudBees, continuing my journey in open source.",
+
+    "jenkinsInvolvement": "I became involved with Jenkins through CloudBees while exploring platform-as-a-service solutions. Jenkins became a key part of enabling DevOps workflows and bridging gaps in software delivery processes.",
+
+    "motivation": "Jenkins offered a way to unify development, testing, and deployment workflows. It provided flexibility and helped organizations transition toward DevOps practices.",
+
+    "challenges": "Balancing rapid innovation with ecosystem stability has been a major challenge. Maintaining backward compatibility while evolving the platform requires careful decision-making.",
+
+    "impactfulWork": "I played a role in the transition from Hudson to Jenkins, helping navigate community challenges and ensuring the project's continuity. Supporting Jenkins through CloudBees has also been significant.",
+
+    "community": "Jenkins thrives as an ecosystem with contributors, plugins, and global collaboration. Supporting this ecosystem has been key to its success.",
+
+    "future": "Jenkins will continue evolving with trends like cloud computing and AI. Its flexible architecture makes it well-suited to adapt to future innovations.",
+
+    "openSourceView": "Open source is about freedom and collaboration. Companies should support the ecosystems they depend on, ensuring long-term sustainability and innovation."
+  }
+},
+{
+  "id": "45c1ec12-872f-558f-9709-708fd879f602",
+  "slug": "shivay-lamba",
+  "name": "Shivay Lamba",
+  "intro": "Shivay Lamba is a software developer from New Delhi, India, with a strong focus on AI, MLOps, and DevOps. He has contributed to Jenkins as a mentor in Google Summer of Code and works across multiple areas of technology.",
+  "github": "shivaylamba",
+  "twitter": "howdevelop",
+  "linkedin": "",
+  "email": "",
+  "location": "New Delhi, India",
+  "pronouns": "He/Him/His",
+  "image": "avatar/shivay-lamba.png",
+  "featured": false,
+  "datePublished": "2024-09-24",
+  "content": {
+    "preamble": "During college, he initially struggled with advanced data structures and algorithms but realized that success in tech doesn’t require being the best at everything. Open source provided a rewarding path for impact.",
+
+    "background": "I began my tech journey in 2016 during my undergraduate studies in computer science. Initially focused on web development with PHP and Node.js, I later discovered Jenkins during an internship at Tech Mahindra while working on Apache OFBiz. This exposure introduced me to CI/CD and open source.",
+
+    "jenkinsUsage": "I started using Jenkins in 2018 during my internship and continued using it for deployments, testing, and infrastructure automation in later roles.",
+
+    "whyJenkins": "Jenkins stands out due to its strong developer community, extensive documentation, and rich plugin ecosystem, making it highly flexible and easy to integrate.",
+
+    "problemsSolved": "Jenkins enabled automation of CI/CD pipelines, deployments, and testing across environments. It also helped automate machine learning workflows, including deploying Jupyter notebooks using the Jenkins ML plugin.",
+
+    "passion": "I am passionate about Jenkins' scalability, ease of use, strong developer experience, and its ability to integrate with a wide range of tools and technologies.",
+
+    "impactfulWork": "Mentoring the Jenkins Machine Learning plugin project in Google Summer of Code and contributing to MLOps automation has been highly impactful.",
+
+    "advice": "Start with beginner-friendly resources like contributor guides and READMEs. Do initial research before asking questions, and don’t compare yourself with others. Explore different paths and focus on your strengths."
+  }
+},
+{
+  "id": "1616591d-4d21-5ffd-8869-9d2516de5f0e",
+  "slug": "tim-jacomb",
+  "name": "Tim Jacomb",
+  "intro": "Tim Jacomb is a software engineer based in Brighton, England, and a long-time Jenkins contributor. He has contributed extensively to UI/UX improvements and serves as a Release Officer.",
+  "github": "timja",
+  "twitter": "tjaynz",
+  "linkedin": "",
+  "email": "",
+  "location": "Brighton, England",
+  "pronouns": "He/Him/His",
+  "image": "avatar/tim-jacomb.jpg",
+  "featured": false,
+  "datePublished": "2024-02-21",
+  "content": {
+    "preamble": "Tim is originally from New Zealand and enjoys traveling, exploring nature, rock climbing, and spending time outdoors. He has visited over 50 countries and now lives in the UK.",
+
+    "background": "I started using Jenkins at my first job after university as a build tool. Over time, I became more involved in development and learned about Linux servers and infrastructure management.",
+
+    "jenkinsUsage": "I have been using Jenkins for around 10 to 11 years.",
+
+    "whyJenkins": "At the time, Jenkins was the best free and open-source CI solution. It was easy to use, required no licensing, and fit well with our open-source-based Java ecosystem.",
+
+    "problemsSolved": "Jenkins provides repeatable builds and deployments, ensuring consistency across environments. It scales well for large teams and allows full control without relying on external providers.",
+
+    "passion": "I enjoy working on UI improvements, performance optimization, and overall system stability.",
+
+    "impactfulWork": "UI modernization efforts, including removal of legacy technologies like Prototype, have been highly impactful. These improvements allow adoption of modern libraries and cleaner architecture.",
+
+    "advice": "Start with small contributions to understand the project. Learn gradually, explore the codebase, and avoid taking on overly complex tasks initially. There are always opportunities to improve the project."
+  }
+},
+{
+  "id": "d3b27d18-ba84-5826-91ec-e8fcd26542b5",
+  "slug": "stefan-spieker",
+  "name": "Stefan Spieker",
+  "intro": "Stefan Spieker is a software developer and solution architect from Herzogenrath, Germany. He has been an active Jenkins contributor, focusing on quality improvements and core contributions.",
+  "github": "StefanSpieker",
+  "twitter": "",
+  "linkedin": "stefan-spieker-446168161",
+  "email": "",
+  "location": "Herzogenrath, Germany",
+  "pronouns": "He/Him/His",
+  "image": "avatar/stefan-spieker.png",
+  "featured": false,
+  "datePublished": "2024-03-06",
+  "content": {
+    "preamble": "Stefan enjoys staying active with sports like volleyball and badminton. He has also written a book titled '52 Stunden Informatik', which includes a chapter on open source.",
+
+    "background": "In my early career, I worked without a build server and later used CruiseControl.NET, which was complex to maintain. I started using Hudson/Jenkins for personal projects and eventually introduced it to my team. I initially contributed to smaller projects before moving to larger ones like Jenkins.",
+
+    "jenkinsUsage": "I started using Hudson in 2010 and switched to Jenkins in 2011. I began contributing through pull requests to Jenkins core in my free time.",
+
+    "whyJenkins": "I appreciate the openness of Jenkins and its community. It also provided an opportunity to encourage colleagues to contribute to open source.",
+
+    "problemsSolved": "Jenkins solved various automation challenges, including software builds, testing, database maintenance, and notifications.",
+
+    "passion": "I am passionate about Jenkins’ flexibility, its large plugin ecosystem, and the strong contributor community.",
+
+    "impactfulWork": "I contributed to improving code quality in Jenkins core, including helping reduce SpotBugs issues to zero.",
+
+    "advice": "Start small, learn with each contribution, and respect existing code. Take time to understand the project and collaborate with the community."
+  }
+},
+{
+  "id": "26a309ec-74d9-5008-83b8-0ce1f0396ce1",
+  "slug": "vandit-singh",
+  "name": "Vandit Singh",
+  "intro": "Vandit Singh is a Jenkins contributor based in India with a strong interest in DevOps and cloud-native technologies. He enjoys coding and music, and actively contributes to open source.",
+  "github": "Vandit1604",
+  "twitter": "vandittweets",
+  "linkedin": "vandit-singh",
+  "email": "",
+  "location": "Delhi NCR, India",
+  "pronouns": "He/Him/His",
+  "image": "avatar/vandit-singh.png",
+  "featured": false,
+  "datePublished": "2024-06-05",
+  "content": {
+    "background": "Before contributing to Jenkins, I had limited knowledge of CI/CD, DevOps, and Java. My interest in open source grew during my freshman year through guidance from seniors and peers.",
+
+    "jenkinsUsage": "I have been contributing to Jenkins since July 2022.",
+
+    "whyJenkins": "Jenkins has a low barrier to entry and welcomes contributors from various backgrounds including coding, design, and documentation. This openness encouraged me to contribute.",
+
+    "problemsSolved": "Jenkins helps automate CI/CD pipelines, testing, and web application tasks, improving the software development lifecycle.",
+
+    "passion": "I am particularly interested in Jenkins infrastructure and the remoting component.",
+
+    "impactfulWork": "My Google Summer of Code 2023 work on adopting alternative tooling for the jenkins.io website has been my most impactful contribution.",
+
+    "advice": "Be patient and persistent. Focus on one thing at a time, try solving problems independently, and enjoy the learning process. Open source offers great opportunities for growth."
+  }
+},
+{
+  "id": "1adddc48-6b8e-54e7-8a45-69b2380c051f",
+  "slug": "valentin-delaye",
+  "name": "Valentin Delaye",
+  "intro": "Valentin Delaye is a Jenkins contributor and plugin maintainer from Lausanne, Switzerland. He is passionate about open source and actively maintains multiple Jenkins plugins.",
+  "github": "jonesbusy",
+  "twitter": "",
+  "linkedin": "",
+  "email": "",
+  "location": "Lausanne, Switzerland",
+  "pronouns": "He/Him/His",
+  "image": "avatar/valentin-delaye.png",
+  "featured": false,
+  "datePublished": "2024-02-07",
+  "content": {
+    "background": "Jenkins was the first open-source project I contributed to with a community. Before that, I made small contributions to homemade Maven plugins and later contributed to tools like Helm charts, Ansible collections, and OpenRewrite.",
+
+    "jenkinsUsage": "I started using Jenkins around 2009 before it was called Jenkins and made my first contribution in 2018.",
+
+    "whyJenkins": "Jenkins attracted me because of its cost, flexibility, and extensibility through plugins, especially for on-premises environments.",
+
+    "problemsSolved": "Jenkins helped automate workflows and implement continuous integration even with on-prem infrastructure constraints.",
+
+    "passion": "I am passionate about the Jenkins community, its plugin ecosystem, and cloud-native deployments such as external storage and Jenkinsfile runner.",
+
+    "impactfulWork": "I adopted around 30 abandoned plugins, fixing issues including security vulnerabilities and maintaining them. I also contributed features like OpenCover and NUnit parsers to the Coverage plugin.",
+
+    "advice": "Start with small contributions like documentation or bug reports. Clearly documenting reproducible issues is highly valuable and helps maintainers solve problems efficiently."
+  }
+},
+{
+  "id": "8c2c39b9-9c0a-5070-a4e2-dc2d9e2385c4",
+  "slug": "vincent-latombe",
+  "name": "Vincent Latombe",
+  "intro": "Vincent Latombe is a software engineer and long-time Jenkins contributor based in France. He has worked across Jenkins core, plugins, and large-scale infrastructure improvements, including high availability and test parallelization.",
+  "github": "vlatombe",
+  "twitter": "",
+  "linkedin": "",
+  "email": "",
+  "location": "Villefranche sur Saone, France",
+  "pronouns": "He/Him/His",
+  "image": "avatar/vincent-latombe.jpg",
+  "featured": false,
+  "datePublished": "2024-11-19",
+  "content": {
+    "preamble": "Vincent has contributed to Jenkins in various roles and enjoys staying active through sports like badminton and cycling. He also shares his passion for technology with his children.",
+
+    "background": "I studied telecommunications and software engineering in France and Sweden, then worked at Amadeus for eight years. I transitioned from UI development to build tooling and CI systems, eventually adopting Hudson/Jenkins and contributing fixes and plugins like ClearCase.",
+
+    "jenkinsUsage": "I started using Hudson in the late 2000s and began contributing to Jenkins around 2010–2011. I have worked with Jenkins for over a decade.",
+
+    "whyJenkins": "Jenkins stood out for its flexibility and ability to configure jobs without requiring restarts, simplifying CI workflows compared to earlier tools.",
+
+    "problemsSolved": "Jenkins helped manage complex CI systems, optimize build processes, and handle multiple projects efficiently while reducing infrastructure costs and improving scalability.",
+
+    "work": "I have worked on cloud deployment prototypes, HA (high availability) support, and plugins like the parallel test executor, enabling faster builds by distributing tests across machines.",
+
+    "impactfulWork": "Maintaining the Kubernetes plugin and contributing to scalable Jenkins infrastructure has been highly impactful, especially for cloud-based CI environments.",
+
+    "advice": "Understand the problem deeply before contributing. Be patient with the learning curve, accept mistakes, and collaborate with the community to improve continuously."
+  }
+},
+{
+  "id": "d4163493-5b92-54b5-a82d-af5450f2c1b8",
+  "slug": "yaroslav-afenkin",
+  "name": "Yaroslav Afenkin",
+  "intro": "Yaroslav Afenkin is a software engineer based in Odesa, Ukraine, who has contributed to Jenkins security and CSP improvements. His work focuses on fixing vulnerabilities and improving the security of Jenkins core.",
+  "github": "yaroslavafenkin",
+  "twitter": "",
+  "linkedin": "yaroslavafenkin",
+  "email": "",
+  "location": "Odesa, Ukraine",
+  "pronouns": "He/Him/His",
+  "image": "avatar/yaroslav-afenkin.jpg",
+  "featured": false,
+  "datePublished": "2025-03-24",
+  "content": {
+    "background": "I studied computer science in Ukraine and Poland, later working as a junior software engineer on Java-based projects. I eventually joined CloudBees and became part of the Jenkins security team.",
+
+    "jenkinsUsage": "I first used Jenkins in my early job as a basic user for builds and logs, but most of my experience comes from working on Jenkins itself rather than using it daily.",
+
+    "interest": "I was drawn to Jenkins due to its technical depth and focus on developer-centric work, especially in security, rather than traditional enterprise domains.",
+
+    "problemsSolved": "I worked on CSP (Content Security Policy) improvements, fixing vulnerabilities, reviewing code, and addressing JavaScript-related security issues such as XSS risks.",
+
+    "challenges": "Many challenges came from handling different JavaScript frameworks and ensuring they complied with CSP. Custom implementations often required new approaches to enforce security policies.",
+
+    "passion": "I find Jenkins extensibility fascinating. Its plugin ecosystem allows solving a wide range of problems and automating almost any task.",
+
+    "impactfulWork": "My contributions to the CSP project and fixing security vulnerabilities in Jenkins core have had a significant impact on improving overall platform security.",
+
+    "advice": "Read and understand the code deeply. Consider how changes impact extensibility and existing functionality before contributing."
+  }
+},
+{
+  "id": "06162aec-ffe0-5895-a22d-6df759970bf9",
+  "slug": "ulli-hafner",
+  "name": "Ulli Hafner",
+  "intro": "Ulli Hafner is a professor of Software Engineering at the University of Applied Sciences Munich, a Jenkins contributor, plugin maintainer, and member of the Jenkins Governance Board.",
+  "github": "uhafner",
+  "twitter": "",
+  "linkedin": "",
+  "email": "",
+  "location": "Munich, Bavaria, Germany",
+  "pronouns": "He/Him/His",
+  "image": "avatar/ulli-hafner.png",
+  "featured": false,
+  "datePublished": "2024-01-23",
+  "content": {
+    "preamble": "Ulli is an active member of the Jenkins UX SIG and enjoys mentoring new contributors. In his free time, he spends time with family, stays active through sports, and volunteers as a lifeguard and swimming trainer.",
+
+    "background": "I worked as a software developer and architect before contributing to Jenkins. Currently, I maintain several Jenkins plugins focused on build result visualization and UI improvements, and I also teach software engineering at university.",
+
+    "jenkinsUsage": "I have been using and contributing to Jenkins for more than 15 years.",
+
+    "whyJenkins": "I initially used Jenkins in a company project where I was responsible for ensuring high-quality code delivery.",
+
+    "problemsSolved": "Jenkins helped automate quality gates and provide detailed reporting through a rich user interface, ensuring adherence to development standards.",
+
+    "passion": "I am passionate about improving Jenkins' user interface and enhancing how quality metrics like testing, coverage, and static analysis are visualized.",
+
+    "impactfulWork": "My most impactful contributions include plugins for static analysis, code coverage, and Git forensics, which are widely used and have received recognition such as the SUN Open Source Community Innovation Award.",
+
+    "advice": "Focus on improving existing projects instead of reinventing the wheel, and maintain high-quality standards in your contributions."
+  }
+}
+]
