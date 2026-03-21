@@ -16,9 +16,9 @@ function ContributorDetails() {
 
     const [contributor, setContributor] = useState(null);
     const [sanitizedHTML, setSanitizedHTML] = useState('');
-    const [slug, setSlug] = useState(null); // ✅ FIX
+    const [slug, setSlug] = useState(null); //
 
-    // ✅ SAFE WINDOW ACCESS
+    //  SAFE WINDOW ACCESS
     useEffect(() => {
         if (typeof window !== 'undefined') {
             const params = new URLSearchParams(window.location.search);
@@ -26,7 +26,7 @@ function ContributorDetails() {
         }
     }, []);
 
-    // ✅ FETCH DATA (runs only after slug is set)
+    //  FETCH DATA (runs only after slug is set)
     useEffect(() => {
         if (!slug) return;
 
@@ -53,7 +53,7 @@ function ContributorDetails() {
             .catch((err) => console.error('Fetch error:', err));
     }, [slug]);
 
-    // ✅ SANITIZE HTML
+    //  SANITIZE HTML
     useEffect(() => {
         if (contributor?.html) {
             setSanitizedHTML(DOMPurify.sanitize(contributor.html));
