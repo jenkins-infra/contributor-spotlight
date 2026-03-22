@@ -375,3 +375,24 @@
     opacity: 0.75;
     font-style: italic;
 }
+
+.see-more-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 1.5rem;
+}
+
+.see-more-button {
+    border: 1px solid currentColor;
+    border-radius: 999px;
+    background: transparent;
+    color: inherit;
+    padding: 0.5rem 1.1rem;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.see-more-button:hover {
+    opacity: 0.85;
+}
