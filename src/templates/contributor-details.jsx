@@ -4,7 +4,7 @@ import { Box, Stack, Typography, useTheme } from '@mui/material';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import '../styles/contributor-details.css';
 import useMediaQuery from '@mui/material/useMediaQuery';
-import { Helmet } from 'react-helmet';
+
 import dayjs from 'dayjs';
 import { Github, Linkedin, Mail } from 'lucide-react';
 import XIcon from '../Components/XIcon.jsx';
@@ -53,37 +53,6 @@ function ContributorDetails(props) {
     };
     return (
         <>
-            <Helmet>
-                <meta charSet='utf-8' />
-                <title>{title}</title>
-                <meta name='title' property='og:title' content={title} />
-                <meta
-                    property='og:image'
-                    content={
-                        '../../../' + props.data.asciidoc.pageAttributes.image
-                    }
-                />
-                <meta property='og:image:width' content='520' />
-                <meta property='og:image:height' content='270' />
-                <meta
-                    property='og:description'
-                    content={
-                        'Jenkins Contributor Spotlight is where we celebrate the contributions of Jenkins community members. In this feature we spotlight ' +
-                        props.data.asciidoc.document.title +
-                        '.'
-                    }
-                />
-                <meta
-                    property='article:author'
-                    content='Jenkins Copy Editors'
-                />
-                <meta
-                    property='article:published_time'
-                    content={dayjs(
-                        props.data.asciidoc.pageAttributes.datepublished
-                    ).toISOString()}
-                />
-            </Helmet>
             <Box padding={0} display='flex' flexDirection='column'>
                 <Box
                     display='flex'
@@ -269,6 +238,39 @@ function ContributorDetails(props) {
 }
 
 export default ContributorDetails;
+
+export const Head = ({ data }) => {
+    const title =
+        data.asciidoc.document.title + ' - Jenkins Contributor Spotlight';
+    return (
+        <>
+            <meta charSet='utf-8' />
+            <title>{title}</title>
+            <meta name='title' property='og:title' content={title} />
+            <meta
+                property='og:image'
+                content={'../../../' + data.asciidoc.pageAttributes.image}
+            />
+            <meta property='og:image:width' content='520' />
+            <meta property='og:image:height' content='270' />
+            <meta
+                property='og:description'
+                content={
+                    'Jenkins Contributor Spotlight is where we celebrate the contributions of Jenkins community members. In this feature we spotlight ' +
+                    data.asciidoc.document.title +
+                    '.'
+                }
+            />
+            <meta property='article:author' content='Jenkins Copy Editors' />
+            <meta
+                property='article:published_time'
+                content={dayjs(
+                    data.asciidoc.pageAttributes.datepublished
+                ).toISOString()}
+            />
+        </>
+    );
+};
 
 export const pageQuery = graphql`
     query ($id: String!) {
