@@ -16,11 +16,12 @@ function ContributorDetails(props) {
     const isTablet = useMediaQuery(theme.breakpoints.between('lg', 'sm'));
     const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
     const title =
-        props.data.asciidoc.pageAttributes.name +
-        ' - Jenkins Contributor Spotlight';
+        props.data.asciidoc.document.title + ' - Jenkins Contributor Spotlight';
 
     // State for sanitized HTML
-    const [sanitizedHTML, setSanitizedHTML] = useState(props.data.asciidoc.html);
+    const [sanitizedHTML, setSanitizedHTML] = useState(
+        props.data.asciidoc.html
+    );
 
     // Sanitize HTML on client side only
     useEffect(() => {
@@ -68,7 +69,7 @@ function ContributorDetails(props) {
                     property='og:description'
                     content={
                         'Jenkins Contributor Spotlight is where we celebrate the contributions of Jenkins community members. In this feature we spotlight ' +
-                        props.data.asciidoc.pageAttributes.name +
+                        props.data.asciidoc.document.title +
                         '.'
                     }
                 />
