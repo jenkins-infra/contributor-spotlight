@@ -1,24 +1,52 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { graphql, Link } from 'gatsby';
 import { Box, Stack, Typography, useTheme } from '@mui/material';
-import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import GitHubIcon from '@mui/icons-material/GitHub';
-import TwitterIcon from '@mui/icons-material/Twitter';
-import AlternateEmailIcon from '@mui/icons-material/AlternateEmail';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import '../styles/contributor-details.css';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import { Helmet } from 'react-helmet';
 import dayjs from 'dayjs';
-
+import { Github, Linkedin, Mail } from 'lucide-react';
+import XIcon from '../Components/XIcon.jsx';
+import { motion } from 'framer-motion';
+import './contributor-details.css';
 function ContributorDetails(props) {
     const theme = useTheme();
     const isDesktop = useMediaQuery(theme.breakpoints.up('lg'));
     const isTablet = useMediaQuery(theme.breakpoints.between('lg', 'sm'));
     const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
+    const darkmode = useMediaQuery('(prefers-color-scheme: dark)');
     const title =
         `${props.data.asciidoc.document.title} - Jenkins Contributor Spotlight`;
 
+    // Sanitize HTML on client side only
+    useEffect(() => {
+        if (typeof window !== 'undefined') {
+            import('dompurify').then((module) => {
+                const DOMPurify = module.default;
+                setSanitizedHTML(DOMPurify.sanitize(props.data.asciidoc.html));
+            });
+        }
+    }, [props.data.asciidoc.html]);
+
+    const socialLinkVariants = {
+        hidden: { opacity: 0, scale: 0.8 },
+        visible: (i) => ({
+            opacity: 1,
+            scale: 1,
+            transition: {
+                delay: i * 0.1,
+                type: 'spring',
+                stiffness: 200,
+                damping: 15,
+            },
+        }),
+        hover: {
+            scale: 1.2,
+            rotate: 5,
+            transition: { type: 'spring', stiffness: 400 },
+        },
+    };
     return (
         <>
             <Helmet>
@@ -154,32 +182,70 @@ function ContributorDetails(props) {
                         sx={{ paddingBottom: 2 }}
                     >
                         {props.data.asciidoc.pageAttributes.linkedin !== '' && (
-                            <Link
-                                to={`https://www.linkedin.com/in/${props.data.asciidoc.pageAttributes.linkedin}`}
+                            <motion.a
+                                href={`https://linkedin.com/in/${props.data.asciidoc.pageAttributes.linkedin}`}
+                                target='_blank'
+                                rel='noreferrer'
+                                onClick={(e) => e.stopPropagation()}
+                                variants={socialLinkVariants}
+                                custom={1}
+                                whileHover='hover'
+                                whileTap={{ scale: 0.9 }}
+                                className='social-link'
                             >
-                                <LinkedInIcon />
-                            </Link>
+                                <Linkedin size={18} />
+                                <span className='social-tooltip'>LinkedIn</span>
+                            </motion.a>
                         )}
                         {props.data.asciidoc.pageAttributes.twitter !== '' && (
-                            <Link
-                                to={`https://twitter.com/${props.data.asciidoc.pageAttributes.twitter}`}
+                            <motion.a
+                                href={`https://x.com/${props.data.asciidoc.pageAttributes.twitter}`}
+                                target='_blank'
+                                rel='noreferrer'
+                                onClick={(e) => e.stopPropagation()}
+                                variants={socialLinkVariants}
+                                custom={2}
+                                whileHover='hover'
+                                whileTap={{ scale: 0.9 }}
+                                className='social-link'
                             >
-                                <TwitterIcon />
-                            </Link>
+                                <XIcon size={18} />
+                                <span className='social-tooltip'>
+                                    X (formerly Twitter)
+                                </span>
+                            </motion.a>
                         )}
                         {props.data.asciidoc.pageAttributes.github !== '' && (
-                            <Link
-                                to={`https://github.com/${props.data.asciidoc.pageAttributes.github}`}
+                            <motion.a
+                                href={`https://github.com/${props.data.asciidoc.pageAttributes.github}`}
+                                target='_blank'
+                                rel='noreferrer'
+                                onClick={(e) => e.stopPropagation()}
+                                variants={socialLinkVariants}
+                                custom={0}
+                                whileHover='hover'
+                                whileTap={{ scale: 0.9 }}
+                                className='social-link'
                             >
-                                <GitHubIcon />
-                            </Link>
+                                <Github size={18} />
+                                <span className='social-tooltip'>GitHub</span>
+                            </motion.a>
                         )}
                         {props.data.asciidoc.pageAttributes.email !== '' && (
-                            <Link
-                                to={`mailto:${props.data.asciidoc.pageAttributes.email}`}
+                            <motion.a
+                                href={`mailto:${props.data.asciidoc.pageAttributes.email}`}
+                                target='_blank'
+                                rel='noreferrer'
+                                onClick={(e) => e.stopPropagation()}
+                                variants={socialLinkVariants}
+                                custom={1}
+                                whileHover='hover'
+                                whileTap={{ scale: 0.9 }}
+                                className='social-link'
                             >
-                                <AlternateEmailIcon />
-                            </Link>
+                                <Mail size={18} />
+                                <span className='social-tooltip'>Email</span>
+                            </motion.a>
                         )}
                     </Box>
                     <Box sx={{ my: 2 }}>
@@ -189,9 +255,149 @@ function ContributorDetails(props) {
                     </Box>
                     <Box
                         dangerouslySetInnerHTML={{
-                            __html: props.data.asciidoc.html,
+                            __html: sanitizedHTML,
                         }}
                     />
+                    <Box
+                        sx={{
+                            mt: 10,
+                            pt: 4,
+                            borderTop: '1px solid #e0e0e0',
+                            display: 'flex',
+                            flexDirection: {
+                                xs: 'column',
+                                sm: 'row',
+                            },
+                            justifyContent: 'space-between',
+                            alignItems: {
+                                xs: 'stretch',
+                                sm: 'center',
+                            },
+                            gap: 2,
+                        }}
+                    >
+                        {previous ? (
+                            <Link
+                                to={previous.slug}
+                                style={{
+                                    textDecoration: 'none',
+                                    color: 'inherit',
+                                }}
+                            >
+                                <Stack
+                                    direction='row'
+                                    alignItems='center'
+                                    spacing={1}
+                                >
+                                    <ArrowBackIcon fontSize='small' />
+
+                                    <img
+                                        src={`../../../${previous.image}`}
+                                        alt={previous.title}
+                                        width={44}
+                                        height={44}
+                                        style={{
+                                            borderRadius: '50%',
+                                            objectFit: 'cover',
+                                        }}
+                                    />
+
+                                    <Box>
+                                        <Typography
+                                            variant='caption'
+                                            sx={{
+                                                color: darkmode
+                                                    ? '#bbbbbb'
+                                                    : 'text.secondary',
+                                            }}
+                                        >
+                                            Previous Profile
+                                        </Typography>
+                                        <Typography
+                                            fontWeight={600}
+                                            sx={{
+                                                maxWidth: 180,
+                                                whiteSpace: 'nowrap',
+                                                overflow: 'hidden',
+                                                textOverflow: 'ellipsis',
+                                            }}
+                                        >
+                                            {previous.title}
+                                        </Typography>
+                                    </Box>
+                                </Stack>
+                            </Link>
+                        ) : (
+                            <div />
+                        )}
+
+                        {next ? (
+                            <Box
+                                sx={{
+                                    alignSelf: {
+                                        xs: 'flex-end',
+                                        sm: 'auto',
+                                    },
+                                }}
+                            >
+                                <Link
+                                    to={next.slug}
+                                    style={{
+                                        textDecoration: 'none',
+                                        color: 'inherit',
+                                    }}
+                                >
+                                    <Stack
+                                        direction='row'
+                                        alignItems='center'
+                                        spacing={1}
+                                    >
+                                        <Box textAlign='right'>
+                                            <Typography
+                                                variant='caption'
+                                                sx={{
+                                                    color: darkmode
+                                                        ? '#bbbbbb'
+                                                        : 'text.secondary',
+                                                }}
+                                            >
+                                                Next Profile
+                                            </Typography>
+                                            <Typography
+                                                fontWeight={600}
+                                                sx={{
+                                                    maxWidth: 180,
+                                                    whiteSpace: 'nowrap',
+                                                    overflow: 'hidden',
+                                                    textOverflow: 'ellipsis',
+                                                }}
+                                            >
+                                                {next.title}
+                                            </Typography>
+                                        </Box>
+
+                                        <img
+                                            src={`../../../${next.image}`}
+                                            alt={next.title}
+                                            width={44}
+                                            height={44}
+                                            style={{
+                                                borderRadius: '50%',
+                                                objectFit: 'cover',
+                                            }}
+                                        />
+
+                                        <ArrowBackIcon
+                                            fontSize='small'
+                                            sx={{ transform: 'rotate(180deg)' }}
+                                        />
+                                    </Stack>
+                                </Link>
+                            </Box>
+                        ) : (
+                            <div />
+                        )}
+                    </Box>
                 </Box>
             </Box>
         </>

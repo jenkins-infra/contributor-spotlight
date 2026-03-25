@@ -32,12 +32,6 @@ module.exports = {
         },
         `gatsby-transformer-asciidoc`,
         {
-            resolve: `gatsby-plugin-typography`,
-            options: {
-                pathToConfigModule: `${__dirname}/src/utils/typography`,
-            },
-        },
-        {
             resolve: `gatsby-transformer-asciidoc`,
             options: {
                 attributes: {

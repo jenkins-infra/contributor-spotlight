@@ -1,0 +1,35 @@
+/* Base typography - replaces gatsby-plugin-typography / react-typography */
+html {
+    font-size: 112.5%; /* 18px */
+    line-height: 1.45;
+}
+
+body {
+    margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    line-height: 1.2;
+}
+
+p,
+blockquote {
+    margin-bottom: 0.75rem;
+}
+
+/* Tablet: 17px base */
+@media only screen and (max-width: 768px) {
+    html {
+        font-size: 106.25%;
+    }
+}
+
+/* Mobile: 16px base */
+@media only screen and (max-width: 600px) {
+    html {
+        font-size: 100%;
+    }
+}

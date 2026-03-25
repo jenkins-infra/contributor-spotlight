@@ -1,13 +1,13 @@
 .contributors-container {
     width: 100%;
-    max-width: 1200px;
     margin: 0 auto;
-    padding: 3rem 1.5rem;
+    padding: 3rem 2rem;
 }
 
 .contributors-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(320px, 380px));
+    justify-content: center;
     gap: 2rem;
 }
 
@@ -31,6 +31,26 @@
     position: relative;
     overflow: hidden;
     min-height: 340px;
+}
+.contributor-est-badge {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 5px 11px;
+    border-radius: 999px;
+    background: linear-gradient(135deg, #0d9488 0%, #0891b2 100%);
+    box-shadow:
+        0 0 12px rgba(13, 148, 136, 0.45),
+        0 2px 6px rgba(0, 0, 0, 0.35);
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    color: #e0fdf4;
+    user-select: none;
+    z-index: 10;
 }
 
 .contributor-card::before {
@@ -148,6 +168,7 @@
     padding: 0.4rem 0.8rem;
     background: rgba(255, 255, 255, 0.05);
     border-radius: 12px;
+    white-space: nowrap;
 }
 
 .contributor-links {
@@ -309,19 +330,9 @@
     background: #111827;
 }
 
-@media (max-width: 1200px) {
-    .contributors-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
 @media (max-width: 768px) {
     .contributors-container {
         padding: 1.5rem 1rem;
-    }
-
-    .contributors-grid {
-        grid-template-columns: 1fr;
     }
 
     .contributor-card {
@@ -336,12 +347,6 @@
 }
 
 @media (max-width: 480px) {
-    .contributors-grid {
-        grid-template-columns: 1fr;
-        max-width: 320px;
-        margin: 0 auto;
-    }
-
     .contributor-card {
         padding: 1.5rem;
     }

@@ -1,0 +1,148 @@
+.results-container {
+    background: #1f1f1f;
+    border: 1px solid #444;
+    border-radius: 20px;
+    width: 1000px;
+    max-width: 90vw;
+}
+.result-card {
+    padding: 20px 24px;
+    border-bottom: 1px solid #333;
+    cursor: pointer;
+
+    display: flex;
+    gap: 18px;
+    align-items: flex-start;
+    border-radius: 20px;
+}
+
+.result-card:last-child {
+    border-bottom: none;
+}
+
+.result-card:hover {
+    background: #262626;
+}
+
+.result-avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+    border: 1px solid #444;
+}
+
+.result-content {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    width: 100%;
+}
+
+.result-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.result-name {
+    margin: 0;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.result-score {
+    color: #888;
+    font-size: 13px;
+}
+
+.result-location {
+    margin: 0;
+    color: #aaa;
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+.result-links {
+    display: flex;
+    gap: 16px;
+    margin-top: 6px;
+}
+
+.result-links a {
+    color: #ffffff;
+    font-size: 14px;
+    text-decoration: bolder;
+}
+
+.result-links a:hover {
+    text-decoration: underline;
+}
+
+.no-results {
+    padding: 16px;
+    color: #999;
+    text-align: center;
+}
+
+.light .results-container {
+    background: rgba(255, 255, 255, 0.95);
+    border: 1px solid #e0e0e0;
+}
+.light .result-card {
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.light .result-card:hover {
+    background: rgba(0, 0, 0, 0.04);
+}
+.light .result-name {
+    color: #000;
+}
+
+.light .result-location {
+    color: #444;
+}
+
+.light .result-links a {
+    color: #2563eb;
+}
+
+.light .result-links a:hover {
+    text-decoration: underline;
+}
+.light .social-tooltip {
+    background: #111827;
+    color: #fff;
+}
+
+.light .social-tooltip::after {
+    border-top-color: #111827;
+}
+
+@media (max-width: 640px) {
+    .result-card {
+        flex-direction: row;
+        align-items: center;
+        padding: 14px 16px;
+    }
+
+    .result-avatar {
+        width: 48px;
+        height: 48px;
+    }
+
+    .result-name {
+        font-size: 16px;
+    }
+
+    .result-location {
+        font-size: 13px;
+    }
+
+    .result-links {
+        gap: 12px;
+    }
+}
