@@ -1,7 +1,6 @@
 import { Box, Stack, useTheme } from '@mui/material';
 import React, { useEffect, useState } from 'react';
 import useMediaQuery from '@mui/material/useMediaQuery';
-import axios from 'axios';
 import Papa from 'papaparse';
 import dayjs from 'dayjs';
 
@@ -13,13 +12,12 @@ const ThankYouNote = ({ darkmode }) => {
 
     useEffect(() => {
         const fetchHonoredContributor = () => {
-            axios
-                .get(
-                    'https://raw.githubusercontent.com/jenkins-infra/jenkins-contribution-stats/main/data/honored_contributor.csv',
-                    { responseType: 'text' }
-                )
-                .then((response) => {
-                    setThankYou(Papa.parse(response.data)?.data[1]);
+            fetch(
+                'https://raw.githubusercontent.com/jenkins-infra/jenkins-contribution-stats/main/data/honored_contributor.csv'
+            )
+                .then((res) => res.text())
+                .then((text) => {
+                    setThankYou(Papa.parse(text)?.data[1]);
                 })
                 .catch((error) => {
                     console.error('Error fetching thank you note:', error);
