@@ -17,8 +17,7 @@ function ContributorDetails(props) {
     const isTablet = useMediaQuery(theme.breakpoints.between('lg', 'sm'));
     const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
     const title =
-        props.data.asciidoc.pageAttributes.name +
-        ' - Jenkins Contributor Spotlight';
+        `${props.data.asciidoc.document.title} - Jenkins Contributor Spotlight`;
 
     return (
         <>
