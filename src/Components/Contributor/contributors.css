@@ -6,21 +6,21 @@
 
 .contributors-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 380px));
+    grid-template-columns: repeat(auto-fit, minmax(200px, 300px));
     justify-content: center;
     gap: 2rem;
 }
 
 .contributor-card {
     background: linear-gradient(
-        145deg,
-        rgba(255, 255, 255, 0.05),
-        rgba(255, 255, 255, 0.02)
+        180deg,
+        rgba(138, 130, 130, 0.938),
+        rgba(51, 48, 48, 0.806)
     );
     backdrop-filter: blur(10px);
     border: 2px solid rgba(0, 0, 0, 0.08);
     border-radius: 20px;
-    padding: 2rem;
+    padding: 1.5rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -30,7 +30,7 @@
     transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.1);
     position: relative;
     overflow: hidden;
-    min-height: 340px;
+    min-height: 200px;
 }
 .contributor-est-badge {
     position: absolute;
@@ -41,7 +41,7 @@
     gap: 5px;
     padding: 5px 11px;
     border-radius: 999px;
-    background: linear-gradient(135deg, #0d9488 0%, #0891b2 100%);
+    background: linear-gradient(135deg, #0d944e 0%, #08c149 100%);
     box-shadow:
         0 0 12px rgba(13, 148, 136, 0.45),
         0 2px 6px rgba(0, 0, 0, 0.35);
@@ -81,8 +81,8 @@
 }
 
 .contributor-image-wrapper {
-    width: 200px;
-    height: 200px;
+    width: 120px;
+    height: 120px;
     margin-bottom: 1.5rem;
     position: relative;
 }
@@ -127,7 +127,7 @@
 }
 
 .contributor-card h3 {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     font-weight: 600;
     margin-bottom: 0.5rem;
     background: linear-gradient(45deg, #fff, rgba(255, 255, 255, 0.9));
@@ -149,13 +149,13 @@
     align-items: center;
     gap: 0.5rem;
     margin: 0.5rem 0;
-    font-size: 0.95rem;
+    font-size: 0.5rem;
 }
 
 .contributor-location::before {
     content: '📍';
-    font-size: 0.9rem;
-    opacity: 0.6;
+    font-size: 1rem;
+    opacity: 0.9;
 }
 
 .contributor-meta {
