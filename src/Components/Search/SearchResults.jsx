@@ -72,7 +72,7 @@ function SearchResults({ results, darkmode }) {
                                         <motion.a
                                             href={`https://github.com/${item.github}`}
                                             target='_blank'
-                                            rel='noreferrer'
+                                            rel='noopener noreferrer'
                                             onClick={(e) => e.stopPropagation()}
                                             variants={socialLinkVariants}
                                             custom={0}
@@ -90,7 +90,7 @@ function SearchResults({ results, darkmode }) {
                                         <motion.a
                                             href={`https://linkedin.com/in/${item?.linkedin}`}
                                             target='_blank'
-                                            rel='noreferrer'
+                                            rel='noopener noreferrer'
                                             onClick={(e) => e.stopPropagation()}
                                             variants={socialLinkVariants}
                                             custom={1}
@@ -108,7 +108,7 @@ function SearchResults({ results, darkmode }) {
                                         <motion.a
                                             href={`https://x.com/${item.twitter}`}
                                             target='_blank'
-                                            rel='noreferrer'
+                                            rel='noopener noreferrer'
                                             onClick={(e) => e.stopPropagation()}
                                             variants={socialLinkVariants}
                                             custom={2}
