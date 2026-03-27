@@ -192,7 +192,7 @@ function ContributorDetails(props) {
                             <motion.a
                                 href={`https://linkedin.com/in/${props.data.asciidoc.pageAttributes.linkedin}`}
                                 target='_blank'
-                                rel='noreferrer'
+                                rel='noopener noreferrer'
                                 onClick={(e) => e.stopPropagation()}
                                 variants={socialLinkVariants}
                                 custom={1}
@@ -208,7 +208,7 @@ function ContributorDetails(props) {
                             <motion.a
                                 href={`https://x.com/${props.data.asciidoc.pageAttributes.twitter}`}
                                 target='_blank'
-                                rel='noreferrer'
+                                rel='noopener noreferrer'
                                 onClick={(e) => e.stopPropagation()}
                                 variants={socialLinkVariants}
                                 custom={2}
@@ -226,7 +226,7 @@ function ContributorDetails(props) {
                             <motion.a
                                 href={`https://github.com/${props.data.asciidoc.pageAttributes.github}`}
                                 target='_blank'
-                                rel='noreferrer'
+                                rel='noopener noreferrer'
                                 onClick={(e) => e.stopPropagation()}
                                 variants={socialLinkVariants}
                                 custom={0}
@@ -242,7 +242,7 @@ function ContributorDetails(props) {
                             <motion.a
                                 href={`mailto:${props.data.asciidoc.pageAttributes.email}`}
                                 target='_blank'
-                                rel='noreferrer'
+                                rel='noopener noreferrer'
                                 onClick={(e) => e.stopPropagation()}
                                 variants={socialLinkVariants}
                                 custom={1}
