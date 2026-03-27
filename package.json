@@ -14,9 +14,9 @@
         "info": "gatsby info",
         "clean": "gatsby clean",
         "prepare": "husky",
-        "lint": "ESLINT_USE_FLAT_CONFIG=true eslint src/",
-        "lint:fix": "ESLINT_USE_FLAT_CONFIG=true eslint --fix src/",
-        "format": "prettier . --write"
+        "lint": "npx eslint --config eslint.config.mjs src/",
+        "lint:fix": "npx eslint --config eslint.config.mjs --fix src/",
+        "format": "npx prettier . --write"
     },
     "dependencies": {
         "@emotion/react": "^11.11.1",
@@ -67,7 +67,7 @@
         "prettier": "^3.4.2"
     },
     "lint-staged": {
-        "*.{js,jsx}": "eslint --cache --fix",
+        "*.{js,jsx}": "eslint --config eslint.config.mjs --cache --fix",
         "*.{js,jsx,css,md}": "prettier --write"
     },
     "overrides": {
