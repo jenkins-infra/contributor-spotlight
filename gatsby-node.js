@@ -17,7 +17,7 @@ exports.createPages = ({ graphql, actions }) => {
         {
             allAsciidoc(
                 limit: 1000
-                sort: { fields: [fields___publicationDate], order: DESC }
+                sort: { fields: { publicationDate: DESC } }
             ) {
                 edges {
                     node {
@@ -119,29 +119,3 @@ exports.onCreateNode = async ({ node, actions, getNode, loadNodeContent }) => {
         });
     }
 };
-
-exports.onCreateWebpackConfig = ({ actions, loaders, getConfig }) => {
-    const config = getConfig();
-
-    config.module.rules.push({
-        test: /\.mjs$/,
-        include: /node_modules/,
-        type: "javascript/auto",
-    });
-
-    config.module.rules.push({
-        test: /\.m?js$/,
-        include: /node_modules[\\/](@mui|framer-motion|motion-dom|motion-utils)/,
-        use: [
-            {
-                loader: loaders.js().loader,
-                options: loaders.js().options,
-            },
-        ],
-    });
-
-
-
-    actions.replaceWebpackConfig(config);
-};
-
