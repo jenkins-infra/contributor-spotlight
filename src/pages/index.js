@@ -77,20 +77,27 @@ const IndexPage = (props) => {
                 display='flex'
                 flexDirection='column'
                 alignItems='center'
-                justifyContent='flex-start'
+                justifyContent='center'
                 padding={isMobile ? 5 : 10}
                 sx={{
+                    minHeight: '50vh',
                     backgroundImage:
-                        'url("marek-szturc-2s3fI3M1lO0-unsplash.jpg")',
+                        'linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url("marek-szturc-2s3fI3M1lO0-unsplash.jpg")',
                     backgroundRepeat: 'no-repeat',
                     backgroundSize: 'cover',
                     backgroundPosition: 'center',
                 }}
             >
                 <Typography
-                    variant={isMobile ? 'h5' : 'h4'}
+                    variant={isMobile ? 'h6' : 'h4'}
                     textAlign='center'
-                    style={{ color: 'black' }}
+                    style={{ color: 'white' }}
+                    sx={{
+                        maxWidth: '800px',
+                        lineHeight: 1.2,
+                        padding: '10px',
+                        textShadow: '0px 2px 10px rgba(0,0,0,0.5)',
+                    }}
                 >
                     <strong>Meet the driving forces behind Jenkins</strong>
                     <br />
@@ -98,21 +105,24 @@ const IndexPage = (props) => {
                     continuous integration and delivery
                 </Typography>
                 <Box sx={{ paddingTop: 8 }}>
-                    <img src='/jenkins.png' alt='Jenkins logo' />
+                    <img
+                        src='/jenkins.png'
+                        alt='Jenkins logo'
+                        style={{
+                            width: '150px',
+                            marginTop: '10px',
+                        }}
+                    />
                 </Box>
             </Box>
 
-            <div
-                style={{
-                    textAlign: 'center',
-                    fontSize: '35px',
-                    fontWeight: 'bolder',
-                    background: 'transparent',
-                    padding: '20px',
-                }}
+            <Typography
+                variant='h3'
+                textAlign='center'
+                sx={{ fontWeight: 'bold', marginTop: 6, marginBottom: 3 }}
             >
                 Contributor Spotlight
-            </div>
+            </Typography>
             <Search contributors={contributors} darkmode={darkmode} />
             <FeaturedContributor
                 contributor={featuredContributor}
