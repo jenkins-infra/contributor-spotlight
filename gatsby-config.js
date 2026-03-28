@@ -30,14 +30,8 @@ module.exports = {
                 icon: `${__dirname}/src/images/jenkins.png`,
             },
         },
-        `gatsby-transformer-asciidoc`,
         {
             resolve: `gatsby-transformer-asciidoc`,
-            options: {
-                attributes: {
-                    imagesdir: `${__dirname}/static@`,
-                },
-            },
         },
         {
             resolve: `gatsby-omni-font-loader`,
