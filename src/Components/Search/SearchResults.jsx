@@ -21,7 +21,10 @@ function SearchResults({ results, darkmode }) {
                     margin: '16px 0',
                 }}
             >
-                🔍 No contributors found
+                <span role='img' aria-label='search'>
+                    🔍
+                </span>{' '}
+                No contributors found
             </div>
         );
     }

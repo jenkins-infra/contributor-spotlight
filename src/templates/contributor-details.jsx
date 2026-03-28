@@ -141,7 +141,7 @@ function ContributorDetails(props) {
                     </Box>
                     <Box sx={{ paddingBottom: 1.5 }}>
                         <Typography
-                            variant='h4'
+                            variant={isMobile ? 'h5' : 'h4'}
                             fontWeight={700}
                             textAlign='center'
                             color='#0096FF'
