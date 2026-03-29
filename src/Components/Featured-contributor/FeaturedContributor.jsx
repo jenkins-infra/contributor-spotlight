@@ -56,11 +56,11 @@ const FeaturedContributor = ({ contributor, darkmode }) => {
                             </span>
 
                             <span className='meta-item'>
-                                <Calendar size={12} />
+                                <Calendar size={16} />
                                 <strong>Date Published:</strong> {datepublished}
                             </span>
                             <span className='meta-item'>
-                                <GitCommitHorizontal size={12} />
+                                <GitCommitHorizontal size={16} />
                                 <strong>First Commit:</strong> {firstcommit}
                             </span>
                         </motion.div>
