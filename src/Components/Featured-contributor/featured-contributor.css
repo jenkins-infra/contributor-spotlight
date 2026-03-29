@@ -76,35 +76,6 @@
     text-decoration: none !important;
 }
 
-@media (max-width: 768px) {
-    .featured-contributor-card {
-        flex-direction: column;
-        text-align: center;
-        gap: 1.5rem;
-        padding: 1.5rem;
-    }
-
-    .featured-role {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 0.2rem;
-    }
-
-    .featured-name {
-        font-size: 1.75rem;
-    }
-
-    .featured-image img {
-        width: 150px;
-        height: 150px;
-    }
-
-    .featured-intro {
-        font-size: 1rem;
-    }
-}
-
 .featured-contributor-section.light {
     background: #ffffff;
 }
