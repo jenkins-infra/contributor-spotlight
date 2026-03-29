@@ -1,37 +1,14 @@
 import { Box, Stack, useTheme } from '@mui/material';
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import useMediaQuery from '@mui/material/useMediaQuery';
-import axios from 'axios';
-import Papa from 'papaparse';
 import dayjs from 'dayjs';
 
-const ThankYouNote = ({ darkmode }) => {
+const ThankYouNote = ({ darkmode, thankYou }) => {
     const theme = useTheme();
     const isDesktop = useMediaQuery(theme.breakpoints.up('lg'));
     const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
-    const [thankYou, setThankYou] = useState([]);
 
-    useEffect(() => {
-        const fetchHonoredContributor = () => {
-            axios
-                .get(
-                    'https://raw.githubusercontent.com/jenkins-infra/jenkins-contribution-stats/main/data/honored_contributor.csv',
-                    { responseType: 'text' }
-                )
-                .then((response) => {
-                    setThankYou(Papa.parse(response.data)?.data[1]);
-                })
-                .catch((error) => {
-                    console.error('Error fetching thank you note:', error);
-                });
-        };
-
-        fetchHonoredContributor();
-        const interval = setInterval(fetchHonoredContributor, 3600000);
-
-        return () => clearInterval(interval);
-    }, []);
-
+    // If no data, don't render
     if (!thankYou || thankYou.length === 0) return null;
 
     return (
@@ -61,27 +38,19 @@ const ThankYouNote = ({ darkmode }) => {
                 <Stack
                     direction='row'
                     gap={isMobile ? 1 : 3}
-                    justifyItems='center'
                     alignItems='center'
                 >
-                    <Box
-                        sx={{
-                            display: 'flex',
-                            justifyContent: 'center',
-                            alignItems: 'center',
-                        }}
-                    >
+                    {/* Image */}
+                    <Box>
                         <img
                             src={thankYou[6]?.replace(/['"]+/g, '')}
-                            alt='Random contributor'
+                            alt='Contributor'
                             width={isDesktop ? 100 : isMobile ? 36 : 90}
                             height={isDesktop ? 100 : isMobile ? '100%' : 90}
-                            style={{
-                                marginTop: 'auto',
-                                marginBottom: 'auto',
-                            }}
                         />
                     </Box>
+
+                    {/* Text */}
                     <Box
                         sx={{
                             fontSize: isMobile ? 'small' : 'medium',
@@ -114,6 +83,7 @@ const ThankYouNote = ({ darkmode }) => {
                             ? parseInt(thankYou[8]?.split(' ')?.length) +
                               ' Jenkins '
                             : 'the '}
+                        {/* Repo links */}
                         {thankYou[8]?.split(' ').length < 4 &&
                             thankYou[8]
                                 ?.replace(/['"]+/g, '')
@@ -126,6 +96,7 @@ const ThankYouNote = ({ darkmode }) => {
                                                 thankYou[8]?.split(' ').length -
                                                     2 &&
                                             'and '}
+
                                         <a
                                             target='_blank'
                                             rel='noopener noreferrer'
@@ -133,6 +104,7 @@ const ThankYouNote = ({ darkmode }) => {
                                         >
                                             {repo?.split('/')[1]}
                                         </a>
+
                                         {thankYou[8]?.split(' ').length >= 2 &&
                                         idx <
                                             thankYou[8]?.split(' ').length -

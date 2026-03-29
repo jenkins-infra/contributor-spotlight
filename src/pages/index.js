@@ -1,10 +1,13 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import '../../styles/index.css';
 import { Box, Typography, useTheme } from '@mui/material';
 import { graphql } from 'gatsby';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import { Helmet } from 'react-helmet';
 import dayjs from 'dayjs';
+import axios from 'axios';
+import Papa from 'papaparse';
+
 import ThankYouNote from '../Components/ThankYouNote.jsx';
 import ContributorsList from '../Components/Contributor/ContributorsList.jsx';
 import FeaturedContributor from '../Components/Featured-contributor/FeaturedContributor.jsx';
@@ -15,48 +18,59 @@ const IndexPage = (props) => {
     const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
     const { data } = props;
     const contributors = data.allAsciidoc.edges;
-    const [darkmode, setDarkmode] = useState(null);
 
+    const [darkmode, setDarkmode] = useState(null);
+    const [thankYou, setThankYou] = useState(null);
+    const [mounted, setMounted] = useState(false);
+
+    //  Prevent duplicate API calls (Strict Mode fix)
+    const hasFetched = useRef(false);
+
+    //  Dark mode detection
     useEffect(() => {
         if (typeof window !== 'undefined') {
             const mediaquery =
                 window.matchMedia &&
                 window.matchMedia('(prefers-color-scheme: dark)');
+
             setDarkmode(mediaquery.matches);
+
             const handler = (event) => {
                 setDarkmode(event.matches);
             };
+
             mediaquery.addEventListener('change', handler);
+
             return () => {
                 mediaquery.removeEventListener('change', handler);
             };
         }
     }, []);
 
+    //  API call (ONLY ONCE)
     useEffect(() => {
+        if (hasFetched.current) return;
+        hasFetched.current = true;
+
         const fetchContributorData = async () => {
+            console.log('API called.');
             try {
                 const response = await axios.get(
                     'https://raw.githubusercontent.com/jenkins-infra/jenkins-contribution-stats/main/data/honored_contributor.csv',
                     { responseType: 'text' }
                 );
-                setThankYou(Papa.parse(response.data)?.data[1]);
+
+                const parsed = Papa.parse(response.data);
+                setThankYou(parsed?.data[1]);
             } catch (error) {
                 console.error('Error fetching contributor data:', error);
             }
         };
 
         fetchContributorData();
-
-        const interval = setInterval(() => {
-            fetchContributorData();
-        }, 3600000);
-
-        return () => clearInterval(interval);
     }, []);
 
-    const [mounted, setMounted] = useState(false);
-
+    //  Mount fix (for SSR issues)
     useEffect(() => {
         setMounted(true);
     }, []);
@@ -64,6 +78,7 @@ const IndexPage = (props) => {
     const featuredContributor = contributors.find(
         (contributor) => contributor.node.pageAttributes.featured === 'true'
     );
+
     if (!mounted) {
         return null;
     }
@@ -73,28 +88,33 @@ const IndexPage = (props) => {
             <Helmet>
                 <meta charSet='utf-8' />
                 <title>Jenkins Contributor Spotlight</title>
+
                 <meta
                     name='title'
                     property='og:title'
                     content='Jenkins Contributor Spotlight'
                 />
+
                 <meta property='og:image' content='../../../opengraph.png' />
                 <meta property='og:image:width' content='520' />
                 <meta property='og:image:height' content='270' />
+
                 <meta
                     property='og:description'
-                    content='Jenkins Contributor Spotlight is where we celebrate the contributions of Jenkins community members.
-                    We showcase the top contributors shaping the future of continuous integration and delivery.'
+                    content='Jenkins Contributor Spotlight is where we celebrate the contributions of Jenkins community members. We showcase the top contributors shaping the future of continuous integration and delivery.'
                 />
+
                 <meta
                     property='article:author'
                     content='Jenkins Copy Editors'
                 />
+
                 <meta
                     property='article:published_time'
                     content={dayjs('2023-11-29T00:00:00.000Z').toISOString()}
                 />
             </Helmet>
+
             <Box
                 display='flex'
                 flexDirection='column'
@@ -119,11 +139,13 @@ const IndexPage = (props) => {
                     as we showcase the top contributors shaping the future of
                     continuous integration and delivery
                 </Typography>
+
                 <Box sx={{ paddingTop: 8 }}>
                     <img src='/jenkins.png' alt='Jenkins logo' />
                 </Box>
             </Box>
 
+            {/*   JSX */}
             <div
                 style={{
                     textAlign: 'center',
@@ -135,19 +157,24 @@ const IndexPage = (props) => {
             >
                 Contributor Spotlight
             </div>
+
             <Search contributors={contributors} darkmode={darkmode} />
+
             <FeaturedContributor
                 contributor={featuredContributor}
                 darkmode={darkmode}
             />
+
             <ContributorsList contributors={contributors} darkmode={darkmode} />
-            <ThankYouNote darkmode={darkmode} />
+
+            <ThankYouNote darkmode={darkmode} thankYou={thankYou} />
         </>
     );
 };
 
 export default IndexPage;
 
+//  FIXED GraphQL query (closed properly)
 export const pageQuery = graphql`
     query {
         allAsciidoc(limit: 1000, sort: { fields: { publicationDate: DESC } }) {
