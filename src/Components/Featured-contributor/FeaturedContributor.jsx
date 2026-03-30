@@ -11,6 +11,24 @@ const FeaturedContributor = ({ contributor, darkmode }) => {
     const { name, image, location, datepublished, intro, firstcommit } =
         pageAttributes || {};
     const slug = contributor?.node?.fields?.slug;
+
+    const formatIntro = (text) => {
+        if (!text) return '';
+        const words = text.split(' ');
+        if (words.length <= 2)
+            return (
+                <>
+                    <strong>{text}</strong>
+                </>
+            );
+        const firstTwoWords = words.slice(0, 2).join(' ');
+        const restOfText = words.slice(2).join(' ');
+        return (
+            <>
+                <strong>{firstTwoWords}</strong> {restOfText}
+            </>
+        );
+    };
     return (
         <motion.div
             className={`featured-contributor-section ${
@@ -76,7 +94,7 @@ const FeaturedContributor = ({ contributor, darkmode }) => {
                             }}
                         >
                             <p className='featured-intro'>
-                                <strong>{name}</strong> {intro}
+                                {formatIntro(intro)}
                             </p>
                         </motion.div>
                     </div>
