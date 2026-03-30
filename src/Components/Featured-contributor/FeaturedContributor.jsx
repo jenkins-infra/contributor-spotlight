@@ -14,7 +14,7 @@ const FeaturedContributor = ({ contributor, darkmode }) => {
 
     const formatIntro = (text) => {
         if (!text) return '';
-        const words = text.split(' ');
+        const words = text.trim().split(' ');
         if (words.length <= 2)
             return (
                 <>
