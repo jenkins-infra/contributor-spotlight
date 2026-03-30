@@ -84,14 +84,17 @@ const IndexPage = (props) => {
                     borderRadius: '15px',
 
                     width: '95%',
-                    margin: '20px auto',
+                    margin: '40px auto',
                 }}
             >
                 <Box display='flex' justifyContent='center' sx={{ flex: 0.5 }}>
-                    <img
+                    <Box
+                        component='img'
                         src='/jenkins.png'
                         alt='Jenkins logo'
-                        style={{ width: isMobile ? '120px' : '220px' }}
+                        sx={{
+                            width: { xs: '100px', sm: '120px', md: '200px' },
+                        }}
                     />
                 </Box>
 
@@ -101,7 +104,11 @@ const IndexPage = (props) => {
                 >
                     <Typography
                         sx={{
-                            fontSize: isMobile ? '1rem' : '2.8rem',
+                            fontSize: {
+                                xs: '0.90rem',
+                                sm: '1.2rem',
+                                md: '2.8rem',
+                            },
                             color: '#ff4d4f',
                             fontWeight: '700',
                             lineHeight: 1.1,
@@ -114,7 +121,11 @@ const IndexPage = (props) => {
 
                     <Typography
                         sx={{
-                            fontSize: isMobile ? '0.90rem' : '1.8rem',
+                            fontSize: {
+                                xs: '0.80rem',
+                                sm: '1rem',
+                                md: '1.8rem',
+                            },
                             color: '#d1d5db',
                             lineHeight: 1.1,
                         }}
