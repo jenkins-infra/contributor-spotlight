@@ -93,7 +93,7 @@ const IndexPage = (props) => {
                         src='/jenkins.png'
                         alt='Jenkins logo'
                         sx={{
-                            width: { xs: '100px', sm: '120px', md: '200px' },
+                            width: { xs: '100px', sm: '120px', md: '250px' },
                         }}
                     />
                 </Box>
