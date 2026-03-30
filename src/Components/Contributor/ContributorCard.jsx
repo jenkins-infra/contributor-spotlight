@@ -79,9 +79,13 @@ const ContributorCard = ({ contributor }) => {
             <div className='contributor-card'>
                 <div className='contributor-image-wrapper'>
                     <motion.img
-                        src={image}
+                        src={image || '/default_jenkins.png'} // fallback if image is null
                         alt={name}
                         loading='lazy'
+                        onError={(e) => {
+                            e.target.onerror = null; // prevent infinite loop if placeholder fails
+                            e.target.src = '/default_jenkins.png'; // fallback if image is broken
+                        }}
                         initial={{ scale: 0.8, opacity: 0 }}
                         animate={{ scale: 1, opacity: 1 }}
                         transition={{
