@@ -12,24 +12,6 @@ const FeaturedContributor = ({ contributor, darkmode }) => {
         pageAttributes || {};
     const slug = contributor?.node?.fields?.slug;
 
-    const formatIntro = (text, name) => {
-        if (!text) return null;
-
-        const cleanText = text.trim();
-
-        if (name && cleanText.toLowerCase().startsWith(name.toLowerCase())) {
-            const rest = cleanText.slice(name.length);
-
-            return (
-                <>
-                    <strong>{name}</strong>
-                    {rest}
-                </>
-            );
-        }
-
-        return cleanText;
-    };
     return (
         <motion.div
             className={`featured-contributor-section ${
@@ -94,9 +76,7 @@ const FeaturedContributor = ({ contributor, darkmode }) => {
                                 transition: { type: 'spring', stiffness: 300 },
                             }}
                         >
-                            <p className='featured-intro'>
-                                {formatIntro(intro, name)}
-                            </p>
+                            <p className='featured-intro'>{intro}</p>
                         </motion.div>
                     </div>
                 </Link>
