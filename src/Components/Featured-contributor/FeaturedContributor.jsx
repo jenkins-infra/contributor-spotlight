@@ -12,22 +12,23 @@ const FeaturedContributor = ({ contributor, darkmode }) => {
         pageAttributes || {};
     const slug = contributor?.node?.fields?.slug;
 
-    const formatIntro = (text) => {
-        if (!text) return '';
-        const words = text.trim().split(' ');
-        if (words.length <= 2)
+    const formatIntro = (text, name) => {
+        if (!text) return null;
+
+        const cleanText = text.trim();
+
+        if (name && cleanText.toLowerCase().startsWith(name.toLowerCase())) {
+            const rest = cleanText.slice(name.length);
+
             return (
                 <>
-                    <strong>{text}</strong>
+                    <strong>{name}</strong>
+                    {rest}
                 </>
             );
-        const firstTwoWords = words.slice(0, 2).join(' ');
-        const restOfText = words.slice(2).join(' ');
-        return (
-            <>
-                <strong>{firstTwoWords}</strong> {restOfText}
-            </>
-        );
+        }
+
+        return cleanText;
     };
     return (
         <motion.div
@@ -94,7 +95,7 @@ const FeaturedContributor = ({ contributor, darkmode }) => {
                             }}
                         >
                             <p className='featured-intro'>
-                                {formatIntro(intro)}
+                                {formatIntro(intro, name)}
                             </p>
                         </motion.div>
                     </div>
