@@ -133,7 +133,7 @@ function ContributorDetails(props) {
                     <Box sx={{ paddingBottom: 2, paddingTop: 2 }}>
                         <Typography
                             variant='h5'
-                            fontweight={500}
+                            fontWeight={500}
                             textAlign='center'
                         >
                             Contributor Spotlight
