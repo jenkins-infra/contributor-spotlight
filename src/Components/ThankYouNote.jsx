@@ -2,8 +2,17 @@ import { Box, Stack, useTheme } from '@mui/material';
 import React, { useEffect, useState } from 'react';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import axios from 'axios';
+import axiosRetry from 'axios-retry';
 import Papa from 'papaparse';
 import dayjs from 'dayjs';
+
+// Configure axios-retry for automatic retry with exponential backoff
+axiosRetry(axios, {
+    retries: 3,
+    retryDelay: axiosRetry.exponentialDelay,
+    retryCondition: (error) =>
+        axiosRetry.isNetworkOrIdempotentRequestError(error),
+});
 
 const ThankYouNote = ({ darkmode }) => {
     const theme = useTheme();
@@ -13,48 +22,29 @@ const ThankYouNote = ({ darkmode }) => {
     const [error, setError] = useState(null);
 
     useEffect(() => {
-        const MAX_RETRIES = 3;
-
-        const fetchHonoredContributor = (retryAttempt = 0) => {
-            axios
-                .get(
+        const fetchHonoredContributor = async () => {
+            try {
+                const response = await axios.get(
                     'https://raw.githubusercontent.com/jenkins-infra/jenkins-contribution-stats/main/data/honored_contributor.csv',
                     { responseType: 'text', timeout: 5000 }
-                )
-                .then((response) => {
-                    const parsedData = Papa.parse(response.data)?.data[1];
-                    if (!parsedData || parsedData.length === 0) {
-                        setError('Failed to parse contributor data');
-                        return;
-                    }
-                    setThankYou(parsedData);
-                    setError(null);
-                })
-                .catch((error) => {
-                    console.error('Error fetching thank you note:', error);
+                );
 
-                    // Retry logic for transient failures
-                    if (retryAttempt < MAX_RETRIES) {
-                        const nextAttempt = retryAttempt + 1;
-                        const delayMs = 2000 * nextAttempt;
-                        console.warn(
-                            `Retrying contributor fetch (attempt ${nextAttempt}/${MAX_RETRIES}) in ${delayMs}ms`
-                        );
-                        setTimeout(() => {
-                            fetchHonoredContributor(nextAttempt);
-                        }, delayMs);
-                    } else {
-                        setError(
-                            'Unable to load contributor recognition at this time'
-                        );
-                    }
-                });
+                const parsedData = Papa.parse(response.data)?.data[1];
+                if (!parsedData || parsedData.length === 0) {
+                    setError('Failed to parse contributor data');
+                    return;
+                }
+
+                setThankYou(parsedData);
+                setError(null);
+            } catch (error) {
+                console.error('Error fetching thank you note:', error);
+                setError('Unable to load contributor recognition at this time');
+            }
         };
 
         fetchHonoredContributor();
-        const interval = setInterval(() => {
-            fetchHonoredContributor();
-        }, 3600000);
+        const interval = setInterval(fetchHonoredContributor, 3600000);
 
         return () => clearInterval(interval);
     }, []);
