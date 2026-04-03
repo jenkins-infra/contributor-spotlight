@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 import '../../styles/index.css';
 import { Box, Typography, useTheme } from '@mui/material';
 import { graphql } from 'gatsby';
@@ -34,10 +34,23 @@ const IndexPage = (props) => {
     }, []);
 
     const [mounted, setMounted] = useState(false);
+    const [filteredContributorIds, setFilteredContributorIds] = useState(null);
 
     useEffect(() => {
         setMounted(true);
     }, []);
+
+    const handleFilteredResults = useCallback((result) => {
+        setFilteredContributorIds(result);
+    }, []);
+
+    const displayedContributors =
+        filteredContributorIds === null ||
+        filteredContributorIds === 'search-active'
+            ? contributors
+            : contributors.filter((c) =>
+                  filteredContributorIds.includes(c.node.id)
+              );
 
     const featuredContributor = contributors.find(
         (contributor) => contributor.node.pageAttributes.featured === 'true'
@@ -113,12 +126,21 @@ const IndexPage = (props) => {
             >
                 Contributor Spotlight
             </div>
-            <Search contributors={contributors} darkmode={darkmode} />
+            <Search
+                contributors={contributors}
+                darkmode={darkmode}
+                onFilteredResults={handleFilteredResults}
+            />
             <FeaturedContributor
                 contributor={featuredContributor}
                 darkmode={darkmode}
             />
-            <ContributorsList contributors={contributors} darkmode={darkmode} />
+            {filteredContributorIds !== 'search-active' && (
+                <ContributorsList
+                    contributors={displayedContributors}
+                    darkmode={darkmode}
+                />
+            )}
             <ThankYouNote darkmode={darkmode} />
         </>
     );
