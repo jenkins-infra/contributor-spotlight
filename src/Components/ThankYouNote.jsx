@@ -10,29 +10,92 @@ const ThankYouNote = ({ darkmode }) => {
     const isDesktop = useMediaQuery(theme.breakpoints.up('lg'));
     const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
     const [thankYou, setThankYou] = useState([]);
+    const [error, setError] = useState(null);
 
     useEffect(() => {
-        const fetchHonoredContributor = () => {
+        const MAX_RETRIES = 3;
+
+        const fetchHonoredContributor = (retryAttempt = 0) => {
             axios
                 .get(
                     'https://raw.githubusercontent.com/jenkins-infra/jenkins-contribution-stats/main/data/honored_contributor.csv',
-                    { responseType: 'text' }
+                    { responseType: 'text', timeout: 5000 }
                 )
                 .then((response) => {
-                    setThankYou(Papa.parse(response.data)?.data[1]);
+                    const parsedData = Papa.parse(response.data)?.data[1];
+                    if (!parsedData || parsedData.length === 0) {
+                        setError('Failed to parse contributor data');
+                        return;
+                    }
+                    setThankYou(parsedData);
+                    setError(null);
                 })
                 .catch((error) => {
                     console.error('Error fetching thank you note:', error);
+
+                    // Retry logic for transient failures
+                    if (retryAttempt < MAX_RETRIES) {
+                        const nextAttempt = retryAttempt + 1;
+                        const delayMs = 2000 * nextAttempt;
+                        console.warn(
+                            `Retrying contributor fetch (attempt ${nextAttempt}/${MAX_RETRIES}) in ${delayMs}ms`
+                        );
+                        setTimeout(() => {
+                            fetchHonoredContributor(nextAttempt);
+                        }, delayMs);
+                    } else {
+                        setError(
+                            'Unable to load contributor recognition at this time'
+                        );
+                    }
                 });
         };
 
         fetchHonoredContributor();
-        const interval = setInterval(fetchHonoredContributor, 3600000);
+        const interval = setInterval(() => {
+            fetchHonoredContributor();
+        }, 3600000);
 
         return () => clearInterval(interval);
     }, []);
 
-    if (!thankYou || thankYou.length === 0) return null;
+    if (!thankYou || thankYou.length === 0) {
+        // Show error message if fetch failed
+        if (error) {
+            return (
+                <Box
+                    sx={{
+                        padding: theme.spacing(5, 0),
+                        display: 'flex',
+                        justifyContent: 'center',
+                        alignItems: 'center',
+                        backgroundColor: darkmode ? '#333333' : '#ffffff',
+                    }}
+                >
+                    <Box
+                        sx={{
+                            padding: theme.spacing(2, 3),
+                            borderRadius: 2,
+                            backgroundColor: darkmode
+                                ? 'rgba(255, 0, 0, 0.1)'
+                                : 'rgba(255, 0, 0, 0.05)',
+                            border: `1px solid ${
+                                darkmode
+                                    ? 'rgba(255, 0, 0, 0.3)'
+                                    : 'rgba(255, 0, 0, 0.2)'
+                            }`,
+                            textAlign: 'center',
+                            fontSize: 'small',
+                            color: darkmode ? '#ffcccc' : '#cc0000',
+                        }}
+                    >
+                        {error}
+                    </Box>
+                </Box>
+            );
+        }
+        return null;
+    }
 
     return (
         <Box
