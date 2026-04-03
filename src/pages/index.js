@@ -75,30 +75,64 @@ const IndexPage = (props) => {
             </Helmet>
             <Box
                 display='flex'
-                flexDirection='column'
+                flexDirection={isMobile ? 'column' : 'row'}
                 alignItems='center'
-                justifyContent='flex-start'
-                padding={isMobile ? 5 : 10}
+                justifyContent='center'
+                padding={isMobile ? 4 : 6}
                 sx={{
-                    backgroundImage:
-                        'url("marek-szturc-2s3fI3M1lO0-unsplash.jpg")',
-                    backgroundRepeat: 'no-repeat',
-                    backgroundSize: 'cover',
-                    backgroundPosition: 'center',
+                    backgroundColor: '#1f2a3a',
+                    borderRadius: '15px',
+
+                    width: '95%',
+                    margin: '40px auto',
                 }}
             >
-                <Typography
-                    variant={isMobile ? 'h5' : 'h4'}
-                    textAlign='center'
-                    style={{ color: 'black' }}
+                <Box display='flex' justifyContent='center' sx={{ flex: 0.5 }}>
+                    <Box
+                        component='img'
+                        src='/jenkins.png'
+                        alt='Jenkins logo'
+                        sx={{
+                            width: { xs: '100px', sm: '120px', md: '250px' },
+                        }}
+                    />
+                </Box>
+
+                <Box
+                    textAlign={isMobile ? 'center' : 'right'}
+                    sx={{ flex: 1.2 }}
                 >
-                    <strong>Meet the driving forces behind Jenkins</strong>
-                    <br />
-                    as we showcase the top contributors shaping the future of
-                    continuous integration and delivery
-                </Typography>
-                <Box sx={{ paddingTop: 8 }}>
-                    <img src='/jenkins.png' alt='Jenkins logo' />
+                    <Typography
+                        sx={{
+                            fontSize: {
+                                xs: '0.90rem',
+                                sm: '1.2rem',
+                                md: '2.8rem',
+                            },
+                            color: '#ff4d4f',
+                            fontWeight: '700',
+                            lineHeight: 1.1,
+
+                            marginBottom: '-4px',
+                        }}
+                    >
+                        Meet the driving forces behind Jenkins
+                    </Typography>
+
+                    <Typography
+                        sx={{
+                            fontSize: {
+                                xs: '0.80rem',
+                                sm: '1rem',
+                                md: '1.8rem',
+                            },
+                            color: '#d1d5db',
+                            lineHeight: 1.1,
+                        }}
+                    >
+                        as we showcase the top contributors shaping the future
+                        of continuous integration and delivery
+                    </Typography>
                 </Box>
             </Box>
 
