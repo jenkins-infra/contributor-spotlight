@@ -11,6 +11,18 @@
     gap: 2rem;
 }
 
+@media (min-width: 768px) and (max-width: 1200px) {
+    .contributors-grid {
+        grid-template-columns: repeat(2, minmax(280px, 1fr));
+    }
+}
+
+@media (max-width: 767px) {
+    .contributors-grid {
+        grid-template-columns: minmax(280px, 1fr);
+    }
+}
+
 .contributor-card {
     background: linear-gradient(
         145deg,
