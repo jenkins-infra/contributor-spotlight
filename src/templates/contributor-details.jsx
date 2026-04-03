@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { graphql, Link } from 'gatsby';
 import { Box, Stack, Typography, useTheme } from '@mui/material';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
@@ -133,7 +133,7 @@ function ContributorDetails(props) {
                     <Box sx={{ paddingBottom: 2, paddingTop: 2 }}>
                         <Typography
                             variant='h5'
-                            fontWeight={500}
+                            fontweight={500}
                             textAlign='center'
                         >
                             Contributor Spotlight
@@ -153,13 +153,13 @@ function ContributorDetails(props) {
                             textAlign='center'
                             color='#0096FF'
                         >
-                            {props.data.asciidoc.pageAttributes.pronouns ??
+                            {props.data.asciidoc.pageAttributes.pronouns ||
                                 'They/them'}
                         </Typography>
                     </Box>
                     <Box sx={{ paddingBottom: 1.5 }}>
                         <Typography variant='h6' textAlign='center'>
-                            {props.data.asciidoc.pageAttributes.location ??
+                            {props.data.asciidoc.pageAttributes.location ||
                                 'World'}
                         </Typography>
                         {props.data.asciidoc.pageAttributes.firstcommit &&
