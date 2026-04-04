@@ -148,14 +148,21 @@ function ContributorDetails(props) {
                         >
                             {props.data.asciidoc.document.title}
                         </Typography>
-                        <Typography
-                            variant='h5'
-                            textAlign='center'
-                            color='#0096FF'
-                        >
-                            {props.data.asciidoc.pageAttributes.pronouns ??
-                                'They/them'}
-                        </Typography>
+
+                        {props.data.asciidoc.pageAttributes.pronouns &&
+                            props.data.asciidoc.pageAttributes.pronouns.trim() !==
+                                '' && (
+                                <Typography
+                                    variant='h5'
+                                    textAlign='center'
+                                    color='#0096FF'
+                                >
+                                    {
+                                        props.data.asciidoc.pageAttributes
+                                            .pronouns
+                                    }
+                                </Typography>
+                            )}
                     </Box>
                     <Box sx={{ paddingBottom: 1.5 }}>
                         <Typography variant='h6' textAlign='center'>
