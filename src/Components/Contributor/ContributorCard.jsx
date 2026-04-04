@@ -153,7 +153,7 @@ const ContributorCard = ({ contributor }) => {
                                 <motion.a
                                     href={`https://github.com/${github}`}
                                     target='_blank'
-                                    rel='noreferrer'
+                                    rel='noopener noreferrer'
                                     onClick={(e) => e.stopPropagation()}
                                     variants={socialLinkVariants}
                                     custom={0}
@@ -172,7 +172,7 @@ const ContributorCard = ({ contributor }) => {
                                 <motion.a
                                     href={`https://linkedin.com/in/${linkedin}`}
                                     target='_blank'
-                                    rel='noreferrer'
+                                    rel='noopener noreferrer'
                                     onClick={(e) => e.stopPropagation()}
                                     variants={socialLinkVariants}
                                     custom={1}
@@ -191,7 +191,7 @@ const ContributorCard = ({ contributor }) => {
                                 <motion.a
                                     href={`https://x.com/${twitter}`}
                                     target='_blank'
-                                    rel='noreferrer'
+                                    rel='noopener noreferrer'
                                     onClick={(e) => e.stopPropagation()}
                                     variants={socialLinkVariants}
                                     custom={2}
