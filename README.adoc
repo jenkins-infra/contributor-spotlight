@@ -1,10 +1,10 @@
 = Jenkins Contributor Spotlight
 
-This feature is to showcase the top contributors of the Jenkins project at link:https://contributors.jenkins.io[contributors.jenkins.io]
+This feature showcases the top contributors of the Jenkins project at link:https://contributors.jenkins.io[contributors.jenkins.io]
 
 == 🚀 Quick start
 
-Requires NodeJS (version defined in ./.tool-versions)
+Requires Node.js (version defined in ./.tool-versions)
 
 0. **Install dependencies**
 
@@ -16,7 +16,7 @@ cd contributor-spotlight/
 npm install
 ----
 
-1. **Run development environment**
+1. **Run the development environment**
 
     Run the following commands in your terminal:
 +
@@ -25,11 +25,11 @@ npm install
 npm run clean && npm run develop
 ----
 
-2. **To run the code**
+2. **Access the application**
 
     Once the code is running, the site should be up at http://localhost:8000.
 
-3. **To run prettier**
+3. **To run Prettier**
 
     Run the following commands in your terminal:
 +
@@ -38,7 +38,7 @@ npm run clean && npm run develop
 npm run format
 ----
 
-4. **To run eslint**
+4. **To run ESLint**
 
     Run the following commands in your terminal:
 +
@@ -47,4 +47,4 @@ npm run format
 npm run lint
 ----
 
-Remember to run prettier and eslint before submitting a PR.
+Note: Please run Prettier and ESLint before submitting a PR.
