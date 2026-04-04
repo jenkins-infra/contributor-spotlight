@@ -4,7 +4,7 @@ import { Box, Stack, Typography, useTheme } from '@mui/material';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import '../styles/contributor-details.css';
 import useMediaQuery from '@mui/material/useMediaQuery';
-import { Helmet } from 'react-helmet';
+// import { Helmet } from 'react-helmet';
 import dayjs from 'dayjs';
 import { Github, Linkedin, Mail } from 'lucide-react';
 import XIcon from '../Components/XIcon.jsx';
@@ -17,8 +17,7 @@ function ContributorDetails(props) {
     const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
     const darkmode = useMediaQuery('(prefers-color-scheme: dark)');
     const title =
-        props.data.asciidoc.pageAttributes.name +
-        ' - Jenkins Contributor Spotlight';
+        props.data.asciidoc.document.title + ' - Jenkins Contributor Spotlight';
     const { previous, next } = props.pageContext;
 
     // State for sanitized HTML
@@ -56,7 +55,7 @@ function ContributorDetails(props) {
     };
     return (
         <>
-            <Helmet>
+            {/* <Helmet>
                 <meta charSet='utf-8' />
                 <title>{title}</title>
                 <meta name='title' property='og:title' content={title} />
@@ -86,7 +85,7 @@ function ContributorDetails(props) {
                         props.data.asciidoc.pageAttributes.datepublished
                     ).toISOString()}
                 />
-            </Helmet>
+            </Helmet> */}
             <Box padding={0} display='flex' flexDirection='column'>
                 <Box
                     display='flex'
@@ -439,3 +438,39 @@ export const pageQuery = graphql`
         }
     }
 `;
+
+export const Head = ({ data }) => {
+    const name = data?.asciidoc?.document?.title || 'Jenkins Contributor';
+    const title = `${name} - Jenkins Contributor Spotlight`;
+
+    return (
+        <>
+            <meta charSet='utf-8' />
+            <title>{title}</title>
+
+            <meta name='title' property='og:title' content={title} />
+
+            <meta
+                property='og:image'
+                content={'../../../' + data.asciidoc.pageAttributes.image}
+            />
+
+            <meta property='og:image:width' content='520' />
+            <meta property='og:image:height' content='270' />
+
+            <meta
+                property='og:description'
+                content={`Jenkins Contributor Spotlight is where we celebrate the contributions of Jenkins community members. In this feature we spotlight ${name}.`}
+            />
+
+            <meta property='article:author' content='Jenkins Copy Editors' />
+
+            <meta
+                property='article:published_time'
+                content={dayjs(
+                    data.asciidoc.pageAttributes.datepublished
+                ).toISOString()}
+            />
+        </>
+    );
+};
