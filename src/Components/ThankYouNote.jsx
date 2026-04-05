@@ -22,12 +22,22 @@ const ThankYouNote = ({ darkmode }) => {
     const [error, setError] = useState(null);
 
     useEffect(() => {
+        const abortController = new AbortController();
+        let isMounted = true;
+
         const fetchHonoredContributor = async () => {
             try {
                 const response = await axios.get(
                     'https://raw.githubusercontent.com/jenkins-infra/jenkins-contribution-stats/main/data/honored_contributor.csv',
-                    { responseType: 'text', timeout: 5000 }
+                    {
+                        responseType: 'text',
+                        timeout: 5000,
+                        signal: abortController.signal,
+                    }
                 );
+
+                // Only update state if component is still mounted
+                if (!isMounted) return;
 
                 const parsedData = Papa.parse(response.data)?.data[1];
                 if (!parsedData || parsedData.length === 0) {
@@ -38,15 +48,27 @@ const ThankYouNote = ({ darkmode }) => {
                 setThankYou(parsedData);
                 setError(null);
             } catch (error) {
-                console.error('Error fetching thank you note:', error);
-                setError('Unable to load contributor recognition at this time');
+                // Only update state if component is still mounted
+                if (!isMounted) return;
+
+                // Don't log abort errors
+                if (error.name !== 'CanceledError') {
+                    console.error('Error fetching thank you note:', error);
+                    setError(
+                        'Unable to load contributor recognition at this time'
+                    );
+                }
             }
         };
 
         fetchHonoredContributor();
         const interval = setInterval(fetchHonoredContributor, 3600000);
 
-        return () => clearInterval(interval);
+        return () => {
+            isMounted = false;
+            abortController.abort();
+            clearInterval(interval);
+        };
     }, []);
 
     if (!thankYou || thankYou.length === 0) {
