@@ -87,6 +87,24 @@
     text-align: center;
 }
 
+.no-results-card {
+    padding: 24px;
+    border-radius: 12px;
+    border: 1px solid #333;
+    font-size: 15px;
+    margin: 16px 0;
+}
+
+.no-results-card.dark {
+    background: #2c2c2c;
+    color: #ccc;
+}
+
+.no-results-card.light {
+    background: #f0f0f0;
+    color: #333;
+}
+
 .light .results-container {
     background: rgba(255, 255, 255, 0.95);
     border: 1px solid #e0e0e0;
