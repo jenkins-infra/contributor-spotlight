@@ -19,7 +19,6 @@ const ThankYouNote = ({ darkmode }) => {
     const isDesktop = useMediaQuery(theme.breakpoints.up('lg'));
     const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
     const [thankYou, setThankYou] = useState([]);
-    const [error, setError] = useState(null);
 
     useEffect(() => {
         const abortController = new AbortController();
@@ -39,24 +38,24 @@ const ThankYouNote = ({ darkmode }) => {
                 // Only update state if component is still mounted
                 if (!isMounted) return;
 
+                // Note: Papa.parse is synchronous - it blocks the main thread
+                // This is acceptable here since we're parsing a small CSV with typically 1-2 rows
                 const parsedData = Papa.parse(response.data)?.data[1];
                 if (!parsedData || parsedData.length === 0) {
-                    setError('Failed to parse contributor data');
+                    console.warn(
+                        'Failed to parse contributor data or no data available'
+                    );
                     return;
                 }
 
                 setThankYou(parsedData);
-                setError(null);
             } catch (error) {
-                // Only update state if component is still mounted
+                // Only log if component is still mounted
                 if (!isMounted) return;
 
-                // Don't log abort errors
+                // Don't log abort errors - they're expected when unmounting
                 if (error.name !== 'CanceledError') {
                     console.error('Error fetching thank you note:', error);
-                    setError(
-                        'Unable to load contributor recognition at this time'
-                    );
                 }
             }
         };
@@ -72,40 +71,6 @@ const ThankYouNote = ({ darkmode }) => {
     }, []);
 
     if (!thankYou || thankYou.length === 0) {
-        // Show error message if fetch failed
-        if (error) {
-            return (
-                <Box
-                    sx={{
-                        padding: theme.spacing(5, 0),
-                        display: 'flex',
-                        justifyContent: 'center',
-                        alignItems: 'center',
-                        backgroundColor: darkmode ? '#333333' : '#ffffff',
-                    }}
-                >
-                    <Box
-                        sx={{
-                            padding: theme.spacing(2, 3),
-                            borderRadius: 2,
-                            backgroundColor: darkmode
-                                ? 'rgba(255, 0, 0, 0.1)'
-                                : 'rgba(255, 0, 0, 0.05)',
-                            border: `1px solid ${
-                                darkmode
-                                    ? 'rgba(255, 0, 0, 0.3)'
-                                    : 'rgba(255, 0, 0, 0.2)'
-                            }`,
-                            textAlign: 'center',
-                            fontSize: 'small',
-                            color: darkmode ? '#ffcccc' : '#cc0000',
-                        }}
-                    >
-                        {error}
-                    </Box>
-                </Box>
-            );
-        }
         return null;
     }
 
