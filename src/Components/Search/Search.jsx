@@ -10,12 +10,20 @@ function Search({ contributors, darkmode }) {
     const [results, setResults] = useState([]);
     const [shortcutHint, setShortcutHint] = useState(null);
     const searchInputRef = useRef(null);
-    const ua = navigator.userAgent;
-    const isMobile = /iPhone|iPad|iPod|Android/i.test(ua);
-    const isMacDesktop = navigator.userAgentData
-        ? navigator.userAgentData.platform === 'macOS'
-        : /Mac/i.test(ua);
-    const shortcutHint = isMobile ? null : isMacDesktop ? '⌘ + K' : 'Ctrl + K';
+
+    useEffect(() => {
+        if (typeof window !== 'undefined') {
+            const ua = navigator.userAgent;
+            const isMobile = /iPhone|iPad|iPod|Android/i.test(ua);
+            const isMacDesktop = navigator.userAgentData
+                ? navigator.userAgentData.platform === 'macOS'
+                : /Mac/i.test(ua);
+            setShortcutHint(
+                isMobile ? null : isMacDesktop ? '⌘ + K' : 'Ctrl + K'
+            );
+        }
+    }, []);
+
     const contributorsArray = useMemo(() => {
         return Object.values(contributors).map((c) => ({
             id: c?.node?.id,
