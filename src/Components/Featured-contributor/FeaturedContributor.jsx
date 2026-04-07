@@ -11,6 +11,7 @@ const FeaturedContributor = ({ contributor, darkmode }) => {
     const { name, image, location, datepublished, intro, firstcommit } =
         pageAttributes || {};
     const slug = contributor?.node?.fields?.slug;
+
     return (
         <motion.div
             className={`featured-contributor-section ${
@@ -75,9 +76,7 @@ const FeaturedContributor = ({ contributor, darkmode }) => {
                                 transition: { type: 'spring', stiffness: 300 },
                             }}
                         >
-                            <p className='featured-intro'>
-                                <strong>{name}</strong> {intro}
-                            </p>
+                            <p className='featured-intro'>{intro}</p>
                         </motion.div>
                     </div>
                 </Link>

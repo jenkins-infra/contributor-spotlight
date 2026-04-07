@@ -8,6 +8,7 @@ function Search({ contributors, darkmode }) {
     const [searchQuery, setSearchQuery] = useState('');
     const [isFocused, setIsFocused] = useState(false);
     const [results, setResults] = useState([]);
+    const [shortcutHint, setShortcutHint] = useState(null);
     const searchInputRef = useRef(null);
     const ua = navigator.userAgent;
     const isMobile = /iPhone|iPad|iPod|Android/i.test(ua);
