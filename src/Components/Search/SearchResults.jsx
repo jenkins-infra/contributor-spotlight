@@ -36,17 +36,31 @@ function SearchResults({ results, darkmode }) {
     };
     return (
         <div className='results-container'>
-            {sortedResults.map(({ item, score }) => {
+            {sortedResults.map(({ item }) => {
                 if (!item) return null;
                 return (
-                    <Link to={item?.slug} key={item?.id}>
-                        <div className='result-card'>
+                    <div className='result-card' key={item?.id}>
+                        <Link
+                            to={item?.slug}
+                            style={{
+                                textDecoration: 'none',
+                                color: 'inherit',
+                            }}
+                        >
                             <img
                                 src={item?.image}
                                 alt={item?.name}
                                 className='result-avatar'
                             />
-                            <div className='result-content'>
+                        </Link>
+                        <div className='result-content'>
+                            <Link
+                                to={item?.slug}
+                                style={{
+                                    textDecoration: 'none',
+                                    color: 'inherit',
+                                }}
+                            >
                                 <div className='result-header'>
                                     <h3 className='result-name'>
                                         {item?.name}
@@ -56,66 +70,66 @@ function SearchResults({ results, darkmode }) {
                                 <p className='result-location'>
                                     {item?.location}
                                 </p>
+                            </Link>
 
-                                <div className='result-links'>
-                                    {item?.github && (
-                                        <motion.a
-                                            href={`https://github.com/${item.github}`}
-                                            target='_blank'
-                                            rel='noopener noreferrer'
-                                            onClick={(e) => e.stopPropagation()}
-                                            variants={socialLinkVariants}
-                                            custom={0}
-                                            whileHover='hover'
-                                            whileTap={{ scale: 0.9 }}
-                                            className='social-link'
-                                        >
-                                            <Github size={18} />
-                                            <span className='social-tooltip'>
-                                                GitHub
-                                            </span>
-                                        </motion.a>
-                                    )}
-                                    {item?.linkedin && (
-                                        <motion.a
-                                            href={`https://linkedin.com/in/${item?.linkedin}`}
-                                            target='_blank'
-                                            rel='noopener noreferrer'
-                                            onClick={(e) => e.stopPropagation()}
-                                            variants={socialLinkVariants}
-                                            custom={1}
-                                            whileHover='hover'
-                                            whileTap={{ scale: 0.9 }}
-                                            className='social-link'
-                                        >
-                                            <Linkedin size={18} />
-                                            <span className='social-tooltip'>
-                                                LinkedIn
-                                            </span>
-                                        </motion.a>
-                                    )}
-                                    {item?.twitter && (
-                                        <motion.a
-                                            href={`https://x.com/${item.twitter}`}
-                                            target='_blank'
-                                            rel='noopener noreferrer'
-                                            onClick={(e) => e.stopPropagation()}
-                                            variants={socialLinkVariants}
-                                            custom={2}
-                                            whileHover='hover'
-                                            whileTap={{ scale: 0.9 }}
-                                            className='social-link'
-                                        >
-                                            <XIcon size={18} />
-                                            <span className='social-tooltip'>
-                                                X (formerly Twitter)
-                                            </span>
-                                        </motion.a>
-                                    )}
-                                </div>
+                            <div className='result-links'>
+                                {item?.github && (
+                                    <motion.a
+                                        href={`https://github.com/${item.github}`}
+                                        target='_blank'
+                                        rel='noreferrer'
+                                        onClick={(e) => e.stopPropagation()}
+                                        variants={socialLinkVariants}
+                                        custom={0}
+                                        whileHover='hover'
+                                        whileTap={{ scale: 0.9 }}
+                                        className='social-link'
+                                    >
+                                        <Github size={18} />
+                                        <span className='social-tooltip'>
+                                            GitHub
+                                        </span>
+                                    </motion.a>
+                                )}
+                                {item?.linkedin && (
+                                    <motion.a
+                                        href={`https://linkedin.com/in/${item?.linkedin}`}
+                                        target='_blank'
+                                        rel='noreferrer'
+                                        onClick={(e) => e.stopPropagation()}
+                                        variants={socialLinkVariants}
+                                        custom={1}
+                                        whileHover='hover'
+                                        whileTap={{ scale: 0.9 }}
+                                        className='social-link'
+                                    >
+                                        <Linkedin size={18} />
+                                        <span className='social-tooltip'>
+                                            LinkedIn
+                                        </span>
+                                    </motion.a>
+                                )}
+                                {item?.twitter && (
+                                    <motion.a
+                                        href={`https://x.com/${item.twitter}`}
+                                        target='_blank'
+                                        rel='noreferrer'
+                                        onClick={(e) => e.stopPropagation()}
+                                        variants={socialLinkVariants}
+                                        custom={2}
+                                        whileHover='hover'
+                                        whileTap={{ scale: 0.9 }}
+                                        className='social-link'
+                                    >
+                                        <XIcon size={18} />
+                                        <span className='social-tooltip'>
+                                            X (formerly Twitter)
+                                        </span>
+                                    </motion.a>
+                                )}
                             </div>
                         </div>
-                    </Link>
+                    </div>
                 );
             })}
         </div>
