@@ -124,14 +124,7 @@ const ContributorCard = ({ contributor }) => {
                     {location}
                 </motion.p>
 
-                <div
-                    style={{
-                        display: 'flex',
-                        justifyContent: 'center',
-                        alignItems: 'center',
-                        gap: '20px',
-                    }}
-                >
+                <div className='contributor-meta-row'>
                     {datepublished && (
                         <motion.div
                             className='contributor-meta'
