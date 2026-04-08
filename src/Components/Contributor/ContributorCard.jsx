@@ -68,8 +68,15 @@ const ContributorCard = ({ contributor }) => {
     };
 
     return (
-        <Link to={slug} className='contributor-card-link'>
-            <div className='contributor-card'>
+        <div className='contributor-card'>
+            <Link
+                to={slug}
+                style={{
+                    textDecoration: 'none',
+                    color: 'inherit',
+                    display: 'block',
+                }}
+            >
                 <div className='contributor-image-wrapper'>
                     <motion.img
                         src={image}
@@ -141,77 +148,72 @@ const ContributorCard = ({ contributor }) => {
                         </motion.div>
                     )}
                 </div>
+            </Link>
+            <motion.div
+                className='contributor-links'
+                initial='hidden'
+                animate='visible'
+            >
+                {github || linkedin || twitter ? (
+                    <>
+                        {github && (
+                            <motion.a
+                                href={`https://github.com/${github}`}
+                                target='_blank'
+                                rel='noreferrer'
+                                onClick={(e) => e.stopPropagation()}
+                                variants={socialLinkVariants}
+                                custom={0}
+                                whileHover='hover'
+                                whileTap={{ scale: 0.9 }}
+                                className='social-link'
+                            >
+                                <Github size={18} />
+                                <span className='social-tooltip'>GitHub</span>
+                            </motion.a>
+                        )}
 
-                <motion.div
-                    className='contributor-links'
-                    initial='hidden'
-                    animate='visible'
-                >
-                    {github || linkedin || twitter ? (
-                        <>
-                            {github && (
-                                <motion.a
-                                    href={`https://github.com/${github}`}
-                                    target='_blank'
-                                    rel='noopener noreferrer'
-                                    onClick={(e) => e.stopPropagation()}
-                                    variants={socialLinkVariants}
-                                    custom={0}
-                                    whileHover='hover'
-                                    whileTap={{ scale: 0.9 }}
-                                    className='social-link'
-                                >
-                                    <Github size={18} />
-                                    <span className='social-tooltip'>
-                                        GitHub
-                                    </span>
-                                </motion.a>
-                            )}
+                        {linkedin && (
+                            <motion.a
+                                href={`https://linkedin.com/in/${linkedin}`}
+                                target='_blank'
+                                rel='noreferrer'
+                                onClick={(e) => e.stopPropagation()}
+                                variants={socialLinkVariants}
+                                custom={1}
+                                whileHover='hover'
+                                whileTap={{ scale: 0.9 }}
+                                className='social-link'
+                            >
+                                <Linkedin size={18} />
+                                <span className='social-tooltip'>LinkedIn</span>
+                            </motion.a>
+                        )}
 
-                            {linkedin && (
-                                <motion.a
-                                    href={`https://linkedin.com/in/${linkedin}`}
-                                    target='_blank'
-                                    rel='noopener noreferrer'
-                                    onClick={(e) => e.stopPropagation()}
-                                    variants={socialLinkVariants}
-                                    custom={1}
-                                    whileHover='hover'
-                                    whileTap={{ scale: 0.9 }}
-                                    className='social-link'
-                                >
-                                    <Linkedin size={18} />
-                                    <span className='social-tooltip'>
-                                        LinkedIn
-                                    </span>
-                                </motion.a>
-                            )}
-
-                            {twitter && (
-                                <motion.a
-                                    href={`https://x.com/${twitter}`}
-                                    target='_blank'
-                                    rel='noopener noreferrer'
-                                    onClick={(e) => e.stopPropagation()}
-                                    variants={socialLinkVariants}
-                                    custom={2}
-                                    whileHover='hover'
-                                    whileTap={{ scale: 0.9 }}
-                                    className='social-link'
-                                >
-                                    <XIcon size={18} />
-                                    <span className='social-tooltip'>
-                                        X (formerly Twitter)
-                                    </span>
-                                </motion.a>
-                            )}
-                        </>
-                    ) : (
-                        <span className='no-social-data'>No social links</span>
-                    )}
-                </motion.div>
-            </div>
-        </Link>
+                        {twitter && (
+                            <motion.a
+                                href={`https://x.com/${twitter}`}
+                                target='_blank'
+                                rel='noreferrer'
+                                onClick={(e) => e.stopPropagation()}
+                                variants={socialLinkVariants}
+                                custom={2}
+                                whileHover='hover'
+                                whileTap={{ scale: 0.9 }}
+                                className='social-link'
+                            >
+                                <XIcon size={18} />
+                                <span className='social-tooltip'>
+                                    X (formerly Twitter)
+                                </span>
+                            </motion.a>
+                        )}
+                    </>
+                ) : (
+                    <span className='no-social-data'>No social links</span>
+                )}
+            </motion.div>
+        </div>
     );
 };
 
