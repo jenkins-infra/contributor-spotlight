@@ -29,15 +29,18 @@ pipeline {
       }
     }
 
-    stage('Install dependencies') {
-      environment {
-        NODE_ENV = 'development'
-      }
+    stage('Check Tooling') {
       steps {
         sh '''
-        asdf install
-        npm install
+        node --version
+        npm --version
         '''
+      }
+    }
+
+    stage('Install dependencies') {
+      steps {
+        sh 'npm install'
       }
     }
 
