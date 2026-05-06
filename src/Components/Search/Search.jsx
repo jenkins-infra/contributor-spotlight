@@ -6,6 +6,7 @@ import Fuse from 'fuse.js';
 import SearchResults from './SearchResults.jsx';
 function Search({ contributors, darkmode }) {
     const [searchQuery, setSearchQuery] = useState('');
+    const [debouncedQuery, setDebouncedQuery] = useState('');
     const [isFocused, setIsFocused] = useState(false);
     const [results, setResults] = useState([]);
     const [shortcutHint, setShortcutHint] = useState(null);
@@ -51,13 +52,21 @@ function Search({ contributors, darkmode }) {
     }, [contributorsArray]);
 
     useEffect(() => {
-        if (!searchQuery.trim()) {
+        const timer = setTimeout(() => {
+            setDebouncedQuery(searchQuery);
+        }, 300);
+
+        return () => clearTimeout(timer);
+    }, [searchQuery]);
+
+    useEffect(() => {
+        if (!debouncedQuery.trim()) {
             setResults([]);
             return;
         }
-        const searched_results = idx.search(searchQuery);
+        const searched_results = idx.search(debouncedQuery);
         setResults(searched_results);
-    }, [searchQuery, idx]);
+    }, [debouncedQuery, idx]);
 
     useEffect(() => {
         const handleKeyDown = (e) => {
