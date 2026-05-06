@@ -2,8 +2,17 @@ import { Box, Stack, useTheme } from '@mui/material';
 import React, { useEffect, useState } from 'react';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import axios from 'axios';
+import axiosRetry from 'axios-retry';
 import Papa from 'papaparse';
 import dayjs from 'dayjs';
+
+// Configure axios-retry for automatic retry with exponential backoff
+axiosRetry(axios, {
+    retries: 3,
+    retryDelay: axiosRetry.exponentialDelay,
+    retryCondition: (error) =>
+        axiosRetry.isNetworkOrIdempotentRequestError(error),
+});
 
 const ThankYouNote = ({ darkmode }) => {
     const theme = useTheme();
@@ -12,33 +21,58 @@ const ThankYouNote = ({ darkmode }) => {
     const [thankYou, setThankYou] = useState([]);
 
     useEffect(() => {
-        const fetchHonoredContributor = () => {
-            axios
-                .get(
+        const abortController = new AbortController();
+        let isMounted = true;
+
+        const fetchHonoredContributor = async () => {
+            try {
+                const response = await axios.get(
                     'https://raw.githubusercontent.com/jenkins-infra/jenkins-contribution-stats/main/data/honored_contributor.csv',
-                    { responseType: 'text' }
-                )
-                .then((response) => {
-                    const parsedData = Papa.parse(response.data);
-                    if (
-                        Array.isArray(parsedData?.data) &&
-                        parsedData.data.length > 1
-                    ) {
-                        setThankYou(parsedData.data[1]);
+                    {
+                        responseType: 'text',
+                        timeout: 5000,
+                        signal: abortController.signal,
                     }
-                })
-                .catch((error) => {
+                );
+
+                // Only update state if component is still mounted
+                if (!isMounted) return;
+
+                // Note: Papa.parse is synchronous - it blocks the main thread
+                // This is acceptable here since we're parsing a small CSV with typically 1-2 rows
+                const parsedData = Papa.parse(response.data)?.data[1];
+                if (!parsedData || parsedData.length === 0) {
+                    console.warn(
+                        'Failed to parse contributor data or no data available'
+                    );
+                    return;
+                }
+
+                setThankYou(parsedData);
+            } catch (error) {
+                // Only log if component is still mounted
+                if (!isMounted) return;
+
+                // Don't log abort errors - they're expected when unmounting
+                if (error.name !== 'CanceledError') {
                     console.error('Error fetching thank you note:', error);
-                });
+                }
+            }
         };
 
         fetchHonoredContributor();
         const interval = setInterval(fetchHonoredContributor, 3600000);
 
-        return () => clearInterval(interval);
+        return () => {
+            isMounted = false;
+            abortController.abort();
+            clearInterval(interval);
+        };
     }, []);
 
-    if (!thankYou || thankYou.length === 0) return null;
+    if (!thankYou || thankYou.length === 0) {
+        return null;
+    }
 
     return (
         <Box
