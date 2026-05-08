@@ -98,7 +98,12 @@ const IndexPage = (props) => {
                     continuous integration and delivery
                 </Typography>
                 <Box sx={{ paddingTop: 8 }}>
-                    <img src='/jenkins.png' alt='Jenkins logo' />
+                    <img
+                        src='/jenkins.png'
+                        width='226'
+                        height='312'
+                        alt='Jenkins logo'
+                    />
                 </Box>
             </Box>
 

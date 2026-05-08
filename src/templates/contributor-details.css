@@ -50,6 +50,20 @@
     opacity: 1;
 }
 
+.contributor-details-link-plain {
+    text-decoration: none;
+}
+
+.contributor-details-link-reset {
+    text-decoration: none;
+    color: inherit;
+}
+
+.contributor-details-circle-image {
+    object-fit: cover;
+    border-radius: 50%;
+}
+
 @media (max-width: 480px) {
     .social-link {
         width: 32px;
