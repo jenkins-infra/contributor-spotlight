@@ -111,7 +111,7 @@ function ContributorDetails(props) {
                             alt='Contributor avatar'
                             width={isDesktop ? 350 : isTablet ? 300 : 250}
                             height={isDesktop ? 350 : isTablet ? 300 : 250}
-                            style={{ objectFit: 'cover', borderRadius: '50%' }}
+                            className='contributor-details-circle-image'
                         />
                     </Box>
                 </Box>
@@ -124,7 +124,7 @@ function ContributorDetails(props) {
                               : '16px 32px'
                     }
                 >
-                    <Link style={{ textDecoration: `none` }} to='/'>
+                    <Link className='contributor-details-link-plain' to='/'>
                         <Stack direction='row' gap={1}>
                             <ArrowBackIcon />
                             <Typography>Back to Spotlight</Typography>
@@ -286,10 +286,7 @@ function ContributorDetails(props) {
                         {previous ? (
                             <Link
                                 to={previous.slug}
-                                style={{
-                                    textDecoration: 'none',
-                                    color: 'inherit',
-                                }}
+                                className='contributor-details-link-reset'
                             >
                                 <Stack
                                     direction='row'
@@ -303,10 +300,7 @@ function ContributorDetails(props) {
                                         alt={previous.title}
                                         width={44}
                                         height={44}
-                                        style={{
-                                            borderRadius: '50%',
-                                            objectFit: 'cover',
-                                        }}
+                                        className='contributor-details-circle-image'
                                     />
 
                                     <Box>
@@ -349,10 +343,7 @@ function ContributorDetails(props) {
                             >
                                 <Link
                                     to={next.slug}
-                                    style={{
-                                        textDecoration: 'none',
-                                        color: 'inherit',
-                                    }}
+                                    className='contributor-details-link-reset'
                                 >
                                     <Stack
                                         direction='row'
@@ -388,10 +379,7 @@ function ContributorDetails(props) {
                                             alt={next.title}
                                             width={44}
                                             height={44}
-                                            style={{
-                                                borderRadius: '50%',
-                                                objectFit: 'cover',
-                                            }}
+                                            className='contributor-details-circle-image'
                                         />
 
                                         <ArrowBackIcon
