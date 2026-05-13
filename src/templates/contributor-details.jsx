@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { graphql, Link } from 'gatsby';
 import { Box, Stack, Typography, useTheme } from '@mui/material';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
@@ -13,14 +13,18 @@ import './contributor-details.css';
 function ContributorDetails(props) {
     const theme = useTheme();
     const isDesktop = useMediaQuery(theme.breakpoints.up('lg'));
-    const isTablet = useMediaQuery(theme.breakpoints.between('lg', 'sm'));
+    const isTablet = useMediaQuery(theme.breakpoints.between('sm', 'lg'));
     const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
+    const darkmode = useMediaQuery('(prefers-color-scheme: dark)');
     const title =
         props.data.asciidoc.pageAttributes.name +
         ' - Jenkins Contributor Spotlight';
+    const { previous, next } = props.pageContext;
 
     // State for sanitized HTML
-    const [sanitizedHTML, setSanitizedHTML] = useState(props.data.asciidoc.html);
+    const [sanitizedHTML, setSanitizedHTML] = useState(
+        props.data.asciidoc.html
+    );
 
     // Sanitize HTML on client side only
     useEffect(() => {
@@ -107,7 +111,7 @@ function ContributorDetails(props) {
                             alt='Contributor avatar'
                             width={isDesktop ? 350 : isTablet ? 300 : 250}
                             height={isDesktop ? 350 : isTablet ? 300 : 250}
-                            style={{ objectFit: 'cover', borderRadius: '50%' }}
+                            className='contributor-details-circle-image'
                         />
                     </Box>
                 </Box>
@@ -120,7 +124,7 @@ function ContributorDetails(props) {
                               : '16px 32px'
                     }
                 >
-                    <Link style={{ textDecoration: `none` }} to='/'>
+                    <Link className='contributor-details-link-plain' to='/'>
                         <Stack direction='row' gap={1}>
                             <ArrowBackIcon />
                             <Typography>Back to Spotlight</Typography>
@@ -129,7 +133,7 @@ function ContributorDetails(props) {
                     <Box sx={{ paddingBottom: 2, paddingTop: 2 }}>
                         <Typography
                             variant='h5'
-                            fontweight={500}
+                            fontWeight={500}
                             textAlign='center'
                         >
                             Contributor Spotlight
@@ -188,7 +192,7 @@ function ContributorDetails(props) {
                             <motion.a
                                 href={`https://linkedin.com/in/${props.data.asciidoc.pageAttributes.linkedin}`}
                                 target='_blank'
-                                rel='noreferrer'
+                                rel='noopener noreferrer'
                                 onClick={(e) => e.stopPropagation()}
                                 variants={socialLinkVariants}
                                 custom={1}
@@ -204,7 +208,7 @@ function ContributorDetails(props) {
                             <motion.a
                                 href={`https://x.com/${props.data.asciidoc.pageAttributes.twitter}`}
                                 target='_blank'
-                                rel='noreferrer'
+                                rel='noopener noreferrer'
                                 onClick={(e) => e.stopPropagation()}
                                 variants={socialLinkVariants}
                                 custom={2}
@@ -222,7 +226,7 @@ function ContributorDetails(props) {
                             <motion.a
                                 href={`https://github.com/${props.data.asciidoc.pageAttributes.github}`}
                                 target='_blank'
-                                rel='noreferrer'
+                                rel='noopener noreferrer'
                                 onClick={(e) => e.stopPropagation()}
                                 variants={socialLinkVariants}
                                 custom={0}
@@ -238,7 +242,7 @@ function ContributorDetails(props) {
                             <motion.a
                                 href={`mailto:${props.data.asciidoc.pageAttributes.email}`}
                                 target='_blank'
-                                rel='noreferrer'
+                                rel='noopener noreferrer'
                                 onClick={(e) => e.stopPropagation()}
                                 variants={socialLinkVariants}
                                 custom={1}
@@ -261,6 +265,134 @@ function ContributorDetails(props) {
                             __html: sanitizedHTML,
                         }}
                     />
+                    <Box
+                        sx={{
+                            mt: 10,
+                            pt: 4,
+                            borderTop: '1px solid #e0e0e0',
+                            display: 'flex',
+                            flexDirection: {
+                                xs: 'column',
+                                sm: 'row',
+                            },
+                            justifyContent: 'space-between',
+                            alignItems: {
+                                xs: 'stretch',
+                                sm: 'center',
+                            },
+                            gap: 2,
+                        }}
+                    >
+                        {previous ? (
+                            <Link
+                                to={previous.slug}
+                                className='contributor-details-link-reset'
+                            >
+                                <Stack
+                                    direction='row'
+                                    alignItems='center'
+                                    spacing={1}
+                                >
+                                    <ArrowBackIcon fontSize='small' />
+
+                                    <img
+                                        src={`../../../${previous.image}`}
+                                        alt={previous.title}
+                                        width={44}
+                                        height={44}
+                                        className='contributor-details-circle-image'
+                                    />
+
+                                    <Box>
+                                        <Typography
+                                            variant='caption'
+                                            sx={{
+                                                color: darkmode
+                                                    ? '#bbbbbb'
+                                                    : 'text.secondary',
+                                            }}
+                                        >
+                                            Previous Profile
+                                        </Typography>
+                                        <Typography
+                                            fontWeight={600}
+                                            sx={{
+                                                maxWidth: 180,
+                                                whiteSpace: 'nowrap',
+                                                overflow: 'hidden',
+                                                textOverflow: 'ellipsis',
+                                            }}
+                                        >
+                                            {previous.title}
+                                        </Typography>
+                                    </Box>
+                                </Stack>
+                            </Link>
+                        ) : (
+                            <div />
+                        )}
+
+                        {next ? (
+                            <Box
+                                sx={{
+                                    alignSelf: {
+                                        xs: 'flex-end',
+                                        sm: 'auto',
+                                    },
+                                }}
+                            >
+                                <Link
+                                    to={next.slug}
+                                    className='contributor-details-link-reset'
+                                >
+                                    <Stack
+                                        direction='row'
+                                        alignItems='center'
+                                        spacing={1}
+                                    >
+                                        <Box textAlign='right'>
+                                            <Typography
+                                                variant='caption'
+                                                sx={{
+                                                    color: darkmode
+                                                        ? '#bbbbbb'
+                                                        : 'text.secondary',
+                                                }}
+                                            >
+                                                Next Profile
+                                            </Typography>
+                                            <Typography
+                                                fontWeight={600}
+                                                sx={{
+                                                    maxWidth: 180,
+                                                    whiteSpace: 'nowrap',
+                                                    overflow: 'hidden',
+                                                    textOverflow: 'ellipsis',
+                                                }}
+                                            >
+                                                {next.title}
+                                            </Typography>
+                                        </Box>
+
+                                        <img
+                                            src={`../../../${next.image}`}
+                                            alt={next.title}
+                                            width={44}
+                                            height={44}
+                                            className='contributor-details-circle-image'
+                                        />
+
+                                        <ArrowBackIcon
+                                            fontSize='small'
+                                            sx={{ transform: 'rotate(180deg)' }}
+                                        />
+                                    </Stack>
+                                </Link>
+                            </Box>
+                        ) : (
+                            <div />
+                        )}
+                    </Box>
                 </Box>
             </Box>
         </>

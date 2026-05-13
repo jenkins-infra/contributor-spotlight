@@ -9,17 +9,7 @@ function SearchResults({ results, darkmode }) {
     if (!results || results.length === 0) {
         return (
             <div
-                className='no-results'
-                style={{
-                    padding: '24px',
-                    background: darkmode ? '#2c2c2c' : '#f0f0f0',
-                    borderRadius: '12px',
-                    border: '1px solid #333',
-                    color: darkmode ? '#ccc' : '#333',
-                    fontSize: '15px',
-                    textAlign: 'center',
-                    margin: '16px 0',
-                }}
+                className={`no-results no-results-card ${darkmode ? 'dark' : 'light'}`}
             >
                 🔍 No contributors found
             </div>
@@ -72,7 +62,7 @@ function SearchResults({ results, darkmode }) {
                                         <motion.a
                                             href={`https://github.com/${item.github}`}
                                             target='_blank'
-                                            rel='noreferrer'
+                                            rel='noopener noreferrer'
                                             onClick={(e) => e.stopPropagation()}
                                             variants={socialLinkVariants}
                                             custom={0}
@@ -90,7 +80,7 @@ function SearchResults({ results, darkmode }) {
                                         <motion.a
                                             href={`https://linkedin.com/in/${item?.linkedin}`}
                                             target='_blank'
-                                            rel='noreferrer'
+                                            rel='noopener noreferrer'
                                             onClick={(e) => e.stopPropagation()}
                                             variants={socialLinkVariants}
                                             custom={1}
@@ -108,7 +98,7 @@ function SearchResults({ results, darkmode }) {
                                         <motion.a
                                             href={`https://x.com/${item.twitter}`}
                                             target='_blank'
-                                            rel='noreferrer'
+                                            rel='noopener noreferrer'
                                             onClick={(e) => e.stopPropagation()}
                                             variants={socialLinkVariants}
                                             custom={2}
