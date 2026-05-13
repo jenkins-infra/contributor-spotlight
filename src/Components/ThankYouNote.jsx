@@ -19,7 +19,13 @@ const ThankYouNote = ({ darkmode }) => {
                     { responseType: 'text' }
                 )
                 .then((response) => {
-                    setThankYou(Papa.parse(response.data)?.data[1]);
+                    const parsedData = Papa.parse(response.data);
+                    if (
+                        Array.isArray(parsedData?.data) &&
+                        parsedData.data.length > 1
+                    ) {
+                        setThankYou(parsedData.data[1]);
+                    }
                 })
                 .catch((error) => {
                     console.error('Error fetching thank you note:', error);
