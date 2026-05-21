@@ -13,7 +13,7 @@ Requires Node.js (CI uses the version from packer-images agents; NodeJS 24.15)
 [source,bash]
 ----
 cd contributor-spotlight/
-npm install
+npm ci
 ----
 
 1. **Run the development environment**
