@@ -40,7 +40,7 @@ targets:
                 nodejs (.*)
             replacepattern: >
                 nodejs {{ source "packerImageNodeVersion" }}
-        # scmid: default
+        scmid: default
 
 actions:
     default:
