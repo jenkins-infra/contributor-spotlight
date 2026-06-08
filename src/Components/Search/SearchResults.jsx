@@ -63,6 +63,7 @@ function SearchResults({ results, darkmode }) {
                                             href={`https://github.com/${item.github}`}
                                             target='_blank'
                                             rel='noopener noreferrer'
+                                            aria-label={`GitHub profile of ${item.name}`}
                                             onClick={(e) => e.stopPropagation()}
                                             variants={socialLinkVariants}
                                             custom={0}
@@ -81,6 +82,7 @@ function SearchResults({ results, darkmode }) {
                                             href={`https://linkedin.com/in/${item?.linkedin}`}
                                             target='_blank'
                                             rel='noopener noreferrer'
+                                            aria-label={`LinkedIn profile of ${item.name}`}
                                             onClick={(e) => e.stopPropagation()}
                                             variants={socialLinkVariants}
                                             custom={1}
@@ -99,6 +101,7 @@ function SearchResults({ results, darkmode }) {
                                             href={`https://x.com/${item.twitter}`}
                                             target='_blank'
                                             rel='noopener noreferrer'
+                                            aria-label={`X (formerly Twitter) profile of ${item.name}`}
                                             onClick={(e) => e.stopPropagation()}
                                             variants={socialLinkVariants}
                                             custom={2}
