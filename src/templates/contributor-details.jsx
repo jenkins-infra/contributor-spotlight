@@ -193,6 +193,7 @@ function ContributorDetails(props) {
                                 href={`https://linkedin.com/in/${props.data.asciidoc.pageAttributes.linkedin}`}
                                 target='_blank'
                                 rel='noopener noreferrer'
+                                aria-label={`LinkedIn profile of ${props.data.asciidoc.pageAttributes.name}`}
                                 onClick={(e) => e.stopPropagation()}
                                 variants={socialLinkVariants}
                                 custom={1}
@@ -209,6 +210,7 @@ function ContributorDetails(props) {
                                 href={`https://x.com/${props.data.asciidoc.pageAttributes.twitter}`}
                                 target='_blank'
                                 rel='noopener noreferrer'
+                                aria-label={`X (formerly Twitter) profile of ${props.data.asciidoc.pageAttributes.name}`}
                                 onClick={(e) => e.stopPropagation()}
                                 variants={socialLinkVariants}
                                 custom={2}
@@ -227,6 +229,7 @@ function ContributorDetails(props) {
                                 href={`https://github.com/${props.data.asciidoc.pageAttributes.github}`}
                                 target='_blank'
                                 rel='noopener noreferrer'
+                                aria-label={`GitHub profile of ${props.data.asciidoc.pageAttributes.name}`}
                                 onClick={(e) => e.stopPropagation()}
                                 variants={socialLinkVariants}
                                 custom={0}
@@ -243,6 +246,7 @@ function ContributorDetails(props) {
                                 href={`mailto:${props.data.asciidoc.pageAttributes.email}`}
                                 target='_blank'
                                 rel='noopener noreferrer'
+                                aria-label={`Email ${props.data.asciidoc.pageAttributes.name}`}
                                 onClick={(e) => e.stopPropagation()}
                                 variants={socialLinkVariants}
                                 custom={1}
