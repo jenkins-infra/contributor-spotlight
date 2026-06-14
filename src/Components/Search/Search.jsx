@@ -8,18 +8,22 @@ function Search({ contributors, darkmode }) {
     const [searchQuery, setSearchQuery] = useState('');
     const [isFocused, setIsFocused] = useState(false);
     const [results, setResults] = useState([]);
+    const [shortcutHint, setShortcutHint] = useState(null);
     const searchInputRef = useRef(null);
-    const platform = navigator.platform.toUpperCase();
-    const isMobile =
-        platform === 'IPHONE' ||
-        platform === 'IPAD' ||
-        /Android/i.test(navigator.userAgent);
-    const useCmdKey =
-        platform.indexOf('MAC') >= 0 ||
-        platform === 'IPHONE' ||
-        platform === 'IPAD';
 
-    const shortcutHint = isMobile ? null : useCmdKey ? '⌘ + K' : 'Ctrl + K';
+    useEffect(() => {
+        if (typeof window !== 'undefined') {
+            const ua = navigator.userAgent;
+            const isMobile = /iPhone|iPad|iPod|Android/i.test(ua);
+            const isMacDesktop = navigator.userAgentData
+                ? navigator.userAgentData.platform === 'macOS'
+                : /Mac/i.test(ua);
+            setShortcutHint(
+                isMobile ? null : isMacDesktop ? '⌘ + K' : 'Ctrl + K'
+            );
+        }
+    }, []);
+
     const contributorsArray = useMemo(() => {
         return Object.values(contributors).map((c) => ({
             id: c?.node?.id,

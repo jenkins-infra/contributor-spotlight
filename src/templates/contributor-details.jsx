@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { graphql, Link } from 'gatsby';
 import { Box, Stack, Typography, useTheme } from '@mui/material';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
@@ -111,7 +111,7 @@ function ContributorDetails(props) {
                             alt='Contributor avatar'
                             width={isDesktop ? 350 : isTablet ? 300 : 250}
                             height={isDesktop ? 350 : isTablet ? 300 : 250}
-                            style={{ objectFit: 'cover', borderRadius: '50%' }}
+                            className='contributor-details-circle-image'
                         />
                     </Box>
                 </Box>
@@ -124,7 +124,7 @@ function ContributorDetails(props) {
                               : '16px 32px'
                     }
                 >
-                    <Link style={{ textDecoration: `none` }} to='/'>
+                    <Link className='contributor-details-link-plain' to='/'>
                         <Stack direction='row' gap={1}>
                             <ArrowBackIcon />
                             <Typography>Back to Spotlight</Typography>
@@ -133,7 +133,7 @@ function ContributorDetails(props) {
                     <Box sx={{ paddingBottom: 2, paddingTop: 2 }}>
                         <Typography
                             variant='h5'
-                            fontweight={500}
+                            fontWeight={500}
                             textAlign='center'
                         >
                             Contributor Spotlight
@@ -193,6 +193,7 @@ function ContributorDetails(props) {
                                 href={`https://linkedin.com/in/${props.data.asciidoc.pageAttributes.linkedin}`}
                                 target='_blank'
                                 rel='noopener noreferrer'
+                                aria-label={`LinkedIn profile of ${props.data.asciidoc.pageAttributes.name}`}
                                 onClick={(e) => e.stopPropagation()}
                                 variants={socialLinkVariants}
                                 custom={1}
@@ -209,6 +210,7 @@ function ContributorDetails(props) {
                                 href={`https://x.com/${props.data.asciidoc.pageAttributes.twitter}`}
                                 target='_blank'
                                 rel='noopener noreferrer'
+                                aria-label={`X (formerly Twitter) profile of ${props.data.asciidoc.pageAttributes.name}`}
                                 onClick={(e) => e.stopPropagation()}
                                 variants={socialLinkVariants}
                                 custom={2}
@@ -227,6 +229,7 @@ function ContributorDetails(props) {
                                 href={`https://github.com/${props.data.asciidoc.pageAttributes.github}`}
                                 target='_blank'
                                 rel='noopener noreferrer'
+                                aria-label={`GitHub profile of ${props.data.asciidoc.pageAttributes.name}`}
                                 onClick={(e) => e.stopPropagation()}
                                 variants={socialLinkVariants}
                                 custom={0}
@@ -243,6 +246,7 @@ function ContributorDetails(props) {
                                 href={`mailto:${props.data.asciidoc.pageAttributes.email}`}
                                 target='_blank'
                                 rel='noopener noreferrer'
+                                aria-label={`Email ${props.data.asciidoc.pageAttributes.name}`}
                                 onClick={(e) => e.stopPropagation()}
                                 variants={socialLinkVariants}
                                 custom={1}
@@ -286,10 +290,7 @@ function ContributorDetails(props) {
                         {previous ? (
                             <Link
                                 to={previous.slug}
-                                style={{
-                                    textDecoration: 'none',
-                                    color: 'inherit',
-                                }}
+                                className='contributor-details-link-reset'
                             >
                                 <Stack
                                     direction='row'
@@ -303,10 +304,7 @@ function ContributorDetails(props) {
                                         alt={previous.title}
                                         width={44}
                                         height={44}
-                                        style={{
-                                            borderRadius: '50%',
-                                            objectFit: 'cover',
-                                        }}
+                                        className='contributor-details-circle-image'
                                     />
 
                                     <Box>
@@ -349,10 +347,7 @@ function ContributorDetails(props) {
                             >
                                 <Link
                                     to={next.slug}
-                                    style={{
-                                        textDecoration: 'none',
-                                        color: 'inherit',
-                                    }}
+                                    className='contributor-details-link-reset'
                                 >
                                     <Stack
                                         direction='row'
@@ -388,10 +383,7 @@ function ContributorDetails(props) {
                                             alt={next.title}
                                             width={44}
                                             height={44}
-                                            style={{
-                                                borderRadius: '50%',
-                                                objectFit: 'cover',
-                                            }}
+                                            className='contributor-details-circle-image'
                                         />
 
                                         <ArrowBackIcon
