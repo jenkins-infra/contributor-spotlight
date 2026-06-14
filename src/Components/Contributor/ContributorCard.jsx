@@ -168,6 +168,7 @@ const ContributorCard = ({ contributor }) => {
                                     href={`https://github.com/${github}`}
                                     target='_blank'
                                     rel='noopener noreferrer'
+                                    aria-label={`GitHub profile of ${name}`}
                                     onClick={(e) => e.stopPropagation()}
                                     variants={socialLinkVariants}
                                     custom={0}
@@ -187,6 +188,7 @@ const ContributorCard = ({ contributor }) => {
                                     href={`https://linkedin.com/in/${linkedin}`}
                                     target='_blank'
                                     rel='noopener noreferrer'
+                                    aria-label={`LinkedIn profile of ${name}`}
                                     onClick={(e) => e.stopPropagation()}
                                     variants={socialLinkVariants}
                                     custom={1}
@@ -206,6 +208,7 @@ const ContributorCard = ({ contributor }) => {
                                     href={`https://x.com/${twitter}`}
                                     target='_blank'
                                     rel='noopener noreferrer'
+                                    aria-label={`X (formerly Twitter) profile of ${name}`}
                                     onClick={(e) => e.stopPropagation()}
                                     variants={socialLinkVariants}
                                     custom={2}
