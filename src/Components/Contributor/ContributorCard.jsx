@@ -68,7 +68,14 @@ const ContributorCard = ({ contributor }) => {
     };
 
     return (
-        <Link to={slug} className='contributor-card-link'>
+        <Link
+            to={slug}
+            style={{
+                textDecoration: 'none',
+                color: 'inherit',
+                display: 'block',
+            }}
+        >
             <div className='contributor-card'>
                 <div className='contributor-image-wrapper'>
                     <motion.img
@@ -117,7 +124,14 @@ const ContributorCard = ({ contributor }) => {
                     {location}
                 </motion.p>
 
-                <div className='contributor-meta-row'>
+                <div
+                    style={{
+                        display: 'flex',
+                        justifyContent: 'center',
+                        alignItems: 'center',
+                        gap: '20px',
+                    }}
+                >
                     {datepublished && (
                         <motion.div
                             className='contributor-meta'
