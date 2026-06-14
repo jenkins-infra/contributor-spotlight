@@ -408,11 +408,14 @@ export const Head = ({ data }) => {
             <meta charSet='utf-8' />
             <title>{title}</title>
 
-            <meta name='title' property='og:title' content={title} />
+            <meta name='title' content={title} />
+            <meta property='og:title' content={title} />
 
             <meta
                 property='og:image'
-                content={'../../../' + data.asciidoc.pageAttributes.image}
+                content={
+                    '../../../' + (data?.asciidoc?.pageAttributes?.image ?? '')
+                }
             />
 
             <meta property='og:image:width' content='520' />
@@ -425,12 +428,14 @@ export const Head = ({ data }) => {
 
             <meta property='article:author' content='Jenkins Copy Editors' />
 
-            <meta
-                property='article:published_time'
-                content={dayjs(
-                    data.asciidoc.pageAttributes.datepublished
-                ).toISOString()}
-            />
+            {data?.asciidoc?.pageAttributes?.datepublished ? (
+                <meta
+                    property='article:published_time'
+                    content={dayjs(
+                        data.asciidoc.pageAttributes.datepublished
+                    ).toISOString()}
+                />
+            ) : null}
         </>
     );
 };
