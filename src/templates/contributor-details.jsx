@@ -15,8 +15,6 @@ function ContributorDetails(props) {
     const isTablet = useMediaQuery(theme.breakpoints.between('sm', 'lg'));
     const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
     const darkmode = useMediaQuery('(prefers-color-scheme: dark)');
-    const title =
-        props.data.asciidoc.document.title + ' - Jenkins Contributor Spotlight';
     const { previous, next } = props.pageContext;
 
     // State for sanitized HTML
