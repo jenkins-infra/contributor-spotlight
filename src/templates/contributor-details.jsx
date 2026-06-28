@@ -411,9 +411,7 @@ export const Head = ({ data }) => {
 
             <meta
                 property='og:image'
-                content={
-                    '../../../' + (data?.asciidoc?.pageAttributes?.image ?? '')
-                }
+                content={`../../../${data?.asciidoc?.pageAttributes?.image ?? ''}`}
             />
 
             <meta property='og:image:width' content='520' />
