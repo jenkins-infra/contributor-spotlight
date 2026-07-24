@@ -46,8 +46,8 @@
         "lodash": "^4.17.21",
         "lucide-react": "^0.562.0",
         "papaparse": "^5.4.1",
-        "react": "19.2.4",
-        "react-dom": "19.2.4",
+        "react": "19.2.8",
+        "react-dom": "19.2.8",
         "react-helmet": "^6.1.0",
         "sharp": "^0.35.3",
         "slash": "^5.1.0"
