@@ -1,5 +1,5 @@
-function JioNavbar() {
-  return <jio-navbar></jio-navbar>;
+function JioNavbar({ property }) {
+  return <jio-navbar property={property}></jio-navbar>;
 }
 
 export default JioNavbar;

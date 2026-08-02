@@ -1,6 +1,6 @@
-function JioFooter() {
+function JioFooter({ property }) {
   return (
-    <jio-footer></jio-footer>
+    <jio-footer property={property} ></jio-footer>
   );
 }
 
