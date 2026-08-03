@@ -1,5 +1,8 @@
 // Do not trigger daily if not on the principal branch (e.g. not on PR, not on other branches, not on tags)
 final String cronPattern = env.BRANCH_IS_PRIMARY ? '@daily' : ''
+// infra.ci.jenkins.io defaults to arm64 VM agents (due to Gatsby memory requirements) while ci.jenkins.io has the default spot amd64 used by Java builds.
+// Once the Vite migration lands, this can be simplified to always use 'maven-25'.
+final String agentLabel = infra.isInfra() ? 'linux-arm64-docker' : 'maven-25'
 
 pipeline {
   triggers {
@@ -13,11 +16,15 @@ pipeline {
   }
 
   agent {
-    label 'maven-25'
+    label agentLabel
   }
 
   environment {
     TZ = 'UTC'
+    // Amount of available vCPUs, to avoid OOM - https://www.gatsbyjs.com/docs/how-to/performance/resolving-out-of-memory-issues/#try-reducing-the-number-of-cores
+    // https://github.com/jenkins-infra/jenkins-infra/tree/production/hieradata/clients/controller.ci.jenkins.io.yaml#L327
+    GATSBY_CPU_COUNT = '2'
+    GATSBY_TELEMETRY_DISABLED = '1'
   }
 
   stages {
@@ -69,7 +76,7 @@ pipeline {
         NETLIFY_AUTH_TOKEN = credentials('netlify-auth-token')
       }
       steps {
-        sh 'netlify-deploy --draft=true --siteName "contributor-spotlight" --title "Preview deploy for ${CHANGE_ID}" --alias "deploy-preview-${CHANGE_ID}" -d ./dist'
+        sh 'netlify-deploy --draft=true --siteName "contributor-spotlight" --title "Preview deploy for ${CHANGE_ID}" --alias "deploy-preview-${CHANGE_ID}" -d ./public'
       }
       post {
         success {
@@ -91,8 +98,8 @@ pipeline {
       }
       environment {
         NODE_ENV = 'production'
-        VITE_MATOMO_SITE_URL = 'https://jenkins-matomo.do.g4v.dev'
-        VITE_MATOMO_SITE_ID = '4'
+        GATSBY_MATOMO_SITE_URL = 'https://jenkins-matomo.do.g4v.dev'
+        GATSBY_MATOMO_SITE_ID = '4'
       }
       steps {
         script {
@@ -110,7 +117,7 @@ pipeline {
               --skip-version-check \
               --recursive=true \
               --delete-destination=true \
-              ./dist/ "${FILESHARE_SIGNED_URL}"
+              ./public/ "${FILESHARE_SIGNED_URL}"
             '''
           }
         }
