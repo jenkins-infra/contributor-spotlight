@@ -1,6 +1,7 @@
+final String targetBranch = 'gsoc-2026-revamp'
 // Do not trigger daily if not on the principal branch (e.g. not on PR, not on other branches, not on tags)
 // TODO: replace the condition by `env.BRANCH_IS_PRIMARY` once back to `main` branch
-final String cronPattern = env.BRANCH_NAME == `gsoc-2026-revamp` ? '@daily' : ''
+final String cronPattern = env.BRANCH_NAME == targetBranch ? '@daily' : ''
 // infra.ci.jenkins.io defaults to arm64 VM agents (due to Gatsby memory requirements) while ci.jenkins.io has the default spot amd64 used by Java builds.
 // Once the Vite migration lands, this can be simplified to always use 'maven-25'.
 final String agentLabel = infra.isInfra() ? 'linux-arm64-docker' : 'maven-25'
@@ -68,7 +69,7 @@ pipeline {
     stage('Deploy PR to preview site') {
       when {
         allOf{
-          changeRequest target: 'gsoc-2026-revamp'
+          changeRequest target: targetBranch
           // Only deploy from infra.ci.jenkins.io
           expression { infra.isInfra() }
         }
