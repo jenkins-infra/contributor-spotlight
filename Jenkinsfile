@@ -1,4 +1,10 @@
+// Do not trigger daily if not on the principal branch (e.g. not on PR, not on other branches, not on tags)
+final String cronPattern = env.BRANCH_IS_PRIMARY ? '@daily' : ''
+
 pipeline {
+  triggers {
+    cron(cronPattern)
+  }
   options {
     timeout(time: 60, unit: 'MINUTES')
     ansiColor('xterm')
@@ -7,14 +13,11 @@ pipeline {
   }
 
   agent {
-    label 'linux-arm64-docker || arm64linux'
+    label 'maven-25'
   }
 
   environment {
     TZ = 'UTC'
-    // Amount of available vCPUs, to avoid OOM - https://www.gatsbyjs.com/docs/how-to/performance/resolving-out-of-memory-issues/#try-reducing-the-number-of-cores
-    // https://github.com/jenkins-infra/jenkins-infra/tree/production/hieradata/clients/controller.ci.jenkins.io.yaml#L327
-    GATSBY_CPU_COUNT = '4'
   }
 
   stages {
@@ -50,17 +53,14 @@ pipeline {
         NODE_ENV = 'development'
       }
       steps {
-        sh '''
-        npm run info
-        npm run build
-        '''
+        sh 'npm run build'
       }
     }
 
     stage('Deploy PR to preview site') {
       when {
         allOf{
-          changeRequest target: 'main'
+          changeRequest target: 'gsoc-2026-revamp'
           // Only deploy from infra.ci.jenkins.io
           expression { infra.isInfra() }
         }
@@ -69,7 +69,7 @@ pipeline {
         NETLIFY_AUTH_TOKEN = credentials('netlify-auth-token')
       }
       steps {
-        sh 'netlify-deploy --draft=true --siteName "contributor-spotlight" --title "Preview deploy for ${CHANGE_ID}" --alias "deploy-preview-${CHANGE_ID}" -d ./public'
+        sh 'netlify-deploy --draft=true --siteName "contributor-spotlight" --title "Preview deploy for ${CHANGE_ID}" --alias "deploy-preview-${CHANGE_ID}" -d ./dist'
       }
       post {
         success {
@@ -91,8 +91,8 @@ pipeline {
       }
       environment {
         NODE_ENV = 'production'
-        GATSBY_MATOMO_SITE_URL = 'https://jenkins-matomo.do.g4v.dev'
-        GATSBY_MATOMO_SITE_ID = '4'
+        VITE_MATOMO_SITE_URL = 'https://jenkins-matomo.do.g4v.dev'
+        VITE_MATOMO_SITE_ID = '4'
       }
       steps {
         script {
@@ -110,10 +110,16 @@ pipeline {
               --skip-version-check \
               --recursive=true \
               --delete-destination=true \
-              ./public/ "${FILESHARE_SIGNED_URL}"
+              ./dist/ "${FILESHARE_SIGNED_URL}"
             '''
           }
         }
+      }
+    }
+
+    stage('Publish build report') {
+      steps {
+        publishBuildStatusReport()
       }
     }
   }
