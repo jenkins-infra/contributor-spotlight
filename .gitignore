@@ -1,12 +1,26 @@
-node_modules/
-.cache/
-public
-.idea/
-.vscode/
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+node_modules
+dist
+dist-ssr
+*.local
 .env.development
 .env.production
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
 .DS_Store
-src/.DS_Store
-.eslintcache
-.nvmrc
-issues.md
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
