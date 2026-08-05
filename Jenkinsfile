@@ -78,7 +78,7 @@ pipeline {
         NETLIFY_AUTH_TOKEN = credentials('netlify-auth-token')
       }
       steps {
-        sh 'netlify-deploy --draft=true --siteName "contributor-spotlight" --title "Preview deploy for ${CHANGE_ID}" --alias "deploy-preview-${CHANGE_ID}" -d ./public'
+        sh 'netlify-deploy --draft=true --siteName "contributor-spotlight" --title "Preview deploy for ${CHANGE_ID}" --alias "deploy-preview-${CHANGE_ID}" -d ./dist'
       }
       post {
         success {
