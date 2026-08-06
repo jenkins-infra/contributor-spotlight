@@ -75,7 +75,7 @@
         "react-server-dom-webpack": {
             "react": "$react"
         },
-        "webpack-dev-middleware": "^7.4.5",
+        "webpack-dev-middleware": "^8.0.0",
         "cookie": "^2.0.0",
         "path-to-regexp": "~0.2.0",
         "gatsby-plugin-offline": {
