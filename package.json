@@ -12,8 +12,10 @@
         "info": "vite info"
     },
     "dependencies": {
+        "@asciidoctor/core": "^4.0.7",
         "husky": "^9.1.7",
         "lint-staged": "^17.3.0",
+        "lucide-react": "^0.562.0",
         "prettier": "^3.9.6",
         "react": "^19.2.8",
         "react-dom": "^19.2.8",

@@ -1,0 +1,259 @@
+
+
+.contributor-page {
+  display: flex;
+  min-height: 100vh;
+  background: var(--color-bg-os);
+  color: var(--color-text);
+  font-family: system-ui, sans-serif;
+}
+
+.contributor-sidebar {
+  width: 380px;
+  flex-shrink: 0;
+
+  max-width: 85vw;
+  background: var(--color-bg-sidebar);
+
+  padding: 30px;
+
+  position: sticky;
+  top: 0;
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.back-link {
+  width: 100%;
+  margin-bottom: 60px;
+
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  text-decoration: none;
+  color: var(--color-accent);
+  font-size: 14px;
+}
+
+.contributor-avatar {
+  width: 170px;
+  height: 170px;
+
+  border-radius: 50%;
+  object-fit: cover;
+
+  margin-bottom: 20px;
+}
+
+.contributor-sidebar h1 {
+  margin: 0;
+
+  color: var(--color-text);
+  font-size: 2rem;
+  text-align: center;
+}
+
+.pronouns {
+  margin: 10px 0;
+  color: #0b6ef3;
+}
+
+.meta {
+  margin-top: 24px;
+  text-align: center;
+}
+
+.meta p {
+  margin: 10px 0;
+  color: var(--color-text);
+}
+
+.contributor-content {
+  flex: 1;
+  padding: 40px 50px;
+  overflow-x: hidden;
+  background: var(--color-bg-os);
+}
+
+/* ===========================================
+   Reset AsciiDoctor completely
+=========================================== */
+
+.adoc-content,
+.adoc-content * {
+  box-sizing: border-box;
+}
+
+.adoc-content {
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding: 0;
+}
+
+.adoc-content #content,
+.adoc-content #header,
+.adoc-content #footer,
+.adoc-content .sect1,
+.adoc-content .sect2,
+.adoc-content .sect3,
+.adoc-content .sectionbody,
+.adoc-content .paragraph,
+.adoc-content .content,
+.adoc-content .listingblock,
+.adoc-content .imageblock,
+.adoc-content .ulist,
+.adoc-content .olist,
+.adoc-content .quoteblock,
+.adoc-content .sidebarblock,
+.adoc-content .literalblock {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  max-width: none;
+}
+
+.adoc-content h1 {
+  display: none;
+}
+
+.adoc-content h2 {
+  margin: 1rem 0 0.4rem;
+  color: var(--color-accent);
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.adoc-content h3 {
+  margin: 1.5rem 0 1rem;
+  color: var(--color-accent);
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+
+.adoc-content p {
+  margin: 0 0 1.2rem;
+
+  font-size: 1rem;
+  color: var(--color-text);
+
+  line-height: 1.8;
+}
+
+.adoc-content ul,
+.adoc-content ol {
+  margin: 1rem 0;
+  padding-left: 1.5rem;
+}
+
+.adoc-content li {
+  margin-bottom: .5rem;
+  line-height: 1.8;
+  color: var(--color-text);
+}
+
+.adoc-content a {
+  color: var(--color-accent);
+}
+
+.adoc-content img {
+  max-width: 100%;
+  display: block;
+}
+
+.adoc-content table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.adoc-content th,
+.adoc-content td {
+  border: 1px solid var(--color-border);
+  padding: 10px;
+  color: var(--color-text);
+}
+
+.adoc-content blockquote {
+  margin: 1.5rem 0;
+  padding-left: 20px;
+
+  border-left: 4px solid var(--color-accent);
+  color: var(--color-text);
+}
+
+.adoc-content pre {
+  overflow: auto;
+
+  padding: 16px;
+
+  background: var(--color-code-bg);
+  color: var(--color-code-text);
+
+  border-radius: 6px;
+}
+
+.adoc-content code {
+  background: var(--color-code-bg);
+  color: var(--color-code-text);
+}
+
+@media (max-width: 700px) {
+  .contributor-page {
+    flex-direction: column;
+  }
+
+  .contributor-sidebar {
+    position: static;
+    width: 100%;
+    height: auto;
+  }
+
+  .contributor-content {
+    padding: 24px;
+  }
+}
+
+.contributor-socials {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1.75rem;
+}
+
+.social-link {
+  width: 40px;
+  height: 40px;
+  border-radius: 18px;
+  background: var(--color-icon-bg);
+  color: var(--color-accent);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  text-decoration: none;
+  transition: all 0.25s ease;
+}
+
+.social-link svg {
+  width: 22px;
+  height: 22px;
+  stroke-width: 2;
+}
+
+.social-link:hover {
+  background: var(--color-accent);
+  color: var(--color-white);
+  transform: translateY(-3px);
+}
+
+.social-link:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 3px;
+}
