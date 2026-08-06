@@ -1,7 +1,7 @@
 import Layout from './components/layout/Layout.jsx';
 import LandingPage from './pages/landing-page/LandingPage.jsx';
 import ContributorDetails from './pages/contributor-page/contributor-details.jsx';
-import { loadContributor } from './utils/contributorLoad.js';
+import { loadContributor, slugs } from './utils/contributorLoad.js';
 
 const routes = [
   {
@@ -16,8 +16,8 @@ const routes = [
         path: '/contributors/:slug',
         Component: ContributorDetails,
         loader: async ({ params }) => loadContributor(params.slug),
+        getStaticPaths: () => slugs.map((slug) => `/contributors/${slug}`),
       },
-      
     ],
   },
 ];

@@ -1,5 +1,3 @@
-import React from 'react';
-
 const XIcon = ({ size = 24, className = '', ...props }) => {
     return (
         <svg

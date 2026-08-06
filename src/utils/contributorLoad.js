@@ -1,6 +1,6 @@
 import * as asciidoctorModule from '@asciidoctor/core';
 
-const asciidoctor = asciidoctorModule.default || asciidoctorModule;
+const asciidoctor = asciidoctorModule;
 
 const contributorFiles = import.meta.glob('/src/contributors/*.adoc', {
   query: '?raw',
@@ -17,6 +17,8 @@ const avatarFiles = import.meta.glob('/static/avatar/**/*', {
 const slugs = Object.keys(contributorFiles)
   .map((file) => file.match(/([^/]+)\.adoc$/)[1])
   .sort();
+
+export { slugs };
 
 function getContent(slug) {
   const entry = Object.entries(contributorFiles).find(([file]) =>
