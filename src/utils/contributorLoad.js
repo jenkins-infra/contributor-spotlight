@@ -14,17 +14,19 @@ const avatarFiles = import.meta.glob('/static/avatar/**/*', {
   eager: true,
 });
 
-const slugs = Object.keys(contributorFiles)
-  .map((file) => file.match(/([^/]+)\.adoc$/)[1])
-  .sort();
+const contentBySlug = new Map(
+  Object.entries(contributorFiles).map(([file, content]) => [
+    file.match(/([^/]+)\.adoc$/)[1],
+    content,
+  ])
+);
+
+const slugs = [...contentBySlug.keys()].sort();
 
 export { slugs };
 
 function getContent(slug) {
-  const entry = Object.entries(contributorFiles).find(([file]) =>
-    file.endsWith(`/${slug}.adoc`)
-  );
-  return entry?.[1] ?? null;
+  return contentBySlug.get(slug) ?? null;
 }
 
 function getAvatar(path) {
@@ -57,23 +59,8 @@ function getPageAttributes(doc) {
   };
 }
 
-async function getNeighbor(slug) {
-  if (!slug) return null;
-
-  const content = getContent(slug);
-  const doc = await asciidoctor.load(content);
-
-  return {
-    slug: `/contributors/${slug}`,
-    title: doc.getDocumentTitle(),
-    image: getAvatar(doc.getAttribute('page-image', '')),
-  };
-}
-
 export async function loadContributor(slug) {
-  const index = slugs.indexOf(slug);
-
-  if (index === -1) {
+  if (!slugs.includes(slug)) {
     throw new Error(`Contributor "${slug}" not found.`);
   }
 
@@ -84,7 +71,5 @@ export async function loadContributor(slug) {
     html: await doc.convert(),
     title: doc.getDocumentTitle(),
     pageAttributes: getPageAttributes(doc),
-    previous: index > 0 ? await getNeighbor(slugs[index - 1]) : null,
-    next: index < slugs.length - 1 ? await getNeighbor(slugs[index + 1]) : null,
   };
 }
