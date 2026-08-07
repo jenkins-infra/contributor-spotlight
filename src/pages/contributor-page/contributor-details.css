@@ -57,7 +57,7 @@
 
 .pronouns {
     margin: 10px 0;
-    color: #0b6ef3;
+    color: var(--color-accent);
 }
 
 .meta {
