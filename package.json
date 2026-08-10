@@ -20,7 +20,8 @@
         "prettier": "^3.9.6",
         "react": "^19.2.8",
         "react-dom": "^19.2.8",
-        "react-router-dom": "^6.30.4"
+        "react-router-dom": "^6.30.4",
+        "vite-plugin-sitemap": "^0.8.2"
     },
     "devDependencies": {
         "@eslint/js": "^10.0.1",
