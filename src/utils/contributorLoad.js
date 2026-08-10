@@ -34,5 +34,6 @@ export function loadContributor(slug) {
             ...entry.pageAttributes,
             image: getAvatar(entry.pageAttributes.image),
         },
+        sourcePath: `src/contributors/${slug}.adoc`,
     };
 }
