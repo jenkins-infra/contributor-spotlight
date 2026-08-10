@@ -15,8 +15,9 @@
     --color-social-text: #b9a9ff;
     --color-social-hover-bg: #6c4cf6;
     --color-social-hover-text: #ffffff;
-    --color-shadow: rgba(108, 76, 246, 0.35);
+    --color-shadow: rgba(9, 0, 47, 0.35);
     --color-white: #ffffff;
+    --color-gold: #e5ad00;
 }
 
 @media (prefers-color-scheme: light) {
