@@ -9,7 +9,8 @@ const contributorsDir = path.resolve('src/contributors');
 const dynamicRoutes = fs
   .readdirSync(contributorsDir, { withFileTypes: true })
   .filter((entry) => entry.isFile() && entry.name.endsWith('.adoc'))
-  .map((entry) => `/contributors/${entry.name.replace(/\.adoc$/, '')}/`);
+  .sort((a, b) => a.name.localeCompare(b.name))
+  .map((entry) => `/contributors/${entry.name.replace(/\.adoc$/, '')}`);
 
 export default defineConfig({
   plugins: [
