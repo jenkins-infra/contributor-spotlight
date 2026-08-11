@@ -9,7 +9,7 @@ export default function ContributorPage() {
     const { html, title, pageAttributes } = useLoaderData();
     const { slug } = useParams();
 
-    const siteUrl = 'https://glittering-druid-e01c38.netlify.app';
+    const siteUrl = 'https://contributors.jenkins.io';
     const tagLine = pageAttributes.intro;
     const ogImage = pageAttributes.image?.startsWith('http')
         ? pageAttributes.image
