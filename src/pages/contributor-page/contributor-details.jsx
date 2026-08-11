@@ -1,4 +1,4 @@
-import { Link, useLoaderData } from 'react-router-dom';
+import { Link, useLoaderData, useParams } from 'react-router-dom';
 import { Head } from 'vite-react-ssg';
 import { ArrowLeft, Github, Linkedin, Mail } from 'lucide-react';
 
