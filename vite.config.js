@@ -16,7 +16,7 @@ export default defineConfig({
   plugins: [
     react(),
     Sitemap({
-      hostname: 'https://contributors.jenkins.io/',
+      hostname: 'https://contributors.jenkins.io',
       dynamicRoutes,
       readable: true,
       priority: {
