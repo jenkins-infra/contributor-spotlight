@@ -19,11 +19,12 @@ export default function ContributorPage() {
     return (
         <>
             <Head>
-                <meta name="description" content={tagLine ?? ''} />
-                <meta property="og:title" content={pageTitle} />
-                <meta property="og:description" content={tagLine ?? ''} />
-                <meta property="og:image" content={ogImage} />
-                <meta property="og:url" content={ogUrl} />
+                <title>{title}</title>
+                <meta name='description' content={tagLine ?? ''} />
+                <meta property='og:title' content={title} />
+                <meta property='og:description' content={tagLine ?? ''} />
+                <meta property='og:image' content={ogImage} />
+                <meta property='og:url' content={ogUrl} />
             </Head>
 
             <div className='contributor-page'>
