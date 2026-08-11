@@ -1,10 +1,10 @@
 function JioFooter({ property, sourcePath, githubRepo, githubBranch }) {
   return (
     <jio-footer
-      githubRepo={sourcePath ? githubRepo : ''}
       property={property}
-      sourcePath={sourcePath}
-      githubBranch={githubBranch}
+      sourcePath={sourcePath ?? undefined}
+      githubRepo={sourcePath ? githubRepo : undefined}
+      githubBranch={sourcePath ? githubBranch : undefined}
     ></jio-footer>
   );
 }
