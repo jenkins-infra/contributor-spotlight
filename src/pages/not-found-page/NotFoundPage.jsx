@@ -1,4 +1,5 @@
 import './NotFoundPage.css';
+import { Head } from 'vite-react-ssg';
 import FireImage from '../../assets/Images/fire-jenkins.svg';
 
 const NotFoundPage = () => {
@@ -6,8 +7,9 @@ const NotFoundPage = () => {
 
   return (
     <>
-      <title>{title}</title>
-
+      <Head>
+        <title>{title}</title>
+      </Head>
       <main className="page">
         <img src={FireImage} alt="Jenkins on fire logo" className="image" />
 
