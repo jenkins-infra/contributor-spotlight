@@ -1,4 +1,4 @@
-import { Link, useLoaderData } from 'react-router-dom';
+import { Link, useLoaderData, useParams } from 'react-router-dom';
 import { Head } from 'vite-react-ssg';
 import { ArrowLeft, Github, Linkedin, Mail } from 'lucide-react';
 
@@ -7,11 +7,24 @@ import './contributor-details.css';
 
 export default function ContributorPage() {
     const { html, title, pageAttributes } = useLoaderData();
+    const { slug } = useParams();
+
+    const siteUrl = 'https://contributors.jenkins.io';
+    const tagLine = pageAttributes.intro;
+    const ogImage = pageAttributes.image?.startsWith('http')
+        ? pageAttributes.image
+        : `${siteUrl}${pageAttributes.image}`;
+    const ogUrl = `${siteUrl}/contributors/${slug}`;
 
     return (
         <>
             <Head>
                 <title>{title}</title>
+                <meta name='description' content={tagLine ?? ''} />
+                <meta property='og:title' content={title} />
+                <meta property='og:description' content={tagLine ?? ''} />
+                <meta property='og:image' content={ogImage} />
+                <meta property='og:url' content={ogUrl} />
             </Head>
 
             <div className='contributor-page'>
