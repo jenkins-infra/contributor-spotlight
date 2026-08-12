@@ -16,10 +16,7 @@ const NotFoundPage = () => {
         <h1 className="heading">Page not found</h1>
 
         <p className="paragraph">
-          Sorry{' '}
-          <span role="img" aria-label="Pensive emoji">
-            😔
-          </span>{' '}
+          Sorry,{' '}
           we couldn’t find what you were looking for.
           <br />
           {import.meta.env.DEV && (
@@ -31,7 +28,7 @@ const NotFoundPage = () => {
           )}
           <br />
           <a href="/" className="link">
-            Go home
+            Return to homepage
           </a>
           .
         </p>
