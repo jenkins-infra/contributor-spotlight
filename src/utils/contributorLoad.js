@@ -27,12 +27,14 @@ export function loadContributor(slug) {
         throw new Error(`Contributor "${slug}" not found.`);
     }
 
+    const pageAttributes = entry.pageAttributes ?? {};
+
     return {
         html: entry.html,
         title: entry.title,
         pageAttributes: {
-            ...entry.pageAttributes,
-            image: getAvatar(entry.pageAttributes.image),
+            ...pageAttributes,
+            image: getAvatar(pageAttributes.image),
         },
         sourcePath: `src/contributors/${slug}.adoc`,
     };
