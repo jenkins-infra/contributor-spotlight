@@ -1,5 +1,6 @@
 import { readdirSync, readFileSync, writeFileSync, mkdirSync } from 'node:fs';
 import path from 'node:path';
+import process from 'node:process';
 import * as asciidoctorModule from '@asciidoctor/core';
 
 const asciidoctor = asciidoctorModule; 
