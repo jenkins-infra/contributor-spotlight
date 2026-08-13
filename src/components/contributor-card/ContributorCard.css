@@ -6,7 +6,6 @@
     background: var(--color-bg-content);
     border: 1px solid var(--color-border);
     border-radius: 18px;
-
     font-family: system-ui, sans-serif;
     
     display: flex;
