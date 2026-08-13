@@ -6,15 +6,23 @@ import XIcon from '../../components/XIcons';
 import './contributor-details.css';
 
 export default function ContributorPage() {
-    const { html, title, pageAttributes } = useLoaderData();
+     const data = useLoaderData();
     const { slug } = useParams();
 
+    const html = data?.html ?? '';
+    const title = data?.title ?? '';
+    const pageAttributes = data?.pageAttributes ?? {};
+
     const siteUrl = 'https://contributors.jenkins.io';
-    const tagLine = pageAttributes.intro;
+
+    const tagLine = pageAttributes.intro ?? '';
+
     const ogImage = pageAttributes.image?.startsWith('http')
         ? pageAttributes.image
-        : `${siteUrl}${pageAttributes.image}`;
+        : `${siteUrl}${pageAttributes.image ?? ''}`;
+
     const ogUrl = `${siteUrl}/contributors/${slug}`;
+
 
     return (
         <>

@@ -30,8 +30,8 @@ export function loadContributor(slug) {
     const pageAttributes = entry.pageAttributes ?? {};
 
     return {
-        html: entry.html,
-        title: entry.title,
+        html: entry.html ?? '',
+        title: entry.title ?? '',
         pageAttributes: {
             ...pageAttributes,
             image: getAvatar(pageAttributes.image),
