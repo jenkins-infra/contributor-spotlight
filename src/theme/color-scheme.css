@@ -15,8 +15,10 @@
     --color-social-text: #b9a9ff;
     --color-social-hover-bg: #6c4cf6;
     --color-social-hover-text: #ffffff;
-    --color-shadow: rgba(108, 76, 246, 0.35);
+    --color-shadow: rgba(9, 0, 47, 0.35);
     --color-white: #ffffff;
+    --color-gold: #e5ad00;
+    --color-hero-gradient: linear-gradient(120deg, #24382c 0%, #24344a 50%, #212a4a 100%);    --color-hero-subtext: var(--color-body-text);
 }
 
 @media (prefers-color-scheme: light) {
@@ -38,5 +40,7 @@
         --color-social-hover-text: #ffffff;
         --color-shadow: rgba(108, 76, 246, 0.2);
         --color-icon-bg: #e9f0ff;
+        --color-hero-gradient: linear-gradient(120deg, #e8f7ee 0%, #eaf3fb 50%, #dbe9fb 100%);
+        --color-hero-subtext: var(--color-body-text);
     }
 }
