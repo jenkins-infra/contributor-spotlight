@@ -40,8 +40,9 @@ function LandingPage() {
         [contributors]
     );
 
-    const filteredContributors = searchQuery.trim()
-        ? fuse.search(searchQuery).map((result) => result.item)
+    const trimmedQuery = searchQuery.trim();
+    const filteredContributors = trimmedQuery
+        ? fuse.search(trimmedQuery).map((result) => result.item)
         : contributors;
 
     return (
