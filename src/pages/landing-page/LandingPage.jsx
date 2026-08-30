@@ -18,7 +18,7 @@ function LandingPage() {
                 slug,
                 ...loadContributor(slug),
             })),
-        []
+        [slugs, loadContributor]
     );
 
     const featuredContributor = contributors.find(
