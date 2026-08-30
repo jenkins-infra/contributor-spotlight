@@ -4,7 +4,7 @@ This feature showcases the top contributors of the Jenkins project at link:https
 
 == 🚀 Quick start
 
-Requires Node.js (CI uses the version from packer-images agents; NodeJS 24.x)
+Requires Node.js (see .tool-versions for the exact version; CI uses the version from packer-images agents)
 
 0. **Clone the Repository**
 
