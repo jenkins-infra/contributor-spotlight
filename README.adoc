@@ -9,6 +9,7 @@ Requires Node.js (CI uses the version from packer-images agents; NodeJS 24.x)
 0. **Clone the Repository**
 
 +
+[source,bash]
 ----
 git clone https://github.com/YOUR_USERNAME/contributor-spotlight.git
 cd contributor-spotlight
