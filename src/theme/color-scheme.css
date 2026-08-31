@@ -18,6 +18,7 @@
     --color-shadow: rgba(9, 0, 47, 0.35);
     --color-white: #ffffff;
     --color-gold: #e5ad00;
+    --color-search: #585858;
     --color-hero-gradient: linear-gradient(120deg, #24382c 0%, #24344a 50%, #212a4a 100%);    --color-hero-subtext: var(--color-body-text);
 }
 
