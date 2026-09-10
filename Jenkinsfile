@@ -1,3 +1,10 @@
+@Library('pipeline-library@pull/1055/head') _
+
+buildWebsite([
+  publicFolder: 'public',
+])
+
+/*
 // Do not trigger daily if not on the principal branch (e.g. not on PR, not on other branches, not on tags)
 final String cronPattern = env.BRANCH_IS_PRIMARY ? '@daily' : ''
 // infra.ci.jenkins.io defaults to arm64 VM agents (due to Gastby memory requirements) while ci.jenkins.io has the default spot amd64 used by Java builds.
@@ -133,3 +140,4 @@ pipeline {
     }
   }
 }
+*/
