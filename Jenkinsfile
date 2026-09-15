@@ -1,7 +1,7 @@
 @Library('pipeline-library@pull/1055/head') _
 
 buildWebsite([
-  publicFolder: 'public',
+  deployFolder: 'public',
 ])
 
 /*
