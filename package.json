@@ -7,7 +7,7 @@
         "prebuild": "node scripts/build-contributors.js",
         "dev": "node scripts/build-contributors.js && vite-react-ssg dev",
         "build": "vite-react-ssg build",
-        "lint": "eslint .",
+        "lint": "eslint . | tee -a eslint-results.json",
         "preview": "vite preview",
         "format": "prettier . --write",
         "info": "vite info"
