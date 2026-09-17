@@ -14,7 +14,7 @@
         "info": "gatsby info",
         "clean": "gatsby clean",
         "prepare": "husky",
-        "lint": "ESLINT_USE_FLAT_CONFIG=true eslint src/",
+        "lint": "ESLINT_USE_FLAT_CONFIG=true eslint src/ | tee -a eslint-results.json",
         "lint:fix": "ESLINT_USE_FLAT_CONFIG=true eslint --fix src/",
         "format": "prettier . --write"
     },
