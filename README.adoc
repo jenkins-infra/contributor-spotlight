@@ -4,32 +4,40 @@ This feature showcases the top contributors of the Jenkins project at link:https
 
 == 🚀 Quick start
 
-Requires Node.js (CI uses the version from packer-images agents; NodeJS 24.15)
+Requires Node.js (see .tool-versions for the exact version; CI uses the version from packer-images agents)
 
-0. **Install dependencies**
+0. **Clone the Repository**
+
++
+[source,bash]
+----
+git clone https://github.com/YOUR_USERNAME/contributor-spotlight.git
+cd contributor-spotlight
+----
+
+1. **Install dependencies**
 
     Run the following commands in your terminal:
 +
 [source,bash]
 ----
-cd contributor-spotlight/
 npm ci
 ----
 
-1. **Run the development environment**
+2. **Run the development environment**
 
     Run the following commands in your terminal:
 +
 [source,bash]
 ----
-npm run clean && npm run develop
+npm run dev
 ----
 
-2. **Access the application**
+3. **Access the application**
 
-    Once the code is running, the site should be up at http://localhost:8000.
+    Once the code is running, the site should be up at http://localhost:5173.
 
-3. **To run Prettier**
+4. **To run Prettier**
 
     Run the following commands in your terminal:
 +
@@ -38,7 +46,7 @@ npm run clean && npm run develop
 npm run format
 ----
 
-4. **To run ESLint**
+5. **To run ESLint**
 
     Run the following commands in your terminal:
 +

@@ -1,0 +1,124 @@
+.spotlight {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    font-family: system-ui, sans-serif;
+    margin-top: 100px;
+}
+
+.spotlight__title {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--color-text);
+    margin: 0 0 6rem;
+}
+
+.spotlight__card {
+    position: relative;
+    display: block;
+    background: var(--color-bg-content);
+    border: 1px solid var(--color-border);
+    border-radius: 16px;
+    padding: 3.75rem 2.5rem 2.5rem;
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
+}
+
+.spotlight__card:hover,
+.spotlight__card:focus-visible {
+    transform: translateY(-2px);
+    border-color: var(--color-accent);
+}
+
+.spotlight__card:focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 3px;
+}
+
+.spotlight__avatar {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--color-bg-content);
+    box-shadow: 0 0 0 1px var(--color-border);
+}
+
+.spotlight__header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-bottom: 1.5rem;
+}
+
+.spotlight__identity {
+    min-width: 0;
+}
+
+.spotlight__name {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--color-text);
+    margin: 0;
+}
+
+.spotlight__location {
+    font-size: 0.875rem;
+    color: var(--color-body-text);
+    margin: 0.25rem 0 0;
+}
+
+.spotlight__first-commit {
+    font-size: 0.9rem;
+    color: var(--color-body-text);
+    white-space: nowrap;
+    margin: 0;
+}
+
+.spotlight__first-commit-label {
+    font-weight: 700;
+    color: var(--color-accent);
+}
+
+.spotlight__intro {
+    color: var(--color-body-text);
+    font-size: 0.95rem;
+    line-height: 1.7;
+}
+
+.spotlight__intro p {
+    margin: 0 0 1rem;
+}
+
+.spotlight__intro p:last-child {
+    margin-bottom: 0;
+}
+
+@media (max-width: 600px) {
+    .spotlight__card {
+        padding: 3.5rem 1.5rem 2rem;
+    }
+ 
+    .spotlight__name {
+        margin-top: 40px;
+    }
+ 
+    .spotlight__header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 0.5rem;
+    }
+ 
+    .spotlight__identity {
+        width: 100%;
+    }
+}
