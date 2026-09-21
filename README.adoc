@@ -6,42 +6,36 @@ This feature showcases the top contributors of the Jenkins project at link:https
 
 Requires Node.js (CI uses the version from packer-images agents; NodeJS 24.15)
 
-0. **Install dependencies**
+**Install dependencies**
 
-    Run the following commands in your terminal:
-+
+Run the following commands in your terminal:
+
 [source,bash]
 ----
 cd contributor-spotlight/
 npm ci
 ----
 
-1. **Run the development environment**
+**Run the development environment**
 
-    Run the following commands in your terminal:
-+
 [source,bash]
 ----
 npm run clean && npm run develop
 ----
 
-2. **Access the application**
+**Access the application**
 
-    Once the code is running, the site should be up at http://localhost:8000.
+Once the code is running, the site should be up at http://localhost:8000.
 
-3. **To run Prettier**
+**Format code with Prettier**
 
-    Run the following commands in your terminal:
-+
 [source,bash]
 ----
 npm run format
 ----
 
-4. **To run ESLint**
+**Lint code with ESLint**
 
-    Run the following commands in your terminal:
-+
 [source,bash]
 ----
 npm run lint
