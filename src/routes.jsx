@@ -14,10 +14,10 @@ const routes = [
         element: <LandingPage />,
       },
       {
-        path: '/contributors/:slug',
+        path: '/pages/contributors/:slug',
         Component: ContributorDetails,
         loader: async ({ params }) => loadContributor(params.slug),
-        getStaticPaths: () => slugs.map((slug) => `/contributors/${slug}`),
+        getStaticPaths: () => slugs.map((slug) => `/pages/contributors/${slug}`),
         errorElement: <NotFoundPage />,
       },
       {

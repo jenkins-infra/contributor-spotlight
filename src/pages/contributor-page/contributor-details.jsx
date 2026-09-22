@@ -14,7 +14,7 @@ export default function ContributorPage() {
     const ogImage = pageAttributes.image?.startsWith('http')
         ? pageAttributes.image
         : `${siteUrl}${pageAttributes.image}`;
-    const ogUrl = `${siteUrl}/contributors/${slug}`;
+    const ogUrl = `${siteUrl}/pages/contributors/${slug}/`;
 
     return (
         <>
