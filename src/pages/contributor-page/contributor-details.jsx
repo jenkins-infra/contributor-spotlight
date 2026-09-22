@@ -1,4 +1,4 @@
-import { Link, useLoaderData, useParams } from 'react-router-dom';
+import { Link, useLoaderData } from 'react-router-dom';
 import { Head } from 'vite-react-ssg';
 import { ArrowLeft, Github, Linkedin, Mail } from 'lucide-react';
 
@@ -6,8 +6,7 @@ import XIcon from '../../components/XIcons';
 import './contributor-details.css';
 
 export default function ContributorPage() {
-    const { html, title, pageAttributes } = useLoaderData();
-    const { slug } = useParams();
+    const { slug, html, title, pageAttributes } = useLoaderData();
 
     const siteUrl = 'https://contributors.jenkins.io';
     const tagLine = pageAttributes.intro;
@@ -25,6 +24,7 @@ export default function ContributorPage() {
                 <meta property='og:description' content={tagLine ?? ''} />
                 <meta property='og:image' content={ogImage} />
                 <meta property='og:url' content={ogUrl} />
+                <link rel='canonical' href={ogUrl} />
             </Head>
 
             <div className='contributor-page'>
