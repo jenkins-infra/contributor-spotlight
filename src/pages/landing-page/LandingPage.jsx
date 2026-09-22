@@ -7,8 +7,6 @@ import HeroSection from '../../components/hero-section/HeroSection';
 import SpotLight from '../../components/spotlight/ContributorSpotlight';
 import './LandingPage.css';
 
-const SPOTLIGHT_SLUG = 'allan-burdajewicz';
-
 function LandingPage() {
     const [searchQuery, setSearchQuery] = useState('');
 
@@ -22,7 +20,7 @@ function LandingPage() {
     );
 
     const featuredContributor = contributors.find(
-        (contributor) => contributor.slug === SPOTLIGHT_SLUG
+        (contributor) => contributor.pageAttributes.featured === 'true'
     );
 
     const fuse = useMemo(
