@@ -16,7 +16,7 @@ export default function ContributorSpotlight({ contributor }) {
         <section className="spotlight">
             <h2 className="spotlight__title">Contributor Spotlight</h2>
 
-            <Link to={`/contributors/${slug}`} className="spotlight__card">
+            <Link to={`/pages/contributors/${slug}`} className="spotlight__card">
                 <img
                     className="spotlight__avatar"
                     src={image}

@@ -32,7 +32,7 @@ function ContributorCard({ contributor }) {
     const githubHref = buildSocialHref('github', github);
 
     const goToContributor = () => {
-        if (slug) navigate(`/contributors/${slug}`);
+        if (slug) navigate(`/pages/contributors/${slug}`);
     };
 
     const handleKeyDown = (e) => {
