@@ -1,4 +1,5 @@
 import { useMemo, useState } from 'react';
+import { Head } from 'vite-react-ssg';
 import Fuse from 'fuse.js';
 
 import { slugs, loadContributor } from '../../utils/contributorLoad';
@@ -45,6 +46,10 @@ function LandingPage() {
 
     return (
         <main className='landing-page'>
+            <Head>
+                <title>Jenkins Contributor Spotlight</title>
+            </Head>
+
             <HeroSection />
 
             {featuredContributor && (
