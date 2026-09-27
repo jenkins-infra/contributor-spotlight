@@ -2,6 +2,7 @@ import { Outlet, useLocation, useMatches } from 'react-router-dom';
 import { useEffect } from 'react';
 import JioNavbar from './JioNavbar';
 import JioFooter from './JioFooter';
+import { sourcePathFor } from '../../utils/contributorLoad';
 
 const SITE_URL = 'https://contributors.jenkins.io';
 const GITHUB_REPO = 'jenkins-infra/contributor-spotlight';
@@ -10,10 +11,10 @@ const GITHUB_BRANCH = 'main';
 function Layout() {
   const matches = useMatches();
   const location = useLocation();
-  const sourcePath = matches.reduce(
-    (acc, match) => match.data?.sourcePath ?? acc,
-    null,
-  );
+  const contributorMatch = matches.find((match) => match.params?.slug);
+  const sourcePath = contributorMatch
+    ? sourcePathFor(contributorMatch.params.slug)
+    : null;
 
 useEffect(() => {
   window.scrollTo({ top: 0, left: 0, behavior: 'auto' });
