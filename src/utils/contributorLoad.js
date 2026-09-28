@@ -18,9 +18,22 @@ function getAvatar(path) {
 
 const slugs = Object.keys(contributorsData).sort();
 
-export { slugs };
+// Contributors whose file was renamed, mapped to the current slug so the
+// old /pages/contributors/<slug>/ links from the previous site keep working.
+const legacySlugs = {
+    'daniel-krämer': 'daniel-kramer',
+};
 
-export function loadContributor(slug) {
+export { slugs, legacySlugs };
+
+export function sourcePathFor(requestedSlug) {
+    const slug = legacySlugs[requestedSlug] ?? requestedSlug;
+
+    return contributorsData[slug] ? `src/contributors/${slug}.adoc` : null;
+}
+
+export function loadContributor(requestedSlug) {
+    const slug = legacySlugs[requestedSlug] ?? requestedSlug;
     const entry = contributorsData[slug];
 
     if (!entry) {
@@ -28,12 +41,13 @@ export function loadContributor(slug) {
     }
 
     return {
+        slug,
         html: entry.html,
         title: entry.title,
         pageAttributes: {
             ...entry.pageAttributes,
             image: getAvatar(entry.pageAttributes.image),
         },
-        sourcePath: `src/contributors/${slug}.adoc`,
+        sourcePath: sourcePathFor(slug),
     };
 }

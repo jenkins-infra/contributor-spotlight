@@ -10,9 +10,12 @@ const dynamicRoutes = fs
   .readdirSync(contributorsDir, { withFileTypes: true })
   .filter((entry) => entry.isFile() && entry.name.endsWith('.adoc'))
   .sort((a, b) => a.name.localeCompare(b.name))
-  .map((entry) => `/contributors/${entry.name.replace(/\.adoc$/, '')}`);
+  .map((entry) => `/pages/contributors/${entry.name.replace(/\.adoc$/, '')}`);
 
 export default defineConfig({
+  ssgOptions: {
+    dirStyle: 'nested',
+  },
   plugins: [
     react(),
     Sitemap({

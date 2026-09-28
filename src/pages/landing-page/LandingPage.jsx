@@ -1,4 +1,5 @@
 import { useMemo, useState } from 'react';
+import { Head } from 'vite-react-ssg';
 import Fuse from 'fuse.js';
 
 import { slugs, loadContributor } from '../../utils/contributorLoad';
@@ -6,8 +7,6 @@ import ContributorCard from '../../components/contributor-card/ContributorCard';
 import HeroSection from '../../components/hero-section/HeroSection';
 import SpotLight from '../../components/spotlight/ContributorSpotlight';
 import './LandingPage.css';
-
-const SPOTLIGHT_SLUG = 'allan-burdajewicz';
 
 function LandingPage() {
     const [searchQuery, setSearchQuery] = useState('');
@@ -22,7 +21,7 @@ function LandingPage() {
     );
 
     const featuredContributor = contributors.find(
-        (contributor) => contributor.slug === SPOTLIGHT_SLUG
+        (contributor) => contributor.pageAttributes.featured === 'true'
     );
 
     const fuse = useMemo(
@@ -47,6 +46,10 @@ function LandingPage() {
 
     return (
         <main className='landing-page'>
+            <Head>
+                <title>Jenkins Contributor Spotlight</title>
+            </Head>
+
             <HeroSection />
 
             {featuredContributor && (
