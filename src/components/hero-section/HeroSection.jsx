@@ -14,8 +14,8 @@ function HeroSection() {
                     Meet the driving forces behind Jenkins
                 </h1>
                 <p className='hero-subtext'>
-                    we showcase the top contributors shaping the future of
-                    continuous integration and delivery
+                    We showcase the top contributors shaping the future of
+                    continuous integration and delivery.
                 </p>
                 <img
                     src={pipelineLight}

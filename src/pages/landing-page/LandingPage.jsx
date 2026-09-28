@@ -17,7 +17,7 @@ function LandingPage() {
                 slug,
                 ...loadContributor(slug),
             })),
-        [slugs, loadContributor]
+        []
     );
 
     const featuredContributor = contributors.find(
@@ -31,7 +31,6 @@ function LandingPage() {
                     'title',
                     'pageAttributes.github',
                     'pageAttributes.location',
-                    'pageAttributes.organization',
                 ],
                 threshold: 0.3,
                 ignoreLocation: true,
