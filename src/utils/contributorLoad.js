@@ -26,6 +26,12 @@ const legacySlugs = {
 
 export { slugs, legacySlugs };
 
+export function sourcePathFor(requestedSlug) {
+    const slug = legacySlugs[requestedSlug] ?? requestedSlug;
+
+    return contributorsData[slug] ? `src/contributors/${slug}.adoc` : null;
+}
+
 export function loadContributor(requestedSlug) {
     const slug = legacySlugs[requestedSlug] ?? requestedSlug;
     const entry = contributorsData[slug];
@@ -42,6 +48,6 @@ export function loadContributor(requestedSlug) {
             ...entry.pageAttributes,
             image: getAvatar(entry.pageAttributes.image),
         },
-        sourcePath: `src/contributors/${slug}.adoc`,
+        sourcePath: sourcePathFor(slug),
     };
 }
