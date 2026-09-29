@@ -6,6 +6,7 @@ import { slugs, loadContributor } from '../../utils/contributorLoad';
 import ContributorCard from '../../components/contributor-card/ContributorCard';
 import HeroSection from '../../components/hero-section/HeroSection';
 import SpotLight from '../../components/spotlight/ContributorSpotlight';
+import ThankYouNote from '../../components/thank-you/ThankYouNote';
 import './LandingPage.css';
 
 function LandingPage() {
@@ -84,6 +85,8 @@ function LandingPage() {
                     </p>
                 )}
             </section>
+
+            <ThankYouNote />
         </main>
     );
 }
