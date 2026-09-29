@@ -12,7 +12,14 @@ const dynamicRoutes = fs
   .sort((a, b) => a.name.localeCompare(b.name))
   .map((entry) => `/pages/contributors/${entry.name.replace(/\.adoc$/, '')}`);
 
+// Set by the pipeline. Falls back to main for local builds, which is where
+// the published site is served from.
+const githubBranch = process.env.GITHUB_BRANCH || 'main';
+
 export default defineConfig({
+  define: {
+    'import.meta.env.GITHUB_BRANCH': JSON.stringify(githubBranch),
+  },
   ssgOptions: {
     dirStyle: 'nested',
   },
