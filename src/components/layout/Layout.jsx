@@ -6,7 +6,7 @@ import { sourcePathFor } from '../../utils/contributorLoad';
 
 const SITE_URL = 'https://contributors.jenkins.io';
 const GITHUB_REPO = 'jenkins-infra/contributor-spotlight';
-const GITHUB_BRANCH = 'main';
+const GITHUB_BRANCH = import.meta.env.GITHUB_BRANCH;
 
 function Layout() {
   const matches = useMatches();
