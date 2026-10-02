@@ -12,7 +12,7 @@ const REFRESH_INTERVAL = 60 * 60 * 1000;
 
 function RepositoryList({ repositories }) {
     // Naming more than a few of them makes the sentence unreadable.
-    if (repositories.length > 3) {
+    if (repositories.length > 5) {
         return <>{repositories.length} Jenkins repositories</>;
     }
 

@@ -34,15 +34,22 @@
     line-height: 1.6;
 }
 
+/* Underlined at rest so colour isn't the only thing marking a link, and
+   --color-accent-hover is the one that clears 4.5:1 on the dark ground. */
 .thank-you__text a {
-    color: var(--color-accent);
-    text-decoration: none;
+    color: var(--color-accent-hover);
+    text-decoration: underline;
 }
 
 .thank-you__text a:hover,
 .thank-you__text a:focus-visible {
-    color: var(--color-accent-hover);
-    text-decoration: underline;
+    text-decoration-thickness: 2px;
+}
+
+@media (prefers-color-scheme: light) {
+    .thank-you__text a {
+        color: var(--color-accent);
+    }
 }
 
 @media (max-width: 600px) {
