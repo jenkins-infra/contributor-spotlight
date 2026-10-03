@@ -1,0 +1,72 @@
+.thank-you {
+    max-width: 1000px;
+    margin: 6rem auto 0;
+    padding: 0 1.5rem 4rem;
+    font-family: system-ui, sans-serif;
+}
+
+.thank-you__card {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+    justify-content: center;
+    max-width: 34rem;
+    margin: 0 auto;
+    padding: 1.5rem 2rem;
+    background: var(--color-bg-content);
+    border: 1px solid var(--color-border);
+    border-radius: 16px;
+}
+
+.thank-you__avatar {
+    flex: none;
+    width: 96px;
+    height: 96px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 1px solid var(--color-border);
+}
+
+.thank-you__text {
+    margin: 0;
+    color: var(--color-body-text);
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* Underlined at rest so colour isn't the only thing marking a link, and
+   --color-accent-hover is the one that clears 4.5:1 on the dark ground. */
+.thank-you__text a {
+    color: var(--color-accent-hover);
+    text-decoration: underline;
+}
+
+.thank-you__text a:hover,
+.thank-you__text a:focus-visible {
+    text-decoration-thickness: 2px;
+}
+
+@media (prefers-color-scheme: light) {
+    .thank-you__text a {
+        color: var(--color-accent);
+    }
+}
+
+@media (max-width: 600px) {
+    .thank-you {
+        margin-top: 4rem;
+        padding: 0 1rem 3rem;
+    }
+
+    .thank-you__card {
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1.5rem;
+        text-align: center;
+    }
+
+    .thank-you__avatar {
+        width: 72px;
+        height: 72px;
+    }
+}
