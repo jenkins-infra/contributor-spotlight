@@ -1,11 +1,17 @@
 import { readdirSync, readFileSync, writeFileSync, mkdirSync } from 'node:fs';
 import path from 'node:path';
 import * as asciidoctorModule from '@asciidoctor/core';
+import createDOMPurify from 'dompurify';
+import { JSDOM } from 'jsdom';
 
 const asciidoctor = asciidoctorModule; 
 const contributorsDir = path.resolve('src/contributors');
 const outDir = path.resolve('src/data');
 const outFile = path.join(outDir, 'contributors.json');
+
+// AsciiDoc passthrough blocks can carry raw HTML, so the converted output is
+// sanitized before it reaches the page.
+const DOMPurify = createDOMPurify(new JSDOM('').window);
 
 function getPageAttributes(doc, avatarPath) {
     return {
@@ -34,7 +40,7 @@ async function build() {
         const raw = readFileSync(path.join(contributorsDir, file), 'utf-8');
 
         const doc = await asciidoctor.load(raw);
-        const html = await doc.convert();
+        const html = DOMPurify.sanitize(await doc.convert());
 
         data[slug] = {
             html,
