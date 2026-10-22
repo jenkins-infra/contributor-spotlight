@@ -77,7 +77,7 @@
         },
         "webpack-dev-middleware": "^8.0.0",
         "cookie": "^2.0.0",
-        "path-to-regexp": "~8.4.0",
+        "path-to-regexp": "~9.0.0",
         "gatsby-plugin-offline": {
             "workbox-build": "^7.4.0"
         },
