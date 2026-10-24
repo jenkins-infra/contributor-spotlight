@@ -12,6 +12,15 @@ export default function ContributorPage() {
 
     const siteUrl = 'https://contributors.jenkins.io';
     const tagLine = pageAttributes.intro;
+    const introParagraphs = (tagLine || '')
+        .split(/\n\s*\n/)
+        .map((paragraph) => paragraph.trim())
+        .filter(Boolean);
+    const introMarkup = introParagraphs.length
+        ? `<div class="page-intro">${introParagraphs
+              .map((paragraph) => `<p>${paragraph}</p>`)
+              .join('')}</div>`
+        : '';
     const ogImage = pageAttributes.image?.startsWith('http')
         ? pageAttributes.image
         : `${siteUrl}${pageAttributes.image}`;
@@ -126,7 +135,7 @@ export default function ContributorPage() {
                     <div className='adoc-wrapper'>
                         <article
                             className='adoc-content'
-                            dangerouslySetInnerHTML={{ __html: html }}
+                            dangerouslySetInnerHTML={{ __html: `${introMarkup}${html}` }}
                         />
                     </div>
                 </main>
