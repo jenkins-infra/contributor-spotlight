@@ -14,7 +14,7 @@
         "info": "gatsby info",
         "clean": "gatsby clean",
         "prepare": "husky",
-        "lint": "ESLINT_USE_FLAT_CONFIG=true eslint src/",
+        "lint": "ESLINT_USE_FLAT_CONFIG=true eslint src/ | tee -a eslint-results.json",
         "lint:fix": "ESLINT_USE_FLAT_CONFIG=true eslint --fix src/",
         "format": "prettier . --write"
     },
@@ -27,7 +27,7 @@
         "axios": "^1.7.2",
         "dayjs": "^1.11.10",
         "dompurify": "^3.3.1",
-        "framer-motion": "^12.29.0",
+        "motion": "^14.0.0",
         "fuse.js": "^7.1.0",
         "gatsby": "^5.16.1",
         "gatsby-core-utils": "^4.14.0",
@@ -44,10 +44,10 @@
         "gatsby-transformer-sharp": "^5.13.1",
         "loader-utils": "^3.2.1",
         "lodash": "^4.17.21",
-        "lucide-react": "^0.562.0",
+        "lucide-react": "^0.577.0",
         "papaparse": "^5.4.1",
-        "react": "19.2.4",
-        "react-dom": "19.2.4",
+        "react": "19.3.1",
+        "react-dom": "19.3.1",
         "react-helmet": "^6.1.0",
         "sharp": "^0.35.3",
         "slash": "^5.1.0"
@@ -59,12 +59,12 @@
         "eslint": "^8.57.1",
         "eslint-config-google": "^0.14.0",
         "eslint-config-prettier": "^10.0.0",
-        "eslint-plugin-jsdoc": "^62.0.0",
+        "eslint-plugin-jsdoc": "^65.0.0",
         "eslint-plugin-prettier": "^5.2.1",
         "eslint-plugin-react": "^7.37.2",
         "globals": "^17.0.0",
         "husky": "^9.1.7",
-        "lint-staged": "^16.0.0",
+        "lint-staged": "^17.0.0",
         "prettier": "^3.4.2"
     },
     "lint-staged": {
@@ -75,9 +75,9 @@
         "react-server-dom-webpack": {
             "react": "$react"
         },
-        "webpack-dev-middleware": "^7.4.5",
-        "cookie": "^1.1.1",
-        "path-to-regexp": "~0.1.7",
+        "webpack-dev-middleware": "^8.0.0",
+        "cookie": "^2.0.0",
+        "path-to-regexp": "~8.4.0",
         "gatsby-plugin-offline": {
             "workbox-build": "^7.4.0"
         },
