@@ -1,4 +1,5 @@
 .contributor-card {
+    position: relative;
     width: 100%;
     min-height: 250px;
     box-sizing: border-box;
@@ -13,7 +14,6 @@
     justify-content: center;
 
     padding: 20px;
-    cursor: pointer;
 
     transition:
         transform 0.2s ease,
@@ -65,6 +65,29 @@
     color: var(--color-text);
 }
 
+.contributor-card-link {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* Stretch the name's link over the whole card, so a click anywhere on it
+   opens the contributor while the card stays a single link. */
+.contributor-card-link::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 18px;
+}
+
+.contributor-card-link:focus-visible {
+    outline: none;
+}
+
+.contributor-card-link:focus-visible::after {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 3px;
+}
+
 .contributor-card-pronouns {
     margin: 10px 0 0;
     font-size: 11px;
@@ -84,7 +107,10 @@
     color: var(--color-body-text);
 }
 
+/* Above the stretched link, so the icons stay their own links. */
 .contributor-card-socials {
+    position: relative;
+    z-index: 1;
     display: flex;
     align-items: center;
     justify-content: center;
