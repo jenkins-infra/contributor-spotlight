@@ -1,4 +1,4 @@
-import { useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { Github, Linkedin } from 'lucide-react';
 import XIcon from '../XIcons';
 import './ContributorCard.css';
@@ -20,7 +20,6 @@ function buildSocialHref(platform, value) {
 }
 
 function ContributorCard({ contributor }) {
-    const navigate = useNavigate();
     const { slug, title, pageAttributes = {} } = contributor;
     const { image, name, pronouns, location, linkedin, twitter, github } =
         pageAttributes;
@@ -31,27 +30,8 @@ function ContributorCard({ contributor }) {
     const twitterHref = buildSocialHref('twitter', twitter);
     const githubHref = buildSocialHref('github', github);
 
-    const goToContributor = () => {
-        if (slug) navigate(`/pages/contributors/${slug}`);
-    };
-
-    const handleKeyDown = (e) => {
-        if (e.key === 'Enter' || e.key === ' ') {
-            e.preventDefault();
-            goToContributor();
-        }
-    };
-
-    const stopBubble = (e) => e.stopPropagation();
-
     return (
-        <article
-            className='contributor-card'
-            role='link'
-            tabIndex={0}
-            onClick={goToContributor}
-            onKeyDown={handleKeyDown}
-        >
+        <article className='contributor-card'>
             <div className='contributor-card-content'>
                 {image && (
                     <img
@@ -62,7 +42,15 @@ function ContributorCard({ contributor }) {
                     />
                 )}
 
-                <h3 className='contributor-card-name'>{contributorName}</h3>
+                {/* The link covers the whole card, see ContributorCard.css. */}
+                <h3 className='contributor-card-name'>
+                    <Link
+                        to={`/pages/contributors/${slug}`}
+                        className='contributor-card-link'
+                    >
+                        {contributorName}
+                    </Link>
+                </h3>
 
                 {pronouns && (
                     <p className='contributor-card-pronouns'>{pronouns}</p>
@@ -80,7 +68,6 @@ function ContributorCard({ contributor }) {
                             target='_blank'
                             rel='noopener noreferrer'
                             aria-label={`${contributorName} on GitHub`}
-                            onClick={stopBubble}
                         >
                             <Github size={18} />
                         </a>
@@ -93,7 +80,6 @@ function ContributorCard({ contributor }) {
                             target='_blank'
                             rel='noopener noreferrer'
                             aria-label={`${contributorName} on LinkedIn`}
-                            onClick={stopBubble}
                         >
                             <Linkedin size={18} />
                         </a>
@@ -106,7 +92,6 @@ function ContributorCard({ contributor }) {
                             target='_blank'
                             rel='noopener noreferrer'
                             aria-label={`${contributorName} on X`}
-                            onClick={stopBubble}
                         >
                             <XIcon size={18} />
                         </a>
