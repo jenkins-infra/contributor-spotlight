@@ -108,9 +108,12 @@
 }
 
 /* Above the stretched link, so the icons stay their own links. */
-.contributor-card-socials {
+.contributor-card-social {
     position: relative;
     z-index: 1;
+}
+
+.contributor-card-socials {
     display: flex;
     align-items: center;
     justify-content: center;
